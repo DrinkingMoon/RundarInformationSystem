@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9054DDFD-AFCF-4533-8E11-72BCA93E9B63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServerModule</RootNamespace>
+    <AssemblyName>PMS_ServerModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblingBom.cs" />
+    <Compile Include="AssemblyInfoServer.cs" />
+    <Compile Include="ConfigManagement.cs" />
+    <Compile Include="CvtCheckDataService.cs" />
+    <Compile Include="CVTRepairInfoServer.cs" />
+    <Compile Include="DisposableGoodsServer.cs" />
+    <Compile Include="FrockStandingBook.cs" />
+    <Compile Include="IConfigManagement.cs" />
+    <Compile Include="ICvtCheckDataService.cs" />
+    <Compile Include="ICVTRepairInfoServer.cs" />
+    <Compile Include="IDisposableGoodsServer.cs" />
+    <Compile Include="IFrockStandingBook.cs" />
+    <Compile Include="IInspectionSetInfo.cs" />
+    <Compile Include="InspectionSetInfo.cs" />
+    <Compile Include="IOfflineFailSafeServer.cs" />
+    <Compile Include="IPreventErrorServer.cs" />
+    <Compile Include="IProductInfoServer.cs" />
+    <Compile Include="IProductReleases.cs" />
+    <Compile Include="IReplaceWorkBenchServer.cs" />
+    <Compile Include="IValveCheckDataService.cs" />
+    <Compile Include="OfflineFailSafeServer.cs" />
+    <Compile Include="PreventErrorServer.cs" />
+    <Compile Include="ProductInfoServer.cs" />
+    <Compile Include="ProductReleases.cs" />
+    <Compile Include="ReplaceWorkBenchServer.cs" />
+    <Compile Include="ServerFactory.cs" />
+    <Compile Include="BomMappingServer.cs" />
+    <Compile Include="BomServer.cs" />
+    <Compile Include="ChoseConfectServer.cs" />
+    <Compile Include="ElectronFileServer.cs" />
+    <Compile Include="IAssemblingBom.cs" />
+    <Compile Include="IAssemblyInfoServer.cs" />
+    <Compile Include="IBomMappingServer.cs" />
+    <Compile Include="IBomServer.cs" />
+    <Compile Include="IChoseConfectServer.cs" />
+    <Compile Include="IElectronFileServer.cs" />
+    <Compile Include="IReparativePartInfoServer.cs" />
+    <Compile Include="IWorkbenchServer.cs" />
+    <Compile Include="ParameterFactory.cs" />
+    <Compile Include="PlatformService.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlatformService.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReparativePartInfoServer.cs" />
+    <Compile Include="ValveCheckDataService.cs" />
+    <Compile Include="WorkbenchServer.cs" />
+    <Compile Include="条形码组件\BarcodeFactoryForAssemblyLine.cs" />
+    <Compile Include="条形码组件\BarcodeForAssemblyLine.cs" />
+    <Compile Include="条形码组件\BarcodePrintLibrary.cs" />
+    <Compile Include="条形码组件\BarcodePrints.cs" />
+    <Compile Include="条形码组件\IBarcodeForAssemblyLine.cs" />
+    <Compile Include="条形码组件\PrintManagementBarcode.cs" />
+    <Compile Include="条形码组件\PrintPartBarcode.cs" />
+    <Compile Include="装配线\ConvertCVTNumber.cs" />
+    <Compile Include="装配线\IConvertCVTNumber.cs" />
+    <Compile Include="装配线\IMultiBatchPart.cs" />
+    <Compile Include="装配线\IOffLineTest.cs" />
+    <Compile Include="装配线\IPrintProductBarcodeInfo.cs" />
+    <Compile Include="装配线\IProductBarcodeServer.cs" />
+    <Compile Include="装配线\ITempElectronFile.cs" />
+    <Compile Include="装配线\IZPXProductionParams.cs" />
+    <Compile Include="装配线\MultiBatchPart.cs" />
+    <Compile Include="装配线\OffLineTest.cs" />
+    <Compile Include="装配线\PrintProductBarcodeInfo.cs" />
+    <Compile Include="装配线\ProductBarcodeServer.cs" />
+    <Compile Include="装配线\TempElectronFile.cs" />
+    <Compile Include="装配线\ZPXProductionParams.cs" />
+    <Compile Include="通用\StateData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlatformService.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PlatformService.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="PlatformService.dbml.layout">
+      <DependentUpon>PlatformService.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCM_Server_Leave2\SCM_Server_Leave2.csproj">
+      <Project>{2D894A66-B14B-407B-89CF-5183A76E4FD4}</Project>
+      <Name>SCM_Server_Leave2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCS_Server_Leave1\SCM_Server_Leave1.csproj">
+      <Project>{EFA62076-F7CB-416E-8166-66987EC62518}</Project>
+      <Name>SCM_Server_Leave1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\数据库组件\DBOperate\DBOperate.csproj">
+      <Project>{E6B31D5C-3564-41F5-8443-6B2906FCAD1C}</Project>
+      <Name>DBOperate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

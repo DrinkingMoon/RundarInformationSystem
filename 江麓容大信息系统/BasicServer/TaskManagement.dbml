@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="TaskManagement" Class="TaskManagementDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.6,1433;Initial Catalog=TaskManagement;Persist Security Info=True;User ID=InfoSysUser" SettingsObjectName="ServerModule.Properties.Settings" SettingsPropertyName="TaskManagementConnectionString" Provider="System.Data.SqlClient" />
+</Database>

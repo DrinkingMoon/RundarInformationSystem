@@ -1,0 +1,353 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServerModule</RootNamespace>
+    <AssemblyName>ServerModule</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ServerModule.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\ServerModule.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\ServerModule.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBOperate, Version=1.0.601.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\数据库组件\DBOperate\bin\Debug\DBOperate.dll</HintPath>
+    </Reference>
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="主要服务组件\业务管理\接口\IProductDeliveryInspectionServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IQualityProblemRectificationDisposalBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\DeviceMaintenanceBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\GaugeManage.cs" />
+    <Compile Include="主要服务组件\业务管理\类\GoodsShelfLife.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IGoodsShelfLife.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IReport.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IDeviceMaintenanceBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IUnProductTestingSingle.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ITCURepairInfoServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ISalesOrderServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ITechnologyAlteration.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMinorPurchaseBillServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IProductLendService.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IProductLendReturnService.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IProductReturnService.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IStockLack.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IQualitySystemDatabase.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IGaugeManage.cs" />
+    <Compile Include="主要服务组件\业务管理\类\QualitySystemDatabase.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\IToolsManage.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MinorPurchaseBillServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ProductLendReturnService.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ProductLendService.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ProductReturnService.cs" />
+    <Compile Include="主要服务组件\业务管理\类\StockLack.cs" />
+    <Compile Include="主要服务组件\业务管理\类\TCURepairInfoServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\TechnologyAlteration.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\ToolsManage.cs" />
+    <Compile Include="主要服务组件\业务管理\类\UnProductTestingSingle.cs" />
+    <Compile Include="主要服务组件\业务管理\类\SalesOrderServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\ISystemLogServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\SystemLogServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\ILogisticSafeStock.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\FinancialDetailManagement.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\IFinancialDetailManagement.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\LogisticSafeStock.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ProductDeliveryInspectionServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\QualityProblemRectificationDisposal.cs" />
+    <Compile Include="主要服务组件\业务管理\类\Report.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IStorageInfo.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IMarqueeServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\MarqueeServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\StorageInfo.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\AccessoryDutyInfoManageServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\AfterServiceMakePartsBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\Cannibalize.cs" />
+    <Compile Include="主要服务组件\业务管理\类\CheckOutInDepotForOutsourcingServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\CheckReturnRepair.cs" />
+    <Compile Include="主要服务组件\业务管理\类\CommunicateReportBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\FinancingReportBasic.cs" />
+    <Compile Include="主要服务组件\功能性服务\类\BarcodePrintLibrary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="主要服务组件\业务管理\类\BargainGoodsServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\BargainInfoServer.cs" />
+    <Compile Include="主要服务组件\功能性服务\类\CalculateClass.cs" />
+    <Compile Include="主要服务组件\业务管理\类\CheckOutInDepotServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\ClientServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\DeclareWastrelType.cs" />
+    <Compile Include="主要服务组件\功能性服务\类\FieldWidthServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\FrockProvingReport.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\CBOMServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\CVTCustomerInformationServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\CVTTruckLoadingInformation.cs" />
+    <Compile Include="主要服务组件\业务管理\类\GeneratesCheckOutInDepotServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\GoodsAntirust.cs" />
+    <Compile Include="主要服务组件\业务管理\类\GoodsLeastPackAndStock.cs" />
+    <Compile Include="主要服务组件\业务管理\类\HomemadePartInDepotServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\HomemadePartInfoServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\HomemadeRejectBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\HomemadeRejectList.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IAfterServiceMakePartsBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ICannibalize.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ICheckOutInDepotForOutsourcingServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ICheckReturnRepair.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ICommunicateReportBill.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IDeclareWastrelType.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IDetailSummaryInfo.cs" />
+    <Compile Include="主要服务组件\功能性服务\接口\IFieldWidthServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IFrockIndepotBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IFrockProvingReport.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IGeneratesCheckOutInDepotServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IGoodsAntirust.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IGoodsLeastPackAndStock.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IHomemadePartInDepotServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\IHomemadePartInfoServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IHomemadeRejectBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IHomemadeRejectList.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IInvoiceServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IIsolationManageBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMarketingPlan.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialDetainBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialListRejectBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialListReturnedInTheDepot.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialRejectBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialRequisitionPurposeServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialReturnedInTheDepot.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMessMessageFeedback.cs" />
+    <Compile Include="主要服务组件\业务管理\类\DetailSummaryInfo.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMusterAffirmBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMusterUse.cs" />
+    <Compile Include="主要服务组件\业务管理\类\InvoiceServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IOrderFormAffrim.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IOrdinaryInDepotGoodsBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IProductChange.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IProductPlan.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IPurcharsingPlan.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IQuarantine.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ISafeStockServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IScrapGoodsServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IScrapBillServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ISellIn.cs" />
+    <Compile Include="主要服务组件\业务管理\类\IsolationManageBill.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IStoreageCheck.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ITechnologyChange.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IThreePacketsOfTheRepairBill.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\ITorqueConverterInfo.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MarketingPlan.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\ICVTCustomerInformationServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\ICVTTruckLoadingInformation.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialDetainBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialListRejectBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialListReturnedInTheDepot.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialRejectBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialRequisitionPurposeServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialReturnedInTheDepot.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MessMessageFeedback.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MusterAffirmBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MusterUse.cs" />
+    <Compile Include="主要服务组件\业务管理\类\OrderFormAffrim.cs" />
+    <Compile Include="主要服务组件\业务管理\类\OrdinaryInDepotGoodsBill.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\DepartmentServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\MaterialTypeData.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\MaterialTypeServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\GoodsGradeServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\IAccessoryDutyInfoManageServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IBargainGoodsServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IBargainInfoServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\IGoodsGradeServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialRequisitionGoodsServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IMaterialRequisitionServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IOrderFormGoodsServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IOrderFormInfoServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\IOrdinaryInDepotBillServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\IProductListServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialRequisitionGoods.cs" />
+    <Compile Include="主要服务组件\业务管理\类\MaterialRequisitionServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\OrderFormGoodsServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\OrderFormInfoServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\OrdinaryInDepotBillServer.cs" />
+    <Compile Include="主要服务组件\业务管理\接口\ICheckOutInDepotBillServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IClientServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IDepartmentServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IMaterialTypeServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IProviderServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\IStoreServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\接口\IUnitServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ProductChange.cs" />
+    <Compile Include="主要服务组件\业务管理\类\FrockIndepotBill.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ThreePacketsOfTheRepairBill.cs" />
+    <Compile Include="主要服务组件\基础信息二级\接口\ICBOMServer.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\ProductListServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ProductPlan.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="主要服务组件\基础信息一级\类\ProviderServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\PurcharsingPlan.cs" />
+    <Compile Include="主要服务组件\业务管理\类\PYNumber.cs" />
+    <Compile Include="主要服务组件\业务管理\类\Quarantine.cs" />
+    <Compile Include="主要服务组件\业务管理\类\SafeStockServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ScrapGoodsServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\ScrapBillServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\SellIn.cs" />
+    <Compile Include="ServerModuleFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="主要服务组件\业务管理\类\StoreageCheck.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\StoreServer.cs" />
+    <Compile Include="主要服务组件\业务管理\类\TechnologyChange.cs" />
+    <Compile Include="主要服务组件\基础信息二级\类\TorqueConverterServer.cs" />
+    <Compile Include="主要服务组件\基础信息一级\类\UnitServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseMoudule_Economic\BaseModule_Economic.csproj">
+      <Project>{18F5F88E-851A-4564-8582-FA1D36128A87}</Project>
+      <Name>BaseModule_Economic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRServerModule\Service_Peripheral_HR.csproj">
+      <Project>{84A8608A-DFCC-406D-82E0-AA988A10F424}</Project>
+      <Name>Service_Peripheral_HR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMS_ServerModule\PMS_ServerModule.csproj">
+      <Project>{9054DDFD-AFCF-4533-8E11-72BCA93E9B63}</Project>
+      <Name>PMS_ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCM_Server_Leave2\SCM_Server_Leave2.csproj">
+      <Project>{2D894A66-B14B-407B-89CF-5183A76E4FD4}</Project>
+      <Name>SCM_Server_Leave2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCS_Server_Leave1\SCM_Server_Leave1.csproj">
+      <Project>{EFA62076-F7CB-416E-8166-66987EC62518}</Project>
+      <Name>SCM_Server_Leave1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServerModule\WebServerModule.csproj">
+      <Project>{F69CC168-4A04-4CC0-93BE-A5C60417FC63}</Project>
+      <Name>WebServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkShopManagementService\Service_Manufacture_WorkShop.csproj">
+      <Project>{5019E300-6157-4322-B74F-10916FE926CD}</Project>
+      <Name>Service_Manufacture_WorkShop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

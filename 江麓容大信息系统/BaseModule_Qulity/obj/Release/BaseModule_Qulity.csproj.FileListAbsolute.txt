@@ -1,0 +1,5 @@
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Qulity\bin\Release\BaseModule_Qulity.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Qulity\bin\Release\BaseModule_Qulity.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Qulity\obj\Release\ResolveAssemblyReference.cache
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Qulity\obj\Release\BaseModule_Qulity.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Qulity\obj\Release\BaseModule_Qulity.pdb

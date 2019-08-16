@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C322413-7D0F-4C17-B2DB-827993CAC3B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Expression</RootNamespace>
+    <AssemblyName>PMS_Expression</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommResponseServer.cs" />
+    <Compile Include="CVT总成检测数据.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CVT总成检测数据.designer.cs">
+      <DependentUpon>CVT总成检测数据.cs</DependentUpon>
+    </Compile>
+    <Compile Include="下线返修扭矩防错设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="下线返修扭矩防错设置.Designer.cs">
+      <DependentUpon>下线返修扭矩防错设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表\DepotManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepotManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormCopyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCopyProduct.Designer.cs">
+      <DependentUpon>FormCopyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAccessoryChoseConfect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlAccessoryChoseConfect.Designer.cs">
+      <DependentUpon>UserControlAccessoryChoseConfect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAssembly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlAssembly.Designer.cs">
+      <DependentUpon>UserControlAssembly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBarCodeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlBarCodeManage.Designer.cs">
+      <DependentUpon>UserControlBarCodeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlBom.Designer.cs">
+      <DependentUpon>UserControlBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlBomMapping.Designer.cs">
+      <DependentUpon>UserControlBomMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlWorkbench.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlWorkbench.Designer.cs">
+      <DependentUpon>UserControlWorkbench.cs</DependentUpon>
+    </Compile>
+    <Compile Include="一次性物料清单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="一次性物料清单.Designer.cs">
+      <DependentUpon>一次性物料清单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="下线不合格品放行单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="下线不合格品放行单.Designer.cs">
+      <DependentUpon>下线不合格品放行单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="下线试验信息管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="下线试验信息管理.designer.cs">
+      <DependentUpon>下线试验信息管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="下线返修记录管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="下线返修记录管理.Designer.cs">
+      <DependentUpon>下线返修记录管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表\报表_CVT总成检测数据.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表\报表_CVT总成检测数据.designer.cs">
+      <DependentUpon>报表_CVT总成检测数据.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表\报表_阀块总成检测数据.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表\报表_阀块总成检测数据.Designer.cs">
+      <DependentUpon>报表_阀块总成检测数据.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormCopyAssemblySequence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormCopyAssemblySequence.Designer.cs">
+      <DependentUpon>FormCopyAssemblySequence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormFZC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormFZC.Designer.cs">
+      <DependentUpon>FormFZC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormProductType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormProductType.Designer.cs">
+      <DependentUpon>FormProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\Form改变临时档案分总成编号.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\Form改变临时档案分总成编号.Designer.cs">
+      <DependentUpon>Form改变临时档案分总成编号.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\Form设置气密性.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\Form设置气密性.Designer.cs">
+      <DependentUpon>Form设置气密性.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\下线返修复制产品型号.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\下线返修复制产品型号.Designer.cs">
+      <DependentUpon>下线返修复制产品型号.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\任意条码打印窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\任意条码打印窗口.Designer.cs">
+      <DependentUpon>任意条码打印窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\可替换工位信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\可替换工位信息.Designer.cs">
+      <DependentUpon>可替换工位信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\工位管辖划分.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\工位管辖划分.Designer.cs">
+      <DependentUpon>工位管辖划分.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\CVT出厂条形码打印管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\CVT出厂条形码打印管理.Designer.cs">
+      <DependentUpon>CVT出厂条形码打印管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormAfreshFitting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormAfreshFitting.Designer.cs">
+      <DependentUpon>FormAfreshFitting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormAssemblyMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormAssemblyMain.Designer.cs">
+      <DependentUpon>FormAssemblyMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormChoseConfectAccessorySpecCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormChoseConfectAccessorySpecCode.Designer.cs">
+      <DependentUpon>FormChoseConfectAccessorySpecCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormChoseConfectHeadManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormChoseConfectHeadManage.Designer.cs">
+      <DependentUpon>FormChoseConfectHeadManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormChoseDateRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormChoseDateRange.designer.cs">
+      <DependentUpon>FormChoseDateRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormCopyProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormCopyProductInfo.Designer.cs">
+      <DependentUpon>FormCopyProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormModificateElectronFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormModificateElectronFile.Designer.cs">
+      <DependentUpon>FormModificateElectronFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormPrintAssemblyBarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormPrintAssemblyBarCode.Designer.cs">
+      <DependentUpon>FormPrintAssemblyBarCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormVirtualPartInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormVirtualPartInfo.Designer.cs">
+      <DependentUpon>FormVirtualPartInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryInfoDialog.cs" />
+    <Compile Include="UserControlElectronFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlElectronFile.designer.cs">
+      <DependentUpon>UserControlElectronFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="临时电子档案.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="临时电子档案.Designer.cs">
+      <DependentUpon>临时电子档案.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\变更变速箱箱号.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\变更变速箱箱号.Designer.cs">
+      <DependentUpon>变更变速箱箱号.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\强制试验记录.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\强制试验记录.Designer.cs">
+      <DependentUpon>强制试验记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\录入电子档案返修信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\录入电子档案返修信息.Designer.cs">
+      <DependentUpon>录入电子档案返修信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\快速返修变速箱.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\快速返修变速箱.Designer.cs">
+      <DependentUpon>快速返修变速箱.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\打印CVT出厂条形码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\打印CVT出厂条形码.Designer.cs">
+      <DependentUpon>打印CVT出厂条形码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\打印分总成条形码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\打印分总成条形码.designer.cs">
+      <DependentUpon>打印分总成条形码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\打印分总成条形码_重复使用模式.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\打印分总成条形码_重复使用模式.designer.cs">
+      <DependentUpon>打印分总成条形码_重复使用模式.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\打印整台份返修箱条码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\打印整台份返修箱条码.Designer.cs">
+      <DependentUpon>打印整台份返修箱条码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\打印独立装配分总成条形码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\打印独立装配分总成条形码.Designer.cs">
+      <DependentUpon>打印独立装配分总成条形码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\批量变更变速箱箱号.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\批量变更变速箱箱号.Designer.cs">
+      <DependentUpon>批量变更变速箱箱号.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\批量移交变速箱.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\批量移交变速箱.Designer.cs">
+      <DependentUpon>批量移交变速箱.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\拷贝电子档案信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\拷贝电子档案信息.Designer.cs">
+      <DependentUpon>拷贝电子档案信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\查看变速箱交接信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\查看变速箱交接信息.Designer.cs">
+      <DependentUpon>查看变速箱交接信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\查看变速箱称重信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\查看变速箱称重信息.Designer.cs">
+      <DependentUpon>查看变速箱称重信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\查看零件装配数量.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\查看零件装配数量.Designer.cs">
+      <DependentUpon>查看零件装配数量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\电子档案全部查询简体窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\电子档案全部查询简体窗口.Designer.cs">
+      <DependentUpon>电子档案全部查询简体窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\电子档案录入.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\电子档案录入.Designer.cs">
+      <DependentUpon>电子档案录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\看板条形码打印.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\看板条形码打印.Designer.cs">
+      <DependentUpon>看板条形码打印.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\装配线系统参数配置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\装配线系统参数配置.Designer.cs">
+      <DependentUpon>装配线系统参数配置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\设置防错信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\设置防错信息.Designer.cs">
+      <DependentUpon>设置防错信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\设置阶段.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\设置阶段.Designer.cs">
+      <DependentUpon>设置阶段.cs</DependentUpon>
+    </Compile>
+    <Compile Include="点检参数设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="点检参数设置.Designer.cs">
+      <DependentUpon>点检参数设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工装与工位匹配管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工装与工位匹配管理.Designer.cs">
+      <DependentUpon>工装与工位匹配管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装配BOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装配BOM.Designer.cs">
+      <DependentUpon>装配BOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装配多批次零件管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装配多批次零件管理.Designer.cs">
+      <DependentUpon>装配多批次零件管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\转换临时电子档案.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\转换临时电子档案.Designer.cs">
+      <DependentUpon>转换临时电子档案.cs</DependentUpon>
+    </Compile>
+    <Compile Include="装配线系统配置管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="装配线系统配置管理.designer.cs">
+      <DependentUpon>装配线系统配置管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="阀块总成检测数据.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="阀块总成检测数据.Designer.cs">
+      <DependentUpon>阀块总成检测数据.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CVT总成检测数据.resx">
+      <DependentUpon>CVT总成检测数据.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCopyProduct.resx">
+      <DependentUpon>FormCopyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAccessoryChoseConfect.resx">
+      <DependentUpon>UserControlAccessoryChoseConfect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAssembly.resx">
+      <DependentUpon>UserControlAssembly.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBarCodeManage.resx">
+      <DependentUpon>UserControlBarCodeManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBom.resx">
+      <DependentUpon>UserControlBom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBomMapping.resx">
+      <DependentUpon>UserControlBomMapping.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlWorkbench.resx">
+      <DependentUpon>UserControlWorkbench.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一次性物料清单.resx">
+      <DependentUpon>一次性物料清单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="下线不合格品放行单.resx">
+      <DependentUpon>下线不合格品放行单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="下线试验信息管理.resx">
+      <DependentUpon>下线试验信息管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="下线返修扭矩防错设置.resx">
+      <DependentUpon>下线返修扭矩防错设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="下线返修记录管理.resx">
+      <DependentUpon>下线返修记录管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\CVT下线试验数据.rdlc" />
+    <EmbeddedResource Include="报表\报表_CVT总成检测数据.resx">
+      <DependentUpon>报表_CVT总成检测数据.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\报表_阀块总成检测数据.resx">
+      <DependentUpon>报表_阀块总成检测数据.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormCopyAssemblySequence.resx">
+      <DependentUpon>FormCopyAssemblySequence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormFZC.resx">
+      <DependentUpon>FormFZC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormProductType.resx">
+      <DependentUpon>FormProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\Form改变临时档案分总成编号.resx">
+      <DependentUpon>Form改变临时档案分总成编号.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\Form设置气密性.resx">
+      <DependentUpon>Form设置气密性.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\下线返修复制产品型号.resx">
+      <DependentUpon>下线返修复制产品型号.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\任意条码打印窗口.resx">
+      <DependentUpon>任意条码打印窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\可替换工位信息.resx">
+      <DependentUpon>可替换工位信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\工位管辖划分.resx">
+      <DependentUpon>工位管辖划分.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\CVT出厂条形码打印管理.resx">
+      <DependentUpon>CVT出厂条形码打印管理.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormAfreshFitting.resx">
+      <DependentUpon>FormAfreshFitting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormAssemblyMain.resx">
+      <DependentUpon>FormAssemblyMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormChoseConfectAccessorySpecCode.resx">
+      <DependentUpon>FormChoseConfectAccessorySpecCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormChoseConfectHeadManage.resx">
+      <DependentUpon>FormChoseConfectHeadManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormChoseDateRange.resx">
+      <DependentUpon>FormChoseDateRange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormCopyProductInfo.resx">
+      <DependentUpon>FormCopyProductInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormModificateElectronFile.resx">
+      <DependentUpon>FormModificateElectronFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormPrintAssemblyBarCode.resx">
+      <DependentUpon>FormPrintAssemblyBarCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormVirtualPartInfo.resx">
+      <DependentUpon>FormVirtualPartInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlElectronFile.resx">
+      <DependentUpon>UserControlElectronFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="临时电子档案.resx">
+      <DependentUpon>临时电子档案.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\变更变速箱箱号.resx">
+      <DependentUpon>变更变速箱箱号.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\强制试验记录.resx">
+      <DependentUpon>强制试验记录.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\录入电子档案返修信息.resx">
+      <DependentUpon>录入电子档案返修信息.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\快速返修变速箱.resx">
+      <DependentUpon>快速返修变速箱.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\打印CVT出厂条形码.resx">
+      <DependentUpon>打印CVT出厂条形码.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\打印分总成条形码.resx">
+      <DependentUpon>打印分总成条形码.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\打印分总成条形码_重复使用模式.resx">
+      <DependentUpon>打印分总成条形码_重复使用模式.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\打印整台份返修箱条码.resx">
+      <DependentUpon>打印整台份返修箱条码.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\打印独立装配分总成条形码.resx">
+      <DependentUpon>打印独立装配分总成条形码.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\批量变更变速箱箱号.resx">
+      <DependentUpon>批量变更变速箱箱号.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\批量移交变速箱.resx">
+      <DependentUpon>批量移交变速箱.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\拷贝电子档案信息.resx">
+      <DependentUpon>拷贝电子档案信息.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\查看变速箱交接信息.resx">
+      <DependentUpon>查看变速箱交接信息.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\查看变速箱称重信息.resx">
+      <DependentUpon>查看变速箱称重信息.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\查看零件装配数量.resx">
+      <DependentUpon>查看零件装配数量.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\电子档案全部查询简体窗口.resx">
+      <DependentUpon>电子档案全部查询简体窗口.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\电子档案录入.resx">
+      <DependentUpon>电子档案录入.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\看板条形码打印.resx">
+      <DependentUpon>看板条形码打印.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\装配线系统参数配置.resx">
+      <DependentUpon>装配线系统参数配置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\设置防错信息.resx">
+      <DependentUpon>设置防错信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\设置阶段.resx">
+      <DependentUpon>设置阶段.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="点检参数设置.resx">
+      <DependentUpon>点检参数设置.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工装与工位匹配管理.resx">
+      <DependentUpon>工装与工位匹配管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装配BOM.resx">
+      <DependentUpon>装配BOM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装配多批次零件管理.resx">
+      <DependentUpon>装配多批次零件管理.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\转换临时电子档案.resx">
+      <DependentUpon>转换临时电子档案.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="装配线系统配置管理.resx">
+      <DependentUpon>装配线系统配置管理.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\阀块总成检测数据.rdlc" />
+    <EmbeddedResource Include="阀块总成检测数据.resx">
+      <DependentUpon>阀块总成检测数据.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AsynSocketService\AsynSocketService.csproj">
+      <Project>{559238B9-03E8-43B9-A550-69350500A35B}</Project>
+      <Name>AsynSocketService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModuleForm\CommonBusinessModule.csproj">
+      <Project>{8202D612-FB07-4BE6-82B5-F0FA50C16CCA}</Project>
+      <Name>CommonBusinessModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRExpression\Form_Peripheral_HR.csproj">
+      <Project>{D7B10F60-8067-4FAC-B746-7EA83CE138E9}</Project>
+      <Name>Form_Peripheral_HR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRServerModule\Service_Peripheral_HR.csproj">
+      <Project>{84A8608A-DFCC-406D-82E0-AA988A10F424}</Project>
+      <Name>Service_Peripheral_HR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMS_ServerModule\PMS_ServerModule.csproj">
+      <Project>{9054DDFD-AFCF-4533-8E11-72BCA93E9B63}</Project>
+      <Name>PMS_ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCM_Server_Leave2\SCM_Server_Leave2.csproj">
+      <Project>{2D894A66-B14B-407B-89CF-5183A76E4FD4}</Project>
+      <Name>SCM_Server_Leave2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCS_Server_Leave1\SCM_Server_Leave1.csproj">
+      <Project>{EFA62076-F7CB-416E-8166-66987EC62518}</Project>
+      <Name>SCM_Server_Leave1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerRequestProcessorModule\ServerRequestProcessorModule.csproj">
+      <Project>{B624F378-05A8-4F35-9E5B-3FEDB2712CAB}</Project>
+      <Name>ServerRequestProcessorModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketCommDefiniens\SocketCommDefiniens.csproj">
+      <Project>{4D95D033-1D96-439A-BB62-91783CB7702C}</Project>
+      <Name>SocketCommDefiniens</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversalControlLibrary\UniversalControlLibrary.csproj">
+      <Project>{BF9E5E1F-BEDD-4F52-95E2-EF8F329F10A5}</Project>
+      <Name>UniversalControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\数据库组件\DBOperate\DBOperate.csproj">
+      <Project>{E6B31D5C-3564-41F5-8443-6B2906FCAD1C}</Project>
+      <Name>DBOperate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\回退.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\前进.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\审核6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Set2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="报表\DepotManagementDataSet.xsc">
+      <DependentUpon>DepotManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="报表\DepotManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DepotManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="报表\DepotManagementDataSet.xss">
+      <DependentUpon>DepotManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

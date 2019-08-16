@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A95F9CD4-6C79-47CF-A63A-69AC67F61A96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_Manufacture_WorkShop</RootNamespace>
+    <AssemblyName>Form_Manufacture_WorkShop</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>"%24/ERP 信息化系统/江麓容大信息系统", KRAAAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间在产.resx">
+      <DependentUpon>车间在产.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间异常信息记录表.resx">
+      <DependentUpon>车间异常信息记录表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间批次管理变更.resx">
+      <DependentUpon>车间批次管理变更.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间流水账.resx">
+      <DependentUpon>车间流水账.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间基础信息.resx">
+      <DependentUpon>车间基础信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间库存.resx">
+      <DependentUpon>车间库存.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间物料转换单.resx">
+      <DependentUpon>车间物料转换单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间箱号查询.resx">
+      <DependentUpon>车间箱号查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间耗用单.resx">
+      <DependentUpon>车间耗用单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面\车间调运单.resx">
+      <DependentUpon>车间调运单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\批量修改.resx">
+      <DependentUpon>批量修改.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\生成盘点辅助表.resx">
+      <DependentUpon>生成盘点辅助表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\车间异常明细信息处理.resx">
+      <DependentUpon>车间异常明细信息处理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\车间批次管理变更明细.resx">
+      <DependentUpon>车间批次管理变更明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\车间物料转换单明细.resx">
+      <DependentUpon>车间物料转换单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\车间耗用单明细.resx">
+      <DependentUpon>车间耗用单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\车间调运单明细.resx">
+      <DependentUpon>车间调运单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="子界面\选择年月.resx">
+      <DependentUpon>选择年月.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="主界面\车间在产.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间在产.Designer.cs">
+      <DependentUpon>车间在产.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间异常信息记录表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间异常信息记录表.Designer.cs">
+      <DependentUpon>车间异常信息记录表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间批次管理变更.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间批次管理变更.Designer.cs">
+      <DependentUpon>车间批次管理变更.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间流水账.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间流水账.Designer.cs">
+      <DependentUpon>车间流水账.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间库存.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间库存.Designer.cs">
+      <DependentUpon>车间库存.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间基础信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间基础信息.Designer.cs">
+      <DependentUpon>车间基础信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间物料转换单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间物料转换单.Designer.cs">
+      <DependentUpon>车间物料转换单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间箱号查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间箱号查询.Designer.cs">
+      <DependentUpon>车间箱号查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间耗用单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间耗用单.Designer.cs">
+      <DependentUpon>车间耗用单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面\车间调运单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面\车间调运单.Designer.cs">
+      <DependentUpon>车间调运单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\批量修改.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\批量修改.Designer.cs">
+      <DependentUpon>批量修改.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\生成盘点辅助表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\生成盘点辅助表.Designer.cs">
+      <DependentUpon>生成盘点辅助表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\车间异常明细信息处理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\车间异常明细信息处理.Designer.cs">
+      <DependentUpon>车间异常明细信息处理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\车间批次管理变更明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\车间批次管理变更明细.Designer.cs">
+      <DependentUpon>车间批次管理变更明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\车间物料转换单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\车间物料转换单明细.Designer.cs">
+      <DependentUpon>车间物料转换单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\车间耗用单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\车间耗用单明细.Designer.cs">
+      <DependentUpon>车间耗用单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\车间调运单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\车间调运单明细.Designer.cs">
+      <DependentUpon>车间调运单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="子界面\选择年月.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子界面\选择年月.Designer.cs">
+      <DependentUpon>选择年月.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowControlService\FlowControlService.csproj">
+      <Project>{FDBAE102-0D3A-4EC4-BE0C-A5D43C1B8DC8}</Project>
+      <Name>FlowControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMS_ServerModule\PMS_ServerModule.csproj">
+      <Project>{9054DDFD-AFCF-4533-8E11-72BCA93E9B63}</Project>
+      <Name>PMS_ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCS_Server_Leave1\SCM_Server_Leave1.csproj">
+      <Project>{EFA62076-F7CB-416E-8166-66987EC62518}</Project>
+      <Name>SCM_Server_Leave1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversalControlLibrary\UniversalControlLibrary.csproj">
+      <Project>{BF9E5E1F-BEDD-4F52-95E2-EF8F329F10A5}</Project>
+      <Name>UniversalControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkShopManagementService\Service_Manufacture_WorkShop.csproj">
+      <Project>{5019E300-6157-4322-B74F-10916FE926CD}</Project>
+      <Name>Service_Manufacture_WorkShop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\数据库组件\DBOperate\DBOperate.csproj">
+      <Project>{E6B31D5C-3564-41F5-8443-6B2906FCAD1C}</Project>
+      <Name>DBOperate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

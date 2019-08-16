@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="RundarWebServer" Class="WebSiteDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.6,1433;Initial Catalog=RundarWebServer;Persist Security Info=True;User ID=RundarWebUser" SettingsObjectName="WebServerModule2.Properties.Settings" SettingsPropertyName="RundarWebServerConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OF_BillID_Status" Member="OF_BillID_Status">
+    <Type Name="OF_BillID_Status">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Bill_ID" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="UseStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OF_BugCode" Member="OF_BugCode">
+    <Type Name="OF_BugCode">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BugName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OF_CarBugStatus" Member="OF_CarBugStatus">
+    <Type Name="OF_CarBugStatus">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BugCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BugName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OF_NewsFile" Member="OF_NewsFile">
+    <Type Name="OF_NewsFile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sender" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="contents" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="fileNames" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="filePath" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="receiver" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="newsType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_Commtion" Member="S_Commtion">
+    <Type Name="S_Commtion">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarl" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_MessageSource" Member="S_MessageSource">
+    <Type Name="S_MessageSource">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_ServiceFileDown" Member="S_ServiceFileDown">
+    <Type Name="S_ServiceFileDown">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FileNames" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FileAddress" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OF_BugMessageInfo" Member="OF_BugMessageInfo">
+    <Type Name="OF_BugMessageInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BugCode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CarMainBug" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CarSecendBug" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Frequency" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Condition" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BugDeclare" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CVTOilDetection" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PressureSensor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ActiveSensor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PassivitySensor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShiftKnob" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="OverLinkStatus" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="OilSump" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PKey" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="RKey" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NKey" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DKey" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SKey" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_ReplaceAccessory" Member="S_ReplaceAccessory">
+    <Type Name="S_ReplaceAccessory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OldGoodsName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OldGoodsCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OldSpec" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OldGoodsID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OldCvtID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GiveOutDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NewGoodsName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewGoodsCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewSpec" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewGoodsID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewCvtID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_ServiceFeedBack" Member="S_ServiceFeedBack">
+    <Type Name="S_ServiceFeedBack">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Bill_ID" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MessageSource" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CarModel" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CVTCode" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CVTID" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ChassisNum" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TCUCode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewSoftware" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BugCode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CVTCondition" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Linkman" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LinkTel" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BugNumber" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BatchNumber" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BuyCarTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RunMileage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProcessMode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiagnoseSituation" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Solution" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="IsBack" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="YXChargeSuggestion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ZGChargeSuggestion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DutyDept" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReplyTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AppearCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DutyDeptCharge" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DutyPerson" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FinishClaim" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StockSuggestion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Temporary" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Analyse" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="foreverImplement" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsFMEAfile" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="IsOpen" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ZGCheckName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsClose" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Practicable" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="YXSignature" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YXSignatureDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Signature" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SignatureDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DutyDeptChargeDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DutyPersonDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ZGCheckDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_AfterService" Member="S_AfterService">
+    <Type Name="S_AfterService">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSource" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ServerType" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AcceptTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LinkTel" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserTel" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CarModel" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CVTCode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CVTID" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChassisNum" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BugAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BuyCarTime" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="RunMileage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UseProperty" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserAttitude" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BugDescribe" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ServiceIdea" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HelpMoney" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessMode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DiagnoseSituation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocaleProcess" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Solution" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessResult" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CheckName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CheckTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RepairQuality" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ServiceAttitude" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsCharge" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="CVTStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="FailureResults" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ReturnName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReturnTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FKBillID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WB" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoticeDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StrategyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ApplicantDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Applicant" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TCUCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewSoftware" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsThreeGuarantees" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewSanB" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsServiceStock" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsCVTBug" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

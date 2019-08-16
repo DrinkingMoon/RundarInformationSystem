@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DepotManagementDataSet" targetNamespace="http://tempuri.org/DepotManagementDataSet.xsd" xmlns:mstns="http://tempuri.org/DepotManagementDataSet.xsd" xmlns="http://tempuri.org/DepotManagementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DepotManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DepotManagementConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Expression.Properties.Settings.GlobalReference.Default.DepotManagementConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ZPX_ValveTestDataItemsTableAdapter" GeneratorDataComponentClassName="View_ZPX_ValveTestDataItemsTableAdapter" Name="View_ZPX_ValveTestDataItems" UserDataComponentName="View_ZPX_ValveTestDataItemsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString (Settings)" DbObjectName="DepotManagement.dbo.View_ZPX_ValveTestDataItems" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 序号, 阀块总成编号, 试验结果, 实验员, 备注, 日期, 试验项目, 数据名称, 试验结果A, 试验结果B, 项目说明 FROM dbo.View_ZPX_ValveTestDataItems</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="序号" DataSetColumn="序号" />
+              <Mapping SourceColumn="阀块总成编号" DataSetColumn="阀块总成编号" />
+              <Mapping SourceColumn="试验结果" DataSetColumn="试验结果" />
+              <Mapping SourceColumn="实验员" DataSetColumn="实验员" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="日期" DataSetColumn="日期" />
+              <Mapping SourceColumn="试验项目" DataSetColumn="试验项目" />
+              <Mapping SourceColumn="数据名称" DataSetColumn="数据名称" />
+              <Mapping SourceColumn="试验结果A" DataSetColumn="试验结果A" />
+              <Mapping SourceColumn="试验结果B" DataSetColumn="试验结果B" />
+              <Mapping SourceColumn="项目说明" DataSetColumn="项目说明" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ZPX_CVTTestDataItemsTableAdapter" GeneratorDataComponentClassName="View_ZPX_CVTTestDataItemsTableAdapter" Name="View_ZPX_CVTTestDataItems" UserDataComponentName="View_ZPX_CVTTestDataItemsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString (Settings)" DbObjectName="DepotManagement.dbo.View_ZPX_CVTTestDataItems" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 序号, 产品型号, 产品编号, 试验设备, 试验油, 结论, 试验员, 预装员, 备注, 试验日期, 检验项目, 试验项目, 试验条件, 要求, 检测数据, 判定 FROM dbo.View_ZPX_CVTTestDataItems</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="序号" DataSetColumn="序号" />
+              <Mapping SourceColumn="产品型号" DataSetColumn="产品型号" />
+              <Mapping SourceColumn="产品编号" DataSetColumn="产品编号" />
+              <Mapping SourceColumn="试验设备" DataSetColumn="试验设备" />
+              <Mapping SourceColumn="试验油" DataSetColumn="试验油" />
+              <Mapping SourceColumn="结论" DataSetColumn="结论" />
+              <Mapping SourceColumn="试验员" DataSetColumn="试验员" />
+              <Mapping SourceColumn="预装员" DataSetColumn="预装员" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="试验日期" DataSetColumn="试验日期" />
+              <Mapping SourceColumn="检验项目" DataSetColumn="检验项目" />
+              <Mapping SourceColumn="试验项目" DataSetColumn="试验项目" />
+              <Mapping SourceColumn="试验条件" DataSetColumn="试验条件" />
+              <Mapping SourceColumn="要求" DataSetColumn="要求" />
+              <Mapping SourceColumn="检测数据" DataSetColumn="检测数据" />
+              <Mapping SourceColumn="判定" DataSetColumn="判定" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DepotManagementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DepotManagementDataSet" msprop:Generator_DataSetName="DepotManagementDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_ZPX_ValveTestDataItems" msprop:Generator_UserTableName="View_ZPX_ValveTestDataItems" msprop:Generator_RowDeletedName="View_ZPX_ValveTestDataItemsRowDeleted" msprop:Generator_RowChangedName="View_ZPX_ValveTestDataItemsRowChanged" msprop:Generator_RowClassName="View_ZPX_ValveTestDataItemsRow" msprop:Generator_RowChangingName="View_ZPX_ValveTestDataItemsRowChanging" msprop:Generator_RowEvArgName="View_ZPX_ValveTestDataItemsRowChangeEvent" msprop:Generator_RowEvHandlerName="View_ZPX_ValveTestDataItemsRowChangeEventHandler" msprop:Generator_TableClassName="View_ZPX_ValveTestDataItemsDataTable" msprop:Generator_TableVarName="tableView_ZPX_ValveTestDataItems" msprop:Generator_RowDeletingName="View_ZPX_ValveTestDataItemsRowDeleting" msprop:Generator_TablePropName="View_ZPX_ValveTestDataItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="序号" msprop:Generator_UserColumnName="序号" msprop:Generator_ColumnVarNameInTable="column序号" msprop:Generator_ColumnPropNameInRow="序号" msprop:Generator_ColumnPropNameInTable="序号Column" type="xs:long" />
+              <xs:element name="阀块总成编号" msprop:Generator_UserColumnName="阀块总成编号" msprop:Generator_ColumnVarNameInTable="column阀块总成编号" msprop:Generator_ColumnPropNameInRow="阀块总成编号" msprop:Generator_ColumnPropNameInTable="阀块总成编号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验结果" msprop:Generator_UserColumnName="试验结果" msprop:Generator_ColumnVarNameInTable="column试验结果" msprop:Generator_ColumnPropNameInRow="试验结果" msprop:Generator_ColumnPropNameInTable="试验结果Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="实验员" msprop:Generator_UserColumnName="实验员" msprop:Generator_ColumnVarNameInTable="column实验员" msprop:Generator_ColumnPropNameInRow="实验员" msprop:Generator_ColumnPropNameInTable="实验员Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="日期" msprop:Generator_UserColumnName="日期" msprop:Generator_ColumnVarNameInTable="column日期" msprop:Generator_ColumnPropNameInRow="日期" msprop:Generator_ColumnPropNameInTable="日期Column" type="xs:dateTime" />
+              <xs:element name="试验项目" msprop:Generator_UserColumnName="试验项目" msprop:Generator_ColumnVarNameInTable="column试验项目" msprop:Generator_ColumnPropNameInRow="试验项目" msprop:Generator_ColumnPropNameInTable="试验项目Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="数据名称" msprop:Generator_UserColumnName="数据名称" msprop:Generator_ColumnVarNameInTable="column数据名称" msprop:Generator_ColumnPropNameInRow="数据名称" msprop:Generator_ColumnPropNameInTable="数据名称Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验结果A" msprop:Generator_UserColumnName="试验结果A" msprop:Generator_ColumnVarNameInTable="column试验结果A" msprop:Generator_ColumnPropNameInRow="试验结果A" msprop:Generator_ColumnPropNameInTable="试验结果AColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验结果B" msprop:Generator_UserColumnName="试验结果B" msprop:Generator_ColumnVarNameInTable="column试验结果B" msprop:Generator_ColumnPropNameInRow="试验结果B" msprop:Generator_ColumnPropNameInTable="试验结果BColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="项目说明" msprop:Generator_UserColumnName="项目说明" msprop:Generator_ColumnPropNameInRow="项目说明" msprop:Generator_ColumnVarNameInTable="column项目说明" msprop:Generator_ColumnPropNameInTable="项目说明Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_ZPX_CVTTestDataItems" msprop:Generator_UserTableName="View_ZPX_CVTTestDataItems" msprop:Generator_RowDeletedName="View_ZPX_CVTTestDataItemsRowDeleted" msprop:Generator_RowChangedName="View_ZPX_CVTTestDataItemsRowChanged" msprop:Generator_RowClassName="View_ZPX_CVTTestDataItemsRow" msprop:Generator_RowChangingName="View_ZPX_CVTTestDataItemsRowChanging" msprop:Generator_RowEvArgName="View_ZPX_CVTTestDataItemsRowChangeEvent" msprop:Generator_RowEvHandlerName="View_ZPX_CVTTestDataItemsRowChangeEventHandler" msprop:Generator_TableClassName="View_ZPX_CVTTestDataItemsDataTable" msprop:Generator_TableVarName="tableView_ZPX_CVTTestDataItems" msprop:Generator_RowDeletingName="View_ZPX_CVTTestDataItemsRowDeleting" msprop:Generator_TablePropName="View_ZPX_CVTTestDataItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="序号" msprop:Generator_UserColumnName="序号" msprop:Generator_ColumnVarNameInTable="column序号" msprop:Generator_ColumnPropNameInRow="序号" msprop:Generator_ColumnPropNameInTable="序号Column" type="xs:long" />
+              <xs:element name="产品型号" msprop:Generator_UserColumnName="产品型号" msprop:Generator_ColumnVarNameInTable="column产品型号" msprop:Generator_ColumnPropNameInRow="产品型号" msprop:Generator_ColumnPropNameInTable="产品型号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="产品编号" msprop:Generator_UserColumnName="产品编号" msprop:Generator_ColumnVarNameInTable="column产品编号" msprop:Generator_ColumnPropNameInRow="产品编号" msprop:Generator_ColumnPropNameInTable="产品编号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验设备" msprop:Generator_UserColumnName="试验设备" msprop:Generator_ColumnVarNameInTable="column试验设备" msprop:Generator_ColumnPropNameInRow="试验设备" msprop:Generator_ColumnPropNameInTable="试验设备Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验油" msprop:Generator_UserColumnName="试验油" msprop:Generator_ColumnVarNameInTable="column试验油" msprop:Generator_ColumnPropNameInRow="试验油" msprop:Generator_ColumnPropNameInTable="试验油Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="结论" msprop:Generator_UserColumnName="结论" msprop:Generator_ColumnVarNameInTable="column结论" msprop:Generator_ColumnPropNameInRow="结论" msprop:Generator_ColumnPropNameInTable="结论Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验员" msprop:Generator_UserColumnName="试验员" msprop:Generator_ColumnVarNameInTable="column试验员" msprop:Generator_ColumnPropNameInRow="试验员" msprop:Generator_ColumnPropNameInTable="试验员Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="预装员" msprop:Generator_UserColumnName="预装员" msprop:Generator_ColumnVarNameInTable="column预装员" msprop:Generator_ColumnPropNameInRow="预装员" msprop:Generator_ColumnPropNameInTable="预装员Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验日期" msdata:ReadOnly="true" msprop:Generator_UserColumnName="试验日期" msprop:Generator_ColumnVarNameInTable="column试验日期" msprop:Generator_ColumnPropNameInRow="试验日期" msprop:Generator_ColumnPropNameInTable="试验日期Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="检验项目" msprop:Generator_UserColumnName="检验项目" msprop:Generator_ColumnVarNameInTable="column检验项目" msprop:Generator_ColumnPropNameInRow="检验项目" msprop:Generator_ColumnPropNameInTable="检验项目Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验项目" msprop:Generator_UserColumnName="试验项目" msprop:Generator_ColumnVarNameInTable="column试验项目" msprop:Generator_ColumnPropNameInRow="试验项目" msprop:Generator_ColumnPropNameInTable="试验项目Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="试验条件" msprop:Generator_UserColumnName="试验条件" msprop:Generator_ColumnVarNameInTable="column试验条件" msprop:Generator_ColumnPropNameInRow="试验条件" msprop:Generator_ColumnPropNameInTable="试验条件Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="要求" msprop:Generator_UserColumnName="要求" msprop:Generator_ColumnVarNameInTable="column要求" msprop:Generator_ColumnPropNameInRow="要求" msprop:Generator_ColumnPropNameInTable="要求Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="检测数据" msprop:Generator_UserColumnName="检测数据" msprop:Generator_ColumnVarNameInTable="column检测数据" msprop:Generator_ColumnPropNameInRow="检测数据" msprop:Generator_ColumnPropNameInTable="检测数据Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="判定" msprop:Generator_UserColumnName="判定" msprop:Generator_ColumnVarNameInTable="column判定" msprop:Generator_ColumnPropNameInRow="判定" msprop:Generator_ColumnPropNameInTable="判定Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ZPX_ValveTestDataItems" />
+      <xs:field xpath="mstns:序号" />
+    </xs:unique>
+    <xs:unique name="View_ZPX_CVTTestDataItems_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ZPX_CVTTestDataItems" />
+      <xs:field xpath="mstns:序号" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

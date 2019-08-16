@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21085E17-E388-486C-B1AC-A4AC49B35576}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_Economic_Purchase</RootNamespace>
+    <AssemblyName>Form_Economic_Purchase</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="价格清单.resx">
+      <DependentUpon>价格清单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="供应商与零件归属变更单.resx">
+      <DependentUpon>供应商与零件归属变更单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="供应商与零件归属变更单明细.resx">
+      <DependentUpon>供应商与零件归属变更单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="供应商应付账款.resx">
+      <DependentUpon>供应商应付账款.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="供应商挂账表.resx">
+      <DependentUpon>供应商挂账表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="供应商挂账表明细.resx">
+      <DependentUpon>供应商挂账表明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="供应商淘汰评审表.resx">
+      <DependentUpon>供应商淘汰评审表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="发票信息编辑窗体.resx">
+      <DependentUpon>发票信息编辑窗体.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="供应商应付账款明细.resx">
+      <DependentUpon>供应商应付账款明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\报表_采购结算单%28发供应商%29.rdlc" />
+    <EmbeddedResource Include="报表\报表_采购结算单.rdlc" />
+    <EmbeddedResource Include="报表\报表_采购结算单.resx">
+      <DependentUpon>报表_采购结算单.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\报表_采购结算单_委外%28发供应商%29.rdlc" />
+    <EmbeddedResource Include="报表\报表_采购结算单_委外.rdlc" />
+    <EmbeddedResource Include="采购结算_选择入库单.resx">
+      <DependentUpon>采购结算_选择入库单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="采购结算单.resx">
+      <DependentUpon>采购结算单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="采购结算单明细.resx">
+      <DependentUpon>采购结算单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SettlementDataSet.xsc">
+      <DependentUpon>SettlementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SettlementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SettlementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SettlementDataSet.xss">
+      <DependentUpon>SettlementDataSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SettlementDataSet.Designer.cs">
+      <DependentUpon>SettlementDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="价格清单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="价格清单.Designer.cs">
+      <DependentUpon>价格清单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="供应商与零件归属变更单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商与零件归属变更单.Designer.cs">
+      <DependentUpon>供应商与零件归属变更单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="供应商与零件归属变更单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商与零件归属变更单明细.Designer.cs">
+      <DependentUpon>供应商与零件归属变更单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="供应商挂账表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商挂账表.Designer.cs">
+      <DependentUpon>供应商挂账表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="供应商挂账表明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商挂账表明细.Designer.cs">
+      <DependentUpon>供应商挂账表明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="供应商淘汰评审表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商淘汰评审表.Designer.cs">
+      <DependentUpon>供应商淘汰评审表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="发票信息编辑窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="发票信息编辑窗体.Designer.cs">
+      <DependentUpon>发票信息编辑窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="供应商应付账款.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商应付账款.Designer.cs">
+      <DependentUpon>供应商应付账款.cs</DependentUpon>
+    </Compile>
+    <Compile Include="供应商应付账款明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商应付账款明细.Designer.cs">
+      <DependentUpon>供应商应付账款明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表\报表_采购结算单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表\报表_采购结算单.Designer.cs">
+      <DependentUpon>报表_采购结算单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="采购结算_选择入库单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="采购结算_选择入库单.Designer.cs">
+      <DependentUpon>采购结算_选择入库单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="采购结算单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="采购结算单.Designer.cs">
+      <DependentUpon>采购结算单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="采购结算单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="采购结算单明细.Designer.cs">
+      <DependentUpon>采购结算单明细.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseMoudule_Economic\BaseModule_Economic.csproj">
+      <Project>{18F5F88E-851A-4564-8582-FA1D36128A87}</Project>
+      <Name>BaseModule_Economic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowControlService\FlowControlService.csproj">
+      <Project>{FDBAE102-0D3A-4EC4-BE0C-A5D43C1B8DC8}</Project>
+      <Name>FlowControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurchasingManagementService\Service_Economic_Purchase.csproj">
+      <Project>{53A24EFF-6053-49E5-B05F-7CA3FB483F7F}</Project>
+      <Name>Service_Economic_Purchase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCM_Server_Leave2\SCM_Server_Leave2.csproj">
+      <Project>{2D894A66-B14B-407B-89CF-5183A76E4FD4}</Project>
+      <Name>SCM_Server_Leave2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCS_Server_Leave1\SCM_Server_Leave1.csproj">
+      <Project>{EFA62076-F7CB-416E-8166-66987EC62518}</Project>
+      <Name>SCM_Server_Leave1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversalControlLibrary\UniversalControlLibrary.csproj">
+      <Project>{BF9E5E1F-BEDD-4F52-95E2-EF8F329F10A5}</Project>
+      <Name>UniversalControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\数据库组件\DBOperate\DBOperate.csproj">
+      <Project>{E6B31D5C-3564-41F5-8443-6B2906FCAD1C}</Project>
+      <Name>DBOperate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6604ba8a24fdcdf78db0b4e338b297ee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a9785ffe07f524dcc59e61ea337241f8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\begin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greentick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hold.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keybackimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainbackimage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessageBackImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReadMe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+    <None Include="Resources\wait.ani" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\订单.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\高级检索.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\合同.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\回退.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\前进.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\确定亮.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\容大水晶图标.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\审核.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\审核.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\审核6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\提交.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

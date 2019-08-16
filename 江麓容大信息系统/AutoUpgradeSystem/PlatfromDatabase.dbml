@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="PlatformService" Class="PlatfromDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=XINXI-SERVER;Initial Catalog=PlatformService;Persist Security Info=True;User ID=InfoSysUser" SettingsObjectName="AutoUpgradeSystem.Properties.Settings" SettingsPropertyName="PlatformServiceConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Sys_AutoUpgrade" Member="Sys_AutoUpgrade">
+    <Type Name="Sys_AutoUpgrade">
+      <Column Name="序号" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="软件系统名称" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="版本号" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="文件名称" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="文件内容" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="文件大小" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="日期" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

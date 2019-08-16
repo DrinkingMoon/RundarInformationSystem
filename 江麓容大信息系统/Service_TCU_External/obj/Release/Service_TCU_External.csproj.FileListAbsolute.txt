@@ -1,0 +1,5 @@
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\Service_TCU_External\bin\Release\Service_TCU_External.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\Service_TCU_External\bin\Release\Service_TCU_External.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\Service_TCU_External\obj\Release\ResolveAssemblyReference.cache
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\Service_TCU_External\obj\Release\Service_TCU_External.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\Service_TCU_External\obj\Release\Service_TCU_External.pdb

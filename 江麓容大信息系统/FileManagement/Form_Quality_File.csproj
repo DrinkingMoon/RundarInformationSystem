@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{201D1D1F-C795-40C3-8F64-CAE09CD512AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_Quality_File</RootNamespace>
+    <AssemblyName>Form_Quality_File</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\主界面\体系文件结构.resx">
+      <DependentUpon>体系文件结构.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\主界面\文件修订废止申请单.resx">
+      <DependentUpon>文件修订废止申请单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\主界面\文件发布流程.resx">
+      <DependentUpon>文件发布流程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\主界面\文件发放回收登记表.resx">
+      <DependentUpon>文件发放回收登记表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\主界面\文件审查流程.resx">
+      <DependentUpon>文件审查流程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\主界面\文件类别.resx">
+      <DependentUpon>文件类别.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\主界面\文件销毁记录表.resx">
+      <DependentUpon>文件销毁记录表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\子界面\操作方式.resx">
+      <DependentUpon>操作方式.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\子界面\文件修订废止申请单明细.resx">
+      <DependentUpon>文件修订废止申请单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\子界面\文件发布流程明细.resx">
+      <DependentUpon>文件发布流程明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\子界面\文件审查流程明细.resx">
+      <DependentUpon>文件审查流程明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="体系文件\子界面\文件显示窗体.resx">
+      <DependentUpon>文件显示窗体.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\主界面\制度修订废弃申请流程.resx">
+      <DependentUpon>制度修订废弃申请流程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\主界面\制度发布流程.resx">
+      <DependentUpon>制度发布流程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\主界面\制度审查流程.resx">
+      <DependentUpon>制度审查流程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\主界面\制度文件结构.resx">
+      <DependentUpon>制度文件结构.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\主界面\制度类别.resx">
+      <DependentUpon>制度类别.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\主界面\制度销毁申请流程.resx">
+      <DependentUpon>制度销毁申请流程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\子界面\制度发布流程明细.resx">
+      <DependentUpon>制度发布流程明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\子界面\制度审查流程明细.resx">
+      <DependentUpon>制度审查流程明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\子界面\制度修订废弃申请流程明细.resx">
+      <DependentUpon>制度修订废弃申请流程明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="制度文件\子界面\制度销毁申请流程明细.resx">
+      <DependentUpon>制度销毁申请流程明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="体系文件\主界面\体系文件结构.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\主界面\体系文件结构.Designer.cs">
+      <DependentUpon>体系文件结构.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件修订废止申请单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件修订废止申请单.Designer.cs">
+      <DependentUpon>文件修订废止申请单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件发布流程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件发布流程.Designer.cs">
+      <DependentUpon>文件发布流程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件发放回收登记表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件发放回收登记表.Designer.cs">
+      <DependentUpon>文件发放回收登记表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件审查流程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件审查流程.Designer.cs">
+      <DependentUpon>文件审查流程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件类别.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件类别.Designer.cs">
+      <DependentUpon>文件类别.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件销毁记录表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\主界面\文件销毁记录表.Designer.cs">
+      <DependentUpon>文件销毁记录表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\子界面\操作方式.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\子界面\操作方式.Designer.cs">
+      <DependentUpon>操作方式.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件修订废止申请单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件修订废止申请单明细.Designer.cs">
+      <DependentUpon>文件修订废止申请单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件发布流程明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件发布流程明细.Designer.cs">
+      <DependentUpon>文件发布流程明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件审查流程明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件审查流程明细.Designer.cs">
+      <DependentUpon>文件审查流程明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件显示窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="体系文件\子界面\文件显示窗体.Designer.cs">
+      <DependentUpon>文件显示窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度修订废弃申请流程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度修订废弃申请流程.Designer.cs">
+      <DependentUpon>制度修订废弃申请流程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度发布流程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度发布流程.Designer.cs">
+      <DependentUpon>制度发布流程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度审查流程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度审查流程.Designer.cs">
+      <DependentUpon>制度审查流程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度文件结构.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度文件结构.Designer.cs">
+      <DependentUpon>制度文件结构.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度类别.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度类别.Designer.cs">
+      <DependentUpon>制度类别.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度销毁申请流程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\主界面\制度销毁申请流程.Designer.cs">
+      <DependentUpon>制度销毁申请流程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度发布流程明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度发布流程明细.Designer.cs">
+      <DependentUpon>制度发布流程明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度审查流程明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度审查流程明细.Designer.cs">
+      <DependentUpon>制度审查流程明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度修订废弃申请流程明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度修订废弃申请流程明细.Designer.cs">
+      <DependentUpon>制度修订废弃申请流程明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度销毁申请流程明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="制度文件\子界面\制度销毁申请流程明细.Designer.cs">
+      <DependentUpon>制度销毁申请流程明细.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileManagementService\Service_Quality_File.csproj">
+      <Project>{121AADE5-8197-42CD-8A7E-766AC72E95B7}</Project>
+      <Name>Service_Quality_File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowControlService\FlowControlService.csproj">
+      <Project>{FDBAE102-0D3A-4EC4-BE0C-A5D43C1B8DC8}</Project>
+      <Name>FlowControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCS_Server_Leave1\SCM_Server_Leave1.csproj">
+      <Project>{EFA62076-F7CB-416E-8166-66987EC62518}</Project>
+      <Name>SCM_Server_Leave1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversalControlLibrary\UniversalControlLibrary.csproj">
+      <Project>{BF9E5E1F-BEDD-4F52-95E2-EF8F329F10A5}</Project>
+      <Name>UniversalControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\数据库组件\DBOperate\DBOperate.csproj">
+      <Project>{E6B31D5C-3564-41F5-8443-6B2906FCAD1C}</Project>
+      <Name>DBOperate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6604ba8a24fdcdf78db0b4e338b297ee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a9785ffe07f524dcc59e61ea337241f8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8990b294ec15dd372b744619cfd3cab4.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

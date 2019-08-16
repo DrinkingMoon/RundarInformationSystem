@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73B4A12C-F15F-40D1-8B6F-F3531B743B7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_Project_Design</RootNamespace>
+    <AssemblyName>Form_Project_Design</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOM变更单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM变更单明细.Designer.cs">
+      <DependentUpon>BOM变更单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BOM变更单明细.resx">
+      <DependentUpon>BOM变更单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM变更单.resx">
+      <DependentUpon>BOM变更单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCU_车型信息.resx">
+      <DependentUpon>TCU_车型信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCU软件升级.resx">
+      <DependentUpon>TCU软件升级.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCU软件升级明细.resx">
+      <DependentUpon>TCU软件升级明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="物料录入申请单.resx">
+      <DependentUpon>物料录入申请单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="物料录入申请单明细.resx">
+      <DependentUpon>物料录入申请单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCU_车型与TCU软件信息.resx">
+      <DependentUpon>TCU_车型与TCU软件信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="BOM变更单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM变更单.Designer.cs">
+      <DependentUpon>BOM变更单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCU_车型信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCU_车型信息.Designer.cs">
+      <DependentUpon>TCU_车型信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCU软件升级.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCU软件升级.Designer.cs">
+      <DependentUpon>TCU软件升级.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCU软件升级明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCU软件升级明细.Designer.cs">
+      <DependentUpon>TCU软件升级明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="物料录入申请单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="物料录入申请单.Designer.cs">
+      <DependentUpon>物料录入申请单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="物料录入申请单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="物料录入申请单明细.Designer.cs">
+      <DependentUpon>物料录入申请单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCU_车型与TCU软件信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCU_车型与TCU软件信息.Designer.cs">
+      <DependentUpon>TCU_车型与TCU软件信息.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicDataService\Service_Project_Design.csproj">
+      <Project>{42152C2B-C954-4CED-9135-1674F4B72831}</Project>
+      <Name>Service_Project_Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowControlService\FlowControlService.csproj">
+      <Project>{FDBAE102-0D3A-4EC4-BE0C-A5D43C1B8DC8}</Project>
+      <Name>FlowControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversalControlLibrary\UniversalControlLibrary.csproj">
+      <Project>{BF9E5E1F-BEDD-4F52-95E2-EF8F329F10A5}</Project>
+      <Name>UniversalControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\数据库组件\DBOperate\DBOperate.csproj">
+      <Project>{E6B31D5C-3564-41F5-8443-6B2906FCAD1C}</Project>
+      <Name>DBOperate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

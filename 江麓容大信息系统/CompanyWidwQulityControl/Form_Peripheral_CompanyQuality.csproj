@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64FA646D-0C6E-47D5-B7A9-F2FB018703F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_Peripheral_CompanyQuality</RootNamespace>
+    <AssemblyName>Form_Peripheral_CompanyQuality</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="创意提案明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="创意提案明细.Designer.cs">
+      <DependentUpon>创意提案明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="创意提案.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="创意提案.Designer.cs">
+      <DependentUpon>创意提案.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT运维申请单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT运维申请单.Designer.cs">
+      <DependentUpon>IT运维申请单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT运维申请单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT运维申请单明细.Designer.cs">
+      <DependentUpon>IT运维申请单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="发布重点工作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="发布重点工作.Designer.cs">
+      <DependentUpon>发布重点工作.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设置关键节点.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设置关键节点.Designer.cs">
+      <DependentUpon>设置关键节点.cs</DependentUpon>
+    </Compile>
+    <Compile Include="重点工作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="重点工作.Designer.cs">
+      <DependentUpon>重点工作.cs</DependentUpon>
+    </Compile>
+    <Compile Include="重点工作关键节点.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="重点工作关键节点.Designer.cs">
+      <DependentUpon>重点工作关键节点.cs</DependentUpon>
+    </Compile>
+    <Compile Include="重点工作明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="重点工作明细.Designer.cs">
+      <DependentUpon>重点工作明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="重点工作查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="重点工作查询.Designer.cs">
+      <DependentUpon>重点工作查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="重点工作详细信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="重点工作详细信息.Designer.cs">
+      <DependentUpon>重点工作详细信息.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyWidwQulityControlService\Service_Peripheral_CompanyQuality.csproj">
+      <Project>{1518FBD2-FD44-442D-A494-7B9163E3341B}</Project>
+      <Name>Service_Peripheral_CompanyQuality</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowControlService\FlowControlService.csproj">
+      <Project>{FDBAE102-0D3A-4EC4-BE0C-A5D43C1B8DC8}</Project>
+      <Name>FlowControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversalControlLibrary\UniversalControlLibrary.csproj">
+      <Project>{BF9E5E1F-BEDD-4F52-95E2-EF8F329F10A5}</Project>
+      <Name>UniversalControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\数据库组件\DBOperate\DBOperate.csproj">
+      <Project>{E6B31D5C-3564-41F5-8443-6B2906FCAD1C}</Project>
+      <Name>DBOperate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="创意提案明细.resx">
+      <DependentUpon>创意提案明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="创意提案.resx">
+      <DependentUpon>创意提案.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT运维申请单.resx">
+      <DependentUpon>IT运维申请单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT运维申请单明细.resx">
+      <DependentUpon>IT运维申请单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="发布重点工作.resx">
+      <DependentUpon>发布重点工作.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置关键节点.resx">
+      <DependentUpon>设置关键节点.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="重点工作.resx">
+      <DependentUpon>重点工作.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="重点工作关键节点.resx">
+      <DependentUpon>重点工作关键节点.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="重点工作明细.resx">
+      <DependentUpon>重点工作明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="重点工作查询.resx">
+      <DependentUpon>重点工作查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="重点工作详细信息.resx">
+      <DependentUpon>重点工作详细信息.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sort_Ascending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sort_Descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ascending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a9785ffe07f524dcc59e61ea337241f8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6604ba8a24fdcdf78db0b4e338b297ee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hold.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\确定亮.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.ico" />
+    <None Include="Resources\wait.ani" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\begin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greentick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keybackimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainbackimage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessageBackImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReadMe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\订单.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\高级检索.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\合同.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\回退.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\前进.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\审核.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\审核.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\审核6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\提交.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\容大水晶图标.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

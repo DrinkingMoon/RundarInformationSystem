@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="PlatformService" Class="PlatformServiceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=XINXI-SERVER;Initial Catalog=PlatformService;Persist Security Info=True;User ID=InfoSysUser" SettingsObjectName="ServerModule.Properties.Settings" SettingsPropertyName="PlatformServiceConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ZPX_CCDResult" Member="ZPX_CCDResult">
+    <Type Name="ZPX_CCDResult">
+      <Column Name="测点号" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="检测结果" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_IncompleteAssembly" Member="ZPX_IncompleteAssembly">
+    <Type Name="ZPX_IncompleteAssembly">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkBench" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductEdition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentScanCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GoodsCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GoodsName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Spec" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GoodsOnlyCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Counts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Provider" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="BatchNo" Type="System.String" DbType="VarChar(26)" CanBeNull="true" />
+      <Column Name="CheckDatas" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FactDatas" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FittingPersonnel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FittingTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AssemblyFlag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FinishTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AssemblingMode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AssemblingStatus" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_MeasureData" Member="ZPX_MeasureData">
+    <Type Name="ZPX_MeasureData">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="零件扫描码" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="测量数据" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="装配时间" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="装配人员" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="备注" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_PartNameWithUniqueCode" Member="ZPX_PartNameWithUniqueCode">
+    <Type Name="ZPX_PartNameWithUniqueCode">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GoodsName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AllowReiteration" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PreUniqueCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_TorqueMachineConfig" Member="ZPX_TorqueMachineConfig">
+    <Type Name="ZPX_TorqueMachineConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="零件图号" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="零件名称" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="零件规格" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="拧紧机端口号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="记录模式" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="目标扭矩" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="扭矩上限" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="扭矩下限" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_TorqueMachineResult" Member="ZPX_TorqueMachineResult">
+    <Type Name="ZPX_TorqueMachineResult">
+      <Column Name="工位" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="结果" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_WorkBenchType" Member="ZPX_WorkBenchType">
+    <Type Name="ZPX_WorkBenchType">
+      <Column Name="WorkBench" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WorkBenchType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZZZ_MeasureData" Member="ZZZ_MeasureData">
+    <Type Name="ZZZ_MeasureData">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="变速箱号" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="零件名称" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="测量数据" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="装配时间" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="装配人员" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZZZ_ParentInfoOfWorkBench" Member="ZZZ_ParentInfoOfWorkBench">
+    <Type Name="ZZZ_ParentInfoOfWorkBench">
+      <Column Name="Workbench" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ParentName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZZZ_MeasurePartConfig" Member="ZZZ_MeasurePartConfig">
+    <Type Name="ZZZ_MeasurePartConfig">
+      <Column Name="产品名称" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="零件名称" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="提示信息" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_ProductWorkbenchConfig" Member="ZPX_ProductWorkbenchConfig">
+    <Type Name="ZPX_ProductWorkbenchConfig">
+      <Column Name="产品类型" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="当前工位" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="分总成名称" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="上道工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="是本阶段起始工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="是本阶段末工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="是气密性检测工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="是所有产品通用工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="是按顺序流水号装配" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="需测量总成名称" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配末道工序值" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配端口号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="屏蔽开始时间" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="屏蔽终止时间" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_WorkBenchConfig" Member="ZPX_WorkBenchConfig">
+    <Type Name="ZPX_WorkBenchConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="启用标志" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="新工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="服务器IP地址" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="服务器端口" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="应答延时" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="允许实例个数" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="是否清除总成装配信息" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="工位类型" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="端口号1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="端口号2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="高级用户" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="是按顺序流水号装配" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="需测量总成名称" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配末道工序值" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配端口号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="用途编号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="是气密性检测工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="备注" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_ZPX_ProductWorkbenchConfig" Member="View_ZPX_ProductWorkbenchConfig">
+    <Type Name="View_ZPX_ProductWorkbenchConfig">
+      <Column Name="产品类型" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="当前工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="分总成名称" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="上道工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="是本阶段起始工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="是本阶段末工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="是气密性检测工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="是所有产品通用工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="允许实例个数" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="端口号1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="端口号2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="高级用户" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="是按顺序流水号装配" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="需测量总成名称" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配末道工序值" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配端口号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="用途编号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="用途" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_ZPX_WorkBenchConfig" Member="View_ZPX_WorkBenchConfig">
+    <Type Name="View_ZPX_WorkBenchConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="新工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="启用标志" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="服务器IP地址" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="服务器端口" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="应答延时" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="允许实例个数" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="是否清除总成装配信息" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="工位类型" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="端口号1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="端口号2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="高级用户" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="是按顺序流水号装配" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="需测量总成名称" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配末道工序值" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="按序装配端口号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="用途编号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="用途" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="是气密性检测工位" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="备注" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_LeakproofParts" Member="ZPX_LeakproofParts">
+    <Type Name="ZPX_LeakproofParts">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="防漏装零件图号" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="防漏装零件名称" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="防漏装零件规格" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="电子秤端口号" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="防错模式" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="零件单重" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="屏蔽开始时间" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="屏蔽终止时间" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="公差" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="备注" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPX_CCDConfig" Member="ZPX_CCDConfig">
+    <Type Name="ZPX_CCDConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="工位" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="零件图号" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="零件名称" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="零件规格" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="测点号" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="通信模式" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="通信端口" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="适用产品类型" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="屏蔽开始时间" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="屏蔽终止时间" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

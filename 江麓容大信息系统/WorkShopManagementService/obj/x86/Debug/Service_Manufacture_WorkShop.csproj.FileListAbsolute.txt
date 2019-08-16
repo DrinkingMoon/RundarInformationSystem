@@ -1,0 +1,13 @@
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\Service_Manufacture_WorkShop.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\Service_Manufacture_WorkShop.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\BasicServerModule.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\DBOperate.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\FlowControlService.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\GlobalObject.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\FlowControlService.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\GlobalObject.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\BasicServerModule.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\bin\x86\Debug\DBOperate.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\obj\x86\Debug\Service_Manufacture_WorkShop.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\WorkShopManagementService\obj\x86\Debug\Service_Manufacture_WorkShop.pdb

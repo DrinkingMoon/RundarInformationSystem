@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[FileManagement.csproj]
+SCC_Aux_Path = "\\192.168.0.11\VSS projects$"
+SCC_Project_Name = "$/江麓容大信息化系统/源码/江麓容大信息系统/FileManagement", UKTAAAAA
+
+[Form_Quality_File.csproj]
+SCC_Aux_Path = "\\10.30.17.19\vss$"
+SCC_Project_Name = "$/ERP 信息化系统/江麓容大信息系统/FileManagement", EXDAAAAA

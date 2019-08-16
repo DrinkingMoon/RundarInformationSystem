@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<params>
+  <param name="数据显示控件列宽">
+    <paramitem width="200" visible="true">货物编码</paramitem>
+    <paramitem width="160" visible="true">货物名称</paramitem>
+    <paramitem width="200" visible="true">图号型号</paramitem>
+    <paramitem width="130" visible="true">批次号</paramitem>
+    <paramitem width="200" visible="true">零部件编码</paramitem>
+    <paramitem width="200" visible="true">零部件名称</paramitem>
+    <paramitem width="200" visible="true">供应商名称</paramitem>
+  </param>
+  <param name="供应商管理">
+    <paramitem width="103" visible="True">供应商编码</paramitem>
+    <paramitem width="314" visible="True">供应商名称</paramitem>
+    <paramitem width="78" visible="True">简称</paramitem>
+    <paramitem width="222" visible="True">责任人</paramitem>
+    <paramitem width="83" visible="True">是否为零星采购供应商</paramitem>
+    <paramitem width="75" visible="True">是否在用</paramitem>
+  </param>
+  <param name="合同信息管理">
+    <paramitem width="114" visible="False">序号</paramitem>
+    <paramitem width="239" visible="True">图号型号</paramitem>
+    <paramitem width="114" visible="True">规格</paramitem>
+    <paramitem width="159" visible="True">产品名称</paramitem>
+    <paramitem width="89" visible="True">供货单位</paramitem>
+    <paramitem width="114" visible="True">单价</paramitem>
+    <paramitem width="75" visible="True">采购员</paramitem>
+    <paramitem width="119" visible="True">供应商联系人</paramitem>
+    <paramitem width="151" visible="True">合同号</paramitem>
+    <paramitem width="68" visible="True">税率</paramitem>
+    <paramitem width="131" visible="True">日期</paramitem>
+  </param>
+  <param name="新开发供应商管理">
+    <paramitem width="120" visible="True">新供应商编码</paramitem>
+    <paramitem width="240" visible="True">新供应商名称</paramitem>
+    <paramitem width="140" visible="True">备注</paramitem>
+  </param>
+  <param name="零件责任归属管理">
+    <paramitem width="120" visible="False">序号</paramitem>
+    <paramitem width="78" visible="True">类别</paramitem>
+    <paramitem width="139" visible="True">图号型号</paramitem>
+    <paramitem width="98" visible="True">规格</paramitem>
+    <paramitem width="212" visible="True">货物名称</paramitem>
+    <paramitem width="88" visible="True">SQE组员A</paramitem>
+    <paramitem width="88" visible="True">SQE组员B</paramitem>
+    <paramitem width="116" visible="True">供应商开发员</paramitem>
+    <paramitem width="81" visible="True">采购员A</paramitem>
+    <paramitem width="83" visible="True">采购员B</paramitem>
+    <paramitem width="81" visible="True">供应商A</paramitem>
+    <paramitem width="87" visible="True">供应商B</paramitem>
+    <paramitem width="83" visible="True">供应商C</paramitem>
+    <paramitem width="129" visible="True">新开发供应商A</paramitem>
+    <paramitem width="123" visible="True">新开发供应商B</paramitem>
+    <paramitem width="89" visible="True">难度分级</paramitem>
+    <paramitem width="73" visible="True">备注</paramitem>
+    <paramitem width="195" visible="True">物品名称</paramitem>
+  </param>
+  <param name="零件信息表">
+    <paramitem width="63" visible="False">序号</paramitem>
+    <paramitem width="280" visible="True">图号型号</paramitem>
+    <paramitem width="288" visible="True">产品名称</paramitem>
+    <paramitem width="253" visible="True">规格</paramitem>
+    <paramitem width="178" visible="True">零件名称</paramitem>
+    <paramitem width="88" visible="True">总成标志</paramitem>
+    <paramitem width="90" visible="True">零件类型</paramitem>
+    <paramitem width="73" visible="True">修改人</paramitem>
+    <paramitem width="106" visible="True">终止日期</paramitem>
+    <paramitem width="146" visible="True">修改日期</paramitem>
+  </param>
+  <param name="客户管理">
+    <paramitem width="230" visible="True">客户名称</paramitem>
+    <paramitem width="227" visible="True">备注</paramitem>
+    <paramitem width="96" visible="True">客户编码</paramitem>
+  </param>
+  <param name="产品装配零件信息附属表">
+    <paramitem width="61" visible="False">序号</paramitem>
+    <paramitem width="161" visible="True">图号型号</paramitem>
+    <paramitem width="81" visible="True">规格</paramitem>
+    <paramitem width="160" visible="True">产品名称</paramitem>
+  </param>
+  <param name="条形码管理">
+    <paramitem width="85" visible="True">条形码</paramitem>
+    <paramitem width="200" visible="True">货物编码</paramitem>
+    <paramitem width="71" visible="True">规格</paramitem>
+    <paramitem width="160" visible="True">货物名称</paramitem>
+    <paramitem width="91" visible="True">供货单位</paramitem>
+    <paramitem width="100" visible="True">批次号</paramitem>
+    <paramitem width="65" visible="True">产品标志</paramitem>
+    <paramitem width="240" visible="True">图号型号</paramitem>
+    <paramitem width="184" visible="True">物品名称</paramitem>
+    <paramitem width="120" visible="False">货架</paramitem>
+    <paramitem width="40" visible="True">列</paramitem>
+    <paramitem width="31" visible="True">层</paramitem>
+    <paramitem width="120" visible="True">仓库名称</paramitem>
+    <paramitem width="120" visible="True">入库时间</paramitem>
+    <paramitem width="76" visible="True">物品ID</paramitem>
+    <paramitem width="93" visible="True">库房代码</paramitem>
+    <paramitem width="120" visible="True">库房名称</paramitem>
+    <paramitem width="120" visible="True">材料类别编码</paramitem>
+    <paramitem width="120" visible="True">材料类别名称</paramitem>
+    <paramitem width="120" visible="True">工位</paramitem>
+    <paramitem width="120" visible="True">U1</paramitem>
+  </param>
+  <param name="计划成本管理">
+    <paramitem width="42" visible="True">序号</paramitem>
+    <paramitem width="198" visible="True">规格</paramitem>
+    <paramitem width="129" visible="True">单价</paramitem>
+    <paramitem width="166" visible="True">货物名称</paramitem>
+    <paramitem width="269" visible="True">货物编码</paramitem>
+    <paramitem width="272" visible="True">物品编码</paramitem>
+    <paramitem width="181" visible="True">物品名称</paramitem>
+    <paramitem width="64" visible="True">单位ID</paramitem>
+    <paramitem width="45" visible="True">单位</paramitem>
+    <paramitem width="110" visible="True">物品类别</paramitem>
+    <paramitem width="262" visible="True">图号型号</paramitem>
+    <paramitem width="77" visible="True">日期</paramitem>
+    <paramitem width="128" visible="True">物品类别名称</paramitem>
+    <paramitem width="147" visible="True">备注</paramitem>
+  </param>
+  <param name="产品目录表">
+    <paramitem width="60" visible="False">序号</paramitem>
+    <paramitem width="60" visible="False">CVT总成标志</paramitem>
+    <paramitem width="206" visible="True">产品编码</paramitem>
+    <paramitem width="182" visible="True">规格</paramitem>
+    <paramitem width="134" visible="True">产品名称</paramitem>
+    <paramitem width="130" visible="True">图号型号</paramitem>
+  </param>
+  <param name="AB类零件信息表">
+    <paramitem width="58" visible="False">序号</paramitem>
+    <paramitem width="88" visible="True">规格</paramitem>
+    <paramitem width="218" visible="True">名称</paramitem>
+    <paramitem width="245" visible="True">图号型号</paramitem>
+    <paramitem width="138" visible="True">类别</paramitem>
+  </param>
+  <param name="货物库存">
+    <paramitem width="77" visible="True">供应商</paramitem>
+    <paramitem width="154" visible="True">规格</paramitem>
+    <paramitem width="90" visible="True">单位</paramitem>
+    <paramitem width="191" visible="True">货物名称</paramitem>
+    <paramitem width="83" visible="True">库存</paramitem>
+    <paramitem width="210" visible="True">货物编码</paramitem>
+    <paramitem width="237" visible="True">图号型号</paramitem>
+  </param>
+  <param name="仓库货架库存">
+    <paramitem width="132" visible="True">货物名称</paramitem>
+    <paramitem width="60" visible="True">规格</paramitem>
+    <paramitem width="86" visible="True">供货单位</paramitem>
+    <paramitem width="59" visible="True">单位</paramitem>
+    <paramitem width="87" visible="True">库存数量</paramitem>
+    <paramitem width="97" visible="True">仓库</paramitem>
+    <paramitem width="59" visible="True">货架</paramitem>
+    <paramitem width="54" visible="True">列</paramitem>
+    <paramitem width="52" visible="True">层</paramitem>
+    <paramitem width="61" visible="True">备注</paramitem>
+    <paramitem width="106" visible="True">批次号</paramitem>
+  </param>
+  <param name="BOM">
+    <paramitem width="187" visible="True">零部件名称</paramitem>
+    <paramitem width="221" visible="True">规格</paramitem>
+    <paramitem width="316" visible="True">零部件编码</paramitem>
+    <paramitem width="120" visible="True">父总成编码</paramitem>
+  </param>
+  <param name="产品信息">
+    <paramitem width="60" visible="True">序号</paramitem>
+    <paramitem width="130" visible="True">产品类型编码</paramitem>
+    <paramitem width="126" visible="True">产品类型名称</paramitem>
+    <paramitem width="115" visible="True">产品装配简码</paramitem>
+  </param>
+  <param name="查询信息">
+    <paramitem width="245" visible="True">零件编码</paramitem>
+    <paramitem width="237" visible="True">零件名称</paramitem>
+    <paramitem width="280" visible="True">图号型号</paramitem>
+    <paramitem width="189" visible="True">规格</paramitem>
+    <paramitem width="221" visible="True">供应商名称</paramitem>
+    <paramitem width="253" visible="True">物品编码</paramitem>
+    <paramitem width="235" visible="True">批次号</paramitem>
+    <paramitem width="215" visible="True">零部件编码</paramitem>
+    <paramitem width="170" visible="True">零部件名称</paramitem>
+    <paramitem width="279" visible="True">货物编码</paramitem>
+    <paramitem width="198" visible="True">物品名称</paramitem>
+    <paramitem width="162" visible="True">合同号</paramitem>
+    <paramitem width="148" visible="True">订单号</paramitem>
+    <paramitem width="46" visible="True">序号</paramitem>
+  </param>
+  <param name="Bom映射表">
+    <paramitem width="23" visible="True">产品名称</paramitem>
+    <paramitem width="59" visible="True">零件基数</paramitem>
+    <paramitem width="54" visible="True">工位</paramitem>
+    <paramitem width="69" visible="True">装配数</paramitem>
+    <paramitem width="58" visible="True">父总成编码</paramitem>
+    <paramitem width="58" visible="True">父总成名称</paramitem>
+  </param>
+  <param name="领料物品清单">
+    <paramitem width="73" visible="True">库存数</paramitem>
+    <paramitem width="61" visible="True">单位</paramitem>
+    <paramitem width="78" visible="True">实领数</paramitem>
+    <paramitem width="74" visible="True">请领数</paramitem>
+    <paramitem width="64" visible="True">基数</paramitem>
+    <paramitem width="329" visible="True">规格</paramitem>
+    <paramitem width="67" visible="True">货架</paramitem>
+    <paramitem width="64" visible="True">列</paramitem>
+    <paramitem width="49" visible="True">层</paramitem>
+    <paramitem width="142" visible="True">物品名称</paramitem>
+    <paramitem width="108" visible="True">物品类别</paramitem>
+    <paramitem width="144" visible="True">物品编码</paramitem>
+    <paramitem width="21" visible="True">序号</paramitem>
+    <paramitem width="103" visible="True">供应商编码</paramitem>
+    <paramitem width="128" visible="True">批次号</paramitem>
+    <paramitem width="236" visible="True">图号型号</paramitem>
+  </param>
+  <param name="仓库直接入库">
+    <paramitem width="35" visible="True">序号</paramitem>
+    <paramitem width="152" visible="True">规格</paramitem>
+    <paramitem width="71" visible="True">供货单位</paramitem>
+    <paramitem width="15" visible="True">供方批次号</paramitem>
+    <paramitem width="52" visible="True">单位</paramitem>
+    <paramitem width="76" visible="True">库存数量</paramitem>
+    <paramitem width="5" visible="True">仓库</paramitem>
+    <paramitem width="107" visible="True">货物名称</paramitem>
+    <paramitem width="113" visible="True">仓库名称</paramitem>
+    <paramitem width="85" visible="True">物品状态</paramitem>
+    <paramitem width="53" visible="True">物品ID</paramitem>
+    <paramitem width="17" visible="True">实际单价</paramitem>
+    <paramitem width="12" visible="True">实际金额</paramitem>
+    <paramitem width="41" visible="True">货架</paramitem>
+    <paramitem width="33" visible="True">列</paramitem>
+    <paramitem width="36" visible="True">层</paramitem>
+    <paramitem width="221" visible="True">物品名称</paramitem>
+    <paramitem width="145" visible="True">批次号</paramitem>
+    <paramitem width="171" visible="True">图号型号</paramitem>
+    <paramitem width="65" visible="True">备注</paramitem>
+  </param>
+  <param name="人员档案">
+    <paramitem width="51" visible="True">工号</paramitem>
+    <paramitem width="85" visible="True">姓名</paramitem>
+    <paramitem width="168" visible="True">职位</paramitem>
+    <paramitem width="99" visible="True">是否操作用户</paramitem>
+    <paramitem width="80" visible="True">是否在职</paramitem>
+    <paramitem width="88" visible="True">电子邮件</paramitem>
+    <paramitem width="74" visible="True">手机号</paramitem>
+    <paramitem width="99" visible="True">备注</paramitem>
+    <paramitem width="75" visible="True">职位编码</paramitem>
+  </param>
+  <param name="报废物品">
+    <paramitem width="80" visible="True">选择物品</paramitem>
+    <paramitem width="60" visible="True">供应商</paramitem>
+    <paramitem width="160" visible="True">报废原因</paramitem>
+    <paramitem width="120" visible="True">批次号</paramitem>
+    <paramitem width="120" visible="True">变速箱号</paramitem>
+    <paramitem width="200" visible="True">备注</paramitem>
+    <paramitem width="60" visible="True">工时</paramitem>
+    <paramitem width="178" visible="True">物品名称</paramitem>
+    <paramitem width="84" visible="True">规格</paramitem>
+    <paramitem width="85" visible="True">报废类别</paramitem>
+    <paramitem width="84" visible="True">责任类型</paramitem>
+    <paramitem width="162" visible="True">报废方式</paramitem>
+    <paramitem width="133" visible="True">报废数量</paramitem>
+  </param>
+  <param name="普通入库物品清单">
+    <paramitem width="157" visible="True">规格</paramitem>
+    <paramitem width="163" visible="True">大写金额</paramitem>
+    <paramitem width="173" visible="True">图号型号</paramitem>
+    <paramitem width="147" visible="True">物品名称</paramitem>
+  </param>
+  <param name="领料单">
+    <paramitem width="184" visible="True">用途说明</paramitem>
+    <paramitem width="80" visible="True">部门名称</paramitem>
+    <paramitem width="78" visible="True">领料类型</paramitem>
+    <paramitem width="118" visible="True">产品类型</paramitem>
+    <paramitem width="73" visible="True">领料台数</paramitem>
+    <paramitem width="62" visible="True">编制人</paramitem>
+    <paramitem width="121" visible="True">关联单号</paramitem>
+    <paramitem width="112" visible="True">关联单据</paramitem>
+    <paramitem width="107" visible="True">部门主管签名</paramitem>
+    <paramitem width="74" visible="True">仓管签名</paramitem>
+    <paramitem width="104" visible="True">单据状态</paramitem>
+    <paramitem width="184" visible="True">备注</paramitem>
+    <paramitem width="125" visible="True">出库时间</paramitem>
+    <paramitem width="133" visible="True">领料单号</paramitem>
+    <paramitem width="136" visible="True">日期</paramitem>
+    <paramitem width="59" visible="True">是否已打印</paramitem>
+    <paramitem width="5" visible="True">库房代码</paramitem>
+    <paramitem width="65" visible="True">工艺人员签名</paramitem>
+  </param>
+  <param name="报检入库单">
+    <paramitem width="102" visible="True">是否紧急放行</paramitem>
+    <paramitem width="120" visible="True">入库时间</paramitem>
+    <paramitem width="190" visible="True">物品名称</paramitem>
+    <paramitem width="163" visible="True">单据状态</paramitem>
+    <paramitem width="135" visible="True">订单号</paramitem>
+    <paramitem width="118" visible="True">入库单号</paramitem>
+    <paramitem width="247" visible="True">质量信息</paramitem>
+    <paramitem width="335" visible="True">备注</paramitem>
+    <paramitem width="214" visible="True">规格</paramitem>
+    <paramitem width="227" visible="True">图号型号</paramitem>
+    <paramitem width="81" visible="True">供货单位</paramitem>
+    <paramitem width="72" visible="True">单位</paramitem>
+    <paramitem width="61" visible="True">版次号</paramitem>
+  </param>
+  <param name="订单信息管理">
+    <paramitem width="155" visible="True">订单号</paramitem>
+    <paramitem width="163" visible="True">合同号</paramitem>
+  </param>
+  <param name="领料退库单">
+    <paramitem width="297" visible="True">退库原因</paramitem>
+    <paramitem width="134" visible="True">退库单号</paramitem>
+    <paramitem width="141" visible="True">退库时间</paramitem>
+    <paramitem width="156" visible="True">申请部门</paramitem>
+    <paramitem width="182" visible="True">初始用途</paramitem>
+    <paramitem width="129" visible="True">入库日期</paramitem>
+    <paramitem width="76" visible="True">库房代码</paramitem>
+    <paramitem width="79" visible="True">库房名称</paramitem>
+    <paramitem width="85" visible="True">退库方式</paramitem>
+  </param>
+  <param name="装配BOM">
+    <paramitem width="154" visible="True">零件名称</paramitem>
+    <paramitem width="40" visible="True">规格</paramitem>
+    <paramitem width="73" visible="True">产品编码</paramitem>
+    <paramitem width="80" visible="True">产品名称</paramitem>
+    <paramitem width="109" visible="True">父总成名称</paramitem>
+    <paramitem width="5" visible="True">父总成编码</paramitem>
+    <paramitem width="46" visible="True">工位</paramitem>
+    <paramitem width="34" visible="True">基数</paramitem>
+    <paramitem width="61" visible="True">装配数量</paramitem>
+    <paramitem width="54" visible="True">是否清洗</paramitem>
+    <paramitem width="62" visible="True">是否选配零件</paramitem>
+    <paramitem width="71" visible="True">是否总成</paramitem>
+    <paramitem width="73" visible="True">备注</paramitem>
+    <paramitem width="60" visible="True">录入员</paramitem>
+    <paramitem width="15" visible="True">零件编码</paramitem>
+  </param>
+  <param name="普通入库单">
+    <paramitem width="164" visible="True">供应商简称</paramitem>
+    <paramitem width="158" visible="True">订单号</paramitem>
+    <paramitem width="123" visible="True">入库时间</paramitem>
+    <paramitem width="113" visible="True">质检时间</paramitem>
+    <paramitem width="128" visible="True">单据提交时间</paramitem>
+  </param>
+  <param name="电子档案">
+    <paramitem width="45" visible="True">数量</paramitem>
+    <paramitem width="89" visible="True">规格</paramitem>
+    <paramitem width="106" visible="True">零件标识码</paramitem>
+    <paramitem width="102" visible="True">批次号</paramitem>
+    <paramitem width="44" visible="True">工位</paramitem>
+    <paramitem width="91" visible="True">装配模式</paramitem>
+    <paramitem width="16" visible="True">产品编码</paramitem>
+  </param>
+  <param name="合格供应商与零件责任归属管理">
+    <paramitem width="34" visible="True">序号</paramitem>
+    <paramitem width="39" visible="True">是否删除</paramitem>
+    <paramitem width="163" visible="True">规格</paramitem>
+    <paramitem width="153" visible="True">物品名称</paramitem>
+    <paramitem width="259" visible="True">图号型号</paramitem>
+    <paramitem width="66" visible="True">审核状态</paramitem>
+    <paramitem width="232" visible="True">备注</paramitem>
+  </param>
+  <param name="采购退货物品清单">
+    <paramitem width="170" visible="True">物品名称</paramitem>
+  </param>
+  <param name="装配多批次零件管理">
+    <paramitem width="82" visible="True">条形码</paramitem>
+    <paramitem width="61" visible="True">数量</paramitem>
+    <paramitem width="227" visible="True">图型图号</paramitem>
+    <paramitem width="182" visible="True">物品名称</paramitem>
+    <paramitem width="93" visible="True">规格</paramitem>
+    <paramitem width="67" visible="True">供应商</paramitem>
+    <paramitem width="120" visible="True">批次号</paramitem>
+    <paramitem width="124" visible="True">创建日期</paramitem>
+    <paramitem width="133" visible="True">备注</paramitem>
+  </param>
+  <param name="临时电子档案">
+    <paramitem width="90" visible="True">产品型号</paramitem>
+    <paramitem width="142" visible="True">产品编码</paramitem>
+    <paramitem width="59" visible="True">数量</paramitem>
+    <paramitem width="72" visible="True">供应商</paramitem>
+    <paramitem width="55" visible="True">工位</paramitem>
+    <paramitem width="147" visible="True">装配时间</paramitem>
+  </param>
+  <param name="仓库物品信息">
+    <paramitem width="152" visible="True">物品名称</paramitem>
+    <paramitem width="236" visible="True">图号型号</paramitem>
+    <paramitem width="141" visible="True">批次号</paramitem>
+    <paramitem width="279" visible="True">备注</paramitem>
+    <paramitem width="65" visible="True">物品ID</paramitem>
+    <paramitem width="78" visible="True">规格</paramitem>
+    <paramitem width="56" visible="True">版次号</paramitem>
+    <paramitem width="67" visible="True">单位</paramitem>
+    <paramitem width="74" visible="True">物品状态</paramitem>
+    <paramitem width="76" visible="True">供货单位</paramitem>
+    <paramitem width="86" visible="True">供方批次号</paramitem>
+    <paramitem width="144" visible="True">实际单价</paramitem>
+    <paramitem width="87" visible="True">实际金额</paramitem>
+    <paramitem width="74" visible="True">库存数量</paramitem>
+    <paramitem width="108" visible="True">材料类别编码</paramitem>
+    <paramitem width="98" visible="True">材料类别名称</paramitem>
+    <paramitem width="50" visible="True">货架</paramitem>
+    <paramitem width="35" visible="True">列</paramitem>
+    <paramitem width="37" visible="True">层</paramitem>
+    <paramitem width="118" visible="True">入库时间</paramitem>
+    <paramitem width="77" visible="True">库房名称</paramitem>
+  </param>
+  <param name="报废单">
+    <paramitem width="126" visible="True">报废单号</paramitem>
+    <paramitem width="141" visible="True">报废时间</paramitem>
+    <paramitem width="91" visible="True">申请人签名</paramitem>
+    <paramitem width="169" visible="True">单据报废类型</paramitem>
+    <paramitem width="73" visible="True">申请部门</paramitem>
+    <paramitem width="104" visible="True">部门主管签名</paramitem>
+    <paramitem width="126" visible="True">损失金额</paramitem>
+    <paramitem width="161" visible="True">备注</paramitem>
+    <paramitem width="89" visible="True">单据状态</paramitem>
+    <paramitem width="128" visible="True">知会检验名姓名</paramitem>
+    <paramitem width="127" visible="True">批准时间</paramitem>
+    <paramitem width="128" visible="True">SQE处理日期</paramitem>
+  </param>
+  <param name="领料退库物品清单">
+    <paramitem width="267" visible="True">图号型号</paramitem>
+    <paramitem width="149" visible="True">材料类别名称</paramitem>
+  </param>
+  <param name="基础物品管理">
+    <paramitem width="46" visible="True">序号</paramitem>
+    <paramitem width="390" visible="True">图号型号</paramitem>
+    <paramitem width="256" visible="True">物品名称</paramitem>
+    <paramitem width="53" visible="True">单位</paramitem>
+    <paramitem width="138" visible="True">单价</paramitem>
+    <paramitem width="142" visible="True">规格</paramitem>
+    <paramitem width="142" visible="True">备注</paramitem>
+    <paramitem width="100" visible="True">物品类别</paramitem>
+    <paramitem width="109" visible="True">物品类别名称</paramitem>
+    <paramitem width="97" visible="True">日期</paramitem>
+  </param>
+  <param name="委外报检入库单">
+    <paramitem width="136" visible="True">单据号</paramitem>
+    <paramitem width="134" visible="True">单据状态</paramitem>
+    <paramitem width="163" visible="True">关联订单号</paramitem>
+    <paramitem width="173" visible="True">图号型号</paramitem>
+  </param>
+  <param name="售后函电处理">
+    <paramitem width="114" visible="True">用户姓名</paramitem>
+    <paramitem width="89" visible="True">变速箱编号</paramitem>
+    <paramitem width="136" visible="True">车架号</paramitem>
+    <paramitem width="74" visible="True">接单处理人</paramitem>
+    <paramitem width="58" visible="True">接函电人</paramitem>
+    <paramitem width="77" visible="True">接函电时间</paramitem>
+    <paramitem width="102" visible="True">变速箱型号</paramitem>
+    <paramitem width="92" visible="True">信息来源</paramitem>
+    <paramitem width="72" visible="True">单据状态</paramitem>
+    <paramitem width="95" visible="True">单据号</paramitem>
+  </param>
+  <param name="人员档案管理">
+    <paramitem width="160" visible="True">身份证</paramitem>
+    <paramitem width="335" visible="True">毕业院校</paramitem>
+    <paramitem width="180" visible="True">专业</paramitem>
+    <paramitem width="152" visible="True">职位</paramitem>
+    <paramitem width="372" visible="True">家庭地址</paramitem>
+  </param>
+  <param name="岗位管理">
+    <paramitem width="191" visible="True">岗位名称</paramitem>
+  </param>
+  <param name="出差申请表">
+    <paramitem width="160" visible="True">单据状态</paramitem>
+  </param>
+</params>

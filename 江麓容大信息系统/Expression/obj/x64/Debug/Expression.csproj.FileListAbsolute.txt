@@ -1,0 +1,2 @@
+E:\进销存代码\代码文件\ERP信息系统\江麓容大信息系统\Expression\bin\x64\Debug\Expression.exe.config
+E:\进销存代码\代码文件\ERP信息系统\江麓容大信息系统\Expression\obj\x64\Debug\Expression.csproj.ResolveComReference.cache

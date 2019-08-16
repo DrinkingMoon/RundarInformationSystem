@@ -1,0 +1,1292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DepotManagementDataSet1" targetNamespace="http://tempuri.org/DepotManagementDataSet1.xsd" xmlns:mstns="http://tempuri.org/DepotManagementDataSet1.xsd" xmlns="http://tempuri.org/DepotManagementDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DepotManagementConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DepotManagementConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Expression.Properties.Settings.GlobalReference.Default.DepotManagementConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ClientTableAdapter" GeneratorDataComponentClassName="View_ClientTableAdapter" Name="View_Client" UserDataComponentName="View_ClientTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_Client" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 客户编码, 客户名称, 客户全称, 联系电话, 详细地址, 联系人, 省份, 服务区域, 负责人, [是否为服务站点/4S店/二级库房], 备注 FROM dbo.View_Client</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="客户编码" DataSetColumn="客户编码" />
+              <Mapping SourceColumn="客户名称" DataSetColumn="客户名称" />
+              <Mapping SourceColumn="客户全称" DataSetColumn="客户全称" />
+              <Mapping SourceColumn="联系电话" DataSetColumn="联系电话" />
+              <Mapping SourceColumn="详细地址" DataSetColumn="详细地址" />
+              <Mapping SourceColumn="联系人" DataSetColumn="联系人" />
+              <Mapping SourceColumn="省份" DataSetColumn="省份" />
+              <Mapping SourceColumn="服务区域" DataSetColumn="服务区域" />
+              <Mapping SourceColumn="负责人" DataSetColumn="负责人" />
+              <Mapping SourceColumn="是否为服务站点/4S店/二级库房" DataSetColumn="是否为服务站点/4S店/二级库房" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_S_MarketingPartBillTableAdapter" GeneratorDataComponentClassName="View_S_MarketingPartBillTableAdapter" Name="View_S_MarketingPartBill" UserDataComponentName="View_S_MarketingPartBillTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_S_MarketingPartBill" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 单据号, 单据状态, 客户名称, 总金额, 营销出库单号, 销售人员, 销售时间, 财务审核人, 审核时间, 备注, ClientID, 价格套用的整车厂, 价格套用的整车厂编码, 打印次数, 是否套用整车厂, 营销审核人, 营销审核时间 FROM View_S_MarketingPartBill</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="单据状态" DataSetColumn="单据状态" />
+              <Mapping SourceColumn="客户名称" DataSetColumn="客户名称" />
+              <Mapping SourceColumn="总金额" DataSetColumn="总金额" />
+              <Mapping SourceColumn="营销出库单号" DataSetColumn="营销出库单号" />
+              <Mapping SourceColumn="销售人员" DataSetColumn="销售人员" />
+              <Mapping SourceColumn="销售时间" DataSetColumn="销售时间" />
+              <Mapping SourceColumn="财务审核人" DataSetColumn="财务审核人" />
+              <Mapping SourceColumn="审核时间" DataSetColumn="审核时间" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="ClientID" DataSetColumn="ClientID" />
+              <Mapping SourceColumn="打印次数" DataSetColumn="打印次数" />
+              <Mapping SourceColumn="营销审核人" DataSetColumn="营销审核人" />
+              <Mapping SourceColumn="营销审核时间" DataSetColumn="营销审核时间" />
+              <Mapping SourceColumn="价格套用的整车厂" DataSetColumn="价格套用的整车厂" />
+              <Mapping SourceColumn="价格套用的整车厂编码" DataSetColumn="价格套用的整车厂编码" />
+              <Mapping SourceColumn="是否套用整车厂" DataSetColumn="是否套用整车厂" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_S_MarketintPartListTableAdapter" GeneratorDataComponentClassName="View_S_MarketintPartListTableAdapter" Name="View_S_MarketintPartList" UserDataComponentName="View_S_MarketintPartListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_S_MarketintPartList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 序号, 单据号, 图号型号, 物品名称, 规格, 销售单价, 最低定价, 数量, 总价, 单位, 批次号, 备注, GoodsID, 供应商, 主机厂代码, 主机厂物品名称 FROM View_S_MarketintPartList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="序号" DataSetColumn="序号" />
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="图号型号" DataSetColumn="图号型号" />
+              <Mapping SourceColumn="物品名称" DataSetColumn="物品名称" />
+              <Mapping SourceColumn="规格" DataSetColumn="规格" />
+              <Mapping SourceColumn="销售单价" DataSetColumn="销售单价" />
+              <Mapping SourceColumn="最低定价" DataSetColumn="最低定价" />
+              <Mapping SourceColumn="数量" DataSetColumn="数量" />
+              <Mapping SourceColumn="总价" DataSetColumn="总价" />
+              <Mapping SourceColumn="单位" DataSetColumn="单位" />
+              <Mapping SourceColumn="批次号" DataSetColumn="批次号" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="GoodsID" DataSetColumn="GoodsID" />
+              <Mapping SourceColumn="供应商" DataSetColumn="供应商" />
+              <Mapping SourceColumn="主机厂代码" DataSetColumn="主机厂代码" />
+              <Mapping SourceColumn="主机厂物品名称" DataSetColumn="主机厂物品名称" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_B_MinorPurchaseBillTableAdapter" GeneratorDataComponentClassName="View_B_MinorPurchaseBillTableAdapter" Name="View_B_MinorPurchaseBill" UserDataComponentName="View_B_MinorPurchaseBillTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_B_MinorPurchaseBill" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 编号, 单据状态, 采购类别, 是否紧急, 申请人, 申请日期, 申请部门, 编制人, 编制日期, 部门负责人, 部门确认时间, 分管领导, 分管领导确认时间, 财务领导确认, 财务确认时间, 总经理确认, 总经理确认时间, 采购工程师, 完成日期, 备注, 分管领导意见, 总经理意见, 负责人意见, 财务意见, 单据号, 部门月预算内, 是否已打印, 用途, 申请部门编号, 调配人 FROM View_B_MinorPurchaseBill</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="编号" DataSetColumn="编号" />
+              <Mapping SourceColumn="单据状态" DataSetColumn="单据状态" />
+              <Mapping SourceColumn="采购类别" DataSetColumn="采购类别" />
+              <Mapping SourceColumn="是否紧急" DataSetColumn="是否紧急" />
+              <Mapping SourceColumn="申请人" DataSetColumn="申请人" />
+              <Mapping SourceColumn="申请日期" DataSetColumn="申请日期" />
+              <Mapping SourceColumn="申请部门" DataSetColumn="申请部门" />
+              <Mapping SourceColumn="编制人" DataSetColumn="编制人" />
+              <Mapping SourceColumn="编制日期" DataSetColumn="编制日期" />
+              <Mapping SourceColumn="部门负责人" DataSetColumn="部门负责人" />
+              <Mapping SourceColumn="部门确认时间" DataSetColumn="部门确认时间" />
+              <Mapping SourceColumn="分管领导" DataSetColumn="分管领导" />
+              <Mapping SourceColumn="分管领导确认时间" DataSetColumn="分管领导确认时间" />
+              <Mapping SourceColumn="财务领导确认" DataSetColumn="财务领导确认" />
+              <Mapping SourceColumn="财务确认时间" DataSetColumn="财务确认时间" />
+              <Mapping SourceColumn="常务副总经理确认" DataSetColumn="常务副总经理确认" />
+              <Mapping SourceColumn="常务副总经理确认时间" DataSetColumn="常务副总经理确认时间" />
+              <Mapping SourceColumn="采购工程师" DataSetColumn="采购工程师" />
+              <Mapping SourceColumn="完成日期" DataSetColumn="完成日期" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="负责人意见" DataSetColumn="负责人意见" />
+              <Mapping SourceColumn="分管领导意见" DataSetColumn="分管领导意见" />
+              <Mapping SourceColumn="财务意见" DataSetColumn="财务意见" />
+              <Mapping SourceColumn="常务副总经理意见" DataSetColumn="常务副总经理意见" />
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="部门月预算内" DataSetColumn="部门月预算内" />
+              <Mapping SourceColumn="用途" DataSetColumn="用途" />
+              <Mapping SourceColumn="是否已打印" DataSetColumn="是否已打印" />
+              <Mapping SourceColumn="调配人" DataSetColumn="调配人" />
+              <Mapping SourceColumn="申请部门编号" DataSetColumn="申请部门编号" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_B_MinorPurchaseListTableAdapter" GeneratorDataComponentClassName="View_B_MinorPurchaseListTableAdapter" Name="View_B_MinorPurchaseList" UserDataComponentName="View_B_MinorPurchaseListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_B_MinorPurchaseList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 编号, 图号型号, 物品名称, 规格, 供应商, 申请数量, 库存数量, 单位, 要求到货日期, 物品状态, 预算价格, 最终到货日期, 备注, GoodsID FROM dbo.View_B_MinorPurchaseList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="编号" DataSetColumn="编号" />
+              <Mapping SourceColumn="图号型号" DataSetColumn="图号型号" />
+              <Mapping SourceColumn="物品名称" DataSetColumn="物品名称" />
+              <Mapping SourceColumn="规格" DataSetColumn="规格" />
+              <Mapping SourceColumn="供应商" DataSetColumn="供应商" />
+              <Mapping SourceColumn="申请数量" DataSetColumn="申请数量" />
+              <Mapping SourceColumn="库存数量" DataSetColumn="库存数量" />
+              <Mapping SourceColumn="单位" DataSetColumn="单位" />
+              <Mapping SourceColumn="要求到货日期" DataSetColumn="要求到货日期" />
+              <Mapping SourceColumn="物品状态" DataSetColumn="物品状态" />
+              <Mapping SourceColumn="预算价格" DataSetColumn="预算价格" />
+              <Mapping SourceColumn="最终到货日期" DataSetColumn="最终到货日期" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="GoodsID" DataSetColumn="GoodsID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_S_MusterUseBillTableAdapter" GeneratorDataComponentClassName="View_S_MusterUseBillTableAdapter" Name="View_S_MusterUseBill" UserDataComponentName="View_S_MusterUseBillTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_S_MusterUseBill" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 单据号, 单据状态, 用途, 库房名称, 申请人, 申请日期, 审核人, 审核日期, 仓管员, 出库日期, 库房编码, 用途编码 FROM dbo.View_S_MusterUseBill</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="单据状态" DataSetColumn="单据状态" />
+              <Mapping SourceColumn="用途" DataSetColumn="用途" />
+              <Mapping SourceColumn="库房名称" DataSetColumn="库房名称" />
+              <Mapping SourceColumn="申请人" DataSetColumn="申请人" />
+              <Mapping SourceColumn="申请日期" DataSetColumn="申请日期" />
+              <Mapping SourceColumn="审核人" DataSetColumn="审核人" />
+              <Mapping SourceColumn="审核日期" DataSetColumn="审核日期" />
+              <Mapping SourceColumn="仓管员" DataSetColumn="仓管员" />
+              <Mapping SourceColumn="出库日期" DataSetColumn="出库日期" />
+              <Mapping SourceColumn="库房编码" DataSetColumn="库房编码" />
+              <Mapping SourceColumn="用途编码" DataSetColumn="用途编码" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_S_MusterUseListTableAdapter" GeneratorDataComponentClassName="View_S_MusterUseListTableAdapter" Name="View_S_MusterUseList" UserDataComponentName="View_S_MusterUseListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_S_MusterUseList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 图号型号, 物品名称, 规格, 数量, 批次号, 版次号, 单位, 库存数, 物品ID, 单据号, 备注 FROM dbo.View_S_MusterUseList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="图号型号" DataSetColumn="图号型号" />
+              <Mapping SourceColumn="物品名称" DataSetColumn="物品名称" />
+              <Mapping SourceColumn="规格" DataSetColumn="规格" />
+              <Mapping SourceColumn="数量" DataSetColumn="数量" />
+              <Mapping SourceColumn="批次号" DataSetColumn="批次号" />
+              <Mapping SourceColumn="版次号" DataSetColumn="版次号" />
+              <Mapping SourceColumn="单位" DataSetColumn="单位" />
+              <Mapping SourceColumn="库存数" DataSetColumn="库存数" />
+              <Mapping SourceColumn="物品ID" DataSetColumn="物品ID" />
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_S_MarketingAllTableAdapter" GeneratorDataComponentClassName="View_S_MarketingAllTableAdapter" Name="View_S_MarketingAll" UserDataComponentName="View_S_MarketingAllTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_S_MarketingAll" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, DJH, LRRY, Dept, SHRY, YWLX, KFRY, DJZT_FLAG, DELETE_FLAG, Date, Price, Remark, ListID, DJ_ID, CPID, Provider, UnitPrice, GoodsPrice, Count, Unit, BatchNo, GoodsRemark, StorageID, YWFS, StorageName, GoodsCode, GoodsName, Spec, LRKS, AffirmDate, FSRY FROM dbo.View_S_MarketingAll</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="DJH" DataSetColumn="DJH" />
+              <Mapping SourceColumn="LRRY" DataSetColumn="LRRY" />
+              <Mapping SourceColumn="Dept" DataSetColumn="Dept" />
+              <Mapping SourceColumn="SHRY" DataSetColumn="SHRY" />
+              <Mapping SourceColumn="YWLX" DataSetColumn="YWLX" />
+              <Mapping SourceColumn="KFRY" DataSetColumn="KFRY" />
+              <Mapping SourceColumn="DJZT_FLAG" DataSetColumn="DJZT_FLAG" />
+              <Mapping SourceColumn="DELETE_FLAG" DataSetColumn="DELETE_FLAG" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="ListID" DataSetColumn="ListID" />
+              <Mapping SourceColumn="DJ_ID" DataSetColumn="DJ_ID" />
+              <Mapping SourceColumn="CPID" DataSetColumn="CPID" />
+              <Mapping SourceColumn="Provider" DataSetColumn="Provider" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="GoodsPrice" DataSetColumn="GoodsPrice" />
+              <Mapping SourceColumn="Count" DataSetColumn="Count" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="BatchNo" DataSetColumn="BatchNo" />
+              <Mapping SourceColumn="GoodsRemark" DataSetColumn="GoodsRemark" />
+              <Mapping SourceColumn="StorageID" DataSetColumn="StorageID" />
+              <Mapping SourceColumn="YWFS" DataSetColumn="YWFS" />
+              <Mapping SourceColumn="StorageName" DataSetColumn="StorageName" />
+              <Mapping SourceColumn="GoodsCode" DataSetColumn="GoodsCode" />
+              <Mapping SourceColumn="GoodsName" DataSetColumn="GoodsName" />
+              <Mapping SourceColumn="Spec" DataSetColumn="Spec" />
+              <Mapping SourceColumn="LRKS" DataSetColumn="LRKS" />
+              <Mapping SourceColumn="AffirmDate" DataSetColumn="AffirmDate" />
+              <Mapping SourceColumn="FSRY" DataSetColumn="FSRY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_B_MinorPurchaseBill1TableAdapter" GeneratorDataComponentClassName="View_B_MinorPurchaseBill1TableAdapter" Name="View_B_MinorPurchaseBill1" UserDataComponentName="View_B_MinorPurchaseBill1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString1 (Settings)" DbObjectName="DepotManagement.dbo.View_B_MinorPurchaseBill" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 编号, 单据号, 单据状态, 采购类别, 用途, 是否紧急, 是否已打印, 部门月预算内, 申请人, 申请日期, 申请部门, 编制人, 编制日期, 部门负责人, 部门确认时间, 负责人意见, 分管领导, 分管领导确认时间, 分管领导意见, 财务领导确认, 财务确认时间, 财务意见, 常务副总经理确认, 常务副总经理确认时间, 调配人, 常务副总经理意见, 采购工程师, 完成日期, 备注, 申请部门编号 FROM dbo.View_B_MinorPurchaseBill</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="编号" DataSetColumn="编号" />
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="单据状态" DataSetColumn="单据状态" />
+              <Mapping SourceColumn="采购类别" DataSetColumn="采购类别" />
+              <Mapping SourceColumn="用途" DataSetColumn="用途" />
+              <Mapping SourceColumn="是否紧急" DataSetColumn="是否紧急" />
+              <Mapping SourceColumn="是否已打印" DataSetColumn="是否已打印" />
+              <Mapping SourceColumn="部门月预算内" DataSetColumn="部门月预算内" />
+              <Mapping SourceColumn="申请人" DataSetColumn="申请人" />
+              <Mapping SourceColumn="申请日期" DataSetColumn="申请日期" />
+              <Mapping SourceColumn="申请部门" DataSetColumn="申请部门" />
+              <Mapping SourceColumn="编制人" DataSetColumn="编制人" />
+              <Mapping SourceColumn="编制日期" DataSetColumn="编制日期" />
+              <Mapping SourceColumn="部门负责人" DataSetColumn="部门负责人" />
+              <Mapping SourceColumn="部门确认时间" DataSetColumn="部门确认时间" />
+              <Mapping SourceColumn="负责人意见" DataSetColumn="负责人意见" />
+              <Mapping SourceColumn="分管领导" DataSetColumn="分管领导" />
+              <Mapping SourceColumn="分管领导确认时间" DataSetColumn="分管领导确认时间" />
+              <Mapping SourceColumn="分管领导意见" DataSetColumn="分管领导意见" />
+              <Mapping SourceColumn="财务领导确认" DataSetColumn="财务领导确认" />
+              <Mapping SourceColumn="财务确认时间" DataSetColumn="财务确认时间" />
+              <Mapping SourceColumn="财务意见" DataSetColumn="财务意见" />
+              <Mapping SourceColumn="常务副总经理确认" DataSetColumn="常务副总经理确认" />
+              <Mapping SourceColumn="常务副总经理确认时间" DataSetColumn="常务副总经理确认时间" />
+              <Mapping SourceColumn="调配人" DataSetColumn="调配人" />
+              <Mapping SourceColumn="常务副总经理意见" DataSetColumn="常务副总经理意见" />
+              <Mapping SourceColumn="采购工程师" DataSetColumn="采购工程师" />
+              <Mapping SourceColumn="完成日期" DataSetColumn="完成日期" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="申请部门编号" DataSetColumn="申请部门编号" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DepotManagementDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DepotManagementDataSet1" msprop:Generator_DataSetName="DepotManagementDataSet1" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Client" msprop:Generator_UserTableName="View_Client" msprop:Generator_RowDeletedName="View_ClientRowDeleted" msprop:Generator_RowChangedName="View_ClientRowChanged" msprop:Generator_RowClassName="View_ClientRow" msprop:Generator_RowChangingName="View_ClientRowChanging" msprop:Generator_RowEvArgName="View_ClientRowChangeEvent" msprop:Generator_RowEvHandlerName="View_ClientRowChangeEventHandler" msprop:Generator_TableClassName="View_ClientDataTable" msprop:Generator_TableVarName="tableView_Client" msprop:Generator_RowDeletingName="View_ClientRowDeleting" msprop:Generator_TablePropName="View_Client">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="客户编码" msprop:Generator_UserColumnName="客户编码" msprop:Generator_ColumnVarNameInTable="column客户编码" msprop:Generator_ColumnPropNameInRow="客户编码" msprop:Generator_ColumnPropNameInTable="客户编码Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="客户名称" msprop:Generator_UserColumnName="客户名称" msprop:Generator_ColumnVarNameInTable="column客户名称" msprop:Generator_ColumnPropNameInRow="客户名称" msprop:Generator_ColumnPropNameInTable="客户名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="客户全称" msprop:Generator_UserColumnName="客户全称" msprop:Generator_ColumnVarNameInTable="column客户全称" msprop:Generator_ColumnPropNameInRow="客户全称" msprop:Generator_ColumnPropNameInTable="客户全称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="联系电话" msprop:Generator_UserColumnName="联系电话" msprop:Generator_ColumnVarNameInTable="column联系电话" msprop:Generator_ColumnPropNameInRow="联系电话" msprop:Generator_ColumnPropNameInTable="联系电话Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="详细地址" msprop:Generator_UserColumnName="详细地址" msprop:Generator_ColumnVarNameInTable="column详细地址" msprop:Generator_ColumnPropNameInRow="详细地址" msprop:Generator_ColumnPropNameInTable="详细地址Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="联系人" msprop:Generator_UserColumnName="联系人" msprop:Generator_ColumnVarNameInTable="column联系人" msprop:Generator_ColumnPropNameInRow="联系人" msprop:Generator_ColumnPropNameInTable="联系人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="省份" msprop:Generator_UserColumnName="省份" msprop:Generator_ColumnVarNameInTable="column省份" msprop:Generator_ColumnPropNameInRow="省份" msprop:Generator_ColumnPropNameInTable="省份Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="服务区域" msprop:Generator_UserColumnName="服务区域" msprop:Generator_ColumnVarNameInTable="column服务区域" msprop:Generator_ColumnPropNameInRow="服务区域" msprop:Generator_ColumnPropNameInTable="服务区域Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="负责人" msprop:Generator_UserColumnName="负责人" msprop:Generator_ColumnVarNameInTable="column负责人" msprop:Generator_ColumnPropNameInRow="负责人" msprop:Generator_ColumnPropNameInTable="负责人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否为服务站点_x002F_4S店_x002F_二级库房" msprop:Generator_UserColumnName="是否为服务站点/4S店/二级库房" msprop:Generator_ColumnVarNameInTable="_column是否为服务站点_4S店_二级库房" msprop:Generator_ColumnPropNameInRow="_是否为服务站点_4S店_二级库房" msprop:Generator_ColumnPropNameInTable="_是否为服务站点_4S店_二级库房Column" type="xs:boolean" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_S_MarketingPartBill" msprop:Generator_UserTableName="View_S_MarketingPartBill" msprop:Generator_RowDeletedName="View_S_MarketingPartBillRowDeleted" msprop:Generator_RowChangedName="View_S_MarketingPartBillRowChanged" msprop:Generator_RowClassName="View_S_MarketingPartBillRow" msprop:Generator_RowChangingName="View_S_MarketingPartBillRowChanging" msprop:Generator_RowEvArgName="View_S_MarketingPartBillRowChangeEvent" msprop:Generator_RowEvHandlerName="View_S_MarketingPartBillRowChangeEventHandler" msprop:Generator_TableClassName="View_S_MarketingPartBillDataTable" msprop:Generator_TableVarName="tableView_S_MarketingPartBill" msprop:Generator_RowDeletingName="View_S_MarketingPartBillRowDeleting" msprop:Generator_TablePropName="View_S_MarketingPartBill">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnPropNameInTable="单据号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="单据状态" msprop:Generator_UserColumnName="单据状态" msprop:Generator_ColumnVarNameInTable="column单据状态" msprop:Generator_ColumnPropNameInRow="单据状态" msprop:Generator_ColumnPropNameInTable="单据状态Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="客户名称" msprop:Generator_UserColumnName="客户名称" msprop:Generator_ColumnVarNameInTable="column客户名称" msprop:Generator_ColumnPropNameInRow="客户名称" msprop:Generator_ColumnPropNameInTable="客户名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="总金额" msdata:ReadOnly="true" msprop:Generator_UserColumnName="总金额" msprop:Generator_ColumnVarNameInTable="column总金额" msprop:Generator_ColumnPropNameInRow="总金额" msprop:Generator_ColumnPropNameInTable="总金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="营销出库单号" msprop:Generator_UserColumnName="营销出库单号" msprop:Generator_ColumnVarNameInTable="column营销出库单号" msprop:Generator_ColumnPropNameInRow="营销出库单号" msprop:Generator_ColumnPropNameInTable="营销出库单号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="销售人员" msdata:ReadOnly="true" msprop:Generator_UserColumnName="销售人员" msprop:Generator_ColumnVarNameInTable="column销售人员" msprop:Generator_ColumnPropNameInRow="销售人员" msprop:Generator_ColumnPropNameInTable="销售人员Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="销售时间" msprop:Generator_UserColumnName="销售时间" msprop:Generator_ColumnVarNameInTable="column销售时间" msprop:Generator_ColumnPropNameInRow="销售时间" msprop:Generator_ColumnPropNameInTable="销售时间Column" type="xs:dateTime" />
+              <xs:element name="财务审核人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="财务审核人" msprop:Generator_ColumnVarNameInTable="column财务审核人" msprop:Generator_ColumnPropNameInRow="财务审核人" msprop:Generator_ColumnPropNameInTable="财务审核人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="审核时间" msprop:Generator_UserColumnName="审核时间" msprop:Generator_ColumnVarNameInTable="column审核时间" msprop:Generator_ColumnPropNameInRow="审核时间" msprop:Generator_ColumnPropNameInTable="审核时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientID" msprop:Generator_UserColumnName="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="打印次数" msdata:ReadOnly="true" msprop:Generator_UserColumnName="打印次数" msprop:Generator_ColumnPropNameInRow="打印次数" msprop:Generator_ColumnVarNameInTable="column打印次数" msprop:Generator_ColumnPropNameInTable="打印次数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="营销审核人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="营销审核人" msprop:Generator_ColumnPropNameInRow="营销审核人" msprop:Generator_ColumnVarNameInTable="column营销审核人" msprop:Generator_ColumnPropNameInTable="营销审核人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="营销审核时间" msprop:Generator_UserColumnName="营销审核时间" msprop:Generator_ColumnPropNameInRow="营销审核时间" msprop:Generator_ColumnVarNameInTable="column营销审核时间" msprop:Generator_ColumnPropNameInTable="营销审核时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="价格套用的整车厂" msprop:Generator_UserColumnName="价格套用的整车厂" msprop:Generator_ColumnPropNameInRow="价格套用的整车厂" msprop:Generator_ColumnVarNameInTable="column价格套用的整车厂" msprop:Generator_ColumnPropNameInTable="价格套用的整车厂Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="价格套用的整车厂编码" msprop:Generator_UserColumnName="价格套用的整车厂编码" msprop:Generator_ColumnPropNameInRow="价格套用的整车厂编码" msprop:Generator_ColumnVarNameInTable="column价格套用的整车厂编码" msprop:Generator_ColumnPropNameInTable="价格套用的整车厂编码Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否套用整车厂" msdata:ReadOnly="true" msprop:Generator_UserColumnName="是否套用整车厂" msprop:Generator_ColumnPropNameInRow="是否套用整车厂" msprop:Generator_ColumnVarNameInTable="column是否套用整车厂" msprop:Generator_ColumnPropNameInTable="是否套用整车厂Column" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_S_MarketintPartList" msprop:Generator_UserTableName="View_S_MarketintPartList" msprop:Generator_RowDeletedName="View_S_MarketintPartListRowDeleted" msprop:Generator_RowChangedName="View_S_MarketintPartListRowChanged" msprop:Generator_RowClassName="View_S_MarketintPartListRow" msprop:Generator_RowChangingName="View_S_MarketintPartListRowChanging" msprop:Generator_RowEvArgName="View_S_MarketintPartListRowChangeEvent" msprop:Generator_RowEvHandlerName="View_S_MarketintPartListRowChangeEventHandler" msprop:Generator_TableClassName="View_S_MarketintPartListDataTable" msprop:Generator_TableVarName="tableView_S_MarketintPartList" msprop:Generator_RowDeletingName="View_S_MarketintPartListRowDeleting" msprop:Generator_TablePropName="View_S_MarketintPartList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="序号" msprop:Generator_UserColumnName="序号" msprop:Generator_ColumnVarNameInTable="column序号" msprop:Generator_ColumnPropNameInRow="序号" msprop:Generator_ColumnPropNameInTable="序号Column" type="xs:int" />
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnPropNameInTable="单据号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="图号型号" msprop:Generator_UserColumnName="图号型号" msprop:Generator_ColumnVarNameInTable="column图号型号" msprop:Generator_ColumnPropNameInRow="图号型号" msprop:Generator_ColumnPropNameInTable="图号型号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物品名称" msprop:Generator_UserColumnName="物品名称" msprop:Generator_ColumnVarNameInTable="column物品名称" msprop:Generator_ColumnPropNameInRow="物品名称" msprop:Generator_ColumnPropNameInTable="物品名称Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="规格" msprop:Generator_UserColumnName="规格" msprop:Generator_ColumnVarNameInTable="column规格" msprop:Generator_ColumnPropNameInRow="规格" msprop:Generator_ColumnPropNameInTable="规格Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="销售单价" msprop:Generator_UserColumnName="销售单价" msprop:Generator_ColumnVarNameInTable="column销售单价" msprop:Generator_ColumnPropNameInRow="销售单价" msprop:Generator_ColumnPropNameInTable="销售单价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="最低定价" msprop:Generator_UserColumnName="最低定价" msprop:Generator_ColumnVarNameInTable="column最低定价" msprop:Generator_ColumnPropNameInRow="最低定价" msprop:Generator_ColumnPropNameInTable="最低定价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="数量" msprop:Generator_UserColumnName="数量" msprop:Generator_ColumnVarNameInTable="column数量" msprop:Generator_ColumnPropNameInRow="数量" msprop:Generator_ColumnPropNameInTable="数量Column" type="xs:decimal" />
+              <xs:element name="总价" msdata:ReadOnly="true" msprop:Generator_UserColumnName="总价" msprop:Generator_ColumnVarNameInTable="column总价" msprop:Generator_ColumnPropNameInRow="总价" msprop:Generator_ColumnPropNameInTable="总价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="单位" msprop:Generator_UserColumnName="单位" msprop:Generator_ColumnVarNameInTable="column单位" msprop:Generator_ColumnPropNameInRow="单位" msprop:Generator_ColumnPropNameInTable="单位Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="批次号" msprop:Generator_UserColumnName="批次号" msprop:Generator_ColumnVarNameInTable="column批次号" msprop:Generator_ColumnPropNameInRow="批次号" msprop:Generator_ColumnPropNameInTable="批次号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoodsID" msprop:Generator_UserColumnName="GoodsID" msprop:Generator_ColumnVarNameInTable="columnGoodsID" msprop:Generator_ColumnPropNameInRow="GoodsID" msprop:Generator_ColumnPropNameInTable="GoodsIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="供应商" msprop:Generator_UserColumnName="供应商" msprop:Generator_ColumnVarNameInTable="column供应商" msprop:Generator_ColumnPropNameInRow="供应商" msprop:Generator_ColumnPropNameInTable="供应商Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="主机厂代码" msdata:ReadOnly="true" msprop:Generator_UserColumnName="主机厂代码" msprop:Generator_ColumnVarNameInTable="column主机厂代码" msprop:Generator_ColumnPropNameInRow="主机厂代码" msprop:Generator_ColumnPropNameInTable="主机厂代码Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="主机厂物品名称" msdata:ReadOnly="true" msprop:Generator_UserColumnName="主机厂物品名称" msprop:Generator_ColumnVarNameInTable="column主机厂物品名称" msprop:Generator_ColumnPropNameInRow="主机厂物品名称" msprop:Generator_ColumnPropNameInTable="主机厂物品名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_B_MinorPurchaseBill" msprop:Generator_UserTableName="View_B_MinorPurchaseBill" msprop:Generator_RowDeletedName="View_B_MinorPurchaseBillRowDeleted" msprop:Generator_RowChangedName="View_B_MinorPurchaseBillRowChanged" msprop:Generator_RowClassName="View_B_MinorPurchaseBillRow" msprop:Generator_RowChangingName="View_B_MinorPurchaseBillRowChanging" msprop:Generator_RowEvArgName="View_B_MinorPurchaseBillRowChangeEvent" msprop:Generator_RowEvHandlerName="View_B_MinorPurchaseBillRowChangeEventHandler" msprop:Generator_TableClassName="View_B_MinorPurchaseBillDataTable" msprop:Generator_TableVarName="tableView_B_MinorPurchaseBill" msprop:Generator_RowDeletingName="View_B_MinorPurchaseBillRowDeleting" msprop:Generator_TablePropName="View_B_MinorPurchaseBill">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="编号" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="编号" msprop:Generator_ColumnVarNameInTable="column编号" msprop:Generator_ColumnPropNameInRow="编号" msprop:Generator_ColumnPropNameInTable="编号Column" type="xs:int" />
+              <xs:element name="单据状态" msprop:Generator_UserColumnName="单据状态" msprop:Generator_ColumnVarNameInTable="column单据状态" msprop:Generator_ColumnPropNameInRow="单据状态" msprop:Generator_ColumnPropNameInTable="单据状态Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="采购类别" msprop:Generator_UserColumnName="采购类别" msprop:Generator_ColumnVarNameInTable="column采购类别" msprop:Generator_ColumnPropNameInRow="采购类别" msprop:Generator_ColumnPropNameInTable="采购类别Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否紧急" msdata:ReadOnly="true" msprop:Generator_UserColumnName="是否紧急" msprop:Generator_ColumnVarNameInTable="column是否紧急" msprop:Generator_ColumnPropNameInRow="是否紧急" msprop:Generator_ColumnPropNameInTable="是否紧急Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="申请人" msprop:Generator_ColumnVarNameInTable="column申请人" msprop:Generator_ColumnPropNameInRow="申请人" msprop:Generator_ColumnPropNameInTable="申请人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请日期" msprop:Generator_UserColumnName="申请日期" msprop:Generator_ColumnVarNameInTable="column申请日期" msprop:Generator_ColumnPropNameInRow="申请日期" msprop:Generator_ColumnPropNameInTable="申请日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="申请部门" msprop:Generator_UserColumnName="申请部门" msprop:Generator_ColumnVarNameInTable="column申请部门" msprop:Generator_ColumnPropNameInRow="申请部门" msprop:Generator_ColumnPropNameInTable="申请部门Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="编制人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="编制人" msprop:Generator_ColumnVarNameInTable="column编制人" msprop:Generator_ColumnPropNameInRow="编制人" msprop:Generator_ColumnPropNameInTable="编制人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="编制日期" msprop:Generator_UserColumnName="编制日期" msprop:Generator_ColumnVarNameInTable="column编制日期" msprop:Generator_ColumnPropNameInRow="编制日期" msprop:Generator_ColumnPropNameInTable="编制日期Column" type="xs:dateTime" />
+              <xs:element name="部门负责人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="部门负责人" msprop:Generator_ColumnVarNameInTable="column部门负责人" msprop:Generator_ColumnPropNameInRow="部门负责人" msprop:Generator_ColumnPropNameInTable="部门负责人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="部门确认时间" msprop:Generator_UserColumnName="部门确认时间" msprop:Generator_ColumnVarNameInTable="column部门确认时间" msprop:Generator_ColumnPropNameInRow="部门确认时间" msprop:Generator_ColumnPropNameInTable="部门确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="分管领导" msdata:ReadOnly="true" msprop:Generator_UserColumnName="分管领导" msprop:Generator_ColumnVarNameInTable="column分管领导" msprop:Generator_ColumnPropNameInRow="分管领导" msprop:Generator_ColumnPropNameInTable="分管领导Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分管领导确认时间" msprop:Generator_UserColumnName="分管领导确认时间" msprop:Generator_ColumnVarNameInTable="column分管领导确认时间" msprop:Generator_ColumnPropNameInRow="分管领导确认时间" msprop:Generator_ColumnPropNameInTable="分管领导确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="财务领导确认" msdata:ReadOnly="true" msprop:Generator_UserColumnName="财务领导确认" msprop:Generator_ColumnVarNameInTable="column财务领导确认" msprop:Generator_ColumnPropNameInRow="财务领导确认" msprop:Generator_ColumnPropNameInTable="财务领导确认Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="财务确认时间" msprop:Generator_UserColumnName="财务确认时间" msprop:Generator_ColumnVarNameInTable="column财务确认时间" msprop:Generator_ColumnPropNameInRow="财务确认时间" msprop:Generator_ColumnPropNameInTable="财务确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="常务副总经理确认" msdata:ReadOnly="true" msprop:Generator_UserColumnName="常务副总经理确认" msprop:Generator_ColumnVarNameInTable="column常务副总经理确认" msprop:Generator_ColumnPropNameInRow="常务副总经理确认" msprop:Generator_ColumnPropNameInTable="常务副总经理确认Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="常务副总经理确认时间" msprop:Generator_UserColumnName="常务副总经理确认时间" msprop:Generator_ColumnVarNameInTable="column常务副总经理确认时间" msprop:Generator_ColumnPropNameInRow="常务副总经理确认时间" msprop:Generator_ColumnPropNameInTable="常务副总经理确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="采购工程师" msdata:ReadOnly="true" msprop:Generator_UserColumnName="采购工程师" msprop:Generator_ColumnVarNameInTable="column采购工程师" msprop:Generator_ColumnPropNameInRow="采购工程师" msprop:Generator_ColumnPropNameInTable="采购工程师Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="完成日期" msprop:Generator_UserColumnName="完成日期" msprop:Generator_ColumnVarNameInTable="column完成日期" msprop:Generator_ColumnPropNameInRow="完成日期" msprop:Generator_ColumnPropNameInTable="完成日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="负责人意见" msprop:Generator_UserColumnName="负责人意见" msprop:Generator_ColumnPropNameInRow="负责人意见" msprop:Generator_ColumnVarNameInTable="column负责人意见" msprop:Generator_ColumnPropNameInTable="负责人意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分管领导意见" msprop:Generator_UserColumnName="分管领导意见" msprop:Generator_ColumnPropNameInRow="分管领导意见" msprop:Generator_ColumnVarNameInTable="column分管领导意见" msprop:Generator_ColumnPropNameInTable="分管领导意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="财务意见" msprop:Generator_UserColumnName="财务意见" msprop:Generator_ColumnPropNameInRow="财务意见" msprop:Generator_ColumnVarNameInTable="column财务意见" msprop:Generator_ColumnPropNameInTable="财务意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="常务副总经理意见" msprop:Generator_UserColumnName="常务副总经理意见" msprop:Generator_ColumnPropNameInRow="常务副总经理意见" msprop:Generator_ColumnVarNameInTable="column常务副总经理意见" msprop:Generator_ColumnPropNameInTable="常务副总经理意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInTable="单据号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="部门月预算内" msdata:ReadOnly="true" msprop:Generator_UserColumnName="部门月预算内" msprop:Generator_ColumnPropNameInRow="部门月预算内" msprop:Generator_ColumnVarNameInTable="column部门月预算内" msprop:Generator_ColumnPropNameInTable="部门月预算内Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="用途" msprop:Generator_UserColumnName="用途" msprop:Generator_ColumnVarNameInTable="column用途" msprop:Generator_ColumnPropNameInRow="用途" msprop:Generator_ColumnPropNameInTable="用途Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否已打印" msprop:Generator_UserColumnName="是否已打印" msprop:Generator_ColumnVarNameInTable="column是否已打印" msprop:Generator_ColumnPropNameInRow="是否已打印" msprop:Generator_ColumnPropNameInTable="是否已打印Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="调配人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="调配人" msprop:Generator_ColumnVarNameInTable="column调配人" msprop:Generator_ColumnPropNameInRow="调配人" msprop:Generator_ColumnPropNameInTable="调配人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请部门编号" msprop:Generator_UserColumnName="申请部门编号" msprop:Generator_ColumnVarNameInTable="column申请部门编号" msprop:Generator_ColumnPropNameInRow="申请部门编号" msprop:Generator_ColumnPropNameInTable="申请部门编号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_B_MinorPurchaseList" msprop:Generator_UserTableName="View_B_MinorPurchaseList" msprop:Generator_RowDeletedName="View_B_MinorPurchaseListRowDeleted" msprop:Generator_RowChangedName="View_B_MinorPurchaseListRowChanged" msprop:Generator_RowClassName="View_B_MinorPurchaseListRow" msprop:Generator_RowChangingName="View_B_MinorPurchaseListRowChanging" msprop:Generator_RowEvArgName="View_B_MinorPurchaseListRowChangeEvent" msprop:Generator_RowEvHandlerName="View_B_MinorPurchaseListRowChangeEventHandler" msprop:Generator_TableClassName="View_B_MinorPurchaseListDataTable" msprop:Generator_TableVarName="tableView_B_MinorPurchaseList" msprop:Generator_RowDeletingName="View_B_MinorPurchaseListRowDeleting" msprop:Generator_TablePropName="View_B_MinorPurchaseList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="编号" msprop:Generator_UserColumnName="编号" msprop:Generator_ColumnVarNameInTable="column编号" msprop:Generator_ColumnPropNameInRow="编号" msprop:Generator_ColumnPropNameInTable="编号Column" type="xs:int" />
+              <xs:element name="图号型号" msprop:Generator_UserColumnName="图号型号" msprop:Generator_ColumnVarNameInTable="column图号型号" msprop:Generator_ColumnPropNameInRow="图号型号" msprop:Generator_ColumnPropNameInTable="图号型号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物品名称" msprop:Generator_UserColumnName="物品名称" msprop:Generator_ColumnVarNameInTable="column物品名称" msprop:Generator_ColumnPropNameInRow="物品名称" msprop:Generator_ColumnPropNameInTable="物品名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="规格" msprop:Generator_UserColumnName="规格" msprop:Generator_ColumnVarNameInTable="column规格" msprop:Generator_ColumnPropNameInRow="规格" msprop:Generator_ColumnPropNameInTable="规格Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="供应商" msprop:Generator_UserColumnName="供应商" msprop:Generator_ColumnVarNameInTable="column供应商" msprop:Generator_ColumnPropNameInRow="供应商" msprop:Generator_ColumnPropNameInTable="供应商Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请数量" msprop:Generator_UserColumnName="申请数量" msprop:Generator_ColumnVarNameInTable="column申请数量" msprop:Generator_ColumnPropNameInRow="申请数量" msprop:Generator_ColumnPropNameInTable="申请数量Column" type="xs:int" minOccurs="0" />
+              <xs:element name="库存数量" msdata:ReadOnly="true" msprop:Generator_UserColumnName="库存数量" msprop:Generator_ColumnVarNameInTable="column库存数量" msprop:Generator_ColumnPropNameInRow="库存数量" msprop:Generator_ColumnPropNameInTable="库存数量Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="单位" msprop:Generator_UserColumnName="单位" msprop:Generator_ColumnVarNameInTable="column单位" msprop:Generator_ColumnPropNameInRow="单位" msprop:Generator_ColumnPropNameInTable="单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="要求到货日期" msprop:Generator_UserColumnName="要求到货日期" msprop:Generator_ColumnVarNameInTable="column要求到货日期" msprop:Generator_ColumnPropNameInRow="要求到货日期" msprop:Generator_ColumnPropNameInTable="要求到货日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="物品状态" msprop:Generator_UserColumnName="物品状态" msprop:Generator_ColumnVarNameInTable="column物品状态" msprop:Generator_ColumnPropNameInRow="物品状态" msprop:Generator_ColumnPropNameInTable="物品状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="预算价格" msprop:Generator_UserColumnName="预算价格" msprop:Generator_ColumnVarNameInTable="column预算价格" msprop:Generator_ColumnPropNameInRow="预算价格" msprop:Generator_ColumnPropNameInTable="预算价格Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="最终到货日期" msprop:Generator_UserColumnName="最终到货日期" msprop:Generator_ColumnVarNameInTable="column最终到货日期" msprop:Generator_ColumnPropNameInRow="最终到货日期" msprop:Generator_ColumnPropNameInTable="最终到货日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoodsID" msprop:Generator_UserColumnName="GoodsID" msprop:Generator_ColumnVarNameInTable="columnGoodsID" msprop:Generator_ColumnPropNameInRow="GoodsID" msprop:Generator_ColumnPropNameInTable="GoodsIDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_S_MusterUseBill" msprop:Generator_UserTableName="View_S_MusterUseBill" msprop:Generator_RowDeletedName="View_S_MusterUseBillRowDeleted" msprop:Generator_RowChangedName="View_S_MusterUseBillRowChanged" msprop:Generator_RowClassName="View_S_MusterUseBillRow" msprop:Generator_RowChangingName="View_S_MusterUseBillRowChanging" msprop:Generator_RowEvArgName="View_S_MusterUseBillRowChangeEvent" msprop:Generator_RowEvHandlerName="View_S_MusterUseBillRowChangeEventHandler" msprop:Generator_TableClassName="View_S_MusterUseBillDataTable" msprop:Generator_TableVarName="tableView_S_MusterUseBill" msprop:Generator_RowDeletingName="View_S_MusterUseBillRowDeleting" msprop:Generator_TablePropName="View_S_MusterUseBill">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnPropNameInTable="单据号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="单据状态" msprop:Generator_UserColumnName="单据状态" msprop:Generator_ColumnVarNameInTable="column单据状态" msprop:Generator_ColumnPropNameInRow="单据状态" msprop:Generator_ColumnPropNameInTable="单据状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="用途" msprop:Generator_UserColumnName="用途" msprop:Generator_ColumnVarNameInTable="column用途" msprop:Generator_ColumnPropNameInRow="用途" msprop:Generator_ColumnPropNameInTable="用途Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="库房名称" msprop:Generator_UserColumnName="库房名称" msprop:Generator_ColumnVarNameInTable="column库房名称" msprop:Generator_ColumnPropNameInRow="库房名称" msprop:Generator_ColumnPropNameInTable="库房名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请人" msprop:Generator_UserColumnName="申请人" msprop:Generator_ColumnVarNameInTable="column申请人" msprop:Generator_ColumnPropNameInRow="申请人" msprop:Generator_ColumnPropNameInTable="申请人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请日期" msprop:Generator_UserColumnName="申请日期" msprop:Generator_ColumnVarNameInTable="column申请日期" msprop:Generator_ColumnPropNameInRow="申请日期" msprop:Generator_ColumnPropNameInTable="申请日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="审核人" msprop:Generator_UserColumnName="审核人" msprop:Generator_ColumnVarNameInTable="column审核人" msprop:Generator_ColumnPropNameInRow="审核人" msprop:Generator_ColumnPropNameInTable="审核人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="审核日期" msprop:Generator_UserColumnName="审核日期" msprop:Generator_ColumnVarNameInTable="column审核日期" msprop:Generator_ColumnPropNameInRow="审核日期" msprop:Generator_ColumnPropNameInTable="审核日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="仓管员" msprop:Generator_UserColumnName="仓管员" msprop:Generator_ColumnVarNameInTable="column仓管员" msprop:Generator_ColumnPropNameInRow="仓管员" msprop:Generator_ColumnPropNameInTable="仓管员Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="出库日期" msprop:Generator_UserColumnName="出库日期" msprop:Generator_ColumnVarNameInTable="column出库日期" msprop:Generator_ColumnPropNameInRow="出库日期" msprop:Generator_ColumnPropNameInTable="出库日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="库房编码" msprop:Generator_UserColumnName="库房编码" msprop:Generator_ColumnVarNameInTable="column库房编码" msprop:Generator_ColumnPropNameInRow="库房编码" msprop:Generator_ColumnPropNameInTable="库房编码Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="用途编码" msprop:Generator_UserColumnName="用途编码" msprop:Generator_ColumnVarNameInTable="column用途编码" msprop:Generator_ColumnPropNameInRow="用途编码" msprop:Generator_ColumnPropNameInTable="用途编码Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_S_MusterUseList" msprop:Generator_UserTableName="View_S_MusterUseList" msprop:Generator_RowDeletedName="View_S_MusterUseListRowDeleted" msprop:Generator_RowChangedName="View_S_MusterUseListRowChanged" msprop:Generator_RowClassName="View_S_MusterUseListRow" msprop:Generator_RowChangingName="View_S_MusterUseListRowChanging" msprop:Generator_RowEvArgName="View_S_MusterUseListRowChangeEvent" msprop:Generator_RowEvHandlerName="View_S_MusterUseListRowChangeEventHandler" msprop:Generator_TableClassName="View_S_MusterUseListDataTable" msprop:Generator_TableVarName="tableView_S_MusterUseList" msprop:Generator_RowDeletingName="View_S_MusterUseListRowDeleting" msprop:Generator_TablePropName="View_S_MusterUseList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="图号型号" msprop:Generator_UserColumnName="图号型号" msprop:Generator_ColumnVarNameInTable="column图号型号" msprop:Generator_ColumnPropNameInRow="图号型号" msprop:Generator_ColumnPropNameInTable="图号型号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物品名称" msprop:Generator_UserColumnName="物品名称" msprop:Generator_ColumnVarNameInTable="column物品名称" msprop:Generator_ColumnPropNameInRow="物品名称" msprop:Generator_ColumnPropNameInTable="物品名称Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="规格" msprop:Generator_UserColumnName="规格" msprop:Generator_ColumnVarNameInTable="column规格" msprop:Generator_ColumnPropNameInRow="规格" msprop:Generator_ColumnPropNameInTable="规格Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="数量" msprop:Generator_UserColumnName="数量" msprop:Generator_ColumnVarNameInTable="column数量" msprop:Generator_ColumnPropNameInRow="数量" msprop:Generator_ColumnPropNameInTable="数量Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="批次号" msprop:Generator_UserColumnName="批次号" msprop:Generator_ColumnVarNameInTable="column批次号" msprop:Generator_ColumnPropNameInRow="批次号" msprop:Generator_ColumnPropNameInTable="批次号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="版次号" msprop:Generator_UserColumnName="版次号" msprop:Generator_ColumnVarNameInTable="column版次号" msprop:Generator_ColumnPropNameInRow="版次号" msprop:Generator_ColumnPropNameInTable="版次号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="单位" msprop:Generator_UserColumnName="单位" msprop:Generator_ColumnVarNameInTable="column单位" msprop:Generator_ColumnPropNameInRow="单位" msprop:Generator_ColumnPropNameInTable="单位Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="库存数" msprop:Generator_UserColumnName="库存数" msprop:Generator_ColumnVarNameInTable="column库存数" msprop:Generator_ColumnPropNameInRow="库存数" msprop:Generator_ColumnPropNameInTable="库存数Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="物品ID" msprop:Generator_UserColumnName="物品ID" msprop:Generator_ColumnVarNameInTable="column物品ID" msprop:Generator_ColumnPropNameInRow="物品ID" msprop:Generator_ColumnPropNameInTable="物品IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnPropNameInTable="单据号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_S_MarketingAll" msprop:Generator_UserTableName="View_S_MarketingAll" msprop:Generator_RowDeletedName="View_S_MarketingAllRowDeleted" msprop:Generator_RowChangedName="View_S_MarketingAllRowChanged" msprop:Generator_RowClassName="View_S_MarketingAllRow" msprop:Generator_RowChangingName="View_S_MarketingAllRowChanging" msprop:Generator_RowEvArgName="View_S_MarketingAllRowChangeEvent" msprop:Generator_RowEvHandlerName="View_S_MarketingAllRowChangeEventHandler" msprop:Generator_TableClassName="View_S_MarketingAllDataTable" msprop:Generator_TableVarName="tableView_S_MarketingAll" msprop:Generator_RowDeletingName="View_S_MarketingAllRowDeleting" msprop:Generator_TablePropName="View_S_MarketingAll">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="DJH" msprop:Generator_UserColumnName="DJH" msprop:Generator_ColumnVarNameInTable="columnDJH" msprop:Generator_ColumnPropNameInRow="DJH" msprop:Generator_ColumnPropNameInTable="DJHColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LRRY" msdata:ReadOnly="true" msprop:Generator_UserColumnName="LRRY" msprop:Generator_ColumnVarNameInTable="columnLRRY" msprop:Generator_ColumnPropNameInRow="LRRY" msprop:Generator_ColumnPropNameInTable="LRRYColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dept" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Dept" msprop:Generator_ColumnVarNameInTable="columnDept" msprop:Generator_ColumnPropNameInRow="Dept" msprop:Generator_ColumnPropNameInTable="DeptColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SHRY" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SHRY" msprop:Generator_ColumnVarNameInTable="columnSHRY" msprop:Generator_ColumnPropNameInRow="SHRY" msprop:Generator_ColumnPropNameInTable="SHRYColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YWLX" msprop:Generator_UserColumnName="YWLX" msprop:Generator_ColumnVarNameInTable="columnYWLX" msprop:Generator_ColumnPropNameInRow="YWLX" msprop:Generator_ColumnPropNameInTable="YWLXColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KFRY" msdata:ReadOnly="true" msprop:Generator_UserColumnName="KFRY" msprop:Generator_ColumnVarNameInTable="columnKFRY" msprop:Generator_ColumnPropNameInRow="KFRY" msprop:Generator_ColumnPropNameInTable="KFRYColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DJZT_FLAG" msprop:Generator_UserColumnName="DJZT_FLAG" msprop:Generator_ColumnVarNameInTable="columnDJZT_FLAG" msprop:Generator_ColumnPropNameInRow="DJZT_FLAG" msprop:Generator_ColumnPropNameInTable="DJZT_FLAGColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DELETE_FLAG" msprop:Generator_UserColumnName="DELETE_FLAG" msprop:Generator_ColumnVarNameInTable="columnDELETE_FLAG" msprop:Generator_ColumnPropNameInRow="DELETE_FLAG" msprop:Generator_ColumnPropNameInTable="DELETE_FLAGColumn" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" />
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" type="xs:decimal" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ListID" msprop:Generator_UserColumnName="ListID" msprop:Generator_ColumnVarNameInTable="columnListID" msprop:Generator_ColumnPropNameInRow="ListID" msprop:Generator_ColumnPropNameInTable="ListIDColumn" type="xs:int" />
+              <xs:element name="DJ_ID" msprop:Generator_UserColumnName="DJ_ID" msprop:Generator_ColumnVarNameInTable="columnDJ_ID" msprop:Generator_ColumnPropNameInRow="DJ_ID" msprop:Generator_ColumnPropNameInTable="DJ_IDColumn" type="xs:int" />
+              <xs:element name="CPID" msprop:Generator_UserColumnName="CPID" msprop:Generator_ColumnVarNameInTable="columnCPID" msprop:Generator_ColumnPropNameInRow="CPID" msprop:Generator_ColumnPropNameInTable="CPIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Provider" msprop:Generator_UserColumnName="Provider" msprop:Generator_ColumnVarNameInTable="columnProvider" msprop:Generator_ColumnPropNameInRow="Provider" msprop:Generator_ColumnPropNameInTable="ProviderColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitPrice" msprop:Generator_UserColumnName="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" type="xs:decimal" />
+              <xs:element name="GoodsPrice" msprop:Generator_UserColumnName="GoodsPrice" msprop:Generator_ColumnVarNameInTable="columnGoodsPrice" msprop:Generator_ColumnPropNameInRow="GoodsPrice" msprop:Generator_ColumnPropNameInTable="GoodsPriceColumn" type="xs:decimal" />
+              <xs:element name="Count" msprop:Generator_UserColumnName="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" type="xs:decimal" />
+              <xs:element name="Unit" msprop:Generator_UserColumnName="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BatchNo" msprop:Generator_UserColumnName="BatchNo" msprop:Generator_ColumnVarNameInTable="columnBatchNo" msprop:Generator_ColumnPropNameInRow="BatchNo" msprop:Generator_ColumnPropNameInTable="BatchNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoodsRemark" msprop:Generator_UserColumnName="GoodsRemark" msprop:Generator_ColumnVarNameInTable="columnGoodsRemark" msprop:Generator_ColumnPropNameInRow="GoodsRemark" msprop:Generator_ColumnPropNameInTable="GoodsRemarkColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StorageID" msprop:Generator_UserColumnName="StorageID" msprop:Generator_ColumnVarNameInTable="columnStorageID" msprop:Generator_ColumnPropNameInRow="StorageID" msprop:Generator_ColumnPropNameInTable="StorageIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YWFS" msprop:Generator_UserColumnName="YWFS" msprop:Generator_ColumnVarNameInTable="columnYWFS" msprop:Generator_ColumnPropNameInRow="YWFS" msprop:Generator_ColumnPropNameInTable="YWFSColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StorageName" msprop:Generator_UserColumnName="StorageName" msprop:Generator_ColumnVarNameInTable="columnStorageName" msprop:Generator_ColumnPropNameInRow="StorageName" msprop:Generator_ColumnPropNameInTable="StorageNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoodsCode" msprop:Generator_UserColumnName="GoodsCode" msprop:Generator_ColumnVarNameInTable="columnGoodsCode" msprop:Generator_ColumnPropNameInRow="GoodsCode" msprop:Generator_ColumnPropNameInTable="GoodsCodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoodsName" msprop:Generator_UserColumnName="GoodsName" msprop:Generator_ColumnVarNameInTable="columnGoodsName" msprop:Generator_ColumnPropNameInRow="GoodsName" msprop:Generator_ColumnPropNameInTable="GoodsNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Spec" msprop:Generator_UserColumnName="Spec" msprop:Generator_ColumnVarNameInTable="columnSpec" msprop:Generator_ColumnPropNameInRow="Spec" msprop:Generator_ColumnPropNameInTable="SpecColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LRKS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="LRKS" msprop:Generator_ColumnVarNameInTable="columnLRKS" msprop:Generator_ColumnPropNameInRow="LRKS" msprop:Generator_ColumnPropNameInTable="LRKSColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AffirmDate" msprop:Generator_UserColumnName="AffirmDate" msprop:Generator_ColumnVarNameInTable="columnAffirmDate" msprop:Generator_ColumnPropNameInRow="AffirmDate" msprop:Generator_ColumnPropNameInTable="AffirmDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FSRY" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FSRY" msprop:Generator_ColumnVarNameInTable="columnFSRY" msprop:Generator_ColumnPropNameInRow="FSRY" msprop:Generator_ColumnPropNameInTable="FSRYColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_B_MinorPurchaseBill1" msprop:Generator_UserTableName="View_B_MinorPurchaseBill1" msprop:Generator_RowDeletedName="View_B_MinorPurchaseBill1RowDeleted" msprop:Generator_TableClassName="View_B_MinorPurchaseBill1DataTable" msprop:Generator_RowChangedName="View_B_MinorPurchaseBill1RowChanged" msprop:Generator_RowClassName="View_B_MinorPurchaseBill1Row" msprop:Generator_RowChangingName="View_B_MinorPurchaseBill1RowChanging" msprop:Generator_RowEvArgName="View_B_MinorPurchaseBill1RowChangeEvent" msprop:Generator_RowEvHandlerName="View_B_MinorPurchaseBill1RowChangeEventHandler" msprop:Generator_TablePropName="View_B_MinorPurchaseBill1" msprop:Generator_TableVarName="tableView_B_MinorPurchaseBill1" msprop:Generator_RowDeletingName="View_B_MinorPurchaseBill1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="编号" msprop:Generator_UserColumnName="编号" msprop:Generator_ColumnPropNameInRow="编号" msprop:Generator_ColumnVarNameInTable="column编号" msprop:Generator_ColumnPropNameInTable="编号Column" type="xs:int" />
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInTable="单据号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="单据状态" msprop:Generator_UserColumnName="单据状态" msprop:Generator_ColumnPropNameInRow="单据状态" msprop:Generator_ColumnVarNameInTable="column单据状态" msprop:Generator_ColumnPropNameInTable="单据状态Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="采购类别" msprop:Generator_UserColumnName="采购类别" msprop:Generator_ColumnPropNameInRow="采购类别" msprop:Generator_ColumnVarNameInTable="column采购类别" msprop:Generator_ColumnPropNameInTable="采购类别Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="用途" msprop:Generator_UserColumnName="用途" msprop:Generator_ColumnPropNameInRow="用途" msprop:Generator_ColumnVarNameInTable="column用途" msprop:Generator_ColumnPropNameInTable="用途Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否紧急" msdata:ReadOnly="true" msprop:Generator_UserColumnName="是否紧急" msprop:Generator_ColumnPropNameInRow="是否紧急" msprop:Generator_ColumnVarNameInTable="column是否紧急" msprop:Generator_ColumnPropNameInTable="是否紧急Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否已打印" msprop:Generator_UserColumnName="是否已打印" msprop:Generator_ColumnPropNameInRow="是否已打印" msprop:Generator_ColumnVarNameInTable="column是否已打印" msprop:Generator_ColumnPropNameInTable="是否已打印Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="部门月预算内" msdata:ReadOnly="true" msprop:Generator_UserColumnName="部门月预算内" msprop:Generator_ColumnPropNameInRow="部门月预算内" msprop:Generator_ColumnVarNameInTable="column部门月预算内" msprop:Generator_ColumnPropNameInTable="部门月预算内Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="申请人" msprop:Generator_ColumnPropNameInRow="申请人" msprop:Generator_ColumnVarNameInTable="column申请人" msprop:Generator_ColumnPropNameInTable="申请人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请日期" msprop:Generator_UserColumnName="申请日期" msprop:Generator_ColumnPropNameInRow="申请日期" msprop:Generator_ColumnVarNameInTable="column申请日期" msprop:Generator_ColumnPropNameInTable="申请日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="申请部门" msprop:Generator_UserColumnName="申请部门" msprop:Generator_ColumnPropNameInRow="申请部门" msprop:Generator_ColumnVarNameInTable="column申请部门" msprop:Generator_ColumnPropNameInTable="申请部门Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="编制人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="编制人" msprop:Generator_ColumnPropNameInRow="编制人" msprop:Generator_ColumnVarNameInTable="column编制人" msprop:Generator_ColumnPropNameInTable="编制人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="编制日期" msprop:Generator_UserColumnName="编制日期" msprop:Generator_ColumnPropNameInRow="编制日期" msprop:Generator_ColumnVarNameInTable="column编制日期" msprop:Generator_ColumnPropNameInTable="编制日期Column" type="xs:dateTime" />
+              <xs:element name="部门负责人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="部门负责人" msprop:Generator_ColumnPropNameInRow="部门负责人" msprop:Generator_ColumnVarNameInTable="column部门负责人" msprop:Generator_ColumnPropNameInTable="部门负责人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="部门确认时间" msprop:Generator_UserColumnName="部门确认时间" msprop:Generator_ColumnPropNameInRow="部门确认时间" msprop:Generator_ColumnVarNameInTable="column部门确认时间" msprop:Generator_ColumnPropNameInTable="部门确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="负责人意见" msprop:Generator_UserColumnName="负责人意见" msprop:Generator_ColumnPropNameInRow="负责人意见" msprop:Generator_ColumnVarNameInTable="column负责人意见" msprop:Generator_ColumnPropNameInTable="负责人意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分管领导" msdata:ReadOnly="true" msprop:Generator_UserColumnName="分管领导" msprop:Generator_ColumnPropNameInRow="分管领导" msprop:Generator_ColumnVarNameInTable="column分管领导" msprop:Generator_ColumnPropNameInTable="分管领导Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分管领导确认时间" msprop:Generator_UserColumnName="分管领导确认时间" msprop:Generator_ColumnPropNameInRow="分管领导确认时间" msprop:Generator_ColumnVarNameInTable="column分管领导确认时间" msprop:Generator_ColumnPropNameInTable="分管领导确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="分管领导意见" msprop:Generator_UserColumnName="分管领导意见" msprop:Generator_ColumnPropNameInRow="分管领导意见" msprop:Generator_ColumnVarNameInTable="column分管领导意见" msprop:Generator_ColumnPropNameInTable="分管领导意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="财务领导确认" msdata:ReadOnly="true" msprop:Generator_UserColumnName="财务领导确认" msprop:Generator_ColumnPropNameInRow="财务领导确认" msprop:Generator_ColumnVarNameInTable="column财务领导确认" msprop:Generator_ColumnPropNameInTable="财务领导确认Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="财务确认时间" msprop:Generator_UserColumnName="财务确认时间" msprop:Generator_ColumnPropNameInRow="财务确认时间" msprop:Generator_ColumnVarNameInTable="column财务确认时间" msprop:Generator_ColumnPropNameInTable="财务确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="财务意见" msprop:Generator_UserColumnName="财务意见" msprop:Generator_ColumnPropNameInRow="财务意见" msprop:Generator_ColumnVarNameInTable="column财务意见" msprop:Generator_ColumnPropNameInTable="财务意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="常务副总经理确认" msdata:ReadOnly="true" msprop:Generator_UserColumnName="常务副总经理确认" msprop:Generator_ColumnPropNameInRow="常务副总经理确认" msprop:Generator_ColumnVarNameInTable="column常务副总经理确认" msprop:Generator_ColumnPropNameInTable="常务副总经理确认Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="常务副总经理确认时间" msprop:Generator_UserColumnName="常务副总经理确认时间" msprop:Generator_ColumnPropNameInRow="常务副总经理确认时间" msprop:Generator_ColumnVarNameInTable="column常务副总经理确认时间" msprop:Generator_ColumnPropNameInTable="常务副总经理确认时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="调配人" msdata:ReadOnly="true" msprop:Generator_UserColumnName="调配人" msprop:Generator_ColumnPropNameInRow="调配人" msprop:Generator_ColumnVarNameInTable="column调配人" msprop:Generator_ColumnPropNameInTable="调配人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="常务副总经理意见" msprop:Generator_UserColumnName="常务副总经理意见" msprop:Generator_ColumnPropNameInRow="常务副总经理意见" msprop:Generator_ColumnVarNameInTable="column常务副总经理意见" msprop:Generator_ColumnPropNameInTable="常务副总经理意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="采购工程师" msdata:ReadOnly="true" msprop:Generator_UserColumnName="采购工程师" msprop:Generator_ColumnPropNameInRow="采购工程师" msprop:Generator_ColumnVarNameInTable="column采购工程师" msprop:Generator_ColumnPropNameInTable="采购工程师Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="完成日期" msprop:Generator_UserColumnName="完成日期" msprop:Generator_ColumnPropNameInRow="完成日期" msprop:Generator_ColumnVarNameInTable="column完成日期" msprop:Generator_ColumnPropNameInTable="完成日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请部门编号" msprop:Generator_UserColumnName="申请部门编号" msprop:Generator_ColumnPropNameInRow="申请部门编号" msprop:Generator_ColumnVarNameInTable="column申请部门编号" msprop:Generator_ColumnPropNameInTable="申请部门编号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Client" />
+      <xs:field xpath="mstns:客户编码" />
+    </xs:unique>
+    <xs:unique name="View_S_MarketingPartBill_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_S_MarketingPartBill" />
+      <xs:field xpath="mstns:单据号" />
+    </xs:unique>
+    <xs:unique name="View_S_MarketintPartList_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_S_MarketintPartList" />
+      <xs:field xpath="mstns:序号" />
+    </xs:unique>
+    <xs:unique name="View_B_MinorPurchaseBill_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_B_MinorPurchaseBill" />
+      <xs:field xpath="mstns:编号" />
+    </xs:unique>
+    <xs:unique name="View_S_MusterUseBill_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_S_MusterUseBill" />
+      <xs:field xpath="mstns:库房编码" />
+    </xs:unique>
+    <xs:unique name="View_B_MinorPurchaseBill1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_B_MinorPurchaseBill1" />
+      <xs:field xpath="mstns:编号" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 14.5" name="PlatformService">
+  <DataContextMoniker Name="/PlatformServiceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d13c144b-3fa7-4f90-9b75-e9650689d7e3" absoluteBounds="0.75, 0.75, 2, 1.1677168782552083">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_CCDResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49749a83-1af4-4578-8b93-00727045d607" absoluteBounds="0.76500000000000012, 1.21, 1.9700000000000002, 0.60771687825520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b25aa2db-eacc-4595-a467-17c929b6640c" absoluteBounds="0.75, 2.75, 2, 5.0483931477864576">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_IncompleteAssembly" />
+      <nestedChildShapes>
+        <elementListCompartment Id="099ac093-4a11-4f2c-9431-cd03d5edd11d" absoluteBounds="0.765, 3.21, 1.9700000000000002, 4.488393147786458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="348308a2-cb2f-4dbf-b970-8cc8ab128441" absoluteBounds="3.75, 0.75, 2, 1.9068933105468751">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_MeasureData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6856e7c-c956-4436-9785-71171089465d" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a8439240-14dc-4b69-9dc0-9c211a3e43cb" absoluteBounds="3.75, 3.75, 2, 1.7220992024739577">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_PartNameWithUniqueCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ad0d41b-440c-4285-a696-7fc9d613872f" absoluteBounds="3.7649999999999997, 4.21, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d03bba73-ad0e-4d03-8ae9-2ebb4ba417dc" absoluteBounds="6.75, 0.75, 2, 2.6460697428385416">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_TorqueMachineConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="999c01bb-028e-441e-b1de-7e7473a134f9" absoluteBounds="6.765, 1.2100000000000009, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd0adea1-d514-44c3-aff1-b77319fe37b1" absoluteBounds="3.75, 6.75, 2, 1.1677168782552077">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_TorqueMachineResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e701cc04-ae2c-4f62-b213-83ee6dc192e5" absoluteBounds="3.7650000000000006, 7.21, 1.9700000000000002, 0.60771687825520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="973739c8-e16f-4dad-b82d-c72221aa32a8" absoluteBounds="6.75, 4.75, 2, 1.1677168782552077">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_WorkBenchType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c87609fa-ebdf-4141-9f6c-43c48b34cc78" absoluteBounds="6.7650000000000006, 5.21, 1.9700000000000002, 0.60771687825520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e158665-9085-41a4-ae71-1a5b9fec94ca" absoluteBounds="6.75, 6.75, 2, 1.9068933105468755">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZZZ_MeasureData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ca2b4ab-6bee-4d46-abc5-d66dc37727f6" absoluteBounds="6.7650000000000006, 7.21, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2dd21d5d-7596-458e-aca8-92d272598f56" absoluteBounds="0.75, 8.75, 2, 1.3525109863281255">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZZZ_ParentInfoOfWorkBench" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bbdf6b0-51ee-48d6-97a0-39fe87206994" absoluteBounds="0.76500000000000057, 9.21, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27a02fed-d49c-41e1-bfa7-bb3ace9d6fec" absoluteBounds="9.75, 0.75, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZZZ_MeasurePartConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e881a9ec-8ed1-4ae3-9d97-b56a0d6038d4" absoluteBounds="9.765, 1.2100000000000009, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d1d8e9a-fa62-433e-97c1-7f0e285c759c" absoluteBounds="9.75, 3.75, 2, 3.3852461751302076">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_ProductWorkbenchConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c09387ca-d5f2-4f9f-8790-d2b9625d141f" absoluteBounds="9.765, 4.21, 1.9700000000000002, 2.825246175130208" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20896ba1-05e4-421c-aecb-72c937a7a544" absoluteBounds="3.75, 9.75, 2, 4.4940108235677076">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_WorkBenchConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="683f8b41-2ee3-4991-8be3-d756bc9992c5" absoluteBounds="3.765, 10.21, 1.9700000000000002, 3.934010823567708" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef387f55-2eee-4541-9fd4-ec73e7cfe733" absoluteBounds="6.75, 9.75, 2, 4.1244226074218755">
+      <DataClassMoniker Name="/PlatformServiceDataContext/View_ZPX_ProductWorkbenchConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f83881eb-6f2c-4cd8-a31b-4977ddd84748" absoluteBounds="6.765, 10.21, 1.9700000000000002, 3.564422607421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="702794b2-a495-42a6-82fb-13578bfdc661" absoluteBounds="9.75, 7.75, 2, 4.6788049316406255">
+      <DataClassMoniker Name="/PlatformServiceDataContext/View_ZPX_WorkBenchConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cd4cbd9-73a4-45fd-b292-34d721859dc6" absoluteBounds="9.765, 8.21, 1.9700000000000002, 4.118804931640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cf89e99-912a-4d0d-955e-4d653cbec5b9" absoluteBounds="12.75, 4, 2, 3.0156579589843746">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_LeakproofParts" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe701169-b4fe-4291-978d-8fd25fc2556d" absoluteBounds="12.765, 4.46, 1.9700000000000002, 2.455657958984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31b243ab-b309-45e5-97cc-fdbd448746b0" absoluteBounds="12.75, 0.75, 2, 2.8308638509114581">
+      <DataClassMoniker Name="/PlatformServiceDataContext/ZPX_CCDConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5df491f-e2a4-4e37-baa5-3e0f0d51fcf4" absoluteBounds="12.765, 1.21, 1.9700000000000002, 2.270863850911458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

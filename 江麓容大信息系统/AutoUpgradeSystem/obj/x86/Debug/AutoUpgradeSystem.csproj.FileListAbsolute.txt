@@ -1,0 +1,5 @@
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\AutoUpgradeSystem\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\AutoUpgradeSystem\obj\x86\Debug\AutoUpgradeSystem.FormConfigDataServer.resources
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\AutoUpgradeSystem\obj\x86\Debug\AutoUpgradeSystem.FormMain.resources
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\AutoUpgradeSystem\obj\x86\Debug\AutoUpgradeSystem.Properties.Resources.resources
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\AutoUpgradeSystem\obj\x86\Debug\AutoUpgradeSystem.csproj.GenerateResource.Cache

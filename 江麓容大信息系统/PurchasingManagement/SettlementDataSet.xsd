@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SettlementDataSet" targetNamespace="http://tempuri.org/SettlementDataSet.xsd" xmlns:mstns="http://tempuri.org/SettlementDataSet.xsd" xmlns="http://tempuri.org/SettlementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Form_Economic_Purchase.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Business_Settlement_ProcurementStatementDetailTableAdapter" GeneratorDataComponentClassName="View_Business_Settlement_ProcurementStatementDetailTableAdapter" Name="View_Business_Settlement_ProcurementStatementDetail" UserDataComponentName="View_Business_Settlement_ProcurementStatementDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="DepotManagement.dbo.View_Business_Settlement_ProcurementStatementDetail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 单据号, 入库单号, 零件图号, 零件名称, 规格, 批次号, 入库数量, 入库单价, 单件委托材料, 单件加工费, 入库金额, 委托加工材料, 发票单价, 税额, 价税合计, 发票金额, 合同申请单号, 差异说明, 物品ID FROM View_Business_Settlement_ProcurementStatementDetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="入库单号" DataSetColumn="入库单号" />
+              <Mapping SourceColumn="零件图号" DataSetColumn="零件图号" />
+              <Mapping SourceColumn="零件名称" DataSetColumn="零件名称" />
+              <Mapping SourceColumn="规格" DataSetColumn="规格" />
+              <Mapping SourceColumn="批次号" DataSetColumn="批次号" />
+              <Mapping SourceColumn="入库数量" DataSetColumn="入库数量" />
+              <Mapping SourceColumn="入库单价" DataSetColumn="入库单价" />
+              <Mapping SourceColumn="单件委托材料" DataSetColumn="单件委托材料" />
+              <Mapping SourceColumn="单件加工费" DataSetColumn="单件加工费" />
+              <Mapping SourceColumn="入库金额" DataSetColumn="入库金额" />
+              <Mapping SourceColumn="委托加工材料" DataSetColumn="委托加工材料" />
+              <Mapping SourceColumn="发票单价" DataSetColumn="发票单价" />
+              <Mapping SourceColumn="税额" DataSetColumn="税额" />
+              <Mapping SourceColumn="价税合计" DataSetColumn="价税合计" />
+              <Mapping SourceColumn="发票金额" DataSetColumn="发票金额" />
+              <Mapping SourceColumn="合同申请单号" DataSetColumn="合同申请单号" />
+              <Mapping SourceColumn="差异说明" DataSetColumn="差异说明" />
+              <Mapping SourceColumn="物品ID" DataSetColumn="物品ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Business_Settlement_ProcurementStatementTableAdapter" GeneratorDataComponentClassName="View_Business_Settlement_ProcurementStatementTableAdapter" Name="View_Business_Settlement_ProcurementStatement" UserDataComponentName="View_Business_Settlement_ProcurementStatementTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="DepotManagement.dbo.View_Business_Settlement_ProcurementStatement" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BillNo, BillType, SettlementCompany, InvoiceType, TaxRate, ProviderName, OperationPersonnel, InvoiceDate, InvoiceNo FROM View_Business_Settlement_ProcurementStatement</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BillNo" DataSetColumn="BillNo" />
+              <Mapping SourceColumn="BillType" DataSetColumn="BillType" />
+              <Mapping SourceColumn="SettlementCompany" DataSetColumn="SettlementCompany" />
+              <Mapping SourceColumn="InvoiceType" DataSetColumn="InvoiceType" />
+              <Mapping SourceColumn="TaxRate" DataSetColumn="TaxRate" />
+              <Mapping SourceColumn="ProviderName" DataSetColumn="ProviderName" />
+              <Mapping SourceColumn="OperationPersonnel" DataSetColumn="OperationPersonnel" />
+              <Mapping SourceColumn="InvoiceNo" DataSetColumn="InvoiceNo" />
+              <Mapping SourceColumn="InvoiceDate" DataSetColumn="InvoiceDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SettlementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SettlementDataSet" msprop:Generator_DataSetName="SettlementDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Business_Settlement_ProcurementStatementDetail" msprop:Generator_UserTableName="View_Business_Settlement_ProcurementStatementDetail" msprop:Generator_RowDeletedName="View_Business_Settlement_ProcurementStatementDetailRowDeleted" msprop:Generator_RowChangedName="View_Business_Settlement_ProcurementStatementDetailRowChanged" msprop:Generator_RowClassName="View_Business_Settlement_ProcurementStatementDetailRow" msprop:Generator_RowChangingName="View_Business_Settlement_ProcurementStatementDetailRowChanging" msprop:Generator_RowEvArgName="View_Business_Settlement_ProcurementStatementDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="View_Business_Settlement_ProcurementStatementDetailRowChangeEventHandler" msprop:Generator_TableClassName="View_Business_Settlement_ProcurementStatementDetailDataTable" msprop:Generator_TableVarName="tableView_Business_Settlement_ProcurementStatementDetail" msprop:Generator_RowDeletingName="View_Business_Settlement_ProcurementStatementDetailRowDeleting" msprop:Generator_TablePropName="View_Business_Settlement_ProcurementStatementDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnPropNameInTable="单据号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="入库单号" msprop:Generator_UserColumnName="入库单号" msprop:Generator_ColumnVarNameInTable="column入库单号" msprop:Generator_ColumnPropNameInRow="入库单号" msprop:Generator_ColumnPropNameInTable="入库单号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="零件图号" msprop:Generator_UserColumnName="零件图号" msprop:Generator_ColumnVarNameInTable="column零件图号" msprop:Generator_ColumnPropNameInRow="零件图号" msprop:Generator_ColumnPropNameInTable="零件图号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="零件名称" msprop:Generator_UserColumnName="零件名称" msprop:Generator_ColumnVarNameInTable="column零件名称" msprop:Generator_ColumnPropNameInRow="零件名称" msprop:Generator_ColumnPropNameInTable="零件名称Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="规格" msprop:Generator_UserColumnName="规格" msprop:Generator_ColumnVarNameInTable="column规格" msprop:Generator_ColumnPropNameInRow="规格" msprop:Generator_ColumnPropNameInTable="规格Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="批次号" msprop:Generator_UserColumnName="批次号" msprop:Generator_ColumnVarNameInTable="column批次号" msprop:Generator_ColumnPropNameInRow="批次号" msprop:Generator_ColumnPropNameInTable="批次号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="入库数量" msprop:Generator_UserColumnName="入库数量" msprop:Generator_ColumnVarNameInTable="column入库数量" msprop:Generator_ColumnPropNameInRow="入库数量" msprop:Generator_ColumnPropNameInTable="入库数量Column" type="xs:decimal" />
+              <xs:element name="入库单价" msprop:Generator_UserColumnName="入库单价" msprop:Generator_ColumnVarNameInTable="column入库单价" msprop:Generator_ColumnPropNameInRow="入库单价" msprop:Generator_ColumnPropNameInTable="入库单价Column" type="xs:decimal" />
+              <xs:element name="单件委托材料" msprop:Generator_UserColumnName="单件委托材料" msprop:Generator_ColumnVarNameInTable="column单件委托材料" msprop:Generator_ColumnPropNameInRow="单件委托材料" msprop:Generator_ColumnPropNameInTable="单件委托材料Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="单件加工费" msprop:Generator_UserColumnName="单件加工费" msprop:Generator_ColumnVarNameInTable="column单件加工费" msprop:Generator_ColumnPropNameInRow="单件加工费" msprop:Generator_ColumnPropNameInTable="单件加工费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="入库金额" msprop:Generator_UserColumnName="入库金额" msprop:Generator_ColumnVarNameInTable="column入库金额" msprop:Generator_ColumnPropNameInRow="入库金额" msprop:Generator_ColumnPropNameInTable="入库金额Column" type="xs:decimal" />
+              <xs:element name="委托加工材料" msprop:Generator_UserColumnName="委托加工材料" msprop:Generator_ColumnVarNameInTable="column委托加工材料" msprop:Generator_ColumnPropNameInRow="委托加工材料" msprop:Generator_ColumnPropNameInTable="委托加工材料Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="发票单价" msprop:Generator_UserColumnName="发票单价" msprop:Generator_ColumnVarNameInTable="column发票单价" msprop:Generator_ColumnPropNameInRow="发票单价" msprop:Generator_ColumnPropNameInTable="发票单价Column" type="xs:decimal" />
+              <xs:element name="税额" msprop:Generator_UserColumnName="税额" msprop:Generator_ColumnVarNameInTable="column税额" msprop:Generator_ColumnPropNameInRow="税额" msprop:Generator_ColumnPropNameInTable="税额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="价税合计" msprop:Generator_UserColumnName="价税合计" msprop:Generator_ColumnVarNameInTable="column价税合计" msprop:Generator_ColumnPropNameInRow="价税合计" msprop:Generator_ColumnPropNameInTable="价税合计Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="发票金额" msprop:Generator_UserColumnName="发票金额" msprop:Generator_ColumnVarNameInTable="column发票金额" msprop:Generator_ColumnPropNameInRow="发票金额" msprop:Generator_ColumnPropNameInTable="发票金额Column" type="xs:decimal" />
+              <xs:element name="合同申请单号" msprop:Generator_UserColumnName="合同申请单号" msprop:Generator_ColumnVarNameInTable="column合同申请单号" msprop:Generator_ColumnPropNameInRow="合同申请单号" msprop:Generator_ColumnPropNameInTable="合同申请单号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="差异说明" msprop:Generator_UserColumnName="差异说明" msprop:Generator_ColumnVarNameInTable="column差异说明" msprop:Generator_ColumnPropNameInRow="差异说明" msprop:Generator_ColumnPropNameInTable="差异说明Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物品ID" msprop:Generator_UserColumnName="物品ID" msprop:Generator_ColumnVarNameInTable="column物品ID" msprop:Generator_ColumnPropNameInRow="物品ID" msprop:Generator_ColumnPropNameInTable="物品IDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Business_Settlement_ProcurementStatement" msprop:Generator_UserTableName="View_Business_Settlement_ProcurementStatement" msprop:Generator_RowDeletedName="View_Business_Settlement_ProcurementStatementRowDeleted" msprop:Generator_RowChangedName="View_Business_Settlement_ProcurementStatementRowChanged" msprop:Generator_RowClassName="View_Business_Settlement_ProcurementStatementRow" msprop:Generator_RowChangingName="View_Business_Settlement_ProcurementStatementRowChanging" msprop:Generator_RowEvArgName="View_Business_Settlement_ProcurementStatementRowChangeEvent" msprop:Generator_RowEvHandlerName="View_Business_Settlement_ProcurementStatementRowChangeEventHandler" msprop:Generator_TableClassName="View_Business_Settlement_ProcurementStatementDataTable" msprop:Generator_TableVarName="tableView_Business_Settlement_ProcurementStatement" msprop:Generator_RowDeletingName="View_Business_Settlement_ProcurementStatementRowDeleting" msprop:Generator_TablePropName="View_Business_Settlement_ProcurementStatement">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BillNo" msprop:Generator_UserColumnName="BillNo" msprop:Generator_ColumnPropNameInRow="BillNo" msprop:Generator_ColumnVarNameInTable="columnBillNo" msprop:Generator_ColumnPropNameInTable="BillNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BillType" msprop:Generator_UserColumnName="BillType" msprop:Generator_ColumnPropNameInRow="BillType" msprop:Generator_ColumnVarNameInTable="columnBillType" msprop:Generator_ColumnPropNameInTable="BillTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SettlementCompany" msprop:Generator_UserColumnName="SettlementCompany" msprop:Generator_ColumnPropNameInRow="SettlementCompany" msprop:Generator_ColumnVarNameInTable="columnSettlementCompany" msprop:Generator_ColumnPropNameInTable="SettlementCompanyColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceType" msprop:Generator_UserColumnName="InvoiceType" msprop:Generator_ColumnPropNameInRow="InvoiceType" msprop:Generator_ColumnVarNameInTable="columnInvoiceType" msprop:Generator_ColumnPropNameInTable="InvoiceTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TaxRate" msprop:Generator_UserColumnName="TaxRate" msprop:Generator_ColumnPropNameInRow="TaxRate" msprop:Generator_ColumnVarNameInTable="columnTaxRate" msprop:Generator_ColumnPropNameInTable="TaxRateColumn" type="xs:decimal" />
+              <xs:element name="ProviderName" msprop:Generator_UserColumnName="ProviderName" msprop:Generator_ColumnPropNameInRow="ProviderName" msprop:Generator_ColumnVarNameInTable="columnProviderName" msprop:Generator_ColumnPropNameInTable="ProviderNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OperationPersonnel" msdata:ReadOnly="true" msprop:Generator_UserColumnName="OperationPersonnel" msprop:Generator_ColumnPropNameInRow="OperationPersonnel" msprop:Generator_ColumnVarNameInTable="columnOperationPersonnel" msprop:Generator_ColumnPropNameInTable="OperationPersonnelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceNo" msdata:ReadOnly="true" msprop:Generator_UserColumnName="InvoiceNo" msprop:Generator_ColumnVarNameInTable="columnInvoiceNo" msprop:Generator_ColumnPropNameInRow="InvoiceNo" msprop:Generator_ColumnPropNameInTable="InvoiceNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceDate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="InvoiceDate" msprop:Generator_ColumnVarNameInTable="columnInvoiceDate" msprop:Generator_ColumnPropNameInRow="InvoiceDate" msprop:Generator_ColumnPropNameInTable="InvoiceDateColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Business_Settlement_ProcurementStatement" />
+      <xs:field xpath="mstns:BillNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

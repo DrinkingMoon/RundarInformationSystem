@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="DepotManagement" Class="DepotManagementDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=XINXI-SERVER;Initial Catalog=DepotManagement;Persist Security Info=True;User ID=InfoSysUser" SettingsObjectName="ServerModule.Properties.Settings" SettingsPropertyName="DepotManagementConnectionString" Provider="System.Data.SqlClient" />
+</Database>

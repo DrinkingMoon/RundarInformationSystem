@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7B10F60-8067-4FAC-B746-7EA83CE138E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_Peripheral_HR</RootNamespace>
+    <AssemblyName>Form_Peripheral_HR</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBOperate, Version=1.0.601.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\数据库组件\DBOperate\bin\Debug\DBOperate.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PlatformService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalModule\PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DepotManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepotManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="培训管理\培训计划.resx">
+      <DependentUpon>培训计划.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="培训管理\培训计划信息反馈.resx">
+      <DependentUpon>培训计划信息反馈.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="培训管理\培训计划申请表.resx">
+      <DependentUpon>培训计划申请表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="培训管理\培训计划申请表明细.resx">
+      <DependentUpon>培训计划申请表明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="培训管理\学习平台.resx">
+      <DependentUpon>学习平台.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="培训管理\课件题库上传.resx">
+      <DependentUpon>课件题库上传.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="培训管理\课程基础设置.resx">
+      <DependentUpon>课程基础设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\报表_人员档案.rdlc" />
+    <EmbeddedResource Include="报表\报表_人员档案.resx">
+      <DependentUpon>报表_人员档案.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\报表_人员档案变更历史.resx">
+      <DependentUpon>报表_人员档案变更历史.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表\报表_人员档案变更历史信息.rdlc" />
+    <EmbeddedResource Include="报表\报表_出差申请单.rdlc" />
+    <EmbeddedResource Include="报表\报表_出差申请单.resx">
+      <DependentUpon>报表_出差申请单.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormAttendanceDayBookList.resx">
+      <DependentUpon>FormAttendanceDayBookList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormAttendanceScheme.resx">
+      <DependentUpon>FormAttendanceScheme.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormContractStatus.resx">
+      <DependentUpon>FormContractStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormContractTemplet.resx">
+      <DependentUpon>FormContractTemplet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormDeptType.resx">
+      <DependentUpon>FormDeptType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormDimissionList.resx">
+      <DependentUpon>FormDimissionList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormHolidayType.resx">
+      <DependentUpon>FormHolidayType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormLaborContractType.resx">
+      <DependentUpon>FormLaborContractType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormOldWorkSchedule.resx">
+      <DependentUpon>FormOldWorkSchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormOverTimeList.resx">
+      <DependentUpon>FormOverTimeList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormPersonnelArchiveList.resx">
+      <DependentUpon>FormPersonnelArchiveList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormPersonnelArchiveListShow.resx">
+      <DependentUpon>FormPersonnelArchiveListShow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormPersonnelChangeList.resx">
+      <DependentUpon>FormPersonnelChangeList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormPersonnelResume.resx">
+      <DependentUpon>FormPersonnelResume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormPostType.resx">
+      <DependentUpon>FormPostType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormProgressBar.resx">
+      <DependentUpon>FormProgressBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormResumeList.resx">
+      <DependentUpon>FormResumeList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormSchedule.resx">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormSchedulingDefinition.resx">
+      <DependentUpon>FormSchedulingDefinition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormStatistics.resx">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormShortMessage.resx">
+      <DependentUpon>FormShortMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\FormWorkSchedule.resx">
+      <DependentUpon>FormWorkSchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\专家专业人才明细.resx">
+      <DependentUpon>专家专业人才明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\储备人才库明细.resx">
+      <DependentUpon>储备人才库明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\分析离职人员.resx">
+      <DependentUpon>分析离职人员.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\员工档案明细.resx">
+      <DependentUpon>员工档案明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\回退单据.resx">
+      <DependentUpon>回退单据.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\批量修改部门.resx">
+      <DependentUpon>批量修改部门.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\批量排班选择班次.resx">
+      <DependentUpon>批量排班选择班次.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="普通窗体\部门调动申请明细.resx">
+      <DependentUpon>部门调动申请明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\FormShortMsgManagement.resx">
+      <DependentUpon>FormShortMsgManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlAttendanceDaybook.resx">
+      <DependentUpon>UserControlAttendanceDaybook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlAttendanceMachine.resx">
+      <DependentUpon>UserControlAttendanceMachine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlAttendanceSummary.resx">
+      <DependentUpon>UserControlAttendanceSummary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlAttendanceScheme.resx">
+      <DependentUpon>UserControlAttendanceScheme.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlBatchException.resx">
+      <DependentUpon>UserControlBatchException.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlContractHistory.resx">
+      <DependentUpon>UserControlContractHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlDimissionBill.resx">
+      <DependentUpon>UserControlDimissionBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlHoliday.resx">
+      <DependentUpon>UserControlHoliday.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlHRDepartment.resx">
+      <DependentUpon>UserControlHRDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlJobTitle.resx">
+      <DependentUpon>UserControlJobTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlLaborContractTemplet.resx">
+      <DependentUpon>UserControlLaborContractTemplet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlLeaveBill.resx">
+      <DependentUpon>UserControlLeaveBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlLeaveType.resx">
+      <DependentUpon>UserControlLeaveType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlNumOfPeople.resx">
+      <DependentUpon>UserControlNumOfPeople.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlOnBusiness.resx">
+      <DependentUpon>UserControlOnBusiness.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlOperatingPost.resx">
+      <DependentUpon>UserControlOperatingPost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlOvertimeBill.resx">
+      <DependentUpon>UserControlOvertimeBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlPersonnelArchive.resx">
+      <DependentUpon>UserControlPersonnelArchive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlPersonnelHistory.resx">
+      <DependentUpon>UserControlPersonnelHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlPersonnelLaborContract.resx">
+      <DependentUpon>UserControlPersonnelLaborContract.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlPostChange.resx">
+      <DependentUpon>UserControlPostChange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlResume.resx">
+      <DependentUpon>UserControlResume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlTimeException.resx">
+      <DependentUpon>UserControlTimeException.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\UserControlWorkScheduling.resx">
+      <DependentUpon>UserControlWorkScheduling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\专家专业人才信息管理.resx">
+      <DependentUpon>专家专业人才信息管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\储备人才库.resx">
+      <DependentUpon>储备人才库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\培训统计.resx">
+      <DependentUpon>培训统计.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\异常单据业务操作.resx">
+      <DependentUpon>异常单据业务操作.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户控件式窗体\打卡号与工号映射.resx">
+      <DependentUpon>打卡号与工号映射.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="通用窗体\FormSelectPersonnel.resx">
+      <DependentUpon>FormSelectPersonnel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="附加窗体\人力批量处理加班单.resx">
+      <DependentUpon>人力批量处理加班单.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="培训管理\培训计划.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="培训管理\培训计划.Designer.cs">
+      <DependentUpon>培训计划.cs</DependentUpon>
+    </Compile>
+    <Compile Include="培训管理\培训计划信息反馈.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="培训管理\培训计划信息反馈.Designer.cs">
+      <DependentUpon>培训计划信息反馈.cs</DependentUpon>
+    </Compile>
+    <Compile Include="培训管理\培训计划申请表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="培训管理\培训计划申请表.Designer.cs">
+      <DependentUpon>培训计划申请表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="培训管理\培训计划申请表明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="培训管理\培训计划申请表明细.Designer.cs">
+      <DependentUpon>培训计划申请表明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="培训管理\学习平台.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="培训管理\学习平台.Designer.cs">
+      <DependentUpon>学习平台.cs</DependentUpon>
+    </Compile>
+    <Compile Include="培训管理\课件题库上传.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="培训管理\课件题库上传.Designer.cs">
+      <DependentUpon>课件题库上传.cs</DependentUpon>
+    </Compile>
+    <Compile Include="培训管理\课程基础设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="培训管理\课程基础设置.Designer.cs">
+      <DependentUpon>课程基础设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表\报表_人员档案.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表\报表_人员档案.Designer.cs">
+      <DependentUpon>报表_人员档案.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表\报表_人员档案变更历史.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表\报表_人员档案变更历史.Designer.cs">
+      <DependentUpon>报表_人员档案变更历史.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表\报表_出差申请单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表\报表_出差申请单.Designer.cs">
+      <DependentUpon>报表_出差申请单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormAttendanceDayBookList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormAttendanceDayBookList.Designer.cs">
+      <DependentUpon>FormAttendanceDayBookList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormAttendanceScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormAttendanceScheme.designer.cs">
+      <DependentUpon>FormAttendanceScheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormContractStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormContractStatus.designer.cs">
+      <DependentUpon>FormContractStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormContractTemplet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormContractTemplet.designer.cs">
+      <DependentUpon>FormContractTemplet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormDeptType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormDeptType.designer.cs">
+      <DependentUpon>FormDeptType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormDimissionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormDimissionList.designer.cs">
+      <DependentUpon>FormDimissionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormHolidayType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormHolidayType.designer.cs">
+      <DependentUpon>FormHolidayType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormLaborContractType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormLaborContractType.designer.cs">
+      <DependentUpon>FormLaborContractType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormOldWorkSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormOldWorkSchedule.designer.cs">
+      <DependentUpon>FormOldWorkSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormOverTimeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormOverTimeList.Designer.cs">
+      <DependentUpon>FormOverTimeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelArchiveList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelArchiveList.designer.cs">
+      <DependentUpon>FormPersonnelArchiveList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelArchiveListShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelArchiveListShow.Designer.cs">
+      <DependentUpon>FormPersonnelArchiveListShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelChangeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelChangeList.designer.cs">
+      <DependentUpon>FormPersonnelChangeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelResume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormPersonnelResume.designer.cs">
+      <DependentUpon>FormPersonnelResume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormPostType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormPostType.designer.cs">
+      <DependentUpon>FormPostType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormProgressBar.Designer.cs">
+      <DependentUpon>FormProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormResumeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormResumeList.designer.cs">
+      <DependentUpon>FormResumeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormSchedule.designer.cs">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormSchedulingDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormSchedulingDefinition.designer.cs">
+      <DependentUpon>FormSchedulingDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormStatistics.Designer.cs">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormShortMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormShortMessage.Designer.cs">
+      <DependentUpon>FormShortMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\FormWorkSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\FormWorkSchedule.designer.cs">
+      <DependentUpon>FormWorkSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\专家专业人才明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\专家专业人才明细.Designer.cs">
+      <DependentUpon>专家专业人才明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\储备人才库明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\储备人才库明细.Designer.cs">
+      <DependentUpon>储备人才库明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\分析离职人员.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\分析离职人员.Designer.cs">
+      <DependentUpon>分析离职人员.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\员工档案明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\员工档案明细.Designer.cs">
+      <DependentUpon>员工档案明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\回退单据.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\回退单据.Designer.cs">
+      <DependentUpon>回退单据.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\批量修改部门.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\批量修改部门.Designer.cs">
+      <DependentUpon>批量修改部门.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\批量排班选择班次.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\批量排班选择班次.Designer.cs">
+      <DependentUpon>批量排班选择班次.cs</DependentUpon>
+    </Compile>
+    <Compile Include="普通窗体\部门调动申请明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="普通窗体\部门调动申请明细.Designer.cs">
+      <DependentUpon>部门调动申请明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\FormShortMsgManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\FormShortMsgManagement.designer.cs">
+      <DependentUpon>FormShortMsgManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceDaybook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceDaybook.Designer.cs">
+      <DependentUpon>UserControlAttendanceDaybook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceMachine.designer.cs">
+      <DependentUpon>UserControlAttendanceMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceSummary.designer.cs">
+      <DependentUpon>UserControlAttendanceSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlAttendanceScheme.designer.cs">
+      <DependentUpon>UserControlAttendanceScheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlBatchException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlBatchException.designer.cs">
+      <DependentUpon>UserControlBatchException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlContractHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlContractHistory.designer.cs">
+      <DependentUpon>UserControlContractHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlDimissionBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlDimissionBill.designer.cs">
+      <DependentUpon>UserControlDimissionBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlHoliday.designer.cs">
+      <DependentUpon>UserControlHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlHRDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlHRDepartment.designer.cs">
+      <DependentUpon>UserControlHRDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlJobTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlJobTitle.designer.cs">
+      <DependentUpon>UserControlJobTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlLaborContractTemplet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlLaborContractTemplet.designer.cs">
+      <DependentUpon>UserControlLaborContractTemplet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlLeaveBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlLeaveBill.designer.cs">
+      <DependentUpon>UserControlLeaveBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlLeaveType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlLeaveType.designer.cs">
+      <DependentUpon>UserControlLeaveType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlNumOfPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlNumOfPeople.designer.cs">
+      <DependentUpon>UserControlNumOfPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlOnBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlOnBusiness.designer.cs">
+      <DependentUpon>UserControlOnBusiness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlOperatingPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlOperatingPost.designer.cs">
+      <DependentUpon>UserControlOperatingPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlOvertimeBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlOvertimeBill.designer.cs">
+      <DependentUpon>UserControlOvertimeBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPersonnelArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPersonnelArchive.designer.cs">
+      <DependentUpon>UserControlPersonnelArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPersonnelHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPersonnelHistory.designer.cs">
+      <DependentUpon>UserControlPersonnelHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPersonnelLaborContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPersonnelLaborContract.designer.cs">
+      <DependentUpon>UserControlPersonnelLaborContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPostChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlPostChange.designer.cs">
+      <DependentUpon>UserControlPostChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlResume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlResume.designer.cs">
+      <DependentUpon>UserControlResume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlTimeException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlTimeException.designer.cs">
+      <DependentUpon>UserControlTimeException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlWorkScheduling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\UserControlWorkScheduling.designer.cs">
+      <DependentUpon>UserControlWorkScheduling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\专家专业人才信息管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\专家专业人才信息管理.Designer.cs">
+      <DependentUpon>专家专业人才信息管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\储备人才库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\储备人才库.Designer.cs">
+      <DependentUpon>储备人才库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\培训统计.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\培训统计.Designer.cs">
+      <DependentUpon>培训统计.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\异常单据业务操作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\异常单据业务操作.Designer.cs">
+      <DependentUpon>异常单据业务操作.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户控件式窗体\打卡号与工号映射.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户控件式窗体\打卡号与工号映射.Designer.cs">
+      <DependentUpon>打卡号与工号映射.cs</DependentUpon>
+    </Compile>
+    <Compile Include="通用窗体\FormSelectPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="通用窗体\FormSelectPersonnel.designer.cs">
+      <DependentUpon>FormSelectPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="附加窗体\人力批量处理加班单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="附加窗体\人力批量处理加班单.Designer.cs">
+      <DependentUpon>人力批量处理加班单.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicServer\BasicServer.csproj">
+      <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
+      <Name>BasicServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModuleForm\CommonBusinessModule.csproj">
+      <Project>{8202D612-FB07-4BE6-82B5-F0FA50C16CCA}</Project>
+      <Name>CommonBusinessModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowControlService\FlowControlService.csproj">
+      <Project>{FDBAE102-0D3A-4EC4-BE0C-A5D43C1B8DC8}</Project>
+      <Name>FlowControlService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
+      <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
+      <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRServerModule\Service_Peripheral_HR.csproj">
+      <Project>{84A8608A-DFCC-406D-82E0-AA988A10F424}</Project>
+      <Name>Service_Peripheral_HR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskManagementServer\TaskManagementServer.csproj">
+      <Project>{805B671F-6657-4C03-AC29-DA71DFE09EE6}</Project>
+      <Name>TaskManagementServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversalControlLibrary\UniversalControlLibrary.csproj">
+      <Project>{BF9E5E1F-BEDD-4F52-95E2-EF8F329F10A5}</Project>
+      <Name>UniversalControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DepotManagementDataSet.xsc">
+      <DependentUpon>DepotManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DepotManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DepotManagementDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DepotManagementDataSet.xss">
+      <DependentUpon>DepotManagementDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

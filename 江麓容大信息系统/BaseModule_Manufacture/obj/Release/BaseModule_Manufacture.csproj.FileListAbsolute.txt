@@ -1,0 +1,14 @@
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\BaseModule_Manufacture.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\BaseModule_Manufacture.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\BasicServerModule.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\PlatformService.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\GlobalObject.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\DBOperate.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\DBOperateERP.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\PlatformService.xml
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\GlobalObject.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\BasicServerModule.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\bin\Release\DBOperate.pdb
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\obj\Release\ResolveAssemblyReference.cache
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\obj\Release\BaseModule_Manufacture.dll
+E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Manufacture\obj\Release\BaseModule_Manufacture.pdb

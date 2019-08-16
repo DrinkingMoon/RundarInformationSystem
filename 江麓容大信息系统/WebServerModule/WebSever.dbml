@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="RundarWebServer" Class="WebSeverDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.6,1433;Initial Catalog=RundarWebServer;Persist Security Info=True;User ID=RundarWebUser" SettingsObjectName="WebServerModule.Properties.Settings" SettingsPropertyName="RundarWebServerConnectionString2" Provider="System.Data.SqlClient" />
+</Database>

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DepotManagementDataSet" targetNamespace="http://tempuri.org/DepotManagementDataSet.xsd" xmlns:mstns="http://tempuri.org/DepotManagementDataSet.xsd" xmlns="http://tempuri.org/DepotManagementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DepotManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DepotManagementConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Form_Peripheral_External.Properties.Settings.GlobalReference.Default.DepotManagementConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Out_ManeuverBillTableAdapter" GeneratorDataComponentClassName="View_Out_ManeuverBillTableAdapter" Name="View_Out_ManeuverBill" UserDataComponentName="View_Out_ManeuverBillTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString (Settings)" DbObjectName="DepotManagement.dbo.View_Out_ManeuverBill" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 单据号, 单据状态, 关联单据号, 物流名称, 物流单号, 出库库房, 入库库房, 申请人, 申请日期, 审核人, 审核日期, 出库人, 出库日期, 发货人, 发货日期, 收货人, 收货日期, 入库人, 入库日期 FROM dbo.View_Out_ManeuverBill</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="单据号" DataSetColumn="单据号" />
+              <Mapping SourceColumn="单据状态" DataSetColumn="单据状态" />
+              <Mapping SourceColumn="关联单据号" DataSetColumn="关联单据号" />
+              <Mapping SourceColumn="物流名称" DataSetColumn="物流名称" />
+              <Mapping SourceColumn="物流单号" DataSetColumn="物流单号" />
+              <Mapping SourceColumn="出库库房" DataSetColumn="出库库房" />
+              <Mapping SourceColumn="入库库房" DataSetColumn="入库库房" />
+              <Mapping SourceColumn="申请人" DataSetColumn="申请人" />
+              <Mapping SourceColumn="申请日期" DataSetColumn="申请日期" />
+              <Mapping SourceColumn="审核人" DataSetColumn="审核人" />
+              <Mapping SourceColumn="审核日期" DataSetColumn="审核日期" />
+              <Mapping SourceColumn="出库人" DataSetColumn="出库人" />
+              <Mapping SourceColumn="出库日期" DataSetColumn="出库日期" />
+              <Mapping SourceColumn="发货人" DataSetColumn="发货人" />
+              <Mapping SourceColumn="发货日期" DataSetColumn="发货日期" />
+              <Mapping SourceColumn="收货人" DataSetColumn="收货人" />
+              <Mapping SourceColumn="收货日期" DataSetColumn="收货日期" />
+              <Mapping SourceColumn="入库人" DataSetColumn="入库人" />
+              <Mapping SourceColumn="入库日期" DataSetColumn="入库日期" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Out_ManeuverListTableAdapter" GeneratorDataComponentClassName="View_Out_ManeuverListTableAdapter" Name="View_Out_ManeuverList" UserDataComponentName="View_Out_ManeuverListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DepotManagementConnectionString (Settings)" DbObjectName="DepotManagement.dbo.View_Out_ManeuverList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 图号型号, 物品名称, 规格, 账务库房, 申请数量, 发货数量, 收货数量, 单位, 备注, 物品ID, 账务库房ID, Bill_ID FROM dbo.View_Out_ManeuverList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="图号型号" DataSetColumn="图号型号" />
+              <Mapping SourceColumn="物品名称" DataSetColumn="物品名称" />
+              <Mapping SourceColumn="规格" DataSetColumn="规格" />
+              <Mapping SourceColumn="账务库房" DataSetColumn="账务库房" />
+              <Mapping SourceColumn="申请数量" DataSetColumn="申请数量" />
+              <Mapping SourceColumn="发货数量" DataSetColumn="发货数量" />
+              <Mapping SourceColumn="收货数量" DataSetColumn="收货数量" />
+              <Mapping SourceColumn="单位" DataSetColumn="单位" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="物品ID" DataSetColumn="物品ID" />
+              <Mapping SourceColumn="账务库房ID" DataSetColumn="账务库房ID" />
+              <Mapping SourceColumn="Bill_ID" DataSetColumn="Bill_ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DepotManagementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DepotManagementDataSet" msprop:Generator_DataSetName="DepotManagementDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Out_ManeuverBill" msprop:Generator_UserTableName="View_Out_ManeuverBill" msprop:Generator_RowDeletedName="View_Out_ManeuverBillRowDeleted" msprop:Generator_RowChangedName="View_Out_ManeuverBillRowChanged" msprop:Generator_RowClassName="View_Out_ManeuverBillRow" msprop:Generator_RowChangingName="View_Out_ManeuverBillRowChanging" msprop:Generator_RowEvArgName="View_Out_ManeuverBillRowChangeEvent" msprop:Generator_RowEvHandlerName="View_Out_ManeuverBillRowChangeEventHandler" msprop:Generator_TableClassName="View_Out_ManeuverBillDataTable" msprop:Generator_TableVarName="tableView_Out_ManeuverBill" msprop:Generator_RowDeletingName="View_Out_ManeuverBillRowDeleting" msprop:Generator_TablePropName="View_Out_ManeuverBill">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="单据号" msprop:Generator_UserColumnName="单据号" msprop:Generator_ColumnPropNameInRow="单据号" msprop:Generator_ColumnVarNameInTable="column单据号" msprop:Generator_ColumnPropNameInTable="单据号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="单据状态" msprop:Generator_UserColumnName="单据状态" msprop:Generator_ColumnPropNameInRow="单据状态" msprop:Generator_ColumnVarNameInTable="column单据状态" msprop:Generator_ColumnPropNameInTable="单据状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="关联单据号" msprop:Generator_UserColumnName="关联单据号" msprop:Generator_ColumnPropNameInRow="关联单据号" msprop:Generator_ColumnVarNameInTable="column关联单据号" msprop:Generator_ColumnPropNameInTable="关联单据号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物流名称" msprop:Generator_UserColumnName="物流名称" msprop:Generator_ColumnPropNameInRow="物流名称" msprop:Generator_ColumnVarNameInTable="column物流名称" msprop:Generator_ColumnPropNameInTable="物流名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物流单号" msprop:Generator_UserColumnName="物流单号" msprop:Generator_ColumnPropNameInRow="物流单号" msprop:Generator_ColumnVarNameInTable="column物流单号" msprop:Generator_ColumnPropNameInTable="物流单号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="出库库房" msdata:ReadOnly="true" msprop:Generator_UserColumnName="出库库房" msprop:Generator_ColumnPropNameInRow="出库库房" msprop:Generator_ColumnVarNameInTable="column出库库房" msprop:Generator_ColumnPropNameInTable="出库库房Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="入库库房" msdata:ReadOnly="true" msprop:Generator_UserColumnName="入库库房" msprop:Generator_ColumnPropNameInRow="入库库房" msprop:Generator_ColumnVarNameInTable="column入库库房" msprop:Generator_ColumnPropNameInTable="入库库房Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请人" msprop:Generator_UserColumnName="申请人" msprop:Generator_ColumnPropNameInRow="申请人" msprop:Generator_ColumnVarNameInTable="column申请人" msprop:Generator_ColumnPropNameInTable="申请人Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请日期" msprop:Generator_UserColumnName="申请日期" msprop:Generator_ColumnPropNameInRow="申请日期" msprop:Generator_ColumnVarNameInTable="column申请日期" msprop:Generator_ColumnPropNameInTable="申请日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="审核人" msprop:Generator_UserColumnName="审核人" msprop:Generator_ColumnPropNameInRow="审核人" msprop:Generator_ColumnVarNameInTable="column审核人" msprop:Generator_ColumnPropNameInTable="审核人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="审核日期" msprop:Generator_UserColumnName="审核日期" msprop:Generator_ColumnPropNameInRow="审核日期" msprop:Generator_ColumnVarNameInTable="column审核日期" msprop:Generator_ColumnPropNameInTable="审核日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="出库人" msprop:Generator_UserColumnName="出库人" msprop:Generator_ColumnPropNameInRow="出库人" msprop:Generator_ColumnVarNameInTable="column出库人" msprop:Generator_ColumnPropNameInTable="出库人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="出库日期" msprop:Generator_UserColumnName="出库日期" msprop:Generator_ColumnPropNameInRow="出库日期" msprop:Generator_ColumnVarNameInTable="column出库日期" msprop:Generator_ColumnPropNameInTable="出库日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="发货人" msprop:Generator_UserColumnName="发货人" msprop:Generator_ColumnPropNameInRow="发货人" msprop:Generator_ColumnVarNameInTable="column发货人" msprop:Generator_ColumnPropNameInTable="发货人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="发货日期" msprop:Generator_UserColumnName="发货日期" msprop:Generator_ColumnPropNameInRow="发货日期" msprop:Generator_ColumnVarNameInTable="column发货日期" msprop:Generator_ColumnPropNameInTable="发货日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="收货人" msprop:Generator_UserColumnName="收货人" msprop:Generator_ColumnPropNameInRow="收货人" msprop:Generator_ColumnVarNameInTable="column收货人" msprop:Generator_ColumnPropNameInTable="收货人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="收货日期" msprop:Generator_UserColumnName="收货日期" msprop:Generator_ColumnPropNameInRow="收货日期" msprop:Generator_ColumnVarNameInTable="column收货日期" msprop:Generator_ColumnPropNameInTable="收货日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="入库人" msprop:Generator_UserColumnName="入库人" msprop:Generator_ColumnPropNameInRow="入库人" msprop:Generator_ColumnVarNameInTable="column入库人" msprop:Generator_ColumnPropNameInTable="入库人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="入库日期" msprop:Generator_UserColumnName="入库日期" msprop:Generator_ColumnPropNameInRow="入库日期" msprop:Generator_ColumnVarNameInTable="column入库日期" msprop:Generator_ColumnPropNameInTable="入库日期Column" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Out_ManeuverList" msprop:Generator_UserTableName="View_Out_ManeuverList" msprop:Generator_RowDeletedName="View_Out_ManeuverListRowDeleted" msprop:Generator_RowChangedName="View_Out_ManeuverListRowChanged" msprop:Generator_RowClassName="View_Out_ManeuverListRow" msprop:Generator_RowChangingName="View_Out_ManeuverListRowChanging" msprop:Generator_RowEvArgName="View_Out_ManeuverListRowChangeEvent" msprop:Generator_RowEvHandlerName="View_Out_ManeuverListRowChangeEventHandler" msprop:Generator_TableClassName="View_Out_ManeuverListDataTable" msprop:Generator_TableVarName="tableView_Out_ManeuverList" msprop:Generator_RowDeletingName="View_Out_ManeuverListRowDeleting" msprop:Generator_TablePropName="View_Out_ManeuverList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="图号型号" msprop:Generator_UserColumnName="图号型号" msprop:Generator_ColumnPropNameInRow="图号型号" msprop:Generator_ColumnVarNameInTable="column图号型号" msprop:Generator_ColumnPropNameInTable="图号型号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物品名称" msprop:Generator_UserColumnName="物品名称" msprop:Generator_ColumnPropNameInRow="物品名称" msprop:Generator_ColumnVarNameInTable="column物品名称" msprop:Generator_ColumnPropNameInTable="物品名称Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="规格" msprop:Generator_UserColumnName="规格" msprop:Generator_ColumnPropNameInRow="规格" msprop:Generator_ColumnVarNameInTable="column规格" msprop:Generator_ColumnPropNameInTable="规格Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="账务库房" msprop:Generator_UserColumnName="账务库房" msprop:Generator_ColumnPropNameInRow="账务库房" msprop:Generator_ColumnVarNameInTable="column账务库房" msprop:Generator_ColumnPropNameInTable="账务库房Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="申请数量" msprop:Generator_UserColumnName="申请数量" msprop:Generator_ColumnPropNameInRow="申请数量" msprop:Generator_ColumnVarNameInTable="column申请数量" msprop:Generator_ColumnPropNameInTable="申请数量Column" type="xs:decimal" />
+              <xs:element name="发货数量" msprop:Generator_UserColumnName="发货数量" msprop:Generator_ColumnPropNameInRow="发货数量" msprop:Generator_ColumnVarNameInTable="column发货数量" msprop:Generator_ColumnPropNameInTable="发货数量Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="收货数量" msprop:Generator_UserColumnName="收货数量" msprop:Generator_ColumnPropNameInRow="收货数量" msprop:Generator_ColumnVarNameInTable="column收货数量" msprop:Generator_ColumnPropNameInTable="收货数量Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="单位" msdata:ReadOnly="true" msprop:Generator_UserColumnName="单位" msprop:Generator_ColumnPropNameInRow="单位" msprop:Generator_ColumnVarNameInTable="column单位" msprop:Generator_ColumnPropNameInTable="单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="57" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="物品ID" msprop:Generator_UserColumnName="物品ID" msprop:Generator_ColumnPropNameInRow="物品ID" msprop:Generator_ColumnVarNameInTable="column物品ID" msprop:Generator_ColumnPropNameInTable="物品IDColumn" type="xs:int" />
+              <xs:element name="账务库房ID" msprop:Generator_UserColumnName="账务库房ID" msprop:Generator_ColumnPropNameInRow="账务库房ID" msprop:Generator_ColumnVarNameInTable="column账务库房ID" msprop:Generator_ColumnPropNameInTable="账务库房IDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bill_ID" msprop:Generator_UserColumnName="Bill_ID" msprop:Generator_ColumnPropNameInRow="Bill_ID" msprop:Generator_ColumnVarNameInTable="columnBill_ID" msprop:Generator_ColumnPropNameInTable="Bill_IDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Out_ManeuverBill" />
+      <xs:field xpath="mstns:单据号" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<params>
+  <param name="仓库管理系统">
+    <paramitem value="1.0">SystemParams.xml</paramitem>
+  </param>
+</params>
