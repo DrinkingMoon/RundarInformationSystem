@@ -54,10 +54,6 @@ namespace Expression
                                      "已完成"};
 
             checkBillDateAndStatus1.InsertComBox(strBillStatus);
-
-            checkBillDateAndStatus1.OnCompleteSearch +=
-                new GlobalObject.DelegateCollection.NonArgumentHandle(checkBillDateAndStatus1_OnCompleteSearch);
-
             RefreshDataGirdView();
         }
 

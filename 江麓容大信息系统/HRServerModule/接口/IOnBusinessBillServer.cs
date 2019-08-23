@@ -60,7 +60,12 @@ namespace Service_Peripheral_HR
     /// </summary>
     public interface IOnBusinessBillServer
     {
-
+        
+        /// <summary>
+        /// 获得人员信息列表
+        /// </summary>
+        /// <param name="billID"></param>
+        /// <returns></returns>
         List<HR_OnBusinessPersonnel> GetPersonnel(int billID);
 
         /// <summary>

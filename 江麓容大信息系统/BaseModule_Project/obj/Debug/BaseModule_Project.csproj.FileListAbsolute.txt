@@ -18,3 +18,8 @@ E:\公司信息化系统\江麓容大信息系统\BaseModule_Project\bin\Debug\B
 E:\公司信息化系统\江麓容大信息系统\BaseModule_Project\obj\Debug\ResolveAssemblyReference.cache
 E:\公司信息化系统\江麓容大信息系统\BaseModule_Project\obj\Debug\BaseModule_Project.dll
 E:\公司信息化系统\江麓容大信息系统\BaseModule_Project\obj\Debug\BaseModule_Project.pdb
+E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Project\bin\Debug\BaseModule_Project.dll
+E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Project\bin\Debug\BaseModule_Project.pdb
+E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Project\obj\Debug\ResolveAssemblyReference.cache
+E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Project\obj\Debug\BaseModule_Project.dll
+E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Project\obj\Debug\BaseModule_Project.pdb

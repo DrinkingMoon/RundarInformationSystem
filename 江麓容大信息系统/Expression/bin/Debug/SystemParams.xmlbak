@@ -7,6 +7,6 @@
     <paramitem value="">公告提示</paramitem>
     <paramitem value="True">只显示有权限的功能树节点</paramitem>
     <paramitem value="10.30.17.18|10.30.17.9">服务器IP地址</paramitem>
-    <paramitem value="湖南容大">系统平台</paramitem>
+    <paramitem value="泸州容大">系统平台</paramitem>
   </param>
 </params>

@@ -46,3 +46,15 @@ E:\公司信息化系统\江麓容大信息系统\BasicServer\bin\Debug\DBOperat
 E:\公司信息化系统\江麓容大信息系统\BasicServer\obj\Debug\ResolveAssemblyReference.cache
 E:\公司信息化系统\江麓容大信息系统\BasicServer\obj\Debug\BasicServerModule.dll
 E:\公司信息化系统\江麓容大信息系统\BasicServer\obj\Debug\BasicServerModule.pdb
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\BasicServerModule.dll.config
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\BasicServerModule.dll
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\BasicServerModule.pdb
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\DBOperate.dll
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\GlobalObject.dll
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\PlatformService.dll
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\DBOperateERP.dll
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\GlobalObject.pdb
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\bin\Debug\DBOperate.pdb
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\obj\Debug\ResolveAssemblyReference.cache
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\obj\Debug\BasicServerModule.dll
+E:\RundarInformationSystem\江麓容大信息系统\BasicServer\obj\Debug\BasicServerModule.pdb

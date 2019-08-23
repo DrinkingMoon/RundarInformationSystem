@@ -70,10 +70,6 @@ namespace Expression
             string[] strBillStatus = { "全部", "等待接单", "等待审核", "等待回访", "处理完成" };
 
             checkBillDateAndStatus1.InsertComBox(strBillStatus);
-
-            checkBillDateAndStatus1.OnCompleteSearch +=
-                new GlobalObject.DelegateCollection.NonArgumentHandle(checkBillDateAndStatus1_OnCompleteSearch);
-
             checkBillDateAndStatus1.dtpStartTime.Value = ServerTime.Time.AddDays(1).AddMonths(-1);
             checkBillDateAndStatus1.dtpEndTime.Value = ServerTime.Time.AddDays(1);
 

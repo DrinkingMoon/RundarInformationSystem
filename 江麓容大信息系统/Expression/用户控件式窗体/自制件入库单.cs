@@ -123,10 +123,6 @@ namespace Expression
 
             checkBillDateAndStatus1.InsertComBox(typeof(HomemadeBillStatus));
 
-            checkBillDateAndStatus1.OnCompleteSearch +=
-                new GlobalObject.DelegateCollection.NonArgumentHandle(checkBillDateAndStatus1_OnCompleteSearch);
-
-
             S_HomemadePartBill tempBill = m_billServer.GetBill(txtBill_ID.Text);
 
             m_lnqWSCode = tempBill == null ?

@@ -21,8 +21,6 @@ namespace Expression
     {
         object locker = new object();
 
-        Thread thUnsettledBill;
-
         /// <summary>
         /// 节点类型
         /// </summary>

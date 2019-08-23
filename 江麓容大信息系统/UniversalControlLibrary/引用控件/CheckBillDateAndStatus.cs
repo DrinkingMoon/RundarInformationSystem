@@ -179,17 +179,10 @@ namespace UniversalControlLibrary
             }
             else
             {
-                if (cmbBillStatus.InvokeRequired)
+                if (!cmbBillStatus.Text.Contains("全") && !cmbBillStatus.Text.Contains("部"))
                 {
-                    this.BeginInvoke((MethodInvoker)delegate
-                    {
-                        if (!cmbBillStatus.Text.Contains("全") && !cmbBillStatus.Text.Contains("部"))
-                        {
-                            result += " and " + fieldstatusname + " = '" + cmbBillStatus.Text + "'";
-                        }
-                    });
+                    result += " and " + fieldstatusname + " = '" + cmbBillStatus.Text + "'";
                 }
-
             }
 
             return result;

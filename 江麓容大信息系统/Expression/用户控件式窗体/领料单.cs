@@ -123,10 +123,6 @@ namespace Expression
                                          MaterialRequisitionBillStatus.已出库.ToString()};
 
             checkBillDateAndStatus1.InsertComBox(strBillStatus);
-
-            checkBillDateAndStatus1.OnCompleteSearch +=
-                new GlobalObject.DelegateCollection.NonArgumentHandle(checkBillDateAndStatus1_OnCompleteSearch);
-
             #region 被要求使用服务器时间 Modify by cjb on 2012.6.15
 
             checkBillDateAndStatus1.dtpStartTime.Value = ServerTime.Time.AddDays(1).AddMonths(-1);

@@ -67,10 +67,6 @@ namespace Expression
                                      MinorPurchaseBillStatus.已完成.ToString()};
 
             checkBillDateAndStatus1.InsertComBox(strBillStatus);
-
-            checkBillDateAndStatus1.OnCompleteSearch +=
-                new GlobalObject.DelegateCollection.NonArgumentHandle(checkBillDateAndStatus1_OnCompleteSearch);
-
             checkBillDateAndStatus1.dtpStartTime.Value = ServerTime.Time.AddDays(1).AddMonths(-1);
             checkBillDateAndStatus1.dtpEndTime.Value = ServerTime.Time.AddDays(1);
 

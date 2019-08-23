@@ -23,3 +23,8 @@ E:\公司信息化系统\江麓容大信息系统\Service_TCU_External\bin\Debug
 E:\公司信息化系统\江麓容大信息系统\Service_TCU_External\obj\Debug\ResolveAssemblyReference.cache
 E:\公司信息化系统\江麓容大信息系统\Service_TCU_External\obj\Debug\Service_TCU_External.dll
 E:\公司信息化系统\江麓容大信息系统\Service_TCU_External\obj\Debug\Service_TCU_External.pdb
+E:\RundarInformationSystem\江麓容大信息系统\Service_TCU_External\bin\Debug\Service_TCU_External.dll
+E:\RundarInformationSystem\江麓容大信息系统\Service_TCU_External\bin\Debug\Service_TCU_External.pdb
+E:\RundarInformationSystem\江麓容大信息系统\Service_TCU_External\obj\Debug\ResolveAssemblyReference.cache
+E:\RundarInformationSystem\江麓容大信息系统\Service_TCU_External\obj\Debug\Service_TCU_External.dll
+E:\RundarInformationSystem\江麓容大信息系统\Service_TCU_External\obj\Debug\Service_TCU_External.pdb

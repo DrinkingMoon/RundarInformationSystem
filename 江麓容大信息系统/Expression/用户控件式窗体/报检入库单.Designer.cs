@@ -1393,6 +1393,7 @@ namespace Expression
             this.checkBillDateAndStatus1.Size = new System.Drawing.Size(1263, 52);
             this.checkBillDateAndStatus1.StatusVisible = true;
             this.checkBillDateAndStatus1.TabIndex = 163;
+            this.checkBillDateAndStatus1.OnCompleteSearch += new GlobalObject.DelegateCollection.NonArgumentHandle(this.checkBillDateAndStatus1_OnCompleteSearch);
             // 
             // panelMain
             // 
@@ -1526,7 +1527,7 @@ namespace Expression
             // 提交检验报告ToolStripMenuItem
             // 
             this.提交检验报告ToolStripMenuItem.Name = "提交检验报告ToolStripMenuItem";
-            this.提交检验报告ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.提交检验报告ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.提交检验报告ToolStripMenuItem.Tag = "Auditing";
             this.提交检验报告ToolStripMenuItem.Text = "提交检验报告";
             this.提交检验报告ToolStripMenuItem.Click += new System.EventHandler(this.提交检验报告ToolStripMenuItem_Click);
@@ -1534,7 +1535,7 @@ namespace Expression
             // 提交质检信息ToolStripMenuItem
             // 
             this.提交质检信息ToolStripMenuItem.Name = "提交质检信息ToolStripMenuItem";
-            this.提交质检信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.提交质检信息ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.提交质检信息ToolStripMenuItem.Tag = "Auditing";
             this.提交质检信息ToolStripMenuItem.Text = "提交质检信息";
             this.提交质检信息ToolStripMenuItem.Click += new System.EventHandler(this.提交质检信息ToolStripMenuItem_Click);
@@ -1555,7 +1556,7 @@ namespace Expression
             // 确认到货数ToolStripMenuItem
             // 
             this.确认到货数ToolStripMenuItem.Name = "确认到货数ToolStripMenuItem";
-            this.确认到货数ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.确认到货数ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.确认到货数ToolStripMenuItem.Tag = "ConfirmArrival";
             this.确认到货数ToolStripMenuItem.Text = "确认到货数";
             this.确认到货数ToolStripMenuItem.Click += new System.EventHandler(this.确认到货数ToolStripMenuItem_Click);
@@ -1563,7 +1564,7 @@ namespace Expression
             // 零件入库ToolStripMenuItem
             // 
             this.零件入库ToolStripMenuItem.Name = "零件入库ToolStripMenuItem";
-            this.零件入库ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.零件入库ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.零件入库ToolStripMenuItem.Tag = "StockIn";
             this.零件入库ToolStripMenuItem.Text = "零件入库";
             this.零件入库ToolStripMenuItem.Click += new System.EventHandler(this.零件入库ToolStripMenuItem_Click);
@@ -1571,12 +1572,12 @@ namespace Expression
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(133, 6);
             // 
             // 表单打印ToolStripMenuItem
             // 
             this.表单打印ToolStripMenuItem.Name = "表单打印ToolStripMenuItem";
-            this.表单打印ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.表单打印ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.表单打印ToolStripMenuItem.Tag = "StockIn";
             this.表单打印ToolStripMenuItem.Text = "表单打印";
             this.表单打印ToolStripMenuItem.Click += new System.EventHandler(this.仓管表单打印ToolStripMenuItem1_Click);
@@ -1584,7 +1585,7 @@ namespace Expression
             // btnPrintBarCode
             // 
             this.btnPrintBarCode.Name = "btnPrintBarCode";
-            this.btnPrintBarCode.Size = new System.Drawing.Size(152, 22);
+            this.btnPrintBarCode.Size = new System.Drawing.Size(136, 22);
             this.btnPrintBarCode.Tag = "StockIn";
             this.btnPrintBarCode.Text = "打印条形码";
             this.btnPrintBarCode.Click += new System.EventHandler(this.btnPrintBarCode_Click);
@@ -1601,7 +1602,7 @@ namespace Expression
             // 打印条形码ToolStripMenuItem
             // 
             this.打印条形码ToolStripMenuItem.Name = "打印条形码ToolStripMenuItem";
-            this.打印条形码ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.打印条形码ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.打印条形码ToolStripMenuItem.Tag = "Print";
             this.打印条形码ToolStripMenuItem.Text = "打印条形码";
             this.打印条形码ToolStripMenuItem.Click += new System.EventHandler(this.btnPrintBarCode_Click);

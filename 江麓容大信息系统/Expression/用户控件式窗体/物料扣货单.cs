@@ -85,9 +85,6 @@ namespace Expression
             string[] strBillStatus = { "全部", "等待领导审核", "等待质管批准", "等待SQE确认", "等待采购确认", "单据已完成" };
             checkBillDateAndStatus1.InsertComBox(strBillStatus);
 
-            checkBillDateAndStatus1.OnCompleteSearch +=
-                new GlobalObject.DelegateCollection.NonArgumentHandle(checkBillDateAndStatus1_OnCompleteSearch);
-
             #region 被要求使用服务器时间 Modify by cjb on 2012.6.15
             checkBillDateAndStatus1.dtpStartTime.Value = ServerTime.Time.AddDays(1).AddMonths(-1);
             checkBillDateAndStatus1.dtpEndTime.Value = ServerTime.Time.AddDays(1);
