@@ -53,3 +53,14 @@ E:\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\
 E:\RundarInformationSystem\江麓容大信息系统\AsynSocketService\obj\Debug\ResolveAssemblyReference.cache
 E:\RundarInformationSystem\江麓容大信息系统\AsynSocketService\obj\Debug\AsynSocketService.dll
 E:\RundarInformationSystem\江麓容大信息系统\AsynSocketService\obj\Debug\AsynSocketService.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\AsynSocketService.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\AsynSocketService.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\GlobalObject.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\SocketCommDefiniens.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\DBOperateERP.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\PlatformService.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\GlobalObject.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\bin\Debug\SocketCommDefiniens.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\obj\Debug\ResolveAssemblyReference.cache
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\obj\Debug\AsynSocketService.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\AsynSocketService\obj\Debug\AsynSocketService.pdb

@@ -4,11 +4,6 @@
         <name>WebServerModule</name>
     </assembly>
     <members>
-        <member name="T:WebServerModule.ServiceFeedBack">
-            <summary>
-            售后信息服务类
-            </summary>
-        </member>
         <member name="T:WebServerModule.IServiceFeedBack">
             <summary>
             售后质量反馈接口服务类(不可调用ServerModule)
@@ -138,6 +133,11 @@
         <member name="P:WebServerModule.IServiceFeedBack.QueryResultFilter">
             <summary>
             获取或设置查询结果过滤器
+            </summary>
+        </member>
+        <member name="T:WebServerModule.ServiceFeedBack">
+            <summary>
+            售后信息服务类
             </summary>
         </member>
         <member name="F:WebServerModule.ServiceFeedBack.m_queryResultFilter">
@@ -271,22 +271,6 @@
             获取或设置查询结果过滤器
             </summary>
         </member>
-        <member name="T:WebServerModule.ServerModuleFactory">
-            <summary>
-            管理类厂
-            </summary>
-        </member>
-        <member name="F:WebServerModule.ServerModuleFactory.m_hashTable">
-            <summary>
-            用于保证服务组件实例的唯一性
-            </summary>
-        </member>
-        <member name="M:WebServerModule.ServerModuleFactory.GetServerModule``1">
-            <summary>
-            获取服务组件
-            </summary>
-            <returns>返回组件接口</returns>
-        </member>
         <member name="T:WebServerModule.WebDatabaseParameter">
             <summary>
             数据库参数类
@@ -317,6 +301,22 @@
             <summary>
             获取仓库管理数据库操作上下文
             </summary>
+        </member>
+        <member name="T:WebServerModule.ServerModuleFactory">
+            <summary>
+            管理类厂
+            </summary>
+        </member>
+        <member name="F:WebServerModule.ServerModuleFactory.m_hashTable">
+            <summary>
+            用于保证服务组件实例的唯一性
+            </summary>
+        </member>
+        <member name="M:WebServerModule.ServerModuleFactory.GetServerModule``1">
+            <summary>
+            获取服务组件
+            </summary>
+            <returns>返回组件接口</returns>
         </member>
     </members>
 </doc>

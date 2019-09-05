@@ -217,6 +217,7 @@
             this.chb_Purchase_BillType_YCL = new System.Windows.Forms.CheckBox();
             this.chb_Purchase_BillType_WW = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.customPanel1.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -1805,6 +1806,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.label51);
             this.groupBox1.Controls.Add(this.txt_Purchase_GoodsCode);
             this.groupBox1.Controls.Add(this.btn_SelectGoods);
             this.groupBox1.Controls.Add(this.btn_Purchase_Provider);
@@ -2218,15 +2220,15 @@
             // 
             // txt_Purchase_Version
             // 
-            this.txt_Purchase_Version.Location = new System.Drawing.Point(444, 89);
+            this.txt_Purchase_Version.Location = new System.Drawing.Point(516, 89);
             this.txt_Purchase_Version.Name = "txt_Purchase_Version";
-            this.txt_Purchase_Version.Size = new System.Drawing.Size(135, 21);
+            this.txt_Purchase_Version.Size = new System.Drawing.Size(63, 21);
             this.txt_Purchase_Version.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(379, 93);
+            this.label5.Location = new System.Drawing.Point(442, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 9;
@@ -2294,6 +2296,15 @@
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 3;
             this.label4.Text = "单据类型";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(357, 92);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(47, 12);
+            this.label51.TabIndex = 410;
+            this.label51.Text = "/自制件";
             // 
             // 样品确认申请单明细
             // 
@@ -2555,5 +2566,6 @@
         private UniversalControlLibrary.CustomGroupBox groupBox12;
         private System.Windows.Forms.TextBox txt_Store_GoodsCount_InDepot;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label51;
     }
 }

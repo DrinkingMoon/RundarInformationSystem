@@ -63,3 +63,16 @@ E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\D
 E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\obj\Debug\ResolveAssemblyReference.cache
 E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\obj\Debug\BaseModule_Manufacture.dll
 E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\obj\Debug\BaseModule_Manufacture.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\BaseModule_Manufacture.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\BaseModule_Manufacture.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\BasicServerModule.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\PlatformService.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\GlobalObject.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\DBOperate.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\DBOperateERP.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\GlobalObject.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\BasicServerModule.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\bin\Debug\DBOperate.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\obj\Debug\ResolveAssemblyReference.cache
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\obj\Debug\BaseModule_Manufacture.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Manufacture\obj\Debug\BaseModule_Manufacture.pdb

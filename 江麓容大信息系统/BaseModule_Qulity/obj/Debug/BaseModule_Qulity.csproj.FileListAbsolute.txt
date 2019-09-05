@@ -23,3 +23,8 @@ E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\bin\Debug\
 E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\obj\Debug\ResolveAssemblyReference.cache
 E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\obj\Debug\BaseModule_Qulity.dll
 E:\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\obj\Debug\BaseModule_Qulity.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\bin\Debug\BaseModule_Qulity.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\bin\Debug\BaseModule_Qulity.pdb
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\obj\Debug\ResolveAssemblyReference.cache
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\obj\Debug\BaseModule_Qulity.dll
+E:\workspace\RundarInformationSystem\江麓容大信息系统\BaseModule_Qulity\obj\Debug\BaseModule_Qulity.pdb

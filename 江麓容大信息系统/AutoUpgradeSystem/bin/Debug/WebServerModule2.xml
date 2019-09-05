@@ -4,5 +4,649 @@
         <name>WebServerModule2</name>
     </assembly>
     <members>
+        <member name="T:WebServerModule2.CommentParameter2">
+            <summary>
+            CommentParameter2
+            </summary>
+        </member>
+        <member name="F:WebServerModule2.CommentParameter2.m_databaseName">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="F:WebServerModule2.CommentParameter2.m_dboperate">
+            <summary>
+            数据库操作接口
+            </summary>
+        </member>
+        <member name="M:WebServerModule2.CommentParameter2.GetDBOperate">
+            <summary>
+            获取数据库操作接口
+            </summary>
+            <returns>返回是否成功获取数据库操作接口</returns>
+        </member>
+        <member name="P:WebServerModule2.CommentParameter2.DatabaseName">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="P:WebServerModule2.CommentParameter2.WebDataContext">
+            <summary>
+            获取仓库管理数据库操作上下文
+            </summary>
+        </member>
+        <member name="T:WebServerModule2.IServiceFeedBack2">
+            <summary>
+            售后质量反馈接口服务类(可调用ServerModule)
+            </summary>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetTableByBill(System.String,System.String@)">
+            <summary>
+            根据单据号查询反馈信息
+            </summary>
+            <param name="strDJH">单据号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回满足条件的数据集，失败返回错误信息</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.InsertFeedBack(WebServerModule2.S_ServiceFeedBack,WebServerModule2.OF_BugMessageInfo,System.String@)">
+            <summary>
+            添加反馈信息
+            </summary>
+            <param name="feedBack">反馈的数据集</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateYXCheckCreateManeuverBill(System.Data.DataTable,System.Data.DataTable,System.Data.DataRow,System.String,ServerModule.Out_ManeuverBill,System.Data.DataTable,System.String,System.String@)">
+            <summary>
+            营销主管审核，创建调运单或营销退货单
+            </summary>
+            <param name="dtProductCodes">物品信息</param>
+            <param name="dtMxCK">营销退库单主表信息</param>
+            <param name="row">营销退库单子表信息</param>
+            <param name="type">类型</param>
+            <param name="maneuverBill">调运单主表信息</param>
+            <param name="dtManeuverList">调运单子表信息</param>
+            <param name="backID">反馈单号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回True失返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateYXCheck(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+             营销主管审核，修改表信息
+            </summary>
+            <param name="backID">反馈单号</param>
+            <param name="strDJH">单据号</param>
+            <param name="chargeSuggestionYX">主管意见</param>
+            <param name="TKFS">退库方式</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回True失返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateDutyPerson(WebServerModule2.S_ServiceFeedBack,System.String@)">
+            <summary>
+            责任人确认，修改表信息
+            </summary>
+            <param name="back">数据集对象</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetMessageSource">
+            <summary>
+            获得所有信息来源
+            </summary>
+            <returns>成功返回满足条件的数据集，失败返回null的DataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetReplace(System.String,System.String@)">
+            <summary>
+            获取返回件信息
+            </summary>
+            <param name="strDJH">单据号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetReplaceByID(System.String)">
+            <summary>
+            获取返回件信息
+            </summary>
+            <param name="strDJH">单据号</param>
+            <returns>成功返回满足条件的数据集，失败返回错误信息</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetAfterServiceByBillID(System.String)">
+            <summary>
+            通过单据号查询函电信息
+            </summary>
+            <param name="strDJH">单据号</param>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetServiceFeedBackBill(System.String)">
+            <summary>
+            通过单据号查询售后反馈单信息
+            </summary>
+            <param name="serviceID">售后反馈单号</param>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetMessageType">
+            <summary>
+            获取所有来电类型
+            </summary>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetBugCode">
+            <summary>
+            获得所有的故障代码
+            </summary>
+            <returns>成功返回满足条件的数据集，失败返回null的datatable</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetClient(System.String)">
+            <summary>
+            根据客户名称获得客户编码
+            </summary>
+            <param name="clientName">客户名称</param>
+            <returns>成功返回客户编码，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.InsertBugMessage(WebServerModule2.OF_BugMessageInfo,System.String,System.String@)">
+            <summary>
+            添加故障信息
+            </summary>
+            <param name="messageInfo">实体对象</param>
+            <param name="serviceID">函电单号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回True；失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateFeedBackTime(System.String,System.String,System.String,System.String@)">
+            <summary>
+            确认返回件返回时间
+            </summary>
+            <param name="feedBackID">反馈单编号</param>
+            <param name="cvtCode">变速箱型号</param>
+            <param name="cvtID">变速箱编号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetBugCodeByID(System.String)">
+            <summary>
+            获得故障代码
+            </summary>
+            <returns>成功返回ID，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetBugCodeByName(System.Int32)">
+            <summary>
+            获得故障名称
+            </summary>
+            <returns>成功返回名称，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.DeleteBillStatus">
+            <summary>
+            删除没有使用的单据
+            </summary>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.InsertService(WebServerModule2.S_AfterService,WebServerModule2.OF_BugMessageInfo,System.String@)">
+            <summary>
+            客服中心添加单据基础信息
+            </summary>
+            <param name="service">数据对象集</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>添加成功返回True失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateSaleTable(WebServerModule2.S_AfterService,System.Data.DataTable,WebServerModule2.OF_BugMessageInfo,System.Boolean,System.String@)">
+            <summary>
+            售后人员填写故障处理
+            </summary>
+            <param name="service">数据对象</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <param name="dt">明细数据集</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="flag">是否为接单状态，是：true，否：false</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateCheckTable(System.String,System.String,System.String,System.String,WebServerModule2.S_AfterService,WebServerModule2.OF_BugMessageInfo,System.String,System.String,System.String@)">
+            <summary>
+            审核
+            </summary>
+            <param name="serviceID">单据号</param>
+            <param name="checkName">审核人</param>
+            <param name="checkTime">审核时间</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="feedBack">反馈信息数据集</param>
+            <param name="fkBill">反馈单号</param>
+            <param name="processResult">是否填写反馈单</param>
+            <param name="diagnoseSituation">诊断及测试结果</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateResultTable(WebServerModule2.S_AfterService,System.String@)">
+            <summary>
+            客户回访，修改表
+            </summary>
+            <param name="service">数据对象</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回true失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetFeedBackID">
+            <summary>
+            通过反馈单据号查找id
+            </summary>
+            <returns>成功返回一行数据集，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetAfterServicerByUserInfo(System.String)">
+            <summary>
+            判断是否使用了用户信息
+            </summary>
+            <param name="chassisNum">车架号</param>
+            <returns>成功返回整形，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetServiceFeedBackByUserInfo(System.String)">
+            <summary>
+            判断是否使用了用户信息
+            </summary>
+            <param name="chassisNum">车架号</param>
+            <returns>成功返回整形，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetNextBillID(System.Int32)">
+            <summary>
+            获取新的单据号
+            </summary>
+            <param name="checkOutGoodsType">物品类别</param>
+            <returns>成功返回单号，失败返回错误信息</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.ReturnBill(System.String,System.String,System.String@,System.String)">
+            <summary>
+            回退单据
+            </summary>
+            <param name="strDJH">单据号</param>
+            <param name="strBillStatus">单据状态</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <param name="strRebackReason">回退原因</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.ReturnFeedBackBill(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            回退反馈单
+            </summary>
+            <param name="strDJH">反馈单号</param>
+            <param name="strBillStatus">单据状态</param>
+            <param name="strRebackReason">回退原因</param>
+            <param name="YXBillNo">营销退库单号</param>
+            <param name="error">错误信息</param>
+            <returns>回退成功返回True失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetAfterServiceFile(System.String)">
+            <summary>
+            通过单据号查询附件内容
+            </summary>
+            <param name="strDJH">单据号</param>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.UpdateYXCheckCreateManeuverBill(ServerModule.S_MaterialReturnedInTheDepot,ServerModule.S_MaterialListReturnedInTheDepot,ServerModule.S_MaterialRequisition,ServerModule.S_MaterialRequisitionGoods,ServerModule.ProductsCodes,ServerModule.Out_ManeuverBill,System.Data.DataTable,System.String,System.String@)">
+            <summary>
+            营销主管审核，更新件与返回件不同的情况下创建领料单和领料退库单、修改Out_Stoct的GoodsID
+            </summary>
+            <param name="m_inTheDepotBill">领料退库主信息</param>
+            <param name="m_inTheDepotGoods">领料退库明细</param>
+            <param name="m_requisitionBill">领料单主信息</param>
+            <param name="m_lnqGoods">领料单明细</param>
+            <param name="lnqList">产品编号表信息</param>
+            <param name="maneuverBillInfo">调运单主信息</param>
+            <param name="dtManeuverList">调运单明细</param>
+            <param name="ClientCode">服务站编号</param>
+            <param name="m_strErr">错误信息</param>
+            <returns>操作成功返回True，失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.IServiceFeedBack2.GetStockNum(System.String,System.String)">
+            <summary>
+            获得库存信息
+            </summary>
+            <param name="siteCode">服务站编号</param>
+            <param name="goodsID">物品编号</param>
+            <returns>成功返回整形，失败返回null</returns>
+        </member>
+        <member name="T:WebServerModule2.ServiceFeedBack2">
+            <summary>
+            售后信息服务类
+            </summary>
+        </member>
+        <member name="F:WebServerModule2.ServiceFeedBack2.m_billMessageServer">
+            <summary>
+            单据类消息发布器
+            </summary>
+        </member>
+        <member name="F:WebServerModule2.ServiceFeedBack2.m_maneuverServer">
+            <summary>
+            调运单服务类
+            </summary>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetMouth">
+            <summary>
+            对小于10的月份 进行加0
+            </summary>
+            <returns>成功返回正确的字符串，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetBillStatusTable(System.String,System.String@)">
+            <summary>
+            获得单据状态
+            </summary>
+            <param name="bill_ID">单据号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.DeleteBillStatus">
+            <summary>
+            删除没有使用的单据
+            </summary>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetTableID(System.String)">
+            <summary>
+            判断单据是否存在
+            </summary>
+            <param name="bill_ID">单据号</param>
+            <returns>成功返回满足条件的数据集，失败返回空的数据集</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetNextBillID(System.Int32)">
+            <summary>
+            获取新的单据号
+            </summary>
+            <param name="checkOutGoodsType">物品类别</param>
+            <returns>成功返回单号，失败抛出异常</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetTableByBill(System.String,System.String@)">
+            <summary>
+            根据单据号查询反馈信息
+            </summary>
+            <param name="bill_ID">单据号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回满足条件的数据集，失败返回错误信息</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.DeleteFeedBack(WebServerModule2.S_ServiceFeedBack,System.String@)">
+            <summary>
+            通过删除反馈信息
+            </summary>
+            <param name="feedBack">数据集</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.InsertFeedBack(WebServerModule2.S_ServiceFeedBack,WebServerModule2.OF_BugMessageInfo,System.String@)">
+            <summary>
+            添加反馈信息
+            </summary>
+            <param name="feedBack">反馈的数据集</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateFeedBackTime(System.String,System.String,System.String,System.String@)">
+            <summary>
+            确认返回件返回时间
+            </summary>
+            <param name="feedBackID">反馈单编号</param>
+            <param name="cvtCode">变速箱型号</param>
+            <param name="cvtID">变速箱编号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.InsertBugMessage(WebServerModule2.OF_BugMessageInfo,System.String,System.String@)">
+            <summary>
+            添加故障信息
+            </summary>
+            <param name="messageInfo">实体对象</param>
+            <param name="serviceID">函电单号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回True；失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateYXCheckCreateManeuverBill(System.Data.DataTable,System.Data.DataTable,System.Data.DataRow,System.String,ServerModule.Out_ManeuverBill,System.Data.DataTable,System.String,System.String@)">
+            <summary>
+            营销主管审核，创建调运单或营销退货单
+            </summary>
+            <param name="dtProductCodes">物品信息</param>
+            <param name="dtMxCK">营销退库单主表信息</param>
+            <param name="row">营销退库单子表信息</param>
+            <param name="type">类型</param>
+            <param name="maneuverBill">调运单主表信息</param>
+            <param name="dtManeuverList">调运单子表信息</param>
+            <param name="backID">反馈单号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回True失返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateYXCheckCreateManeuverBill(ServerModule.S_MaterialReturnedInTheDepot,ServerModule.S_MaterialListReturnedInTheDepot,ServerModule.S_MaterialRequisition,ServerModule.S_MaterialRequisitionGoods,ServerModule.ProductsCodes,ServerModule.Out_ManeuverBill,System.Data.DataTable,System.String,System.String@)">
+            <summary>
+            营销主管审核，更新件与返回件不同的情况下创建领料单和领料退库单、修改Out_Stoct的GoodsID
+            </summary>
+            <param name="m_inTheDepotBill">领料退库主信息</param>
+            <param name="m_inTheDepotGoods">领料退库明细</param>
+            <param name="m_requisitionBill">领料单主信息</param>
+            <param name="m_lnqGoods">领料单明细</param>
+            <param name="lnqList">产品编号表信息</param>
+            <param name="maneuverBillInfo">调运单主信息</param>
+            <param name="dtManeuverList">调运单明细</param>
+            <param name="ClientCode">服务站编号</param>
+            <param name="m_strErr">错误信息</param>
+            <returns>操作成功返回True，失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateYXCheck(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+             营销主管审核，修改表信息
+            </summary>
+            <param name="backID">反馈单号</param>
+            <param name="strDJH">单据号</param>
+            <param name="chargeSuggestionYX">主管意见</param>
+            <param name="TKFS">退库方式</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回True失返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateDutyPerson(WebServerModule2.S_ServiceFeedBack,System.String@)">
+            <summary>
+            责任人确认，修改表信息
+            </summary>
+            <param name="back">数据集对象</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.DeleteReplaceReturn(System.String,System.String@)">
+            <summary>
+            删除返回件
+            </summary>
+            <param name="strDJH">单据号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetMessageSource">
+            <summary>
+            获得所有信息来源
+            </summary>
+            <returns>成功返回满足条件的数据集，失败返回null的DataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetReplace(System.String,System.String@)">
+            <summary>
+            获取返回件信息
+            </summary>
+            <param name="strDJH">单据号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetReplaceByID(System.String)">
+            <summary>
+            获取返回件信息
+            </summary>
+            <param name="strDJH">单据号</param>
+            <returns>成功返回满足条件的数据集，失败返回错误信息</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetAfterServiceByBillID(System.String)">
+            <summary>
+            通过单据号查询函电信息
+            </summary>
+            <param name="strDJH">单据号</param>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetServiceFeedBackBill(System.String)">
+            <summary>
+            通过单据号查询售后反馈单信息
+            </summary>
+            <param name="serviceID">售后反馈单号</param>
+            <returns>成功返回满足条件的数据集，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetMessageType">
+            <summary>
+            获取所有来电类型
+            </summary>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetClient(System.String)">
+            <summary>
+            根据客户名称获得客户编码
+            </summary>
+            <param name="clientName">客户名称</param>
+            <returns>成功返回客户编码，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetBugCode">
+            <summary>
+            获得所有的故障代码
+            </summary>
+            <returns>成功返回满足条件的数据集，失败返回null的datatable</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetBugCodeByID(System.String)">
+            <summary>
+            获得故障代码
+            </summary>
+            <returns>成功返回ID，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetBugCodeByName(System.Int32)">
+            <summary>
+            获得故障名称
+            </summary>
+            <returns>成功返回名称，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.ChangeVKT(System.String,System.Int32)">
+            <summary>
+            变更里程数
+            </summary>
+            <param name="vehicleShelfNumber">车架号</param>
+            <param name="vKT">里程数</param>
+            <returns>成功返回True，失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.InsertService(WebServerModule2.S_AfterService,WebServerModule2.OF_BugMessageInfo,System.String@)">
+            <summary>
+            客服中心添加单据基础信息
+            </summary>
+            <param name="service">数据对象集</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>添加成功返回True失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateSaleTable(WebServerModule2.S_AfterService,System.Data.DataTable,WebServerModule2.OF_BugMessageInfo,System.Boolean,System.String@)">
+            <summary>
+            售后人员填写故障处理
+            </summary>
+            <param name="service">数据对象</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <param name="dt">明细数据集</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="flag">是否为接单状态，是：true，否：false</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateCheckTable(System.String,System.String,System.String,System.String,WebServerModule2.S_AfterService,WebServerModule2.OF_BugMessageInfo,System.String,System.String,System.String@)">
+            <summary>
+            审核
+            </summary>
+            <param name="serviceID">单据号</param>
+            <param name="checkName">审核人</param>
+            <param name="checkTime">审核时间</param>
+            <param name="messageInfo">故障信息数据集</param>
+            <param name="feedBack">反馈信息数据集</param>
+            <param name="fkBill">反馈单号</param>
+            <param name="processResult">是否填写反馈单</param>
+            <param name="diagnoseSituation">诊断及测试结果</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.UpdateResultTable(WebServerModule2.S_AfterService,System.String@)">
+            <summary>
+            客户回访，修改表
+            </summary>
+            <param name="service">数据对象</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>成功返回true失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetFeedBackID">
+            <summary>
+            通过反馈单据号查找id
+            </summary>
+            <returns>成功返回一行数据集，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetAfterServicerByUserInfo(System.String)">
+            <summary>
+            判断是否使用了用户信息
+            </summary>
+            <param name="chassisNum">车架号</param>
+            <returns>成功返回整形，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetServiceFeedBackByUserInfo(System.String)">
+            <summary>
+            判断是否使用了用户信息
+            </summary>
+            <param name="chassisNum">车架号</param>
+            <returns>成功返回整形，失败返回null</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.ReturnFeedBackBill(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            回退反馈单
+            </summary>
+            <param name="strDJH">反馈单号</param>
+            <param name="strBillStatus">单据状态</param>
+            <param name="strRebackReason">回退原因</param>
+            <param name="YXBillNo">营销退库单号</param>
+            <param name="error">错误信息</param>
+            <returns>回退成功返回True失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.ReturnBill(System.String,System.String,System.String@,System.String)">
+            <summary>
+            回退单据
+            </summary>
+            <param name="strDJH">单据号</param>
+            <param name="strBillStatus">单据状态</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <param name="strRebackReason">回退原因</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.DeleteFeedBackByServiceID(System.String,System.String@)">
+            <summary>
+            通过函电处理单据号删除反馈信息
+            </summary>
+            <param name="serviceID">单据号</param>
+            <param name="error">出错时返回错误信息，无错时返回null</param>
+            <returns>操作成功返回True，操作失败返回False</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetAfterServiceFile(System.String)">
+            <summary>
+            通过单据号查询附件内容
+            </summary>
+            <param name="strDJH">单据号</param>
+            <returns>成功返回满足条件的数据集，失败返回null的dataTable</returns>
+        </member>
+        <member name="M:WebServerModule2.ServiceFeedBack2.GetStockNum(System.String,System.String)">
+            <summary>
+            获得库存信息
+            </summary>
+            <param name="siteCode">服务站编号</param>
+            <param name="goodsID">物品编号</param>
+            <returns>成功返回整形，失败返回null</returns>
+        </member>
+        <member name="T:WebServerModule2.ServerModuleFactory2">
+            <summary>
+            ServerModuleFactory2
+            </summary>
+        </member>
+        <member name="F:WebServerModule2.ServerModuleFactory2.m_hashTable">
+            <summary>
+            用于保证服务组件实例的唯一性
+            </summary>
+        </member>
+        <member name="M:WebServerModule2.ServerModuleFactory2.GetServerModule``1">
+            <summary>
+            获取服务组件
+            </summary>
+            <returns>返回组件接口</returns>
+        </member>
     </members>
 </doc>
