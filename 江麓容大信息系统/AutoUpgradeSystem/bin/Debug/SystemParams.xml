@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<params>
-  <param name="系统参数">
-    <paramitem value="192.168.0.006">数据库服务器地址</paramitem>
-    <paramitem value="60000" remark="服务器与生产线终端通信的端口">服务器端口</paramitem>
-    <paramitem value="0008">用户编码</paramitem>
-  </param>
-</params>

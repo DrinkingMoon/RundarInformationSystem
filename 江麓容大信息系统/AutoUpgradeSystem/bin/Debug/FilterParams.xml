@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<params>
-  <param name="领料退库单" />
-  <param name="报检入库单" />
-  <param name="领料单" />
-  <param name="普通入库单" />
-  <param name="采购退货单" />
-</params>
