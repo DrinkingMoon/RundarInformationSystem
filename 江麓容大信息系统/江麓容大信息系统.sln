@@ -7,15 +7,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "外部组件", "外部组�
 	ProjectSection(SolutionItems) = preProject
 		ExternalModule\AxInterop.DSOFramer.dll = ExternalModule\AxInterop.DSOFramer.dll
 		ExternalModule\CommControl.dll = ExternalModule\CommControl.dll
+		ExternalModule\DBOperateERP.dll = ExternalModule\DBOperateERP.dll
 		ExternalModule\DepotManagementData.dll = ExternalModule\DepotManagementData.dll
 		ExternalModule\dsoframer2007.ocx = ExternalModule\dsoframer2007.ocx
 		ExternalModule\GMSatoPrn.dll = ExternalModule\GMSatoPrn.dll
+		ExternalModule\ICSharpCode.SharpZipLib.dll = ExternalModule\ICSharpCode.SharpZipLib.dll
 		ExternalModule\Interop.DSOFramer.dll = ExternalModule\Interop.DSOFramer.dll
 		ExternalModule\MyCSharpCodeSharpZipLib.dll = ExternalModule\MyCSharpCodeSharpZipLib.dll
 		ExternalModule\NPOI.dll = ExternalModule\NPOI.dll
 		ExternalModule\NPOI.OOXML.dll = ExternalModule\NPOI.OOXML.dll
 		ExternalModule\NPOI.OpenXml4Net.dll = ExternalModule\NPOI.OpenXml4Net.dll
 		ExternalModule\NPOI.OpenXmlFormats.dll = ExternalModule\NPOI.OpenXmlFormats.dll
+		ExternalModule\PlatformService.dll = ExternalModule\PlatformService.dll
 		ExternalModule\TabStrip.dll = ExternalModule\TabStrip.dll
 	EndProjectSection
 EndProject
