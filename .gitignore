@@ -1,10 +1,2 @@
-
-
-*.dll
-*.pdb
-*.cache
-江麓容大信息系统/GlobalObject/bin/Debug/GlobalObject.dll
-江麓容大信息系统/GlobalObject/bin/Debug/GlobalObject.pdb
-江麓容大信息系统/GlobalObject/obj/Debug/GlobalObject.dll
-江麓容大信息系统/GlobalObject/obj/Debug/GlobalObject.pdb
-江麓容大信息系统/GlobalObject/bin/Debug/GlobalObject.dll
+江麓容大信息系统/AsynSocketService/bin
+江麓容大信息系统/AsynSocketService/obj

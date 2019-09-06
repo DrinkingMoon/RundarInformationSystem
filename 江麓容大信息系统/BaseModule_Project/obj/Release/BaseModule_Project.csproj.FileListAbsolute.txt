@@ -1,5 +1,0 @@
-E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Project\bin\Release\BaseModule_Project.dll
-E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Project\bin\Release\BaseModule_Project.pdb
-E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Project\obj\Release\ResolveAssemblyReference.cache
-E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Project\obj\Release\BaseModule_Project.dll
-E:\代码\代码文件\公司信息化系统\江麓容大信息系统\BaseModule_Project\obj\Release\BaseModule_Project.pdb
