@@ -200,7 +200,7 @@
     <Content Include="外部文件\pdf2swf.exe" />
     <Content Include="外部文件\PlatformService.xml" />
     <Content Include="外部文件\SystemParams.xml" />
-    <Content Include="外部文件\msiexec.exe" />
+    <Content Include="外部文件\Uninstall.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
