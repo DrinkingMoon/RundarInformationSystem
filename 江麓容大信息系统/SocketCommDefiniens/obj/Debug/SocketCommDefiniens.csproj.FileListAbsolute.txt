@@ -23,8 +23,3 @@ E:\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\bin\Debu
 E:\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\obj\Debug\ResolveAssemblyReference.cache
 E:\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\obj\Debug\SocketCommDefiniens.dll
 E:\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\obj\Debug\SocketCommDefiniens.pdb
-E:\workspace\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\bin\Debug\SocketCommDefiniens.dll
-E:\workspace\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\bin\Debug\SocketCommDefiniens.pdb
-E:\workspace\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\obj\Debug\ResolveAssemblyReference.cache
-E:\workspace\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\obj\Debug\SocketCommDefiniens.dll
-E:\workspace\RundarInformationSystem\江麓容大信息系统\SocketCommDefiniens\obj\Debug\SocketCommDefiniens.pdb

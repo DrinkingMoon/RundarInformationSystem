@@ -43,12 +43,3 @@ E:\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\bi
 E:\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\obj\Debug\ResolveAssemblyReference.cache
 E:\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\obj\Debug\DBOperate.dll
 E:\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\obj\Debug\DBOperate.pdb
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\bin\Debug\DBOperate.dll
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\bin\Debug\DBOperate.pdb
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\bin\Debug\GlobalObject.dll
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\bin\Debug\DBOperateERP.dll
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\bin\Debug\PlatformService.dll
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\bin\Debug\GlobalObject.pdb
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\obj\Debug\ResolveAssemblyReference.cache
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\obj\Debug\DBOperate.dll
-E:\workspace\RundarInformationSystem\江麓容大信息系统\数据库组件\DBOperate\obj\Debug\DBOperate.pdb
