@@ -712,7 +712,7 @@ namespace ServerModule
                     S_OrdinaryInDepotBill updateBill = result.Single();
 
                     updateBill.Bill_Time = bill.Bill_Time;
-                    updateBill.OrderBill_ID = bill.OrderBill_ID;
+                    //updateBill.OrderBill_ID = bill.OrderBill_ID;
                     updateBill.Invoice_ID = bill.Invoice_ID;
                     updateBill.Cess = bill.Cess;
                     updateBill.Provider = bill.Provider;
