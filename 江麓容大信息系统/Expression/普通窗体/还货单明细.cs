@@ -46,7 +46,7 @@ namespace Expression
         /// <summary>
         /// 单据LINQ数据集
         /// </summary>
-        S_ProductReturnBill m_lnqBill = new S_ProductReturnBill();
+        S_ProductReturnBill m_lnqBill = null;
 
         /// <summary>
         /// 明细信息
@@ -68,8 +68,6 @@ namespace Expression
             {
                 m_lnqBill = m_serverReturn.GetBillSingle(m_strBillNo);
             }
-
-            m_dtList = m_serverReturn.GetListInfo(m_strBillNo);
 
             m_billNoControl = new BillNumberControl(CE_BillTypeEnum.还货单.ToString(), m_serverReturn);
             m_billMessageServer.BillType = CE_BillTypeEnum.还货单.ToString();
@@ -103,6 +101,8 @@ namespace Expression
         {
             if (m_lnqBill == null)
             {
+                lbPropose.Text = BasicInfo.LoginName;
+                lbProposerDate.Text = ServerTime.Time.ToString();
                 return;
             }
 
@@ -119,8 +119,6 @@ namespace Expression
             lbPropose.Text = m_lnqBill.Proposer == null ? "" : m_lnqBill.Proposer;
             lbProposerDate.Text = m_lnqBill.ProposerDate == null ? "" : m_lnqBill.ProposerDate.ToString();
             cmbStorage.SelectedValue = m_lnqBill.StorageID;
-
-            dataGridView1.DataSource = m_dtList;
         }
 
         /// <summary>
@@ -243,6 +241,8 @@ namespace Expression
                 txtDepartment.Tag = BasicInfo.DeptCode;
             }
 
+            m_dtList = m_serverReturn.GetListInfo(m_strBillNo);
+            dataGridView1.DataSource = m_dtList;
             dataGridView1.Columns["单据号"].Visible = false;
 
             FlowControl();

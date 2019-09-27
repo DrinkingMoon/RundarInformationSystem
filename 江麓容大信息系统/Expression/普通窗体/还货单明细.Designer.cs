@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(还货单明细));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnPropose = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparatorAdd = new System.Windows.Forms.ToolStripSeparator();
@@ -108,7 +109,7 @@
             // 
             // btnPropose
             // 
-            this.btnPropose.Image = global::UniversalControlLibrary.Properties.Resources.提交;
+            this.btnPropose.Image = ((System.Drawing.Image)(resources.GetObject("btnPropose.Image")));
             this.btnPropose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPropose.Name = "btnPropose";
             this.btnPropose.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -125,10 +126,10 @@
             // 
             // btnAudit
             // 
-            this.btnAudit.Image = global::UniversalControlLibrary.Properties.Resources.审核1;
+            this.btnAudit.Image = ((System.Drawing.Image)(resources.GetObject("btnAudit.Image")));
             this.btnAudit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAudit.Name = "btnAudit";
-            this.btnAudit.Size = new System.Drawing.Size(91, 22);
+            this.btnAudit.Size = new System.Drawing.Size(92, 22);
             this.btnAudit.Tag = "";
             this.btnAudit.Text = "审核单据(&A)";
             this.btnAudit.Visible = false;
@@ -141,10 +142,10 @@
             // 
             // btnAffirm
             // 
-            this.btnAffirm.Image = global::UniversalControlLibrary.Properties.Resources.确定亮;
+            this.btnAffirm.Image = ((System.Drawing.Image)(resources.GetObject("btnAffirm.Image")));
             this.btnAffirm.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAffirm.Name = "btnAffirm";
-            this.btnAffirm.Size = new System.Drawing.Size(103, 22);
+            this.btnAffirm.Size = new System.Drawing.Size(106, 22);
             this.btnAffirm.Tag = "";
             this.btnAffirm.Text = "管理员确认(&Q)";
             this.btnAffirm.Visible = false;
@@ -157,10 +158,10 @@
             // 
             // btnReback
             // 
-            this.btnReback.Image = global::UniversalControlLibrary.Properties.Resources.回退;
+            this.btnReback.Image = ((System.Drawing.Image)(resources.GetObject("btnReback.Image")));
             this.btnReback.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReback.Name = "btnReback";
-            this.btnReback.Size = new System.Drawing.Size(91, 22);
+            this.btnReback.Size = new System.Drawing.Size(92, 22);
             this.btnReback.Tag = "view";
             this.btnReback.Text = "回退单据(&R)";
             // 
@@ -218,12 +219,22 @@
             // 
             // txtDepartment
             // 
+            this.txtDepartment.DataResult = null;
+            this.txtDepartment.DataTableResult = null;
+            this.txtDepartment.EditingControlDataGridView = null;
+            this.txtDepartment.EditingControlFormattedValue = "";
+            this.txtDepartment.EditingControlRowIndex = 0;
+            this.txtDepartment.EditingControlValueChanged = false;
             this.txtDepartment.FindItem = UniversalControlLibrary.TextBoxShow.FindType.部门;
+            this.txtDepartment.IsMultiSelect = false;
             this.txtDepartment.Location = new System.Drawing.Point(512, 25);
             this.txtDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.ShowResultForm = true;
             this.txtDepartment.Size = new System.Drawing.Size(165, 21);
+            this.txtDepartment.StrEndSql = null;
             this.txtDepartment.TabIndex = 26;
+            this.txtDepartment.TabStop = false;
             this.txtDepartment.OnCompleteSearch += new GlobalObject.DelegateCollection.NonArgumentHandle(this.txtDepartment_OnCompleteSearch);
             // 
             // cmbStorage
@@ -450,12 +461,22 @@
             // 
             // txtBatchNo
             // 
+            this.txtBatchNo.DataResult = null;
+            this.txtBatchNo.DataTableResult = null;
+            this.txtBatchNo.EditingControlDataGridView = null;
+            this.txtBatchNo.EditingControlFormattedValue = "";
+            this.txtBatchNo.EditingControlRowIndex = 0;
+            this.txtBatchNo.EditingControlValueChanged = false;
             this.txtBatchNo.FindItem = UniversalControlLibrary.TextBoxShow.FindType.车间借贷物品批次号;
+            this.txtBatchNo.IsMultiSelect = false;
             this.txtBatchNo.Location = new System.Drawing.Point(78, 62);
             this.txtBatchNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBatchNo.Name = "txtBatchNo";
+            this.txtBatchNo.ShowResultForm = true;
             this.txtBatchNo.Size = new System.Drawing.Size(205, 21);
+            this.txtBatchNo.StrEndSql = null;
             this.txtBatchNo.TabIndex = 23;
+            this.txtBatchNo.TabStop = false;
             this.txtBatchNo.OnCompleteSearch += new GlobalObject.DelegateCollection.NonArgumentHandle(this.txtBatchNo_OnCompleteSearch);
             this.txtBatchNo.Enter += new System.EventHandler(this.txtBatchNo_Enter);
             // 
@@ -477,12 +498,22 @@
             // 
             // txtCode
             // 
+            this.txtCode.DataResult = null;
+            this.txtCode.DataTableResult = null;
+            this.txtCode.EditingControlDataGridView = null;
+            this.txtCode.EditingControlFormattedValue = "";
+            this.txtCode.EditingControlRowIndex = 0;
+            this.txtCode.EditingControlValueChanged = false;
             this.txtCode.FindItem = UniversalControlLibrary.TextBoxShow.FindType.车间借贷物品;
+            this.txtCode.IsMultiSelect = false;
             this.txtCode.Location = new System.Drawing.Point(78, 27);
             this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCode.Name = "txtCode";
+            this.txtCode.ShowResultForm = true;
             this.txtCode.Size = new System.Drawing.Size(205, 21);
+            this.txtCode.StrEndSql = null;
             this.txtCode.TabIndex = 19;
+            this.txtCode.TabStop = false;
             this.txtCode.OnCompleteSearch += new GlobalObject.DelegateCollection.NonArgumentHandle(this.txtCode_OnCompleteSearch);
             this.txtCode.Enter += new System.EventHandler(this.txtCode_Enter);
             // 
@@ -643,6 +674,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "还货单明细";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "还货单明细";
             this.Load += new System.EventHandler(this.还货单明细_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.还货单明细_FormClosing);

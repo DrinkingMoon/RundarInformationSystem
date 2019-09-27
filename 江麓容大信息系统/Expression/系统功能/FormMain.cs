@@ -1664,10 +1664,6 @@ namespace Expression
             //FormAboutInfo formAboutInfo = new FormAboutInfo();
             //formAboutInfo.Show();
             //formAboutInfo.TopMost = true;
-
-            TCUSoftware kk = new TCUSoftware();
-
-            kk.DownloadFile("DK002", TCUSoftware.VersionStatus.Release, null);
         }
 
         /// <summary>
