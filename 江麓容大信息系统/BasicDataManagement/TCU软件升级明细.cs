@@ -74,7 +74,8 @@ namespace Form_Project_Design
                 txtUpdateContent.Text = _UpdateInfo.UpdateContent;
                 txtUpdateReason.Text = _UpdateInfo.UpdateReason;
 
-                txtVersion.Text = _UpdateInfo.Version.Substring((txtCarModelNo.Text + "V").ToString().Length);
+                cmbVersionType.Text = _UpdateInfo.Version.Substring(txtCarModelNo.Text.Length, 1);
+                txtVersion.Text = _UpdateInfo.Version.Substring((txtCarModelNo.Text + "T").ToString().Length);
 
                 btnDownload_TCUSoft.Tag = _UpdateInfo.ProgramUnique;
                 btnDownload_TestReport.Tag = _UpdateInfo.TestReport;
@@ -97,17 +98,20 @@ namespace Form_Project_Design
             if (lbBillStatus.Text == CE_CommonBillStatus.新建单据.ToString())
             {
                 btnUpload_TCUSoft.Enabled = true;
+                cmbVersionType.Enabled = true;
                 btnUpload_TestReport.Enabled = false;
             }
             else
             {
                 btnUpload_TCUSoft.Enabled = false;
+                cmbVersionType.Enabled = false;
                 btnUpload_TestReport.Enabled = true;
             }
 
             if (lbBillStatus.Text == CE_CommonBillStatus.单据完成.ToString())
             {
                 btnUpload_TCUSoft.Enabled = false;
+                cmbVersionType.Enabled = false;
                 btnUpload_TestReport.Enabled = false;
             }
 
@@ -160,7 +164,7 @@ namespace Form_Project_Design
             _UpdateInfo.UnderVersion = txtUnderVersion.Text;
             _UpdateInfo.UpdateContent = txtUpdateContent.Text;
             _UpdateInfo.UpdateReason = txtUpdateReason.Text;
-            _UpdateInfo.Version = txtCarModelNo.Text + "V" + txtVersion.Text.Trim().ToLower();
+            _UpdateInfo.Version = txtCarModelNo.Text + cmbVersionType.Text + txtVersion.Text.Trim().ToLower();
 
             if (customDataGridView1.Rows.Count != 0)
             {
@@ -180,6 +184,11 @@ namespace Form_Project_Design
                 if (txtCarModelNo.Text.Trim().Length == 0)
                 {
                     throw new Exception("请选择【车型代号】");
+                }
+
+                if (cmbVersionType.Text.Trim().Length == 0)
+                {
+                    throw new Exception("请选择【版本号】之前的【版本类型】,V或者S");
                 }
 
                 if (txtVersion.Text.Trim().Length < 4 || txtVersion.Text.Trim().Length > 5)
@@ -299,7 +308,7 @@ namespace Form_Project_Design
                     if (pr == Program_Report.Program)
                     {
                         FileOperationService.File_DownLoad(new Guid(bt.Tag.ToString()),
-                            folderBrowserDialog1.SelectedPath + "\\TCU程序(" + txtCarModelNo.Text.ToUpper() + "V" + txtVersion.Text.Trim().ToLower() + ")",
+                            folderBrowserDialog1.SelectedPath + "\\TCU程序(" + txtCarModelNo.Text.ToUpper() + cmbVersionType.Text + txtVersion.Text.Trim().ToLower() + ")",
                             GeneralFunction.StringConvertToEnum<CE_CommunicationMode>(BasicInfo.BaseSwitchInfo[(int)CE_SwitchName.文件传输方式]));
 
                         _ServiceTCU.WriteTxtFile(txtBillNo.Text, folderBrowserDialog1.SelectedPath);

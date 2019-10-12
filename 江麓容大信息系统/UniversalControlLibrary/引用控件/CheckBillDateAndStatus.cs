@@ -179,7 +179,7 @@ namespace UniversalControlLibrary
             }
             else
             {
-                if (!cmbBillStatus.Text.Contains("全") && !cmbBillStatus.Text.Contains("部"))
+                if (cmbBillStatus.Text.Replace(" ","").ToString() != "全部")
                 {
                     result += " and " + fieldstatusname + " = '" + cmbBillStatus.Text + "'";
                 }

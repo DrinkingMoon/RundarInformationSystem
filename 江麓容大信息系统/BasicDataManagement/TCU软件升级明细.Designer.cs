@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtVersion = new System.Windows.Forms.TextBox();
             this.txtCarModelNo = new UniversalControlLibrary.TextBoxShow();
-            this.label17 = new System.Windows.Forms.Label();
             this.txtTechnicalNote = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnDownload_TCUSoft = new System.Windows.Forms.Button();
@@ -84,6 +83,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cmbVersionType = new System.Windows.Forms.ComboBox();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -114,9 +114,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbVersionType);
             this.groupBox1.Controls.Add(this.txtVersion);
             this.groupBox1.Controls.Add(this.txtCarModelNo);
-            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txtTechnicalNote);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.btnDownload_TCUSoft);
@@ -151,7 +151,7 @@
             // 
             // txtVersion
             // 
-            this.txtVersion.Location = new System.Drawing.Point(138, 97);
+            this.txtVersion.Location = new System.Drawing.Point(165, 98);
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(72, 21);
             this.txtVersion.TabIndex = 432;
@@ -175,15 +175,6 @@
             this.txtCarModelNo.TabIndex = 431;
             this.txtCarModelNo.TabStop = false;
             this.txtCarModelNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(125, 101);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(11, 12);
-            this.label17.TabIndex = 430;
-            this.label17.Text = "V";
             // 
             // txtTechnicalNote
             // 
@@ -407,14 +398,14 @@
             this.DID,
             this.字节数,
             this.内容});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.customDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.customDataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.customDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customDataGridView1.Location = new System.Drawing.Point(0, 159);
             this.customDataGridView1.Name = "customDataGridView1";
@@ -631,6 +622,18 @@
             this.txtTestResult.Size = new System.Drawing.Size(545, 81);
             this.txtTestResult.TabIndex = 425;
             // 
+            // cmbVersionType
+            // 
+            this.cmbVersionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVersionType.FormattingEnabled = true;
+            this.cmbVersionType.Items.AddRange(new object[] {
+            "V",
+            "S"});
+            this.cmbVersionType.Location = new System.Drawing.Point(126, 98);
+            this.cmbVersionType.Name = "cmbVersionType";
+            this.cmbVersionType.Size = new System.Drawing.Size(33, 20);
+            this.cmbVersionType.TabIndex = 433;
+            // 
             // TCU软件升级明细
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -702,7 +705,6 @@
         private System.Windows.Forms.Button btnUpload_TestReport;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtTestResult;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.NumericUpDown numDataSize;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
@@ -712,5 +714,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 内容;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox txtVersion;
+        private System.Windows.Forms.ComboBox cmbVersionType;
     }
 }

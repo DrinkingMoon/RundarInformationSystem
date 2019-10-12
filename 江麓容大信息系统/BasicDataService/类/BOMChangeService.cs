@@ -423,7 +423,7 @@ namespace Service_Project_Design
                 dataContxt.SubmitChanges();
                 #endregion
 
-                dataContxt.ExecuteCommand("exec BASE_Bom_SaveSysVersion {0}", billNo);
+                dataContxt.ExecuteCommand("exec BASE_DBOM_SaveSysVersion {0}", billNo);
 
                 dataContxt.Transaction.Commit();
             }
