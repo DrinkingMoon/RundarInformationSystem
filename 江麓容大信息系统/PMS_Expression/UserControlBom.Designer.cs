@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlBom));
             this.numBasicCount = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbProductType = new System.Windows.Forms.ComboBox();
@@ -134,11 +135,11 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("宋体", 19F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.Location = new System.Drawing.Point(466, 12);
+            this.labelTitle.Location = new System.Drawing.Point(439, 12);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(54, 26);
+            this.labelTitle.Size = new System.Drawing.Size(108, 26);
             this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "BOM";
+            this.labelTitle.Text = "设计BOM";
             // 
             // toolStrip1
             // 
@@ -165,11 +166,11 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Image = global::UniversalControlLibrary.Properties.Resources.add;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAdd.Size = new System.Drawing.Size(67, 22);
+            this.btnAdd.Size = new System.Drawing.Size(68, 22);
             this.btnAdd.Tag = "Update";
             this.btnAdd.Text = "添加(&A)";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -181,10 +182,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Image = global::UniversalControlLibrary.Properties.Resources.delete;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(67, 22);
+            this.btnDelete.Size = new System.Drawing.Size(69, 22);
             this.btnDelete.Tag = "Update";
             this.btnDelete.Text = "删除(&D)";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -196,10 +197,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Image = global::UniversalControlLibrary.Properties.Resources.modification;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(67, 22);
+            this.btnUpdate.Size = new System.Drawing.Size(69, 22);
             this.btnUpdate.Tag = "Update";
             this.btnUpdate.Text = "修改(&U)";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -211,10 +212,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Image = global::UniversalControlLibrary.Properties.Resources.save;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(49, 22);
+            this.btnSave.Size = new System.Drawing.Size(52, 22);
             this.btnSave.Tag = "Update";
             this.btnSave.Text = "保存";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -226,10 +227,10 @@
             // 
             // btnExportExcel
             // 
-            this.btnExportExcel.Image = global::UniversalControlLibrary.Properties.Resources.Excel;
+            this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
             this.btnExportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(79, 22);
+            this.btnExportExcel.Size = new System.Drawing.Size(88, 22);
             this.btnExportExcel.Tag = "ExportFile";
             this.btnExportExcel.Text = "EXCEL导出";
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
@@ -241,10 +242,10 @@
             // 
             // btnCancle
             // 
-            this.btnCancle.Image = global::UniversalControlLibrary.Properties.Resources.cancle;
+            this.btnCancle.Image = ((System.Drawing.Image)(resources.GetObject("btnCancle.Image")));
             this.btnCancle.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(49, 22);
+            this.btnCancle.Size = new System.Drawing.Size(52, 22);
             this.btnCancle.Tag = "Update";
             this.btnCancle.Text = "取消";
             this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
@@ -256,10 +257,10 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Image = global::UniversalControlLibrary.Properties.Resources.refresh;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(49, 22);
+            this.btnRefresh.Size = new System.Drawing.Size(52, 22);
             this.btnRefresh.Tag = "View";
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -495,7 +496,7 @@
             this.contextMenuTreeNode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmbSetAssemblyFlag});
             this.contextMenuTreeNode.Name = "contextMenuTreeNode";
-            this.contextMenuTreeNode.Size = new System.Drawing.Size(182, 28);
+            this.contextMenuTreeNode.Size = new System.Drawing.Size(182, 33);
             // 
             // cmbSetAssemblyFlag
             // 
@@ -504,7 +505,7 @@
             "非总成",
             "总成"});
             this.cmbSetAssemblyFlag.Name = "cmbSetAssemblyFlag";
-            this.cmbSetAssemblyFlag.Size = new System.Drawing.Size(121, 20);
+            this.cmbSetAssemblyFlag.Size = new System.Drawing.Size(121, 25);
             // 
             // panelTreeTop
             // 
@@ -547,12 +548,12 @@
             this.contextMenuDataGridView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.复制数据表数据ToolStripMenuItem});
             this.contextMenuDataGridView.Name = "contextMenuDataGridView";
-            this.contextMenuDataGridView.Size = new System.Drawing.Size(155, 26);
+            this.contextMenuDataGridView.Size = new System.Drawing.Size(161, 26);
             // 
             // 复制数据表数据ToolStripMenuItem
             // 
             this.复制数据表数据ToolStripMenuItem.Name = "复制数据表数据ToolStripMenuItem";
-            this.复制数据表数据ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.复制数据表数据ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.复制数据表数据ToolStripMenuItem.Text = "复制数据表数据";
             this.复制数据表数据ToolStripMenuItem.Click += new System.EventHandler(this.复制数据表数据ToolStripMenuItem_Click);
             // 

@@ -1,7 +1,7 @@
 ﻿using UniversalControlLibrary;
 namespace Expression
 {
-    partial class BOM历史记录
+    partial class 设计BOM历史记录
     {
         /// <summary> 
         /// 必需的设计器变量。

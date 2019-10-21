@@ -1023,7 +1023,7 @@ namespace Expression
                     case "条形码管理":
                         m_childForm = new UserControlBarCodeManage(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
-                    case "Bom表":
+                    case "设计BOM表":
                         m_childForm = new UserControlBom(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
                     case "Bom映射表":
@@ -1302,8 +1302,8 @@ namespace Expression
                     case "下线试验信息管理":
                         m_childForm = new 下线试验信息管理(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
-                    case "BOM历史记录":
-                        m_childForm = new BOM历史记录();
+                    case "设计BOM历史记录":
+                        m_childForm = new 设计BOM历史记录();
                         break;
                     case "工装与工位匹配管理":
                         m_childForm = new 工装与工位匹配管理(e.Node.Tag as FunctionTreeNodeInfo);
@@ -1311,8 +1311,8 @@ namespace Expression
                     case "设备维修安装申请单":
                         m_childForm = new 设备维修安装申请单(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
-                    case "BOM表零件库":
-                        m_childForm = new BOM表零件库(e.Node.Tag as FunctionTreeNodeInfo);
+                    case "设计BOM表零件库":
+                        m_childForm = new 设计BOM表零件库(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
                     case "采购BOM":
                         m_childForm = new 采购BOM(e.Node.Tag as FunctionTreeNodeInfo);
@@ -1497,8 +1497,8 @@ namespace Expression
                     case "采购结算单":
                         m_childForm = new 采购结算单(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
-                    case "BOM变更单":
-                        m_childForm = new BOM变更单();
+                    case "设计BOM变更单":
+                        m_childForm = new 设计BOM变更单();
                         break;
                     case "样品确认申请单":
                         m_childForm = new Form_Project_Project.样品确认申请单();

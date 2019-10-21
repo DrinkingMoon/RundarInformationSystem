@@ -12,14 +12,14 @@ using UniversalControlLibrary;
 
 namespace Expression
 {
-    public partial class BOM历史记录 : Form
+    public partial class 设计BOM历史记录 : Form
     {
         /// <summary>
         /// BOM表操作服务组件
         /// </summary>
         IBomServer m_serverBom = ServerModuleFactory.GetServerModule<IBomServer>();
 
-        public BOM历史记录()
+        public 设计BOM历史记录()
         {
             InitializeComponent();
 

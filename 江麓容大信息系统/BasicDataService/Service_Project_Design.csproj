@@ -64,11 +64,13 @@
     <Compile Include="ServerModuleFactory.cs" />
     <Compile Include="接口\IBOMChangeService.cs" />
     <Compile Include="接口\IGoodsEnteringBill.cs" />
+    <Compile Include="接口\IPBOMChangeService.cs" />
     <Compile Include="类\BOMChangeService.cs" />
     <Compile Include="类\BOMInfoService.cs" />
     <Compile Include="接口\IBOMInfoService.cs" />
     <Compile Include="类\GoodsEnteringBill.cs" />
     <Compile Include="接口\ITCUInfoService.cs" />
+    <Compile Include="类\PBOMChangeService.cs" />
     <Compile Include="类\TCUInfoService.cs" />
   </ItemGroup>
   <ItemGroup>

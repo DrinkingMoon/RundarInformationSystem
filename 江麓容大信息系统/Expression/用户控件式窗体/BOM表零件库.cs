@@ -13,7 +13,7 @@ using UniversalControlLibrary;
 
 namespace Expression
 {
-    public partial class BOM表零件库 : Form
+    public partial class 设计BOM表零件库 : Form
     {
         /// <summary>
         /// BOM服务组件
@@ -25,7 +25,7 @@ namespace Expression
         /// </summary>
         BASE_BomPartsLibrary m_lnqLibrary = new BASE_BomPartsLibrary();
 
-        public BOM表零件库(PlatformManagement.FunctionTreeNodeInfo nodeInfo)
+        public 设计BOM表零件库(PlatformManagement.FunctionTreeNodeInfo nodeInfo)
         {
             InitializeComponent();
 

@@ -1,7 +1,7 @@
 ﻿using UniversalControlLibrary;
 namespace Expression
 {
-    partial class BOM表零件库
+    partial class 设计BOM表零件库
     {
         /// <summary>
         /// Required designer variable.

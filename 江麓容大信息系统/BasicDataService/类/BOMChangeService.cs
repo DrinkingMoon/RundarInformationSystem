@@ -30,7 +30,7 @@ namespace Service_Project_Design
             ctx.Transaction = ctx.Connection.BeginTransaction();
 
             IFlowServer serverFlow = FlowControlService.ServerModuleFactory.GetServerModule<IFlowServer>();
-            BillNumberControl billNoControl = new BillNumberControl(CE_BillTypeEnum.BOM变更单.ToString(), this);
+            BillNumberControl billNoControl = new BillNumberControl(CE_BillTypeEnum.设计BOM变更单.ToString(), this);
 
             try
             {

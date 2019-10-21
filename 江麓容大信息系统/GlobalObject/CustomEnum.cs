@@ -743,7 +743,7 @@ namespace GlobalObject
         出库单,
         整台份请领单,
         采购结算单,
-        BOM变更单,
+        设计BOM变更单,
         供应商与零件归属变更单,
         请假单,
         出差单,
@@ -757,7 +757,8 @@ namespace GlobalObject
         月度预算申请表,
         供应商应付账款,
         重点工作,
-        纠正预防措施报告
+        纠正预防措施报告,
+        生产BOM变更单
     }
 
     /// <summary>

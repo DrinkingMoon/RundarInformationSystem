@@ -65,23 +65,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BOM变更单明细.cs">
+    <Compile Include="生产BOM变更单.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BOM变更单明细.Designer.cs">
-      <DependentUpon>BOM变更单明细.cs</DependentUpon>
+    <Compile Include="生产BOM变更单.Designer.cs">
+      <DependentUpon>生产BOM变更单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="生产BOM变更单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="生产BOM变更单明细.Designer.cs">
+      <DependentUpon>生产BOM变更单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设计BOM变更单明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设计BOM变更单明细.Designer.cs">
+      <DependentUpon>设计BOM变更单明细.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BOM变更单明细.resx">
-      <DependentUpon>BOM变更单明细.cs</DependentUpon>
+    <EmbeddedResource Include="生产BOM变更单.resx">
+      <DependentUpon>生产BOM变更单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="生产BOM变更单明细.resx">
+      <DependentUpon>生产BOM变更单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设计BOM变更单明细.resx">
+      <DependentUpon>设计BOM变更单明细.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="BOM变更单.resx">
-      <DependentUpon>BOM变更单.cs</DependentUpon>
+    <EmbeddedResource Include="设计BOM变更单.resx">
+      <DependentUpon>设计BOM变更单.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TCU_车型信息.resx">
       <DependentUpon>TCU_车型信息.cs</DependentUpon>
@@ -115,11 +133,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="BOM变更单.cs">
+    <Compile Include="设计BOM变更单.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BOM变更单.Designer.cs">
-      <DependentUpon>BOM变更单.cs</DependentUpon>
+    <Compile Include="设计BOM变更单.Designer.cs">
+      <DependentUpon>设计BOM变更单.cs</DependentUpon>
     </Compile>
     <Compile Include="TCU_车型信息.cs">
       <SubType>Form</SubType>
