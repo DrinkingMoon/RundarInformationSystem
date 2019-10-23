@@ -14,5 +14,9 @@ namespace Service_Project_Design
         /// <param name="goodsID">零件物品ID</param>
         /// <returns>返回LINQ信息</returns>
         BASE_BomPartsLibrary GetLibrarySingle(int goodsID);
+
+        List<BASE_BomVersion> GetBOMVersionItems(string edtion, decimal version);
+
+        decimal GetMaxBOMVersion(string edtion);
     }
 }

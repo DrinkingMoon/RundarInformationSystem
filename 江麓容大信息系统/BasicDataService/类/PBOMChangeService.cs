@@ -80,6 +80,22 @@ namespace Service_Project_Design
         {
             Bus_PBOM_Change result = new Bus_PBOM_Change();
 
+            using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
+            {
+                var varData = from a in ctx.Bus_PBOM_Change
+                              where a.BillNo == billNo
+                              select a;
+
+                if (varData.Count() == 1)
+                {
+                    result = varData.Single();
+                }
+                else
+                {
+                    result = null;
+                }
+            }
+
             return result;
         }
 
@@ -87,12 +103,78 @@ namespace Service_Project_Design
         {
             List<View_Bus_PBOM_Change_Detail> result = new List<View_Bus_PBOM_Change_Detail>();
 
+            using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
+            {
+                var varData = from a in ctx.View_Bus_PBOM_Change_Detail
+                              where a.单据号 == billNo
+                              select a;
+
+                result = varData.ToList();
+            }
+
             return result;
         }
 
-        public void SaveInfo(Bus_PBOM_Change billInfo, List<Bus_PBOM_Change_Detail> detail)
+        public void SaveInfo(Bus_PBOM_Change billInfo, List<View_Bus_PBOM_Change_Detail> detail)
         {
-            
+            using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
+            {
+                ctx.Connection.Open();
+                ctx.Transaction = ctx.Connection.BeginTransaction();
+
+                try
+                {
+                    var varData = from a in ctx.Bus_PBOM_Change
+                                  where a.BillNo == billInfo.BillNo
+                                  select a;
+
+                    if (varData.Count() == 1)
+                    {
+                        Bus_PBOM_Change lnqBill = varData.Single();
+
+                        lnqBill.FileCode = billInfo.FileCode;
+                        lnqBill.FileInfo = billInfo.FileInfo;
+                        lnqBill.Reason = billInfo.Reason;
+                    }
+                    else
+                    {
+                        ctx.Bus_PBOM_Change.InsertOnSubmit(billInfo);
+                    }
+
+                    ctx.SubmitChanges();
+
+                    var varDetail = from a in ctx.Bus_PBOM_Change_Detail
+                                    where a.BillNo == billInfo.BillNo
+                                    select a;
+                    ctx.Bus_PBOM_Change_Detail.DeleteAllOnSubmit(varDetail);
+
+                    foreach (View_Bus_PBOM_Change_Detail item in detail)
+                    {
+                        Bus_PBOM_Change_Detail de = new Bus_PBOM_Change_Detail();
+
+                        de.BillNo = billInfo.BillNo;
+                        de.Edtion = item.总成型号;
+                        de.GoodsID = item.物品ID;
+                        de.InvalidGoodsVersion = item.失效版次号;
+                        de.IsInbound = item.领料;
+                        de.ParentGoodsID = item.父级物品ID;
+                        de.Usage = item.基数;
+                        de.ValidGoodsVersion = item.生效版次号;
+                        de.ValidTime = item.生效日期;
+                        de.DBOMSysVersion = item.设计BOM版本;
+
+                        ctx.Bus_PBOM_Change_Detail.InsertOnSubmit(de);
+                    }
+
+                    ctx.SubmitChanges();
+                    ctx.Transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    ctx.Transaction.Rollback();
+                    throw;
+                }
+            }
         }
     }
 }

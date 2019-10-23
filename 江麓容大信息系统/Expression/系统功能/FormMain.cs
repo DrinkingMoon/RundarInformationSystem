@@ -1575,6 +1575,9 @@ namespace Expression
                     case "车间在产":
                         m_childForm = new 车间在产();
                         break;
+                    case "生产BOM变更单":
+                        m_childForm = new 生产BOM变更单();
+                        break;
                     default:
                         m_childForm = null;
                         break;

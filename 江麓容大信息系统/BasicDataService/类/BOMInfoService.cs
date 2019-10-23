@@ -61,5 +61,37 @@ namespace Service_Project_Design
                 return null;
             }
         }
+
+        public List<BASE_BomVersion> GetBOMVersionItems(string edtion, decimal version)
+        {
+            using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
+            {
+                var varData = from a in ctx.BASE_BomVersion
+                              where a.Edtion == edtion && a.DBOMSysVersion == version
+                              select a;
+
+                return varData.ToList();
+            }
+        }
+
+        public decimal GetMaxBOMVersion(string edtion)
+        {
+            using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
+            {
+                var varData = from a in ctx.BASE_BomVersion
+                              where a.Edtion == edtion
+                              orderby a.DBOMSysVersion descending
+                              select a.DBOMSysVersion;
+
+                if (varData.Count() == 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return varData.First();
+                }
+            }
+        }
     }
 }
