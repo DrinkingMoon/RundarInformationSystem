@@ -71,7 +71,7 @@ namespace Service_Project_Design
                           where a.BillNo == billNo
                           select a;
 
-            return (varData == null || varData.Count() == 0);
+            return !(varData == null || varData.Count() == 0);
         }
 
         #endregion
@@ -152,7 +152,8 @@ namespace Service_Project_Design
                     {
                         Bus_PBOM_Change_Detail de = new Bus_PBOM_Change_Detail();
 
-                        de.BillNo = billInfo.BillNo;
+                        de.ID = Guid.NewGuid();
+                        de.BillNo = item.单据号;
                         de.Edtion = item.总成型号;
                         de.GoodsID = item.物品ID;
                         de.InvalidGoodsVersion = item.失效版次号;
@@ -174,6 +175,43 @@ namespace Service_Project_Design
                     ctx.Transaction.Rollback();
                     throw;
                 }
+            }
+        }
+
+        /// <summary>
+        /// 操作流程以外的业务
+        /// </summary>
+        /// <param name="billNo">单据号</param>
+        public void OperatarUnFlowBusiness(string billNo)
+        {
+            IFlowServer serviceFlow = FlowControlService.ServerModuleFactory.GetServerModule<IFlowServer>();
+
+            string billStatus = serviceFlow.GetNextBillStatus(billNo);
+
+            if (billStatus == null)
+            {
+                throw new Exception("单据状态为空，请重新确认");
+            }
+
+            if (billStatus != CE_CommonBillStatus.单据完成.ToString())
+            {
+                return;
+            }
+
+            DepotManagementDataContext dataContxt = CommentParameter.DepotDataContext;
+
+            dataContxt.Connection.Open();
+            dataContxt.Transaction = dataContxt.Connection.BeginTransaction();
+
+            try
+            {
+                dataContxt.ExecuteCommand("exec BASE_PBOM_SaveSysVersion {0}", billNo);
+                dataContxt.Transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                dataContxt.Transaction.Rollback();
+                throw new Exception(ex.Message);
             }
         }
     }

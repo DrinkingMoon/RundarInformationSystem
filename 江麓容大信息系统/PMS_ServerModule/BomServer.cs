@@ -167,9 +167,8 @@ namespace ServerModule
         /// <returns>返回TABLE</returns>
         public DataTable GetBomBackUpBomEdtion(string productCode)
         {
-            string strSql = "select distinct b.SysVersion as BOM版次号 from fun_get_BomTree('" + productCode + "') as a " +
-                " left join BASE_BomStruct_BackUp as b on a.ParentID = b.ParentID";
-
+            string strSql = "select distinct DBOMSysVersion as 设计BOM版本 "+
+                " from BASE_BomVersion where Edtion = '" + productCode + "' order by DBOMSysVersion desc";
             return GlobalObject.DatabaseServer.QueryInfo(strSql);
         }
 
@@ -433,11 +432,12 @@ namespace ServerModule
         /// <summary>
         /// 获取某一版本的Bom信息
         /// </summary>
-        /// <param name="edition">版本号</param>
+        /// <param name="edition">总成型号</param>
+        /// <param name="sysVersion">版本号</param>
         /// <param name="dataTable">Bom 数据表</param>
         /// <param name="error">出错时返回错误信息，无错时返回null</param>
         /// <returns>操作成功返回true</returns>
-        public bool GetBom(string edition, out DataTable dataTable, out string error)
+        public bool GetBom(string edition, string sysVersion, out DataTable dataTable, out string error)
         {
             dataTable = null;
             error = null;
@@ -446,6 +446,7 @@ namespace ServerModule
             DataSet ds = new DataSet();
 
             paramTable.Add("@Edition", edition);
+            paramTable.Add("@SysVersion", sysVersion);
 
             Dictionary<OperateCMD, object> dicOperateCMD = m_dbOperate.RunProc_CMD("SelAllP_ProductBom", ds, paramTable);
 
@@ -480,11 +481,12 @@ namespace ServerModule
         /// <summary>
         /// 获取某一版本的Bom
         /// </summary>
-        /// <param name="edition">版本号</param>
+        /// <param name="edition">总成型号</param>
+        /// <param name="sysVersion">版本号</param>
         /// <param name="dic">Bom字典</param>
         /// <param name="error">出错时返回错误信息，无错时返回null</param>
         /// <returns>返回是否成功获取某一版本的Bom</returns>
-        public bool GetBom(string edition, out Dictionary<string, List<Bom>> dic, out string error)
+        public bool GetBom(string edition, string sysVersion, out Dictionary<string, List<Bom>> dic, out string error)
         {
             dic = null;
             error = null;
@@ -493,6 +495,7 @@ namespace ServerModule
             DataSet ds = new DataSet();
 
             paramTable.Add("@Edition", edition);
+            paramTable.Add("@SysVersion", sysVersion);
 
             Dictionary<OperateCMD, object> dicOperateCMD = m_dbOperate.RunProc_CMD("SelAllP_ProductBom", ds, paramTable);
 
@@ -522,9 +525,9 @@ namespace ServerModule
 
                     bom[i] = new Bom(Convert.ToInt32(bomTable.Rows[i][0]), bomTable.Rows[i][1].ToString(),
                         bomTable.Rows[i][2].ToString(), bomTable.Rows[i][3].ToString(),
-                        spec, Convert.ToInt32(bomTable.Rows[i][5]), Convert.ToBoolean(bomTable.Rows[i][6]),
-                        bomTable.Rows[i][7].ToString(), bomTable.Rows[i][8].ToString(),
-                        (DateTime)bomTable.Rows[i][9], bomTable.Rows[i][11].ToString());
+                        spec, Convert.ToInt32(bomTable.Rows[i][5]), Convert.ToBoolean(bomTable.Rows[i][7]),
+                        bomTable.Rows[i][8].ToString(), bomTable.Rows[i][9].ToString(),
+                        (DateTime)bomTable.Rows[i][10], bomTable.Rows[i][6].ToString());
                     listBom.Add(bom[i]);
                 }
 

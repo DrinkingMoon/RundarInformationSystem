@@ -46,19 +46,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewStruct = new UniversalControlLibrary.CustomDataGridView();
-            this.userControlDataLocalizer1 = new UniversalControlLibrary.UserControlDataLocalizer();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewEdtion = new UniversalControlLibrary.CustomDataGridView();
-            this.总成型号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.设计BOM版本 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnParentDelete = new System.Windows.Forms.Button();
-            this.btnParentAdd = new System.Windows.Forms.Button();
-            this.txtParentGoodsCode = new UniversalControlLibrary.TextBoxShow();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numVersion = new System.Windows.Forms.NumericUpDown();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.父级图号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件图号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +58,22 @@
             this.单据号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.父级物品ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.物品ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.总成型号1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.设计BOM版本1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.总成型号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.设计BOM版本 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userControlDataLocalizer1 = new UniversalControlLibrary.UserControlDataLocalizer();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewEdtion = new UniversalControlLibrary.CustomDataGridView();
+            this.总成型号_ZC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.设计BOM版本_ZC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnParentDelete = new System.Windows.Forms.Button();
+            this.btnParentAdd = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.cmbEdition = new System.Windows.Forms.ComboBox();
+            this.cmbDBOMVersion = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,7 +81,6 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEdtion)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVersion)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -265,8 +265,9 @@
             this.单据号,
             this.父级物品ID,
             this.物品ID,
-            this.总成型号1,
-            this.设计BOM版本1});
+            this.总成型号,
+            this.设计BOM版本,
+            this.ID});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -283,165 +284,6 @@
             this.dataGridViewStruct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStruct.Size = new System.Drawing.Size(640, 486);
             this.dataGridViewStruct.TabIndex = 6;
-            this.dataGridViewStruct.Leave += new System.EventHandler(this.dataGridViewStruct_Leave);
-            // 
-            // userControlDataLocalizer1
-            // 
-            this.userControlDataLocalizer1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.userControlDataLocalizer1.Font = new System.Drawing.Font("新宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.userControlDataLocalizer1.Location = new System.Drawing.Point(0, 0);
-            this.userControlDataLocalizer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControlDataLocalizer1.Name = "userControlDataLocalizer1";
-            this.userControlDataLocalizer1.OnlyLocalize = true;
-            this.userControlDataLocalizer1.Size = new System.Drawing.Size(640, 32);
-            this.userControlDataLocalizer1.StartIndex = 0;
-            this.userControlDataLocalizer1.TabIndex = 5;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dataGridViewEdtion);
-            this.groupBox3.Controls.Add(this.panel2);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(233, 518);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "总成信息";
-            // 
-            // dataGridViewEdtion
-            // 
-            this.dataGridViewEdtion.AllowUserToAddRows = false;
-            this.dataGridViewEdtion.AllowUserToDeleteRows = false;
-            this.dataGridViewEdtion.AllowUserToResizeRows = false;
-            this.dataGridViewEdtion.AutoCreateFilters = true;
-            this.dataGridViewEdtion.BaseFilter = "";
-            this.dataGridViewEdtion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEdtion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.总成型号,
-            this.设计BOM版本});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEdtion.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEdtion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewEdtion.Location = new System.Drawing.Point(3, 132);
-            this.dataGridViewEdtion.MultiSelect = false;
-            this.dataGridViewEdtion.Name = "dataGridViewEdtion";
-            this.dataGridViewEdtion.ReadOnly = true;
-            this.dataGridViewEdtion.RowHeadersWidth = 21;
-            this.dataGridViewEdtion.RowTemplate.Height = 23;
-            this.dataGridViewEdtion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEdtion.Size = new System.Drawing.Size(227, 383);
-            this.dataGridViewEdtion.TabIndex = 4;
-            this.dataGridViewEdtion.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEdtion_CellEnter);
-            // 
-            // 总成型号
-            // 
-            this.总成型号.DataPropertyName = "总成型号";
-            this.总成型号.HeaderText = "总成型号";
-            this.总成型号.Name = "总成型号";
-            this.总成型号.ReadOnly = true;
-            // 
-            // 设计BOM版本
-            // 
-            this.设计BOM版本.DataPropertyName = "设计BOM版本";
-            this.设计BOM版本.HeaderText = "设计BOM版本";
-            this.设计BOM版本.Name = "设计BOM版本";
-            this.设计BOM版本.ReadOnly = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.numVersion);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnParentDelete);
-            this.panel2.Controls.Add(this.btnParentAdd);
-            this.panel2.Controls.Add(this.txtParentGoodsCode);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 115);
-            this.panel2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(8, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 12);
-            this.label1.TabIndex = 266;
-            this.label1.Text = "设计BOM版本";
-            // 
-            // btnParentDelete
-            // 
-            this.btnParentDelete.Location = new System.Drawing.Point(130, 76);
-            this.btnParentDelete.Name = "btnParentDelete";
-            this.btnParentDelete.Size = new System.Drawing.Size(70, 23);
-            this.btnParentDelete.TabIndex = 264;
-            this.btnParentDelete.Text = "删除";
-            this.btnParentDelete.UseVisualStyleBackColor = true;
-            this.btnParentDelete.Click += new System.EventHandler(this.btnParentDelete_Click);
-            // 
-            // btnParentAdd
-            // 
-            this.btnParentAdd.Location = new System.Drawing.Point(44, 76);
-            this.btnParentAdd.Name = "btnParentAdd";
-            this.btnParentAdd.Size = new System.Drawing.Size(70, 23);
-            this.btnParentAdd.TabIndex = 263;
-            this.btnParentAdd.Text = "添加";
-            this.btnParentAdd.UseVisualStyleBackColor = true;
-            this.btnParentAdd.Click += new System.EventHandler(this.btnParentAdd_Click);
-            // 
-            // txtParentGoodsCode
-            // 
-            this.txtParentGoodsCode.DataResult = null;
-            this.txtParentGoodsCode.DataTableResult = null;
-            this.txtParentGoodsCode.EditingControlDataGridView = null;
-            this.txtParentGoodsCode.EditingControlFormattedValue = "";
-            this.txtParentGoodsCode.EditingControlRowIndex = 0;
-            this.txtParentGoodsCode.EditingControlValueChanged = false;
-            this.txtParentGoodsCode.FindItem = UniversalControlLibrary.TextBoxShow.FindType.BOM表零件;
-            this.txtParentGoodsCode.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtParentGoodsCode.IsMultiSelect = false;
-            this.txtParentGoodsCode.Location = new System.Drawing.Point(61, 16);
-            this.txtParentGoodsCode.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtParentGoodsCode.Name = "txtParentGoodsCode";
-            this.txtParentGoodsCode.ShowResultForm = true;
-            this.txtParentGoodsCode.Size = new System.Drawing.Size(148, 21);
-            this.txtParentGoodsCode.StrEndSql = null;
-            this.txtParentGoodsCode.TabIndex = 248;
-            this.txtParentGoodsCode.TabStop = false;
-            this.txtParentGoodsCode.OnCompleteSearch += new GlobalObject.DelegateCollection.NonArgumentHandle(this.txtParentGoodsCode_OnCompleteSearch);
-            this.txtParentGoodsCode.Enter += new System.EventHandler(this.txtParentGoodsCode_Enter);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(8, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 249;
-            this.label3.Text = "总成型号";
-            // 
-            // numVersion
-            // 
-            this.numVersion.DecimalPlaces = 2;
-            this.numVersion.Location = new System.Drawing.Point(84, 45);
-            this.numVersion.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numVersion.Name = "numVersion";
-            this.numVersion.Size = new System.Drawing.Size(125, 21);
-            this.numVersion.TabIndex = 267;
             // 
             // 父级图号
             // 
@@ -465,6 +307,7 @@
             this.零件名称.Name = "零件名称";
             this.零件名称.ReadOnly = true;
             this.零件名称.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.零件名称.Width = 160;
             // 
             // 零件规格
             // 
@@ -472,6 +315,7 @@
             this.零件规格.HeaderText = "零件规格";
             this.零件规格.Name = "零件规格";
             this.零件规格.ReadOnly = true;
+            this.零件规格.Width = 80;
             // 
             // 基数
             // 
@@ -481,14 +325,14 @@
             this.基数.ReadOnly = true;
             this.基数.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.基数.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.基数.Width = 80;
+            this.基数.Width = 60;
             // 
             // 领料
             // 
             this.领料.DataPropertyName = "领料";
             this.领料.HeaderText = "领料";
             this.领料.Name = "领料";
-            this.领料.Width = 60;
+            this.领料.Width = 40;
             // 
             // 生效版次号
             // 
@@ -531,19 +375,170 @@
             this.物品ID.Name = "物品ID";
             this.物品ID.Visible = false;
             // 
-            // 总成型号1
+            // 总成型号
             // 
-            this.总成型号1.DataPropertyName = "总成型号";
-            this.总成型号1.HeaderText = "总成型号1";
-            this.总成型号1.Name = "总成型号1";
-            this.总成型号1.Visible = false;
+            this.总成型号.DataPropertyName = "总成型号";
+            this.总成型号.HeaderText = "总成型号";
+            this.总成型号.Name = "总成型号";
+            this.总成型号.Visible = false;
             // 
-            // 设计BOM版本1
+            // 设计BOM版本
             // 
-            this.设计BOM版本1.DataPropertyName = "设计BOM版本";
-            this.设计BOM版本1.HeaderText = "设计BOM版本1";
-            this.设计BOM版本1.Name = "设计BOM版本1";
-            this.设计BOM版本1.Visible = false;
+            this.设计BOM版本.DataPropertyName = "设计BOM版本";
+            this.设计BOM版本.HeaderText = "设计BOM版本";
+            this.设计BOM版本.Name = "设计BOM版本";
+            this.设计BOM版本.Visible = false;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // userControlDataLocalizer1
+            // 
+            this.userControlDataLocalizer1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userControlDataLocalizer1.Font = new System.Drawing.Font("新宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.userControlDataLocalizer1.Location = new System.Drawing.Point(0, 0);
+            this.userControlDataLocalizer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlDataLocalizer1.Name = "userControlDataLocalizer1";
+            this.userControlDataLocalizer1.OnlyLocalize = true;
+            this.userControlDataLocalizer1.Size = new System.Drawing.Size(640, 32);
+            this.userControlDataLocalizer1.StartIndex = 0;
+            this.userControlDataLocalizer1.TabIndex = 5;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dataGridViewEdtion);
+            this.groupBox3.Controls.Add(this.panel2);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(233, 518);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "总成信息";
+            // 
+            // dataGridViewEdtion
+            // 
+            this.dataGridViewEdtion.AllowUserToAddRows = false;
+            this.dataGridViewEdtion.AllowUserToDeleteRows = false;
+            this.dataGridViewEdtion.AllowUserToResizeRows = false;
+            this.dataGridViewEdtion.AutoCreateFilters = true;
+            this.dataGridViewEdtion.BaseFilter = "";
+            this.dataGridViewEdtion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEdtion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.总成型号_ZC,
+            this.设计BOM版本_ZC});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEdtion.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewEdtion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewEdtion.Location = new System.Drawing.Point(3, 132);
+            this.dataGridViewEdtion.MultiSelect = false;
+            this.dataGridViewEdtion.Name = "dataGridViewEdtion";
+            this.dataGridViewEdtion.ReadOnly = true;
+            this.dataGridViewEdtion.RowHeadersWidth = 21;
+            this.dataGridViewEdtion.RowTemplate.Height = 23;
+            this.dataGridViewEdtion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEdtion.Size = new System.Drawing.Size(227, 383);
+            this.dataGridViewEdtion.TabIndex = 4;
+            this.dataGridViewEdtion.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEdtion_CellEnter);
+            // 
+            // 总成型号_ZC
+            // 
+            this.总成型号_ZC.DataPropertyName = "总成型号";
+            this.总成型号_ZC.HeaderText = "总成型号";
+            this.总成型号_ZC.Name = "总成型号_ZC";
+            this.总成型号_ZC.ReadOnly = true;
+            // 
+            // 设计BOM版本_ZC
+            // 
+            this.设计BOM版本_ZC.DataPropertyName = "设计BOM版本";
+            this.设计BOM版本_ZC.HeaderText = "设计BOM版本";
+            this.设计BOM版本_ZC.Name = "设计BOM版本_ZC";
+            this.设计BOM版本_ZC.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cmbDBOMVersion);
+            this.panel2.Controls.Add(this.cmbEdition);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btnParentDelete);
+            this.panel2.Controls.Add(this.btnParentAdd);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 17);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(227, 115);
+            this.panel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(8, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 12);
+            this.label1.TabIndex = 266;
+            this.label1.Text = "设计BOM版本";
+            // 
+            // btnParentDelete
+            // 
+            this.btnParentDelete.Location = new System.Drawing.Point(130, 76);
+            this.btnParentDelete.Name = "btnParentDelete";
+            this.btnParentDelete.Size = new System.Drawing.Size(70, 23);
+            this.btnParentDelete.TabIndex = 264;
+            this.btnParentDelete.Text = "删除";
+            this.btnParentDelete.UseVisualStyleBackColor = true;
+            this.btnParentDelete.Click += new System.EventHandler(this.btnParentDelete_Click);
+            // 
+            // btnParentAdd
+            // 
+            this.btnParentAdd.Location = new System.Drawing.Point(44, 76);
+            this.btnParentAdd.Name = "btnParentAdd";
+            this.btnParentAdd.Size = new System.Drawing.Size(70, 23);
+            this.btnParentAdd.TabIndex = 263;
+            this.btnParentAdd.Text = "添加";
+            this.btnParentAdd.UseVisualStyleBackColor = true;
+            this.btnParentAdd.Click += new System.EventHandler(this.btnParentAdd_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(8, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 249;
+            this.label3.Text = "总成型号";
+            // 
+            // cmbEdition
+            // 
+            this.cmbEdition.BackColor = System.Drawing.Color.White;
+            this.cmbEdition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEdition.FormattingEnabled = true;
+            this.cmbEdition.Location = new System.Drawing.Point(69, 13);
+            this.cmbEdition.Name = "cmbEdition";
+            this.cmbEdition.Size = new System.Drawing.Size(140, 20);
+            this.cmbEdition.TabIndex = 267;
+            this.cmbEdition.SelectedIndexChanged += new System.EventHandler(this.cmbEdition_SelectedIndexChanged);
+            // 
+            // cmbDBOMVersion
+            // 
+            this.cmbDBOMVersion.BackColor = System.Drawing.Color.White;
+            this.cmbDBOMVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDBOMVersion.FormattingEnabled = true;
+            this.cmbDBOMVersion.Location = new System.Drawing.Point(94, 46);
+            this.cmbDBOMVersion.Name = "cmbDBOMVersion";
+            this.cmbDBOMVersion.Size = new System.Drawing.Size(115, 20);
+            this.cmbDBOMVersion.TabIndex = 268;
             // 
             // 生产BOM变更单明细
             // 
@@ -564,7 +559,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEdtion)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVersion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -589,16 +583,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnParentDelete;
         private System.Windows.Forms.Button btnParentAdd;
-        private UniversalControlLibrary.TextBoxShow txtParentGoodsCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private UniversalControlLibrary.CustomDataGridView dataGridViewStruct;
         private UniversalControlLibrary.UserControlDataLocalizer userControlDataLocalizer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 总成型号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 设计BOM版本;
-        private System.Windows.Forms.NumericUpDown numVersion;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 总成型号_ZC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 设计BOM版本_ZC;
         private System.Windows.Forms.DataGridViewTextBoxColumn 父级图号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件图号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件名称;
@@ -611,7 +603,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 单据号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 父级物品ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn 物品ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 总成型号1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 设计BOM版本1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 总成型号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 设计BOM版本;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.ComboBox cmbEdition;
+        private System.Windows.Forms.ComboBox cmbDBOMVersion;
     }
 }

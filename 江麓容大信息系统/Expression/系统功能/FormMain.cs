@@ -1302,9 +1302,6 @@ namespace Expression
                     case "下线试验信息管理":
                         m_childForm = new 下线试验信息管理(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
-                    case "设计BOM历史记录":
-                        m_childForm = new 设计BOM历史记录();
-                        break;
                     case "工装与工位匹配管理":
                         m_childForm = new 工装与工位匹配管理(e.Node.Tag as FunctionTreeNodeInfo);
                         break;
@@ -1577,6 +1574,9 @@ namespace Expression
                         break;
                     case "生产BOM变更单":
                         m_childForm = new 生产BOM变更单();
+                        break;
+                    case "生产BOM表":
+                        m_childForm = new 生产BOM表();
                         break;
                     default:
                         m_childForm = null;

@@ -47,7 +47,7 @@ namespace Form_Project_Design
                 {
                     case CE_FlowOperationType.提交:
                         this.NotifyPersonnel = form.FlowInfo_NotifyInfo;
-                        //m_serviceStatement.OperatarUnFlowBusiness(lnqBillInfo.BillNo);
+                        _servicePBOMChange.OperatarUnFlowBusiness(lnqBillInfo.BillNo);
                         break;
                     case CE_FlowOperationType.暂存:
                     case CE_FlowOperationType.回退:

@@ -77,6 +77,12 @@
     <Compile Include="生产BOM变更单明细.Designer.cs">
       <DependentUpon>生产BOM变更单明细.cs</DependentUpon>
     </Compile>
+    <Compile Include="生产BOM表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="生产BOM表.Designer.cs">
+      <DependentUpon>生产BOM表.cs</DependentUpon>
+    </Compile>
     <Compile Include="设计BOM变更单明细.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="生产BOM变更单明细.resx">
       <DependentUpon>生产BOM变更单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="生产BOM表.resx">
+      <DependentUpon>生产BOM表.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="设计BOM变更单明细.resx">
       <DependentUpon>设计BOM变更单明细.cs</DependentUpon>
@@ -192,6 +201,10 @@
     <ProjectReference Include="..\GlobalObject\GlobalObject.csproj">
       <Project>{2C5A3AA5-EFB0-4DD4-85FC-DA49804A1C6B}</Project>
       <Name>GlobalObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMS_ServerModule\PMS_ServerModule.csproj">
+      <Project>{9054DDFD-AFCF-4533-8E11-72BCA93E9B63}</Project>
+      <Name>PMS_ServerModule</Name>
     </ProjectReference>
     <ProjectReference Include="..\ServerModule\ServerModule.csproj">
       <Project>{2CFBFEC8-5C0D-4C14-93F7-103DCFC40D02}</Project>

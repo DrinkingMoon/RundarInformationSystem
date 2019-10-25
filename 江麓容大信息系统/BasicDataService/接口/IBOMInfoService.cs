@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ServerModule;
+using System.Data;
 
 namespace Service_Project_Design
 {
@@ -15,8 +16,10 @@ namespace Service_Project_Design
         /// <returns>返回LINQ信息</returns>
         BASE_BomPartsLibrary GetLibrarySingle(int goodsID);
 
-        List<BASE_BomVersion> GetBOMVersionItems(string edtion, decimal version);
+        List<BASE_BomVersion> GetBOMVersionInfoItems(string edtion, decimal version);
 
-        decimal GetMaxBOMVersion(string edtion);
+        List<decimal> GetDBOMVersionItems(string edtion);
+
+        DataTable GetPBOMLogInfoItems(string edition, string sysVersion);
     }
 }

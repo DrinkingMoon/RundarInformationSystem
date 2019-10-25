@@ -18,6 +18,8 @@ namespace Form_Project_Design
 {
     public partial class 生产BOM变更单明细 : CustomFlowForm
     {
+        IBomServer _serviceBOM = ServerModule.ServerModuleFactory.GetServerModule<IBomServer>();
+
         IBOMInfoService _serviceBOMInfo = Service_Project_Design.ServerModuleFactory.GetServerModule<IBOMInfoService>();
 
         IFlowServer _serviceFlow = FlowControlService.ServerModuleFactory.GetServerModule<IFlowServer>();
@@ -45,6 +47,18 @@ namespace Form_Project_Design
         {
             try
             {
+                List<string> lstAsscembly = _serviceBOM.GetAssemblyTypeList();
+
+                if (lstAsscembly != null)
+                {
+                    cmbEdition.DataSource = lstAsscembly;
+
+                    if (cmbEdition.Items.Count > 0)
+                    {
+                        cmbEdition.SelectedIndex = -1;
+                    }
+                }
+
                 _billNoControl = new BillNumberControl(CE_BillTypeEnum.生产BOM变更单.ToString(), _servicePBOMChange);
                 _lnqPBOMBill = _servicePBOMChange.GetItem(this.FlowInfo_BillNo);
                 _listDetail = _servicePBOMChange.GetDetail(this.FlowInfo_BillNo);
@@ -70,6 +84,7 @@ namespace Form_Project_Design
                 }
 
                 FlowOperationType = flowOperationType;
+                ResultInfo = _lnqPBOMBill;
 
                 this.ResultList = new List<object>();
                 ResultList.Add(_listDetail);
@@ -117,7 +132,12 @@ namespace Form_Project_Design
 
             _lnqPBOMBill.BillNo = txtBillNo.Text;
             _lnqPBOMBill.FileCode = txtFileCode.Text;
-            _lnqPBOMBill.FileInfo = lbDownFile.Tag as Byte[];
+
+            if (lbDownFile.Tag != null)
+            {
+                _lnqPBOMBill.FileInfo = lbDownFile.Tag as Byte[];
+            }
+
             _lnqPBOMBill.Reason = txtReason.Text;
         }
 
@@ -147,7 +167,7 @@ namespace Form_Project_Design
             {
                 if (item.生效日期 != null && string.IsNullOrEmpty(item.失效版次号))
                 {
-                    throw new Exception(UniversalFunction.GetGoodsMessage(item.物品ID) + "具有【生效日期】的同时必须填写【失效版次号】");
+                    throw new Exception("【总成型号】：" + item.总成型号 +  UniversalFunction.GetGoodsMessage(item.物品ID) + "具有【生效日期】的同时必须填写【失效版次号】");
                 }
             }
         }
@@ -159,23 +179,11 @@ namespace Form_Project_Design
                 return;
             }
 
-            dataGridViewStruct.DataSource = null;
-
-            List<View_Bus_PBOM_Change_Detail> lstTemp = (from a in _listDetail
-                                                         where a.总成型号 == 
-                                                            dataGridViewEdtion.CurrentRow.Cells["总成型号"].Value.ToString()
-                                                            orderby a.父级图号, a.零件图号
-                                                         select a).ToList();
-
-            dataGridViewStruct.DataSource = lstTemp;
-            dataGridViewStruct.Columns["单据号"].Visible = false;
-
-            //foreach (View_Bus_PBOM_Change_Detail item in lstTemp)
-            //{
-            //    dataGridViewStruct.Rows.Add(new object[]{item.父级图号, item.零件图号, item.零件名称, item.零件规格, item.基数, 
-            //        item.领料, item.生效版次号, item.生效日期, item.失效版次号, item.单据号,
-            //        item.父级物品ID, item.物品ID, item.总成型号, item.设计BOM版本});
-            //}
+            dataGridViewStruct.DataSource = (from a in _listDetail
+                                             where a.总成型号 ==
+                                                dataGridViewEdtion.CurrentRow.Cells["总成型号_ZC"].Value.ToString()
+                                             orderby a.父级图号, a.零件图号
+                                             select a).ToList();
 
             userControlDataLocalizer1.Init(dataGridViewStruct, this.Name,
                 UniversalFunction.SelectHideFields(this.Name, dataGridViewStruct.Name, BasicInfo.LoginID));
@@ -185,18 +193,18 @@ namespace Form_Project_Design
         {
             try
             {
-                if (string.IsNullOrEmpty(txtParentGoodsCode.Text))
+                if (string.IsNullOrEmpty(cmbEdition.Text))
                 {
                     throw new Exception("请选择【总成型号】");
                 }
 
-                if (numVersion.Value == 0)
+                if (cmbDBOMVersion.Text.Length == 0)
                 {
-                    throw new Exception("请填写对应的【设计BOM版本号】");
+                    throw new Exception("请选择对应的【设计BOM版本号】");
                 }
 
                 List<BASE_BomVersion> lstVersion =
-                    _serviceBOMInfo.GetBOMVersionItems(txtParentGoodsCode.Text, numVersion.Value);
+                    _serviceBOMInfo.GetBOMVersionInfoItems(cmbEdition.Text, Convert.ToDecimal(cmbDBOMVersion.Text));
 
                 foreach (BASE_BomVersion item in lstVersion)
                 {
@@ -228,11 +236,7 @@ namespace Form_Project_Design
                     _listDetail.Add(tempLnq);
                 }
 
-                dataGridViewEdtion.Rows.Add(new object[] {txtParentGoodsCode.Text, numVersion.Value});
-
-                dataGridViewEdtion.CurrentCell = dataGridViewEdtion.Rows[dataGridViewEdtion.Rows.Count - 1].Cells[0];
-                dataGridViewEdtion.FirstDisplayedScrollingRowIndex = dataGridViewEdtion.Rows.Count - 1;
-                dataGridViewEdtion_CellEnter(sender, new DataGridViewCellEventArgs(0, dataGridViewEdtion.Rows.Count - 1));
+                dataGridViewEdtion.Rows.Add(new object[] { cmbEdition.Text, cmbDBOMVersion.Text });
             }
             catch (Exception ex)
             {
@@ -249,7 +253,7 @@ namespace Form_Project_Design
                     return;
                 }
 
-                _listDetail.RemoveAll(k => k.总成型号 == dataGridViewEdtion.CurrentRow.Cells["总成型号"].Value.ToString());
+                _listDetail.RemoveAll(k => k.总成型号 == dataGridViewEdtion.CurrentRow.Cells["总成型号_ZC"].Value.ToString());
                 dataGridViewEdtion.Rows.Remove(dataGridViewEdtion.CurrentRow);
 
                 if (dataGridViewEdtion.Rows.Count != 0)
@@ -267,28 +271,6 @@ namespace Form_Project_Design
             {
                 MessageDialog.ShowPromptMessage(ex.Message);
             }
-        }
-
-        private void txtParentGoodsCode_OnCompleteSearch()
-        {
-            if (txtParentGoodsCode.DataResult != null)
-            {
-                txtParentGoodsCode.Tag = txtParentGoodsCode.DataResult["物品ID"];
-                txtParentGoodsCode.Text = txtParentGoodsCode.DataResult["零部件编码"].ToString();
-                numVersion.Value = _serviceBOMInfo.GetMaxBOMVersion(txtParentGoodsCode.Text);
-            }
-            else
-            {
-                txtParentGoodsCode.Tag = null;
-                txtParentGoodsCode.Text = "";
-                numVersion.Value = 0;
-            }
-        }
-
-        private void txtParentGoodsCode_Enter(object sender, EventArgs e)
-        {
-            txtParentGoodsCode.StrEndSql = " and 物品ID in (select GoodsID from F_GoodsAttributeRecord " +
-                " where AttributeID in (" + (int)CE_GoodsAttributeName.CVT +") and AttributeValue = '" + bool.TrueString + "')";
         }
 
         private void lbUpFile_Click(object sender, EventArgs e)
@@ -310,15 +292,20 @@ namespace Form_Project_Design
                     BinaryReader br = new BinaryReader(file);
                     lbDownFile.Tag = br.ReadBytes((int)file.Length);
                     lbDownFile.Enabled = true;
+
                     if (file != null)
+                    {
                         file.Close();
+                    }
+
+                    MessageDialog.ShowPromptMessage("上传成功");
                 }
             }
         }
 
         private void lbDownFile_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "pdf files (*.pdf)|*.pdf|doc files (*.doc)|*.doc|All files (*.*)|*.*";
+            saveFileDialog1.Filter = "doc files (*.doc)|*.doc|pdf files (*.pdf)|*.pdf|All files (*.*)|*.*";
 
             if (lbDownFile.Tag == null)
             {
@@ -335,40 +322,28 @@ namespace Form_Project_Design
                     bw.Write(lbDownFile.Tag as byte[]);
                     bw.Close();
                     fs.Close();
+
+                    MessageDialog.ShowPromptMessage("下载成功");
                 }
             }
         }
 
-        private void dataGridViewStruct_Leave(object sender, EventArgs e)
+        private void cmbEdition_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //_listDetail.RemoveAll(r => r.总成型号 == dataGridViewEdtion.CurrentRow.Cells["总成型号"].Value.ToString());
+            cmbDBOMVersion.Items.Clear();
+            cmbDBOMVersion.DataSource = null;
 
-            //foreach (DataGridViewRow dr in dataGridViewStruct.Rows)
-            //{
-            //    if (dr.Cells["物品ID"].Value == null || dr.Cells["物品ID"].Value.ToString() == "0")
-            //    {
-            //        continue;
-            //    }
+            if (cmbEdition.Text.Length == 0)
+            {
+                return;
+            }
 
-            //    View_Bus_PBOM_Change_Detail tempLnq = new View_Bus_PBOM_Change_Detail();
+            foreach (decimal item in _serviceBOMInfo.GetDBOMVersionItems(cmbEdition.Text))
+            {
+                cmbDBOMVersion.Items.Add(item);
+            }
 
-            //    tempLnq.单据号 = txtBillNo.Text;
-            //    tempLnq.父级图号 = dr.Cells["父级图号"].Value == null ?;
-            //    tempLnq.父级物品ID = (int?)dr.Cells["父级物品ID1"].Value;
-            //    tempLnq.零件规格 = dr.Cells["零件规格"].Value.ToString();
-            //    tempLnq.基数 = Convert.ToDecimal(dr.Cells["基数"].Value);
-            //    tempLnq.零件图号 = dr.Cells["零件图号"].Value.ToString();
-            //    tempLnq.零件名称 = dr.Cells["零件名称"].Value.ToString();
-            //    tempLnq.物品ID = Convert.ToInt32(dr.Cells["物品ID"].Value);
-            //    tempLnq.领料 = Convert.ToBoolean(dr.Cells["领料"].Value);
-            //    tempLnq.设计BOM版本 = Convert.ToDecimal(dr.Cells["设计BOM版本1"].Value);
-            //    tempLnq.生效版次号 = dr.Cells["生效版次号"].Value.ToString();
-            //    tempLnq.生效日期 = dr.Cells["生效日期"].Value == null ? null : (DateTime?)dr.Cells["生效日期"].Value;
-            //    tempLnq.失效版次号 = dr.Cells["失效版次号"].Value.ToString();
-            //    tempLnq.总成型号 = dr.Cells["总成型号"].Value.ToString();
-
-            //    _listDetail.Add(tempLnq);
-            //}
+            cmbDBOMVersion.SelectedIndex = 0;
         }
     }
 }

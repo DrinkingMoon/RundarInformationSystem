@@ -271,7 +271,7 @@ namespace Expression
             Dictionary<string, List<Bom>> DicBomTable;
             Dictionary<string, List<Bom>> tempDic;
 
-            if (m_bomServer.GetBom(edition, out tempDic, out m_err))
+            if (m_bomServer.GetBom(edition, "1.00", out tempDic, out m_err))
             {
                 DicBom = tempDic;
             }
@@ -285,7 +285,7 @@ namespace Expression
 
             treeView1.Nodes.Clear();
 
-            if (m_bomServer.GetBom(edition, out DicBomTable, out error))
+            if (m_bomServer.GetBom(edition, "1.00", out DicBomTable, out error))
             {
                 List<Bom> listBom = DicBomTable[edition];
 

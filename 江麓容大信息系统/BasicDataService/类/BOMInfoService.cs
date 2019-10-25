@@ -62,7 +62,7 @@ namespace Service_Project_Design
             }
         }
 
-        public List<BASE_BomVersion> GetBOMVersionItems(string edtion, decimal version)
+        public List<BASE_BomVersion> GetBOMVersionInfoItems(string edtion, decimal version)
         {
             using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
             {
@@ -74,7 +74,7 @@ namespace Service_Project_Design
             }
         }
 
-        public decimal GetMaxBOMVersion(string edtion)
+        public List<decimal> GetDBOMVersionItems(string edtion)
         {
             using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
             {
@@ -83,15 +83,20 @@ namespace Service_Project_Design
                               orderby a.DBOMSysVersion descending
                               select a.DBOMSysVersion;
 
-                if (varData.Count() == 0)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return varData.First();
-                }
+                return varData.Distinct().ToList();
             }
+        }
+
+        public DataTable GetPBOMLogInfoItems(string edition, string sysVersion)
+        {
+            string error = "";
+
+            Hashtable hsTable = new Hashtable();
+
+            hsTable.Add("@Edition", edition);
+            hsTable.Add("@SysVersion", sysVersion);
+
+            return GlobalObject.DatabaseServer.QueryInfoPro("BASE_PBOM_Select", hsTable, out error);
         }
     }
 }

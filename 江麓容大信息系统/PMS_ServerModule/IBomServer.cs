@@ -130,14 +130,16 @@ namespace ServerModule
         /// <returns>成功获取到返回true</returns>
         bool GetAssemblyInfo(string productCode, out string[] assemblyCodes, out string[] assemblyNames);
 
+
         /// <summary>
         /// 获取某一版本的Bom信息
         /// </summary>
-        /// <param name="edition">版本号</param>
+        /// <param name="edition">总成型号</param>
+        /// <param name="sysVersion">版本号</param>
         /// <param name="dataTable">Bom 数据表</param>
         /// <param name="error">出错时返回错误信息，无错时返回null</param>
         /// <returns>操作成功返回true</returns>
-        bool GetBom(string edition, out System.Data.DataTable dataTable, out string error);
+        bool GetBom(string edition, string sysVersion, out DataTable dataTable, out string error);
 
         /// <summary>
         /// 获取某版本中属于多个父总成的零件
@@ -149,11 +151,12 @@ namespace ServerModule
         /// <summary>
         /// 获取某一版本的Bom
         /// </summary>
-        /// <param name="edition">版本号</param>
+        /// <param name="edition">总成型号</param>
+        /// <param name="sysVersion">版本号</param>
         /// <param name="dic">Bom字典</param>
         /// <param name="error">出错时返回错误信息，无错时返回null</param>
         /// <returns>返回是否成功获取某一版本的Bom</returns>
-        bool GetBom(string edition, out Dictionary<string, List<Bom>> dic, out string error);
+        bool GetBom(string edition, string sysVersion, out Dictionary<string, List<Bom>> dic, out string error);
 
         /// <summary>
         /// 获取某一版本的Bom信息

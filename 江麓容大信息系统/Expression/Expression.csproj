@@ -840,12 +840,6 @@
     <Compile Include="普通窗体\非产品件检验单明细.Designer.cs">
       <DependentUpon>非产品件检验单明细.cs</DependentUpon>
     </Compile>
-    <Compile Include="用户控件式窗体\BOM历史记录.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="用户控件式窗体\BOM历史记录.Designer.cs">
-      <DependentUpon>BOM历史记录.cs</DependentUpon>
-    </Compile>
     <Compile Include="用户控件式窗体\Bom表关联零件设置.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2031,9 +2025,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="普通窗体\非产品件检验单明细.resx">
       <DependentUpon>非产品件检验单明细.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="用户控件式窗体\BOM历史记录.resx">
-      <DependentUpon>BOM历史记录.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="用户控件式窗体\Bom表关联零件设置.resx">
       <DependentUpon>Bom表关联零件设置.cs</DependentUpon>

@@ -28,24 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlBom));
             this.numBasicCount = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbProductType = new System.Windows.Forms.ComboBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnAdd = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparatorAdd = new System.Windows.Forms.ToolStripSeparator();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparatorDelete = new System.Windows.Forms.ToolStripSeparator();
-            this.btnUpdate = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparatorUpdate = new System.Windows.Forms.ToolStripSeparator();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnExportExcel = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparatorSave = new System.Windows.Forms.ToolStripSeparator();
-            this.btnCancle = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,7 +46,7 @@
             this.panelPara = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtVersion = new System.Windows.Forms.TextBox();
-            this.cmbAssemblyFlag = new System.Windows.Forms.ComboBox();
+            this.cmbDBOMVersion = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -69,13 +59,9 @@
             this.panelCenter = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.contextMenuTreeNode = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmbSetAssemblyFlag = new System.Windows.Forms.ToolStripComboBox();
             this.panelTreeTop = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuDataGridView = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.复制数据表数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelSearch = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -90,10 +76,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.contextMenuTreeNode.SuspendLayout();
             this.panelTreeTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.contextMenuDataGridView.SuspendLayout();
             this.panelSearch.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
@@ -145,17 +129,8 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnAdd,
-            this.toolStripSeparatorAdd,
-            this.btnDelete,
-            this.toolStripSeparatorDelete,
-            this.btnUpdate,
-            this.toolStripSeparatorUpdate,
-            this.btnSave,
             this.toolStripSeparator2,
             this.btnExportExcel,
-            this.toolStripSeparatorSave,
-            this.btnCancle,
             this.toolStripSeparator1,
             this.btnRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -163,62 +138,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(986, 25);
             this.toolStrip1.TabIndex = 37;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAdd.Size = new System.Drawing.Size(68, 22);
-            this.btnAdd.Tag = "Update";
-            this.btnAdd.Text = "添加(&A)";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // toolStripSeparatorAdd
-            // 
-            this.toolStripSeparatorAdd.Name = "toolStripSeparatorAdd";
-            this.toolStripSeparatorAdd.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(69, 22);
-            this.btnDelete.Tag = "Update";
-            this.btnDelete.Text = "删除(&D)";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // toolStripSeparatorDelete
-            // 
-            this.toolStripSeparatorDelete.Name = "toolStripSeparatorDelete";
-            this.toolStripSeparatorDelete.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(69, 22);
-            this.btnUpdate.Tag = "Update";
-            this.btnUpdate.Text = "修改(&U)";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // toolStripSeparatorUpdate
-            // 
-            this.toolStripSeparatorUpdate.Name = "toolStripSeparatorUpdate";
-            this.toolStripSeparatorUpdate.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(52, 22);
-            this.btnSave.Tag = "Update";
-            this.btnSave.Text = "保存";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // toolStripSeparator2
             // 
@@ -231,24 +150,9 @@
             this.btnExportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(88, 22);
-            this.btnExportExcel.Tag = "ExportFile";
+            this.btnExportExcel.Tag = "View";
             this.btnExportExcel.Text = "EXCEL导出";
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
-            // 
-            // toolStripSeparatorSave
-            // 
-            this.toolStripSeparatorSave.Name = "toolStripSeparatorSave";
-            this.toolStripSeparatorSave.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnCancle
-            // 
-            this.btnCancle.Image = ((System.Drawing.Image)(resources.GetObject("btnCancle.Image")));
-            this.btnCancle.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(52, 22);
-            this.btnCancle.Tag = "Update";
-            this.btnCancle.Text = "取消";
-            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // toolStripSeparator1
             // 
@@ -278,7 +182,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 18);
+            this.label9.Location = new System.Drawing.Point(9, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 14);
             this.label9.TabIndex = 152;
@@ -315,7 +219,7 @@
             this.panelPara.BackColor = System.Drawing.SystemColors.Control;
             this.panelPara.Controls.Add(this.label5);
             this.panelPara.Controls.Add(this.txtVersion);
-            this.panelPara.Controls.Add(this.cmbAssemblyFlag);
+            this.panelPara.Controls.Add(this.cmbDBOMVersion);
             this.panelPara.Controls.Add(this.txtSpec);
             this.panelPara.Controls.Add(this.label7);
             this.panelPara.Controls.Add(this.label6);
@@ -355,27 +259,25 @@
             this.txtVersion.Size = new System.Drawing.Size(131, 23);
             this.txtVersion.TabIndex = 162;
             // 
-            // cmbAssemblyFlag
+            // cmbDBOMVersion
             // 
-            this.cmbAssemblyFlag.BackColor = System.Drawing.Color.White;
-            this.cmbAssemblyFlag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAssemblyFlag.FormattingEnabled = true;
-            this.cmbAssemblyFlag.Items.AddRange(new object[] {
-            "非总成",
-            "总成"});
-            this.cmbAssemblyFlag.Location = new System.Drawing.Point(355, 14);
-            this.cmbAssemblyFlag.Name = "cmbAssemblyFlag";
-            this.cmbAssemblyFlag.Size = new System.Drawing.Size(115, 21);
-            this.cmbAssemblyFlag.TabIndex = 161;
+            this.cmbDBOMVersion.BackColor = System.Drawing.Color.White;
+            this.cmbDBOMVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDBOMVersion.FormattingEnabled = true;
+            this.cmbDBOMVersion.Location = new System.Drawing.Point(355, 14);
+            this.cmbDBOMVersion.Name = "cmbDBOMVersion";
+            this.cmbDBOMVersion.Size = new System.Drawing.Size(115, 21);
+            this.cmbDBOMVersion.TabIndex = 161;
+            this.cmbDBOMVersion.SelectedIndexChanged += new System.EventHandler(this.cmbDBOMVersion_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(286, 18);
+            this.label6.Location = new System.Drawing.Point(265, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 14);
+            this.label6.Size = new System.Drawing.Size(84, 14);
             this.label6.TabIndex = 160;
-            this.label6.Text = "总成标志";
+            this.label6.Text = "设计BOM版本";
             // 
             // label1
             // 
@@ -483,29 +385,12 @@
             // 
             // treeView1
             // 
-            this.treeView1.ContextMenuStrip = this.contextMenuTreeNode;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(0, 52);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(317, 379);
             this.treeView1.TabIndex = 31;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // contextMenuTreeNode
-            // 
-            this.contextMenuTreeNode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmbSetAssemblyFlag});
-            this.contextMenuTreeNode.Name = "contextMenuTreeNode";
-            this.contextMenuTreeNode.Size = new System.Drawing.Size(182, 33);
-            // 
-            // cmbSetAssemblyFlag
-            // 
-            this.cmbSetAssemblyFlag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSetAssemblyFlag.Items.AddRange(new object[] {
-            "非总成",
-            "总成"});
-            this.cmbSetAssemblyFlag.Name = "cmbSetAssemblyFlag";
-            this.cmbSetAssemblyFlag.Size = new System.Drawing.Size(121, 25);
             // 
             // panelTreeTop
             // 
@@ -530,7 +415,6 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ContextMenuStrip = this.contextMenuDataGridView;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 52);
             this.dataGridView1.Name = "dataGridView1";
@@ -542,20 +426,6 @@
             this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
-            // 
-            // contextMenuDataGridView
-            // 
-            this.contextMenuDataGridView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.复制数据表数据ToolStripMenuItem});
-            this.contextMenuDataGridView.Name = "contextMenuDataGridView";
-            this.contextMenuDataGridView.Size = new System.Drawing.Size(161, 26);
-            // 
-            // 复制数据表数据ToolStripMenuItem
-            // 
-            this.复制数据表数据ToolStripMenuItem.Name = "复制数据表数据ToolStripMenuItem";
-            this.复制数据表数据ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.复制数据表数据ToolStripMenuItem.Text = "复制数据表数据";
-            this.复制数据表数据ToolStripMenuItem.Click += new System.EventHandler(this.复制数据表数据ToolStripMenuItem_Click);
             // 
             // panelSearch
             // 
@@ -624,7 +494,6 @@
             this.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "UserControlBom";
             this.Load += new System.EventHandler(this.UserControlBom_Load);
-            this.Enter += new System.EventHandler(this.UserControlBom_Enter);
             this.Resize += new System.EventHandler(this.UserControlBom_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.numBasicCount)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -637,11 +506,9 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
-            this.contextMenuTreeNode.ResumeLayout(false);
             this.panelTreeTop.ResumeLayout(false);
             this.panelTreeTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuDataGridView.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
             this.panelSearch.PerformLayout();
             this.panelMain.ResumeLayout(false);
@@ -657,13 +524,6 @@
         private System.Windows.Forms.ComboBox cmbProductType;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnAdd;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorAdd;
-        private System.Windows.Forms.ToolStripButton btnDelete;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorDelete;
-        private System.Windows.Forms.ToolStripButton btnUpdate;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorUpdate;
-        private System.Windows.Forms.ToolStripButton btnCancle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtSpec;
@@ -681,12 +541,8 @@
         private System.Windows.Forms.Panel panelCenter;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelRight;
-        private System.Windows.Forms.ComboBox cmbAssemblyFlag;
+        private System.Windows.Forms.ComboBox cmbDBOMVersion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ToolStripButton btnSave;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSave;
-        private System.Windows.Forms.ContextMenuStrip contextMenuTreeNode;
-        private System.Windows.Forms.ToolStripComboBox cmbSetAssemblyFlag;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Panel panelTreeTop;
@@ -695,8 +551,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ContextMenuStrip contextMenuDataGridView;
-        private System.Windows.Forms.ToolStripMenuItem 复制数据表数据ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;

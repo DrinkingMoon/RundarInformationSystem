@@ -52,21 +52,6 @@ namespace Expression
         Dictionary<string, List<string>> m_dicParentAssemblyPartCode = new Dictionary<string, List<string>>();
 
         /// <summary>
-        /// BOM表是否发生了变化的标志
-        /// </summary>
-        bool m_changeFlag = false;
-
-        /// <summary>
-        /// 老的Bom版本
-        /// </summary>
-        string m_oldEdition = "";
-
-        /// <summary>
-        /// 所有需要选配的零件编码列表
-        /// </summary>
-        //List<string> m_choseConfectAccessoryCodeList = new List<string>();
-
-        /// <summary>
         /// 服务组件
         /// </summary>
         IProductInfoServer m_productInfoServer = ServerModuleFactory.GetServerModule<IProductInfoServer>();
@@ -141,38 +126,12 @@ namespace Expression
 
                 if (cmbProductType.Items.Count > 0)
                 {
-                    cmbProductType.SelectedIndex = 0;
-
-                    InitTreeView(cmbProductType.SelectedItem.ToString());
+                    cmbProductType.SelectedIndex = -1;
                 }
             }
             #endregion
 
             this.cmbProductType.SelectedIndexChanged += new System.EventHandler(this.cmbProductType_SelectedIndexChanged);
-        }
-
-        /// <summary>
-        /// 重新窗体消息处理函数
-        /// </summary>
-        /// <param name="m">窗体消息</param>
-        protected override void DefWndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case WndMsgSender.CloseMsg:
-                    if (m_changeFlag)
-                    {
-                        if (MessageDialog.ShowEnquiryMessage("是否存储更新后的Bom表?") == DialogResult.Yes)
-                        {
-                            SaveBom();
-                        }
-                    }
-                    break;
-
-                default:
-                    base.DefWndProc(ref m);
-                    break;
-            }
         }
 
         /// <summary>
@@ -189,14 +148,14 @@ namespace Expression
         /// 刷新DataGridView
         /// </summary>
         /// <param name="edition">版本</param>
-        void RefreshDataGridView(string edition)
+        void RefreshDataGridView()
         {
             try
             {
                 this.dataGridView1.CellEnter -= new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
                 DataTable dataTable;
 
-                if (!m_bomServer.GetBom(edition, out dataTable, out m_err))
+                if (!m_bomServer.GetBom(cmbProductType.Text, cmbDBOMVersion.Text, out dataTable, out m_err))
                 {
                     MessageDialog.ShowErrorMessage(m_err);
                     return;
@@ -240,16 +199,17 @@ namespace Expression
         /// 刷新树视图
         /// </summary>
         /// <param name="edition"></param>
-        void RefreshTreeView(string edition)
+        void RefreshTreeView()
         {
+            string edition = cmbProductType.Text;
+
             string error;
             Dictionary<string, List<Bom>> DicBomTable;
             Dictionary<string, List<Bom>> tempDic;
 
-            m_changeFlag = false;
             m_updatedBomInfo.Clear();
 
-            if (m_bomServer.GetBom(edition, out tempDic, out m_err))
+            if (m_bomServer.GetBom(cmbProductType.Text, cmbDBOMVersion.Text, out tempDic, out m_err))
             {
                 DicBom = tempDic;
             }
@@ -279,7 +239,7 @@ namespace Expression
                 m_dicParentAssemblyPartCode[edition].Clear();
             }
 
-            if (m_bomServer.GetBom(edition, out DicBomTable, out error))
+            if (m_bomServer.GetBom(cmbProductType.Text, cmbDBOMVersion.Text, out DicBomTable, out error))
             {
                 List<Bom> listBom = DicBomTable[edition];
 
@@ -327,8 +287,6 @@ namespace Expression
                 MessageDialog.ShowErrorMessage(error);
 
                 ResetPanelPara();
-                btnUpdate.Enabled = false;
-                btnDelete.Enabled = false;
                 return;
             }
 
@@ -339,13 +297,18 @@ namespace Expression
         /// 初始化树视图
         /// </summary>
         /// <param name="edition">版本号</param>
-        void InitTreeView(string edition)
+        void InitTreeView()
         {
-            RefreshDataGridView(edition);
+            if (cmbProductType.Text.Trim().Length == 0 || cmbDBOMVersion.Text.Trim().Length == 0)
+            {
+                return;
+            }
+
+            RefreshDataGridView();
 
             this.treeView1.AfterSelect -= new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
 
-            RefreshTreeView(edition);
+            RefreshTreeView();
 
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
 
@@ -366,7 +329,6 @@ namespace Expression
             txtSpec.Text = "";
             txtVersion.Text = "";
             numBasicCount.Value = 0;
-            cmbAssemblyFlag.SelectedItem = null;
             txtRemark.Text = "";
         }
 
@@ -418,27 +380,6 @@ namespace Expression
             txtVersion.Text = bom.Version;
 
             numBasicCount.Value = Convert.ToDecimal(bom.Counts);
-
-            if (!bom.AssemblyFlag)
-            {
-                cmbAssemblyFlag.SelectedIndex = 0;
-
-                this.cmbSetAssemblyFlag.SelectedIndexChanged -= new System.EventHandler(this.cmbSetAssemblyFlag_SelectedIndexChanged);
-                cmbSetAssemblyFlag.SelectedIndex = 0;
-                this.cmbSetAssemblyFlag.SelectedIndexChanged += new System.EventHandler(this.cmbSetAssemblyFlag_SelectedIndexChanged);
-            }
-            else if (bom.AssemblyFlag)
-            {
-                cmbAssemblyFlag.SelectedIndex = 1;
-
-                this.cmbSetAssemblyFlag.SelectedIndexChanged -= new System.EventHandler(this.cmbSetAssemblyFlag_SelectedIndexChanged);
-                cmbSetAssemblyFlag.SelectedIndex = 1;
-                this.cmbSetAssemblyFlag.SelectedIndexChanged += new System.EventHandler(this.cmbSetAssemblyFlag_SelectedIndexChanged);
-            }
-            else
-            {
-                cmbAssemblyFlag.SelectedItem = null;
-            }
         }
 
         /// <summary>
@@ -491,7 +432,7 @@ namespace Expression
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            cmbProductType_SelectedIndexChanged(sender, e);
+            InitTreeView();
         }
 
         /// <summary>
@@ -501,322 +442,20 @@ namespace Expression
         /// <param name="e"></param>
         private void cmbProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (m_changeFlag)
+            cmbDBOMVersion.DataSource = null;
+            cmbDBOMVersion.Items.Clear();
+
+            if (cmbProductType.Text.Trim().Length == 0)
             {
-                if (DialogResult.OK == MessageDialog.ShowEnquiryMessage("您对BOM进行了修改，是否保存您的修改内容？"))
-                {
-                    btnSave.PerformClick();
-                }
+                return;
             }
 
-            if (cmbProductType.Items.Count > 0)
-            {
-                m_oldEdition = cmbProductType.SelectedItem.ToString();
-                InitTreeView(cmbProductType.SelectedItem.ToString());
-            }
-        }
+            DataTable dtTemp = m_bomServer.GetBomBackUpBomEdtion(cmbProductType.Text.Trim());
 
-        /// <summary>
-        /// 添加
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (CheckAddBom())
-            {
-                AddBom(cmbProductType.SelectedItem.ToString());
-                btnSave.Enabled = true;
-                btnCancle.Enabled = true;
-            }
-        }
-
-        /// <summary>
-        /// 添加检测
-        /// </summary>
-        /// <returns>返回是否允许添加零件</returns>
-        bool CheckAddBom()
-        {
-            #region 检验数据项不能为空
-
-            txtCode.Text = txtCode.Text.Trim();
-
-            if (txtCode.Text == "")
-            {
-                MessageDialog.ShowPromptMessage("零部件编码不能为空!");
-                return false;
-            }
-
-            if (txtVersion.Text.Trim() == "")
-            {
-                MessageDialog.ShowPromptMessage("零部件版次号不能为空!");
-                return false;
-            }
-
-            txtName.Text = txtName.Text.Trim();
-
-            if (txtName.Text == "")
-            {
-                MessageDialog.ShowPromptMessage("零部件名称不能为空!");
-                return false;
-            }
-
-            if (numBasicCount.Value <= 0)
-            {
-                MessageDialog.ShowPromptMessage("基数不能为0!");
-                return false;
-            }
-
-            if (cmbAssemblyFlag.SelectedItem == null || cmbAssemblyFlag.SelectedItem.ToString() == "")
-            {
-                MessageDialog.ShowPromptMessage("总成标志不能为空!");
-                return false;
-            }
-
-            #endregion
-
-            txtParentCode.Text = txtParentCode.Text.Trim();
-
-            if (treeView1.Nodes.Count == 0)
-            {
-                if (txtParentCode.Text.Length > 0)
-                {
-                    txtParentCode.SelectAll();
-                    txtParentCode.Focus();
-                    MessageDialog.ShowPromptMessage("添加根节点时父总成只能为空!");
-                    return false;
-                }
-                else if (cmbAssemblyFlag.SelectedIndex == 0)
-                {
-                    cmbAssemblyFlag.Focus();
-                    MessageDialog.ShowPromptMessage("添加根节点时总成标志只能为父总成!");
-                    return false;
-                }
-            }
-            #region 检验当前树中是否存在父总成及零部件编码都相同的零部件
-
-            if (m_dicParentAssemblyPartCode.ContainsKey(cmbProductType.SelectedItem.ToString()))
-            {
-                if (m_dicParentAssemblyPartCode[cmbProductType.SelectedItem.ToString()].Contains(txtParentCode.Text 
-                    + txtCode.Text + txtSpec.Text))
-                {
-                    MessageDialog.ShowPromptMessage("不能添加父总成及零部件编码都相同的零部件!");
-                    return false;
-                }
-            }
-
-            #endregion
-
-            //if ((txtParentCode.Text.Trim().Length > 0 && treeView1.SelectedNode.Parent == null) || (treeView1.SelectedNode.Parent != null && txtParentCode.Text.Trim().Length == 0)
-            if (txtParentCode.Text.Trim().Length > 0 && treeView1.Nodes.Count > 0)
-            {
-                TreeNode[] parentNodes = treeView1.Nodes.Find(txtParentCode.Text, true);
-
-                if (parentNodes.Count() == 0)
-                {
-                    MessageDialog.ShowPromptMessage(string.Format("没有找到您所指定的父总成图号为 [{0}] 节点，无法进行此操作！", 
-                                                    txtParentCode.Text));
-                    return false;
-                }
-            }
-
-            List<Bom> listBom;
-
-            if (DicBom != null && DicBom.ContainsKey(cmbProductType.SelectedItem.ToString()))
-            {
-                listBom = DicBom[cmbProductType.SelectedItem.ToString()];
-            }
-            else
-            {
-                listBom = new List<Bom>();
-
-                if (DicBom == null)
-                {
-                    DicBom = new Dictionary<string, List<Bom>>();
-                }
-
-                DicBom.Add(cmbProductType.SelectedItem.ToString(), listBom);
-            }
-
-            #region 检验当前添加的项的父节点是否为非总成节点
-
-            for (int i = 0; i < listBom.Count; i++)
-            {
-                if (listBom[i].PartCode == txtParentCode.Text)
-                {
-                    if (!listBom[i].AssemblyFlag)
-                    {
-                        MessageDialog.ShowPromptMessage("当前节点为非总成节点,不允许继续添加子节点!");
-                        return false;
-                    }
-
-                    break;
-                }
-            }
-
-            #endregion
-
-            #region 检验是否在一节点下添加与自身相同编码的零部件
-
-            if (txtParentCode.Text == txtCode.Text)
-            {
-                MessageDialog.ShowPromptMessage("不允许在一节点下添加与自身相同编码的零部件!");
-                return false;
-            }
-
-            #endregion
-
-            #region 检测添加的数据项为顶部节点的情况下是否将当前待添加的节点替换左树结构
-
-            if (txtParentCode.Text == "" && treeView1.Nodes.Count != 0)
-            {
-                if (MessageBox.Show("树型结构根节点数不能大于1,是否将当前待添加的节点替换左树结构?", "警告", MessageBoxButtons.YesNo, 
-                    MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    DicBom[cmbProductType.SelectedItem.ToString()].Clear();
-
-                    if (m_dicParentAssemblyPartCode.ContainsKey(cmbProductType.SelectedItem.ToString()))
-                    {
-                        m_dicParentAssemblyPartCode[cmbProductType.SelectedItem.ToString()].Clear();
-                    }
-
-                    treeView1.Nodes.Clear();
-                }
-            }
-
-            #endregion
-
-            #region 检验是否在树结构中添加相同编码的总成
-
-            for (int i = 0; i < listBom.Count; i++)
-            {
-                if (listBom[i].PartCode == txtCode.Text && cmbAssemblyFlag.SelectedIndex == 1)
-                {
-                    MessageDialog.ShowPromptMessage("在树型结构中不允许添加相同编码的总成!");
-                    return false;
-                }
-            }
-
-            #endregion
-
-            return true;
-        }
-
-        /// <summary>
-        /// 往更新列表中添加变更的BOM节点
-        /// </summary>
-        /// <param name="bom">BOM节点信息</param>
-        /// <param name="status">更新的状态</param>
-        void AddUpdatedBomInfo(Bom bom, Bom.Status status)
-        {
-            var result = from r in m_updatedBomInfo 
-                         where r.ParentCode == bom.ParentCode && r.PartCode == bom.PartCode 
-                         select r;
-
-            if (result.Count() == 1)
-            {
-                Bom existBom = result.Single();
-
-                if (existBom.StatusFlag == Bom.Status.Add)
-                {
-                    if (status == Bom.Status.Remove)
-                    {
-                        m_updatedBomInfo.Remove(existBom);
-                    }
-
-                }
-                else
-                {
-                    // 原来为更新状态现在为删除状态
-                    Bom cloneBom = existBom.Clone();
-                    cloneBom.StatusFlag = status;
-                    m_updatedBomInfo.Add(cloneBom);
-                }
-            }
-            else
-            {
-                bom.StatusFlag = status;
-                m_updatedBomInfo.Add(bom);
-            }
-
-            if (m_updatedBomInfo.Count > 0)
-            {
-                m_changeFlag = true;
-            }
-        }
-
-        /// <summary>
-        /// 添加Bom信息
-        /// </summary>
-        /// <param name="edition">版本号</param>
-        /// <returns>返回是否成功添加Bom信息</returns>
-        bool AddBom(string editions)
-        {
-            string parentCode = txtParentCode.Text.Trim();
-            string partCode = txtCode.Text;
-            string spec = txtSpec.Text;
-            string partName = txtName.Text;
-            int counts = Convert.ToInt32(numBasicCount.Value);
-            bool assemblyFlag = cmbAssemblyFlag.SelectedIndex > 0;
-            string remark = txtRemark.Text;
-            string userCode = BasicInfo.LoginID;
-            DateTime fillDate = ServerModule.ServerTime.Time;
-            string version = txtVersion.Text.Trim();
-
-            TreeNode node = new TreeNode();
-            node.Name = partCode;
-            node.Text = partName;
-            node.ToolTipText = spec;
-
-            bool Addflag = false;
-
-            if (treeView1.Nodes.Count > 0)
-            {
-                if (treeView1.Nodes[0].Nodes.Count > 0)
-                {
-                    TreeNode[] parentNode = treeView1.Nodes.Find(parentCode, true);
-
-                    if (parentCode != null)
-                    {
-                        parentNode[0].Nodes.Add(node);
-                        Addflag = true;
-                    }
-                }
-                else
-                {
-                    if (treeView1.Nodes[0].Name == txtParentCode.Text)
-                    {
-                        treeView1.Nodes[0].Nodes.Add(node);
-                        Addflag = true;
-                    }
-                }
-            }
-            else
-            {
-                treeView1.Nodes.Add(node);
-                Addflag = true;
-            }
-
-            if (Addflag)
-            {
-                Bom bom = new Bom(0, parentCode, partCode, partName, spec, 
-                    counts, assemblyFlag, remark, userCode, fillDate,version);
-                node.Tag = bom;
-
-                DicBom[editions].Add(bom);
-                AddUpdatedBomInfo(bom, Bom.Status.Add);
-
-                if (m_dicParentAssemblyPartCode.ContainsKey(editions))
-                {
-                    m_dicParentAssemblyPartCode[editions].Add(parentCode + partCode + spec);
-                }
-            }
-            else
-            {
-                MessageDialog.ShowPromptMessage("父总成编码错误,树型结构表中不存在该编码的节点!");
-            }
-
-            return true;
+            cmbDBOMVersion.ValueMember = "设计BOM版本";
+            cmbDBOMVersion.DisplayMember = "设计BOM版本";
+            cmbDBOMVersion.DataSource = dtTemp;
+            cmbDBOMVersion.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -865,44 +504,6 @@ namespace Expression
         }
 
         /// <summary>
-        /// 删除
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (treeView1.SelectedNode != null)
-            {
-                string edition = cmbProductType.SelectedItem.ToString();
-
-                while (treeView1.SelectedNode.Nodes.Count > 0)
-                {
-                    FindChildNode(edition, treeView1.SelectedNode);
-                }
-
-                Bom bom = treeView1.SelectedNode.Tag as Bom;
-
-                m_dicParentAssemblyPartCode[edition].Remove(bom.ParentCode + bom.PartCode + bom.Spec);
-
-                Bom findBom = (from r in DicBom[cmbProductType.Text] 
-                               where r.ParentCode == bom.ParentCode && r.PartCode == bom.PartCode && r.Spec == bom.Spec 
-                               select r).Single();
-
-                AddUpdatedBomInfo(bom, Bom.Status.Remove);
-
-                DicBom[edition].Remove(findBom);
-
-                treeView1.SelectedNode.Remove();
-                btnSave.Enabled = true;
-                btnCancle.Enabled = true;
-            }
-            else
-            {
-                MessageDialog.ShowPromptMessage("请在树型结构表中选择需要删除的节点!");
-            }
-        }
-
-        /// <summary>
         /// 查找子节点
         /// </summary>
         /// <param name="edition">版本号</param>
@@ -929,7 +530,6 @@ namespace Expression
                                     + node.Nodes[i].Name + node.Nodes[i].ToolTipText);
                             }
 
-                            AddUpdatedBomInfo(DicBom[edition][j], Bom.Status.Remove);
                             DicBom[edition].RemoveAt(j);
                         }
                     }
@@ -937,279 +537,6 @@ namespace Expression
                     node.Nodes[i].Remove();
                 }
             }
-        }
-
-        /// <summary>
-        /// 修改
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (treeView1.SelectedNode == null)
-            {
-                MessageDialog.ShowPromptMessage("请选择要修改的节点后再进行此操作！");
-                return;
-            }
-
-            if (!CheckUpdateBom())
-            {
-                return;
-            }
-
-            Bom bom = treeView1.SelectedNode.Tag as Bom;
-
-            string editions = cmbProductType.Text;
-
-            if (m_dicParentAssemblyPartCode.ContainsKey(editions))
-            {
-                if (m_dicParentAssemblyPartCode[editions].Contains(bom.ParentCode + bom.PartCode + bom.Spec))
-                {
-                    m_dicParentAssemblyPartCode[editions].Remove(bom.ParentCode + bom.PartCode + bom.Spec);
-                    m_dicParentAssemblyPartCode[editions].Add(txtParentCode.Text + txtCode.Text + txtSpec.Text);
-                }
-            }
-
-            Bom findBom = (from r in DicBom[cmbProductType.Text] 
-                           where r.ParentCode == bom.ParentCode && r.PartCode == bom.PartCode && r.Spec == bom.Spec 
-                           select r).Single();
-
-            bom.PartCode = txtCode.Text;
-            bom.ParentCode = txtParentCode.Text;
-            bom.PartName = txtName.Text;
-            bom.Spec = txtSpec.Text;
-            bom.Remark = txtRemark.Text;
-            bom.AssemblyFlag = cmbAssemblyFlag.SelectedIndex > 0;
-            bom.Counts = (int)numBasicCount.Value;
-            bom.UserCode = BasicInfo.LoginID;
-            bom.FillData = ServerModule.ServerTime.Time;
-            bom.Version = txtVersion.Text.Trim();
-
-            findBom.PartCode = txtCode.Text;
-            findBom.ParentCode = txtParentCode.Text;
-            findBom.PartName = txtName.Text;
-            findBom.Spec = txtSpec.Text;
-            findBom.Remark = txtRemark.Text;
-            findBom.AssemblyFlag = cmbAssemblyFlag.SelectedIndex > 0;
-            findBom.Counts = (int)numBasicCount.Value;
-            findBom.UserCode = BasicInfo.LoginID;
-            findBom.FillData = ServerModule.ServerTime.Time;
-            findBom.Version = txtVersion.Text.Trim();
-
-            AddUpdatedBomInfo(bom, Bom.Status.Update);
-
-            treeView1.SelectedNode.Name = txtCode.Text;
-            treeView1.SelectedNode.Text = txtName.Text;
-
-            //MessageDialog.ShowPromptMessage("BOM表数据不允许进行修改，只支持增加、删除方式，如果确实需要修改请联系系统管理员！");
-        }
-
-        /// <summary>
-        /// 修改检测
-        /// </summary>
-        /// <returns>返回是否允许修改零件</returns>
-        bool CheckUpdateBom()
-        {
-            #region 检验数据项不能为空
-
-            if (txtCode.Text == "")
-            {
-                MessageDialog.ShowPromptMessage("零部件编码不能为空!");
-                return false;
-            }
-
-            if (txtVersion.Text.Trim() == "")
-            {
-                MessageDialog.ShowPromptMessage("零部件版次号不能为空!");
-                return false;
-            }
-
-            if (txtName.Text == "")
-            {
-                MessageDialog.ShowPromptMessage("零部件名称不能为空!");
-                return false;
-            }
-
-            //if (numBasicCount.Value <= 0)
-            //{
-            //    MessageDialog.ShowPromptMessage("基数不能为0!");
-            //    return false;
-            //}
-
-            if (cmbAssemblyFlag.SelectedItem == null || cmbAssemblyFlag.SelectedItem.ToString() == "")
-            {
-                MessageDialog.ShowPromptMessage("总成标志不能为空!");
-                return false;
-            }
-
-            #endregion
-
-            TreeNode currentNode = treeView1.SelectedNode;
-            Bom bom = treeView1.SelectedNode.Tag as Bom;
-
-            if (cmbAssemblyFlag.SelectedIndex != Convert.ToInt32(bom.AssemblyFlag) && currentNode.Nodes.Count > 0)
-            {
-                MessageDialog.ShowPromptMessage("非叶子节点不允许修改总成标志，将此节点下的子节点全部删除后才允许进行此操作！");
-                return false;
-            }
-
-            if ((bom.ParentCode == null && txtParentCode.Text.Trim().Length > 0) 
-                || (bom.ParentCode != null && bom.ParentCode != txtParentCode.Text) )
-            {
-                MessageDialog.ShowPromptMessage("不允许修改父总成编号！");
-                return false;
-            }
-
-            #region 检验是否在一节点下添加与自身相同编码的零部件
-
-            if (txtParentCode.Text == txtCode.Text)
-            {
-                MessageDialog.ShowErrorMessage("不允许在一节点下存在与自身相同编码的零部件!");
-                return false;
-            }
-
-            #endregion
-
-            List<Bom> listBom = DicBom[cmbProductType.Text];
-            TreeNode[] parentNodes = treeView1.Nodes.Find(txtParentCode.Text, true);
-
-            #region 检验当前修改后的节点的父总成编码是否存在,是否会引起在非总成节点下存在节点的错误情况
-            if (parentNodes != null && parentNodes.Count() > 0)
-            {
-                TreeNode[] findSameNameNode = parentNodes[0].Nodes.Find(txtCode.Text, false);
-
-                if (findSameNameNode != null && findSameNameNode.Count() > 0 && findSameNameNode[0] != currentNode)
-                {
-                    MessageDialog.ShowErrorMessage(string.Format("{0} 节点下已经存在图号为 {1} 的子节点，不允许再重复添加！", 
-                                                   txtParentCode.Text, txtCode.Text));
-                    return false;
-                }
-            }
-            #endregion
-
-            return true;
-        }
-
-        /// <summary>
-        /// 保存
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (m_changeFlag)
-            {
-                SaveBom();
-            }
-            else
-            {
-                MessageDialog.ShowPromptMessage("BOM没有发生任何变化，不需要保存！");
-            }
-        }
-
-        /// <summary>
-        /// 存储Bom
-        /// </summary>
-        void SaveBom()
-        {
-            string edition = cmbProductType.SelectedItem.ToString();
-
-            if (!m_bomServer.UpdateBom(edition, m_updatedBomInfo, out m_err))
-            {
-                MessageDialog.ShowPromptMessage(m_err);
-                InitTreeView(edition);
-            }
-            else
-            {
-                InitTreeView(edition);
-                MessageDialog.ShowPromptMessage("成功保存BOM信息！");
-            }
-
-            m_updatedBomInfo.Clear();
-            m_changeFlag = false;
-        }
-
-        /// <summary>
-        /// 取消
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnCancle_Click(object sender, EventArgs e)
-        {
-            if (m_changeFlag && MessageBox.Show("您是否保存Bom?", "提示", MessageBoxButtons.YesNo, 
-                MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                btnSave.PerformClick();
-            }
-            else
-            {
-                InitTreeView(cmbProductType.SelectedItem.ToString());
-            }
-        }
-
-        /// <summary>
-        /// 修改选中节点总成标志，直接应用到数据库
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void cmbSetAssemblyFlag_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TreeNode currentNode = treeView1.SelectedNode;
-
-            if (currentNode == null)
-            {
-                MessageDialog.ShowPromptMessage("请选择好要修改的节点后再进行此操作！");
-                return;
-            }
-            else if (currentNode.Nodes.Count > 0)
-            {
-                MessageDialog.ShowPromptMessage("非叶子节点不允许修改总成标志，将此节点下的子节点全部删除后才允许进行此操作！");
-                return;
-            }
-
-            Bom bom = currentNode.Tag as Bom;
-            Bom updateBom = bom;
-
-            string info = string.Format("您确定要修改图号为：[{0}]，零件名称为：[{1}] 的节点的总成标志？", bom.PartCode, bom.PartName);
-
-            if (MessageDialog.ShowEnquiryMessage(info) == DialogResult.Yes)
-            {
-                // 如果更新的节点位于更新列表中则直接在更新列表中更新，暂不更新到数据库，否则直接更新到数据库
-                var result = from r in m_updatedBomInfo 
-                             where r.ParentCode == bom.ParentCode && r.PartCode == bom.PartCode 
-                             select r;
-
-                if (result.Count() > 0)
-                {
-                    bom = result.Single();
-                    bom.AssemblyFlag = cmbSetAssemblyFlag.SelectedIndex > 0;
-                    bom.UserCode = BasicInfo.LoginID;
-                    bom.FillData = ServerModule.ServerTime.Time;
-
-                    ChangePara(currentNode);
-                    return;
-                }
-
-                bom.UserCode = BasicInfo.LoginID;
-                bom.FillData = ServerModule.ServerTime.Time;
-
-                bom.AssemblyFlag = cmbSetAssemblyFlag.SelectedIndex > 0;
-                ChangePara(currentNode);
-                //if (!m_bomServer.UpdateBom(cmbProductType.Text, bom, cmbSetAssemblyFlag.SelectedIndex == 1, out m_err))
-                //{
-                //    MessageDialog.ShowErrorMessage(m_err);
-                //}
-                //else
-                //{
-                //    bom.AssemblyFlag = cmbSetAssemblyFlag.SelectedIndex > 0;
-                //    ChangePara(currentNode);
-                //}
-            }
-        }
-
-        private void UserControlBom_Enter(object sender, EventArgs e)
-        {
-            //MessageDialog.ShowPromptMessage("Test");
         }
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -1236,31 +563,6 @@ namespace Expression
             }
             dataGridView1.ClearSelection();
             dataGridView1.CurrentCell = dataGridView1.Rows[e.RowIndex].Cells[strColName];
-        }
-
-        private void 复制数据表数据ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageDialog.ShowPromptMessage("请选择数据表中的一行后再进行此操作！");
-                return;
-            }
-
-            StringBuilder sb = new StringBuilder();
-
-            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
-            {
-                DataGridViewRow row = dataGridView1.SelectedRows[i];
-
-                for (int j = 1; j < 6; j++)
-                {
-                    sb.Append(row.Cells[j].Value);
-                    sb.Append("\t");
-                }
-            }
-
-            sb.AppendLine();
-            Clipboard.SetDataObject(sb.ToString()); 
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -1310,5 +612,9 @@ namespace Expression
                 TextFormatFlags.VerticalCenter | TextFormatFlags.Right);
         }
 
+        private void cmbDBOMVersion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InitTreeView();
+        }
     }
 }
