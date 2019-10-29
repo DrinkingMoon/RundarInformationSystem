@@ -52,6 +52,8 @@ namespace Form_Project_Design
                 if (cmbEdition.Items.Count > 0)
                 {
                     cmbEdition.SelectedIndex = -1;
+                    cmbPBOMVersion.DataSource = null;
+                    cmbPBOMVersion.SelectedIndex = -1;
                 }
             }
         }
@@ -63,20 +65,23 @@ namespace Form_Project_Design
 
         private void cmbEdition_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbPBOMVersion.Items.Clear();
-            cmbPBOMVersion.DataSource = null;
-
             if (cmbEdition.Text.Length == 0)
             {
                 return;
             }
 
-            foreach (decimal item in _serviceBOMInfo.GetDBOMVersionItems(cmbEdition.Text))
-            {
-                cmbPBOMVersion.Items.Add(item);
-            }
+            List<decimal> lstPBOMVersion = _serviceBOMInfo.GetPBOMVersionItems(cmbEdition.Text);
 
-            cmbPBOMVersion.SelectedIndex = 0;
+            if (lstPBOMVersion.Count > 0)
+            {
+                cmbPBOMVersion.DataSource = _serviceBOMInfo.GetPBOMVersionItems(cmbEdition.Text);
+                cmbPBOMVersion.SelectedIndex = 0;
+            }
+            else
+            {
+                cmbPBOMVersion.DataSource = null;
+                cmbPBOMVersion.SelectedIndex = -1;
+            }
         }
 
         private void btnOutput_Click(object sender, EventArgs e)

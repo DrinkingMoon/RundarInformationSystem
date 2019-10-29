@@ -511,6 +511,32 @@ namespace ServerModule
             }
         }
 
+        void DetailCheck(DepotManagementDataContext ctx, S_MaterialReturnedInTheDepot billInfo)
+        {
+            IStoreServer serviceStore = ServerModule.ServerModuleFactory.GetServerModule<IStoreServer>();
+
+            var varData = from a in ctx.S_MaterialListReturnedInTheDepot
+                          where a.Bill_ID == billInfo.Bill_ID
+                          select a;
+
+            foreach (S_MaterialListReturnedInTheDepot item in varData)
+            {
+                StoreQueryCondition storeQuery = new StoreQueryCondition();
+
+                storeQuery.BatchNo = item.BatchNo;
+                storeQuery.GoodsID = item.GoodsID;
+                storeQuery.Provider = item.Provider;
+                storeQuery.StorageID = billInfo.StorageID;
+
+                if (serviceStore.GetStockInfoOverLoad(ctx, storeQuery) == null)
+                {
+                    throw new Exception(UniversalFunction.GetGoodsMessage(item.GoodsID) 
+                        + "供应商：【"+ item.Provider +"】, 批次号：【"+ item.BatchNo +"】, 库房ID：【"
+                        + billInfo.StorageID +"】 无库存记录,无法进行退库");
+                }
+            }
+        }
+
         /// <summary>
         /// 完成领料退库单
         /// </summary>
@@ -558,6 +584,11 @@ namespace ServerModule
                 bill.DepotManager = storeManager;
                 bill.BillStatus = MaterialReturnedInTheDepotBillStatus.已完成.ToString();
                 bill.InDepotDate = ServerTime.Time;
+
+                if (bill.ReturnMode == "领料退库")
+                {
+                    DetailCheck(ctx, bill);//在退库模式为领料退库的模式情况下，只能退库房存在的库存记录的物品
+                }
 
                 IMaterialListReturnedInTheDepot goodsServer = ServerModuleFactory.GetServerModule<IMaterialListReturnedInTheDepot>();
                 

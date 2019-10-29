@@ -74,14 +74,14 @@ namespace Service_Project_Design
             }
         }
 
-        public List<decimal> GetDBOMVersionItems(string edtion)
+        public List<decimal> GetPBOMVersionItems(string edtion)
         {
             using (DepotManagementDataContext ctx = CommentParameter.DepotDataContext)
             {
-                var varData = from a in ctx.BASE_BomVersion
+                var varData = from a in ctx.BASE_PBOM_Log
                               where a.Edtion == edtion
-                              orderby a.DBOMSysVersion descending
-                              select a.DBOMSysVersion;
+                              orderby a.PBOMSysVersion descending
+                              select a.PBOMSysVersion;
 
                 return varData.Distinct().ToList();
             }

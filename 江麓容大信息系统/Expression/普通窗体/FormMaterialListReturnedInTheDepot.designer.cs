@@ -41,8 +41,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnBatchCreate = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnMaterialsTransfer = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnInputExcel = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelRight = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
@@ -88,7 +87,6 @@
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.btnInputExcel = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -114,8 +112,6 @@
             this.toolStripSeparator1,
             this.btnBatchCreate,
             this.toolStripSeparator3,
-            this.btnMaterialsTransfer,
-            this.toolStripSeparator4,
             this.btnInputExcel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -212,21 +208,15 @@
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             this.toolStripSeparator3.Tag = "更新";
             // 
-            // btnMaterialsTransfer
+            // btnInputExcel
             // 
-            this.btnMaterialsTransfer.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterialsTransfer.Image")));
-            this.btnMaterialsTransfer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMaterialsTransfer.Name = "btnMaterialsTransfer";
-            this.btnMaterialsTransfer.Size = new System.Drawing.Size(187, 22);
-            this.btnMaterialsTransfer.Tag = "更新";
-            this.btnMaterialsTransfer.Text = "由车间物料转换单批量生成(&P)";
-            this.btnMaterialsTransfer.Click += new System.EventHandler(this.btnMaterialsTransfer_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            this.toolStripSeparator4.Tag = "更新";
+            this.btnInputExcel.Image = global::Expression.Properties.Resources.Excel;
+            this.btnInputExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInputExcel.Name = "btnInputExcel";
+            this.btnInputExcel.Size = new System.Drawing.Size(93, 22);
+            this.btnInputExcel.Tag = "更新";
+            this.btnInputExcel.Text = "Excel导入(&I)";
+            this.btnInputExcel.Click += new System.EventHandler(this.btnInputExcel_Click);
             // 
             // dataGridView1
             // 
@@ -719,16 +709,6 @@
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "领料退库物品清单";
             // 
-            // btnInputExcel
-            // 
-            this.btnInputExcel.Image = global::Expression.Properties.Resources.Excel;
-            this.btnInputExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnInputExcel.Name = "btnInputExcel";
-            this.btnInputExcel.Size = new System.Drawing.Size(93, 22);
-            this.btnInputExcel.Tag = "更新";
-            this.btnInputExcel.Text = "Excel导入(&I)";
-            this.btnInputExcel.Click += new System.EventHandler(this.btnInputExcel_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -819,8 +799,6 @@
         private System.Windows.Forms.ToolStripButton btnBatchCreate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Button btnBatchNo;
-        private System.Windows.Forms.ToolStripButton btnMaterialsTransfer;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.Button btnProvider;
         private System.Windows.Forms.ToolStripButton btnInputExcel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

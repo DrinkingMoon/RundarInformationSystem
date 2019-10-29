@@ -18,7 +18,7 @@ namespace Service_Project_Design
 
         List<BASE_BomVersion> GetBOMVersionInfoItems(string edtion, decimal version);
 
-        List<decimal> GetDBOMVersionItems(string edtion);
+        List<decimal> GetPBOMVersionItems(string edtion);
 
         DataTable GetPBOMLogInfoItems(string edition, string sysVersion);
     }

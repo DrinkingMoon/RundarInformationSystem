@@ -56,6 +56,8 @@ namespace Form_Project_Design
                     if (cmbEdition.Items.Count > 0)
                     {
                         cmbEdition.SelectedIndex = -1;
+                        cmbDBOMVersion.DataSource = null;
+                        cmbDBOMVersion.SelectedIndex = -1;
                     }
                 }
 
@@ -225,7 +227,21 @@ namespace Form_Project_Design
                     tempLnq.零件规格 = goodsInfo.规格;
                     tempLnq.零件名称 = goodsInfo.物品名称;
                     tempLnq.零件图号 = goodsInfo.图号型号;
-                    tempLnq.领料 = false;
+
+                    //Dictionary<CE_GoodsAttributeName, object> tempDic = 
+                    //    UniversalFunction.GetGoodsInfList_Attribute_AttchedInfoList(goodsInfo.序号);
+
+                    List<View_BASE_BomStruct> lstTemp = _serviceBOMInfo.GetBOMList_Design(goodsInfo.序号);
+
+                    if (lstTemp.Count > 0)
+                    {
+                        tempLnq.领料 = false;
+                    }
+                    else
+                    {
+                        tempLnq.领料 = true;
+                    }
+
                     tempLnq.设计BOM版本 = item.DBOMSysVersion;
                     tempLnq.生效版次号 = item.GoodsVersion;
                     tempLnq.生效日期 = null;
@@ -330,20 +346,25 @@ namespace Form_Project_Design
 
         private void cmbEdition_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbDBOMVersion.Items.Clear();
-            cmbDBOMVersion.DataSource = null;
-
             if (cmbEdition.Text.Length == 0)
             {
                 return;
             }
 
-            foreach (decimal item in _serviceBOMInfo.GetDBOMVersionItems(cmbEdition.Text))
-            {
-                cmbDBOMVersion.Items.Add(item);
-            }
+            DataTable tempTable = _serviceBOM.GetBomBackUpBomEdtion(cmbEdition.Text);
 
-            cmbDBOMVersion.SelectedIndex = 0;
+            if (tempTable != null && tempTable.Rows.Count > 0)
+            {
+                cmbDBOMVersion.ValueMember = "设计BOM版本";
+                cmbDBOMVersion.DisplayMember = "设计BOM版本";
+                cmbDBOMVersion.DataSource = tempTable;
+                cmbDBOMVersion.SelectedIndex = 0;
+            }
+            else
+            {
+                cmbDBOMVersion.DataSource = null;
+                cmbDBOMVersion.SelectedIndex = -1;
+            }
         }
     }
 }
