@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnInput = new System.Windows.Forms.Button();
-            this.lbConnectInfo = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnOutput = new System.Windows.Forms.Button();
@@ -68,6 +67,9 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbConnectInfo = new System.Windows.Forms.Label();
+            this.btnPrintSelect = new System.Windows.Forms.Button();
+            this.btnPrintAll = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,6 +87,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPrintAll);
+            this.groupBox1.Controls.Add(this.btnPrintSelect);
             this.groupBox1.Controls.Add(this.btnInput);
             this.groupBox1.Controls.Add(this.lbConnectInfo);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -117,24 +121,13 @@
             // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(20, 325);
+            this.btnInput.Location = new System.Drawing.Point(20, 323);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(83, 27);
             this.btnInput.TabIndex = 38;
             this.btnInput.Text = "Excel导入";
             this.btnInput.UseVisualStyleBackColor = true;
             this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
-            // 
-            // lbConnectInfo
-            // 
-            this.lbConnectInfo.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbConnectInfo.ForeColor = System.Drawing.Color.Red;
-            this.lbConnectInfo.Location = new System.Drawing.Point(17, 404);
-            this.lbConnectInfo.Name = "lbConnectInfo";
-            this.lbConnectInfo.Size = new System.Drawing.Size(201, 35);
-            this.lbConnectInfo.TabIndex = 37;
-            this.lbConnectInfo.Text = "客户端连接信息显示区";
-            this.lbConnectInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnAdd
             // 
@@ -158,11 +151,11 @@
             // 
             // btnOutput
             // 
-            this.btnOutput.Location = new System.Drawing.Point(135, 325);
+            this.btnOutput.Location = new System.Drawing.Point(135, 323);
             this.btnOutput.Name = "btnOutput";
             this.btnOutput.Size = new System.Drawing.Size(83, 27);
             this.btnOutput.TabIndex = 34;
-            this.btnOutput.Text = "导出Excel";
+            this.btnOutput.Text = "Excel导出";
             this.btnOutput.UseVisualStyleBackColor = true;
             this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
             // 
@@ -255,9 +248,9 @@
             // 
             // btnAuditing
             // 
-            this.btnAuditing.Location = new System.Drawing.Point(20, 364);
+            this.btnAuditing.Location = new System.Drawing.Point(20, 404);
             this.btnAuditing.Name = "btnAuditing";
-            this.btnAuditing.Size = new System.Drawing.Size(83, 27);
+            this.btnAuditing.Size = new System.Drawing.Size(198, 27);
             this.btnAuditing.TabIndex = 14;
             this.btnAuditing.Text = "提交";
             this.btnAuditing.UseVisualStyleBackColor = true;
@@ -400,7 +393,6 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // openFileDialog1
@@ -447,6 +439,40 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // lbConnectInfo
+            // 
+            this.lbConnectInfo.AutoSize = true;
+            this.lbConnectInfo.Font = new System.Drawing.Font("宋体", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbConnectInfo.ForeColor = System.Drawing.Color.Red;
+            this.lbConnectInfo.Location = new System.Drawing.Point(67, 439);
+            this.lbConnectInfo.Name = "lbConnectInfo";
+            this.lbConnectInfo.Size = new System.Drawing.Size(105, 10);
+            this.lbConnectInfo.TabIndex = 37;
+            this.lbConnectInfo.Text = "客户端连接信息显示区";
+            this.lbConnectInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnPrintSelect
+            // 
+            this.btnPrintSelect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPrintSelect.Location = new System.Drawing.Point(20, 360);
+            this.btnPrintSelect.Name = "btnPrintSelect";
+            this.btnPrintSelect.Size = new System.Drawing.Size(83, 34);
+            this.btnPrintSelect.TabIndex = 39;
+            this.btnPrintSelect.Text = "打印选择箱体编码";
+            this.btnPrintSelect.UseVisualStyleBackColor = true;
+            this.btnPrintSelect.Click += new System.EventHandler(this.btnPrintSelect_Click);
+            // 
+            // btnPrintAll
+            // 
+            this.btnPrintAll.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPrintAll.Location = new System.Drawing.Point(135, 360);
+            this.btnPrintAll.Name = "btnPrintAll";
+            this.btnPrintAll.Size = new System.Drawing.Size(83, 34);
+            this.btnPrintAll.TabIndex = 40;
+            this.btnPrintAll.Text = "打印所有箱体编码";
+            this.btnPrintAll.UseVisualStyleBackColor = true;
+            this.btnPrintAll.Click += new System.EventHandler(this.btnPrintAll_Click);
             // 
             // 产品编号
             // 
@@ -496,7 +522,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Label lbConnectInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn BoxNo;
@@ -510,5 +535,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button btnPrintSelect;
+        private System.Windows.Forms.Label lbConnectInfo;
+        private System.Windows.Forms.Button btnPrintAll;
     }
 }

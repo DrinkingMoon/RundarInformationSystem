@@ -46,12 +46,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewStruct = new UniversalControlLibrary.CustomDataGridView();
+            this.userControlDataLocalizer1 = new UniversalControlLibrary.UserControlDataLocalizer();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewEdtion = new UniversalControlLibrary.CustomDataGridView();
+            this.总成型号_ZC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.设计BOM版本_ZC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbDBOMVersion = new System.Windows.Forms.ComboBox();
+            this.cmbEdition = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnParentDelete = new System.Windows.Forms.Button();
+            this.btnParentAdd = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.父级图号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件图号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件规格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.基数 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.领料 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.采购 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.生效版次号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.生效日期 = new UniversalControlLibrary.DataGridViewDateTimePickColumn();
             this.失效版次号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,19 +75,6 @@
             this.总成型号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.设计BOM版本 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userControlDataLocalizer1 = new UniversalControlLibrary.UserControlDataLocalizer();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewEdtion = new UniversalControlLibrary.CustomDataGridView();
-            this.总成型号_ZC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.设计BOM版本_ZC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnParentDelete = new System.Windows.Forms.Button();
-            this.btnParentAdd = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.cmbEdition = new System.Windows.Forms.ComboBox();
-            this.cmbDBOMVersion = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -259,6 +260,7 @@
             this.零件规格,
             this.基数,
             this.领料,
+            this.采购,
             this.生效版次号,
             this.生效日期,
             this.失效版次号,
@@ -284,117 +286,6 @@
             this.dataGridViewStruct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStruct.Size = new System.Drawing.Size(640, 486);
             this.dataGridViewStruct.TabIndex = 6;
-            // 
-            // 父级图号
-            // 
-            this.父级图号.DataPropertyName = "父级图号";
-            this.父级图号.HeaderText = "父级图号";
-            this.父级图号.Name = "父级图号";
-            this.父级图号.ReadOnly = true;
-            // 
-            // 零件图号
-            // 
-            this.零件图号.DataPropertyName = "零件图号";
-            this.零件图号.HeaderText = "零件图号";
-            this.零件图号.Name = "零件图号";
-            this.零件图号.ReadOnly = true;
-            this.零件图号.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // 零件名称
-            // 
-            this.零件名称.DataPropertyName = "零件名称";
-            this.零件名称.HeaderText = "零件名称";
-            this.零件名称.Name = "零件名称";
-            this.零件名称.ReadOnly = true;
-            this.零件名称.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.零件名称.Width = 160;
-            // 
-            // 零件规格
-            // 
-            this.零件规格.DataPropertyName = "零件规格";
-            this.零件规格.HeaderText = "零件规格";
-            this.零件规格.Name = "零件规格";
-            this.零件规格.ReadOnly = true;
-            this.零件规格.Width = 80;
-            // 
-            // 基数
-            // 
-            this.基数.DataPropertyName = "基数";
-            this.基数.HeaderText = "基数";
-            this.基数.Name = "基数";
-            this.基数.ReadOnly = true;
-            this.基数.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.基数.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.基数.Width = 60;
-            // 
-            // 领料
-            // 
-            this.领料.DataPropertyName = "领料";
-            this.领料.HeaderText = "领料";
-            this.领料.Name = "领料";
-            this.领料.Width = 40;
-            // 
-            // 生效版次号
-            // 
-            this.生效版次号.DataPropertyName = "生效版次号";
-            this.生效版次号.HeaderText = "生效版次号";
-            this.生效版次号.Name = "生效版次号";
-            this.生效版次号.Width = 90;
-            // 
-            // 生效日期
-            // 
-            this.生效日期.DataPropertyName = "生效日期";
-            this.生效日期.HeaderText = "生效日期";
-            this.生效日期.Name = "生效日期";
-            // 
-            // 失效版次号
-            // 
-            this.失效版次号.DataPropertyName = "失效版次号";
-            this.失效版次号.HeaderText = "失效版次号";
-            this.失效版次号.Name = "失效版次号";
-            this.失效版次号.Width = 90;
-            // 
-            // 单据号
-            // 
-            this.单据号.DataPropertyName = "单据号";
-            this.单据号.HeaderText = "单据号";
-            this.单据号.Name = "单据号";
-            this.单据号.Visible = false;
-            // 
-            // 父级物品ID
-            // 
-            this.父级物品ID.DataPropertyName = "父级物品ID";
-            this.父级物品ID.HeaderText = "父级物品ID";
-            this.父级物品ID.Name = "父级物品ID";
-            this.父级物品ID.Visible = false;
-            // 
-            // 物品ID
-            // 
-            this.物品ID.DataPropertyName = "物品ID";
-            this.物品ID.HeaderText = "物品ID";
-            this.物品ID.Name = "物品ID";
-            this.物品ID.Visible = false;
-            // 
-            // 总成型号
-            // 
-            this.总成型号.DataPropertyName = "总成型号";
-            this.总成型号.HeaderText = "总成型号";
-            this.总成型号.Name = "总成型号";
-            this.总成型号.Visible = false;
-            // 
-            // 设计BOM版本
-            // 
-            this.设计BOM版本.DataPropertyName = "设计BOM版本";
-            this.设计BOM版本.HeaderText = "设计BOM版本";
-            this.设计BOM版本.Name = "设计BOM版本";
-            this.设计BOM版本.Visible = false;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
             // 
             // userControlDataLocalizer1
             // 
@@ -479,6 +370,27 @@
             this.panel2.Size = new System.Drawing.Size(227, 115);
             this.panel2.TabIndex = 2;
             // 
+            // cmbDBOMVersion
+            // 
+            this.cmbDBOMVersion.BackColor = System.Drawing.Color.White;
+            this.cmbDBOMVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDBOMVersion.FormattingEnabled = true;
+            this.cmbDBOMVersion.Location = new System.Drawing.Point(94, 46);
+            this.cmbDBOMVersion.Name = "cmbDBOMVersion";
+            this.cmbDBOMVersion.Size = new System.Drawing.Size(115, 20);
+            this.cmbDBOMVersion.TabIndex = 268;
+            // 
+            // cmbEdition
+            // 
+            this.cmbEdition.BackColor = System.Drawing.Color.White;
+            this.cmbEdition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEdition.FormattingEnabled = true;
+            this.cmbEdition.Location = new System.Drawing.Point(69, 13);
+            this.cmbEdition.Name = "cmbEdition";
+            this.cmbEdition.Size = new System.Drawing.Size(140, 20);
+            this.cmbEdition.TabIndex = 267;
+            this.cmbEdition.SelectedIndexChanged += new System.EventHandler(this.cmbEdition_SelectedIndexChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -519,26 +431,123 @@
             this.label3.TabIndex = 249;
             this.label3.Text = "总成型号";
             // 
-            // cmbEdition
+            // 父级图号
             // 
-            this.cmbEdition.BackColor = System.Drawing.Color.White;
-            this.cmbEdition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEdition.FormattingEnabled = true;
-            this.cmbEdition.Location = new System.Drawing.Point(69, 13);
-            this.cmbEdition.Name = "cmbEdition";
-            this.cmbEdition.Size = new System.Drawing.Size(140, 20);
-            this.cmbEdition.TabIndex = 267;
-            this.cmbEdition.SelectedIndexChanged += new System.EventHandler(this.cmbEdition_SelectedIndexChanged);
+            this.父级图号.DataPropertyName = "父级图号";
+            this.父级图号.HeaderText = "父级图号";
+            this.父级图号.Name = "父级图号";
+            this.父级图号.ReadOnly = true;
             // 
-            // cmbDBOMVersion
+            // 零件图号
             // 
-            this.cmbDBOMVersion.BackColor = System.Drawing.Color.White;
-            this.cmbDBOMVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDBOMVersion.FormattingEnabled = true;
-            this.cmbDBOMVersion.Location = new System.Drawing.Point(94, 46);
-            this.cmbDBOMVersion.Name = "cmbDBOMVersion";
-            this.cmbDBOMVersion.Size = new System.Drawing.Size(115, 20);
-            this.cmbDBOMVersion.TabIndex = 268;
+            this.零件图号.DataPropertyName = "零件图号";
+            this.零件图号.HeaderText = "零件图号";
+            this.零件图号.Name = "零件图号";
+            this.零件图号.ReadOnly = true;
+            this.零件图号.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // 零件名称
+            // 
+            this.零件名称.DataPropertyName = "零件名称";
+            this.零件名称.HeaderText = "零件名称";
+            this.零件名称.Name = "零件名称";
+            this.零件名称.ReadOnly = true;
+            this.零件名称.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.零件名称.Width = 160;
+            // 
+            // 零件规格
+            // 
+            this.零件规格.DataPropertyName = "零件规格";
+            this.零件规格.HeaderText = "零件规格";
+            this.零件规格.Name = "零件规格";
+            this.零件规格.ReadOnly = true;
+            this.零件规格.Width = 80;
+            // 
+            // 基数
+            // 
+            this.基数.DataPropertyName = "基数";
+            this.基数.HeaderText = "基数";
+            this.基数.Name = "基数";
+            this.基数.ReadOnly = true;
+            this.基数.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.基数.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.基数.Width = 60;
+            // 
+            // 领料
+            // 
+            this.领料.DataPropertyName = "领料";
+            this.领料.HeaderText = "领料";
+            this.领料.Name = "领料";
+            this.领料.Width = 40;
+            // 
+            // 采购
+            // 
+            this.采购.DataPropertyName = "采购";
+            this.采购.HeaderText = "采购";
+            this.采购.Name = "采购";
+            this.采购.Width = 40;
+            // 
+            // 生效版次号
+            // 
+            this.生效版次号.DataPropertyName = "生效版次号";
+            this.生效版次号.HeaderText = "生效版次号";
+            this.生效版次号.Name = "生效版次号";
+            this.生效版次号.Width = 90;
+            // 
+            // 生效日期
+            // 
+            this.生效日期.DataPropertyName = "生效日期";
+            this.生效日期.HeaderText = "生效日期";
+            this.生效日期.Name = "生效日期";
+            // 
+            // 失效版次号
+            // 
+            this.失效版次号.DataPropertyName = "失效版次号";
+            this.失效版次号.HeaderText = "失效版次号";
+            this.失效版次号.Name = "失效版次号";
+            this.失效版次号.Width = 90;
+            // 
+            // 单据号
+            // 
+            this.单据号.DataPropertyName = "单据号";
+            this.单据号.HeaderText = "单据号";
+            this.单据号.Name = "单据号";
+            this.单据号.Visible = false;
+            // 
+            // 父级物品ID
+            // 
+            this.父级物品ID.DataPropertyName = "父级物品ID";
+            this.父级物品ID.HeaderText = "父级物品ID";
+            this.父级物品ID.Name = "父级物品ID";
+            this.父级物品ID.Visible = false;
+            // 
+            // 物品ID
+            // 
+            this.物品ID.DataPropertyName = "物品ID";
+            this.物品ID.HeaderText = "物品ID";
+            this.物品ID.Name = "物品ID";
+            this.物品ID.Visible = false;
+            // 
+            // 总成型号
+            // 
+            this.总成型号.DataPropertyName = "总成型号";
+            this.总成型号.HeaderText = "总成型号";
+            this.总成型号.Name = "总成型号";
+            this.总成型号.Visible = false;
+            // 
+            // 设计BOM版本
+            // 
+            this.设计BOM版本.DataPropertyName = "设计BOM版本";
+            this.设计BOM版本.HeaderText = "设计BOM版本";
+            this.设计BOM版本.Name = "设计BOM版本";
+            this.设计BOM版本.Visible = false;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
             // 生产BOM变更单明细
             // 
@@ -591,12 +600,15 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn 总成型号_ZC;
         private System.Windows.Forms.DataGridViewTextBoxColumn 设计BOM版本_ZC;
+        private System.Windows.Forms.ComboBox cmbEdition;
+        private System.Windows.Forms.ComboBox cmbDBOMVersion;
         private System.Windows.Forms.DataGridViewTextBoxColumn 父级图号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件图号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件名称;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件规格;
         private System.Windows.Forms.DataGridViewTextBoxColumn 基数;
         private System.Windows.Forms.DataGridViewCheckBoxColumn 领料;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn 采购;
         private System.Windows.Forms.DataGridViewTextBoxColumn 生效版次号;
         private UniversalControlLibrary.DataGridViewDateTimePickColumn 生效日期;
         private System.Windows.Forms.DataGridViewTextBoxColumn 失效版次号;
@@ -606,7 +618,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 总成型号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 设计BOM版本;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.ComboBox cmbEdition;
-        private System.Windows.Forms.ComboBox cmbDBOMVersion;
     }
 }

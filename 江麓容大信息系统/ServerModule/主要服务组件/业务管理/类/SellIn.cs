@@ -3090,8 +3090,10 @@ namespace ServerModule
         /// <returns>返回Table</returns>
         public DataTable GetBarcodeTable(string billNo)
         {
-            string strSql = " select a.ID, ProductCode, BoxNo from ProductsCodes as a inner join  (select GoodsID from F_GoodsAttributeRecord  " +
-                            " where AttributeID = " + (int)CE_GoodsAttributeName.CVT + " and AttributeValue = '" + bool.TrueString + "') as b on a.GoodsID = b.GoodsID " +
+            string strSql = " select a.ID, ProductCode, BoxNo from ProductsCodes as a "+
+                            " inner join  (select GoodsID from F_GoodsAttributeRecord  " +
+                            " where (AttributeID = " + (int)CE_GoodsAttributeName.CVT + ")"+
+                            " and AttributeValue = '" + bool.TrueString + "') as b on a.GoodsID = b.GoodsID " +
                             " where DJH = '" + billNo + "' order by BoxNo, a.ID";
 
             DataTable dtTemp = GlobalObject.DatabaseServer.QueryInfo(strSql);

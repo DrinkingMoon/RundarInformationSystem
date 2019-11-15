@@ -651,6 +651,8 @@ namespace UniversalControlLibrary
                 this.Close();
             }
 
+            this.timer1.Enabled = true;
+
             m_blIsTCUFlag = Convert.ToBoolean(UniversalFunction.GetGoodsAttributeInfo(m_barCodeInfo.GoodsID, CE_GoodsAttributeName.TCU));
             txtGoodsName.Text = m_barCodeInfo.GoodsName;
             txtGoodsName.Tag = m_barCodeInfo.GoodsID;
@@ -1064,6 +1066,79 @@ namespace UniversalControlLibrary
             {
                 MessageDialog.ShowPromptMessage(ex.Message);
             }
+        }
+
+        void PrintBoxCode(List<string> lstBoxCode)
+        {
+            m_dtProductCodes = (DataTable)dataGridView1.DataSource;
+
+            if (lstBoxCode == null || lstBoxCode.Count() == 0)
+            {
+                return;
+            }
+
+            if (m_dtProductCodes == null || m_dtProductCodes.Rows.Count == 0)
+            {
+                return;
+            }
+
+            lstBoxCode = lstBoxCode.Distinct().ToList();
+
+            foreach (string boxCode in lstBoxCode)
+            {
+                if (UniversalFunction.GetGoodsAttributeInfo(m_barCodeInfo.GoodsID, CE_GoodsAttributeName.CVT).ToString() == "True")
+                {
+                    DataTable tempTable = DataSetHelper.SiftDataTable(m_dtProductCodes, "BoxNo = '" + boxCode + "'");
+
+                    List<string> lstBarcode = new List<string>();
+
+                    foreach (DataRow dr in tempTable.Rows)
+                    {
+                        lstBarcode.Add(dr["ProductCode"].ToString());
+                    }
+
+                    PrintPartBarcode.PrintBarcodeCVTNumberList(lstBarcode);
+                    PrintPartBarcode.PrintBarcode_120X30(boxCode);
+                }
+                else if (UniversalFunction.GetGoodsAttributeInfo(m_barCodeInfo.GoodsID, CE_GoodsAttributeName.TCU).ToString() == "True")
+                {
+                    PrintPartBarcode.PrintBarcode_60X20(boxCode);
+                }
+            }
+        }
+
+        private void btnPrintSelect_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                return;
+            }
+
+            List<string> lstBoxCode = new List<string>();
+
+            foreach (DataGridViewRow dgvr in dataGridView1.SelectedRows)
+            {
+                lstBoxCode.Add(dgvr.Cells["BoxNo"].Value.ToString());
+            }
+
+            PrintBoxCode(lstBoxCode);
+        }
+
+        private void btnPrintAll_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                return;
+            }
+
+            List<string> lstBoxCode = new List<string>();
+
+            foreach (DataGridViewRow dgvr in dataGridView1.Rows)
+            {
+                lstBoxCode.Add(dgvr.Cells["BoxNo"].Value.ToString());
+            }
+
+            PrintBoxCode(lstBoxCode);
         }
     }
 }

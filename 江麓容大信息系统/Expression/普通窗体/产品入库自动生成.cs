@@ -586,7 +586,7 @@ namespace Expression
                     if (i + 1 == dt.Rows.Count || dt.Rows[i]["BoxNo"] != dt.Rows[i + 1]["BoxNo"])
                     {
                         PrintPartBarcode.PrintBarcodeCVTNumberList(listBarcode);
-                        PrintPartBarcode.PrintBarcodeCVTNumberList_BoxNo(dt.Rows[i]["BoxNo"].ToString());
+                        PrintPartBarcode.PrintBarcode_120X30(dt.Rows[i]["BoxNo"].ToString());
                         listBarcode = new List<string>();
                     }
                 }

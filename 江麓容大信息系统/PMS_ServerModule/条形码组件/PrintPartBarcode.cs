@@ -324,24 +324,45 @@ namespace ServerModule
         /// </summary>
         /// <param name="bigBoxTCUCode">条形码信息</param>
         /// <returns>成功返回true, 失败返回false</returns>
+        static public bool PrintBarcode_60X20(string code)
+        {
+            IntPtr hDC = IntPtr.Zero;
+            bool bRet = true;
+            double x = 12, y = 3, width = 43;
+
+            bRet &= BarcodePrint.UTC_Begin(hDC, false);
+
+            bRet &= BarcodePrint.UTC_Rectangle(8, 1, 58, 19, 5);
+            bRet &= BarcodePrint.UTC_SetFont("黑体", 11, true, false, false, false);
+
+            bRet &= bRet = BarcodePrint.UTC_Barcode(x, y, width, 10, code, "CODE128B", 0, false);
+
+            x = x + (width - BarcodePrint.UTC_GetTextWidth(code)) / 2;
+            bRet &= BarcodePrint.UTC_Text(x, y + 11, code, 0);
+
+            bRet &= BarcodePrint.UTC_End(); //分页
+
+            return bRet;
+        }
+
+        /// <summary>
+        /// 打印TCU箱的条形码
+        /// </summary>
+        /// <param name="bigBoxTCUCode">条形码信息</param>
+        /// <returns>成功返回true, 失败返回false</returns>
         static public bool PrintBarcode_120X30(string code)
         {
             IntPtr hDC = IntPtr.Zero;
             bool bRet = true;
-            double x, y, width;
+            double x = 18, y = 3, width = 72;
 
             bRet &= BarcodePrint.UTC_Begin(hDC, false);
 
             bRet &= BarcodePrint.UTC_Rectangle(10, 1, 98, 29, 5);
-            bRet &= BarcodePrint.UTC_SetFont("黑体", 21, true, false, false, false);
+            bRet &= BarcodePrint.UTC_SetFont("黑体", 25, true, false, false, false);
 
-            x = 18;
-            y = 3;
-
-            width = 72;
             bRet &= bRet = BarcodePrint.UTC_Barcode(x, y, width, 15, code, "CODE128B", 0, false);
 
-            bRet &= BarcodePrint.UTC_SetFont("黑体", 25, true, false, false, false);
             x = x + (width - BarcodePrint.UTC_GetTextWidth(code)) / 2;
             bRet &= BarcodePrint.UTC_Text(x, y + 16, code, 0);
 

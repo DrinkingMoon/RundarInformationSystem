@@ -228,18 +228,17 @@ namespace Form_Project_Design
                     tempLnq.零件名称 = goodsInfo.物品名称;
                     tempLnq.零件图号 = goodsInfo.图号型号;
 
-                    //Dictionary<CE_GoodsAttributeName, object> tempDic = 
-                    //    UniversalFunction.GetGoodsInfList_Attribute_AttchedInfoList(goodsInfo.序号);
-
                     List<View_BASE_BomStruct> lstTemp = _serviceBOMInfo.GetBOMList_Design(goodsInfo.序号);
 
                     if (lstTemp.Count > 0)
                     {
                         tempLnq.领料 = false;
+                        tempLnq.采购 = false;
                     }
                     else
                     {
                         tempLnq.领料 = true;
+                        tempLnq.采购 = true;
                     }
 
                     tempLnq.设计BOM版本 = item.DBOMSysVersion;

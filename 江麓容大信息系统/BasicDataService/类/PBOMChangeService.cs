@@ -158,6 +158,7 @@ namespace Service_Project_Design
                         de.GoodsID = item.物品ID;
                         de.InvalidGoodsVersion = item.失效版次号;
                         de.IsInbound = item.领料;
+                        de.IsPurchase = item.采购;
                         de.ParentGoodsID = item.父级物品ID;
                         de.Usage = item.基数;
                         de.ValidGoodsVersion = item.生效版次号;

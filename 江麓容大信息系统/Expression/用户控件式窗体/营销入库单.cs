@@ -493,7 +493,7 @@ namespace Expression
                 if (barcode.Rows.Count - 1 == i || barcode.Rows[i]["BoxNo"].ToString() != barcode.Rows[i + 1]["BoxNo"].ToString())
                 {
                     PrintPartBarcode.PrintBarcodeCVTNumberList(listBarcode);
-                    PrintPartBarcode.PrintBarcodeCVTNumberList_BoxNo(barcode.Rows[i]["BoxNo"].ToString());
+                    PrintPartBarcode.PrintBarcode_120X30(barcode.Rows[i]["BoxNo"].ToString());
                 }
             }
         }

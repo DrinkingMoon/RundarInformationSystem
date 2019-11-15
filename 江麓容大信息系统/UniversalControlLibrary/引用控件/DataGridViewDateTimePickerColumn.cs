@@ -56,7 +56,8 @@ namespace UniversalControlLibrary
         public DataGridViewDateTimePickerEditingControl()
         {
             this.TabStop = false;
-            this.Format = DateTimePickerFormat.Short;
+            this.CustomFormat = "yyyy-MM-dd HH:mm";
+            this.Format = DateTimePickerFormat.Custom;
         }
 
         /// <summary>

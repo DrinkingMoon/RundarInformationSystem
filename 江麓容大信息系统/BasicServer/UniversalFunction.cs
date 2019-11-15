@@ -1842,7 +1842,7 @@ namespace ServerModule
         /// <param name="goodsID">物品ID</param>
         /// <param name="goodsAttributeName">属性名称</param>
         /// <returns>返回OBJECT</returns>
-        public static object GetGoodsAttributeInfo(int goodsID, CE_GoodsAttributeName goodsAttributeName)
+public static object GetGoodsAttributeInfo(int goodsID, CE_GoodsAttributeName goodsAttributeName)
         {
             object result = new object();
 
