@@ -187,6 +187,18 @@ namespace Form_Project_Design
                                              orderby a.父级图号, a.零件图号
                                              select a).ToList();
 
+            foreach (DataGridViewRow item in dataGridViewStruct.Rows)
+            {
+                bool selected = !Convert.ToBoolean(dataGridViewStruct.Rows[e.RowIndex].Cells[2].Value);
+
+                dataGridViewStruct.Rows[e.RowIndex].Cells[9].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[11].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[12].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[13].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[15].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[16].ReadOnly = selected;
+            }
+
             userControlDataLocalizer1.Init(dataGridViewStruct, this.Name,
                 UniversalFunction.SelectHideFields(this.Name, dataGridViewStruct.Name, BasicInfo.LoginID));
         }
@@ -232,15 +244,18 @@ namespace Form_Project_Design
 
                     if (lstTemp.Count > 0)
                     {
-                        tempLnq.领料 = false;
+                        tempLnq.台套领料 = false;
                         tempLnq.采购 = false;
+                        tempLnq.选 = false;
                     }
                     else
                     {
-                        tempLnq.领料 = true;
+                        tempLnq.台套领料 = true;
                         tempLnq.采购 = true;
+                        tempLnq.选 = true;
                     }
 
+                    tempLnq.零件类别 = CE_PartType.成品.ToString();
                     tempLnq.设计BOM版本 = item.DBOMSysVersion;
                     tempLnq.生效版次号 = item.GoodsVersion;
                     tempLnq.生效日期 = null;
@@ -363,6 +378,26 @@ namespace Form_Project_Design
             {
                 cmbDBOMVersion.DataSource = null;
                 cmbDBOMVersion.SelectedIndex = -1;
+            }
+        }
+
+        private void dataGridViewStruct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewStruct.Rows.Count == 0)
+            {
+                return;
+            }
+
+            if (e.ColumnIndex == 2)
+            {
+                bool selected = Convert.ToBoolean(dataGridViewStruct.Rows[e.RowIndex].Cells[2].Value);
+
+                dataGridViewStruct.Rows[e.RowIndex].Cells[9].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[11].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[12].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[13].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[15].ReadOnly = selected;
+                dataGridViewStruct.Rows[e.RowIndex].Cells[16].ReadOnly = selected;
             }
         }
     }

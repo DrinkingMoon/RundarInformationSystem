@@ -82,7 +82,7 @@ namespace UniversalControlLibrary
         {
             get
             {
-                return this.Value.ToShortDateString();
+                return this.Value.ToString("yyyy-MM-dd HH:mm");
             }
             set
             {
@@ -233,7 +233,7 @@ namespace UniversalControlLibrary
             : base()
         {
             // Use the short date format.
-            this.Style.Format = "d";
+            this.Style.Format = "yyyy-MM-dd HH:mm";
         }
 
         /// <summary>

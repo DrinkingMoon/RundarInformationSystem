@@ -156,14 +156,17 @@ namespace Service_Project_Design
                         de.BillNo = item.单据号;
                         de.Edtion = item.总成型号;
                         de.GoodsID = item.物品ID;
+                        de.PartType = item.零件类别;
                         de.InvalidGoodsVersion = item.失效版次号;
-                        de.IsInbound = item.领料;
+                        de.IsSelecting = item.选配;
+                        de.IsInbound = item.台套领料;
                         de.IsPurchase = item.采购;
                         de.ParentGoodsID = item.父级物品ID;
                         de.Usage = item.基数;
                         de.ValidGoodsVersion = item.生效版次号;
                         de.ValidTime = item.生效日期;
                         de.DBOMSysVersion = item.设计BOM版本;
+                        de.Selected = item.选;
 
                         ctx.Bus_PBOM_Change_Detail.InsertOnSubmit(de);
                     }

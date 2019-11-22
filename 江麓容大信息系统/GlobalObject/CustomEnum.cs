@@ -20,6 +20,14 @@ using System.Text;
 
 namespace GlobalObject
 {
+    public enum CE_PartType
+    {
+        成品,
+        自制件,
+        半成品,
+        毛坯
+    }
+
     public enum CE_SystemName
     {
         泸州容大,

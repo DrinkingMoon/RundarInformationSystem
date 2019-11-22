@@ -59,12 +59,15 @@
             this.btnParentAdd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.选 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.父级图号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件图号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.零件规格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.零件类别 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.基数 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.领料 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.选配 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.台套领料 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.采购 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.生效版次号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.生效日期 = new UniversalControlLibrary.DataGridViewDateTimePickColumn();
@@ -254,12 +257,15 @@
             this.dataGridViewStruct.BaseFilter = "";
             this.dataGridViewStruct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStruct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.选,
             this.父级图号,
             this.零件图号,
             this.零件名称,
             this.零件规格,
+            this.零件类别,
             this.基数,
-            this.领料,
+            this.选配,
+            this.台套领料,
             this.采购,
             this.生效版次号,
             this.生效日期,
@@ -286,6 +292,7 @@
             this.dataGridViewStruct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStruct.Size = new System.Drawing.Size(640, 486);
             this.dataGridViewStruct.TabIndex = 6;
+            this.dataGridViewStruct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStruct_CellClick);
             // 
             // userControlDataLocalizer1
             // 
@@ -431,12 +438,22 @@
             this.label3.TabIndex = 249;
             this.label3.Text = "总成型号";
             // 
+            // 选
+            // 
+            this.选.DataPropertyName = "选";
+            this.选.HeaderText = "选";
+            this.选.Name = "选";
+            this.选.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.选.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.选.Width = 40;
+            // 
             // 父级图号
             // 
             this.父级图号.DataPropertyName = "父级图号";
             this.父级图号.HeaderText = "父级图号";
             this.父级图号.Name = "父级图号";
             this.父级图号.ReadOnly = true;
+            this.父级图号.Width = 120;
             // 
             // 零件图号
             // 
@@ -445,6 +462,7 @@
             this.零件图号.Name = "零件图号";
             this.零件图号.ReadOnly = true;
             this.零件图号.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.零件图号.Width = 120;
             // 
             // 零件名称
             // 
@@ -463,6 +481,18 @@
             this.零件规格.ReadOnly = true;
             this.零件规格.Width = 80;
             // 
+            // 零件类别
+            // 
+            this.零件类别.DataPropertyName = "零件类别";
+            this.零件类别.HeaderText = "零件类别";
+            this.零件类别.Items.AddRange(new object[] {
+            "成品",
+            "自制件",
+            "半成品",
+            "毛坯"});
+            this.零件类别.Name = "零件类别";
+            this.零件类别.Width = 80;
+            // 
             // 基数
             // 
             this.基数.DataPropertyName = "基数";
@@ -473,12 +503,19 @@
             this.基数.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.基数.Width = 60;
             // 
-            // 领料
+            // 选配
             // 
-            this.领料.DataPropertyName = "领料";
-            this.领料.HeaderText = "领料";
-            this.领料.Name = "领料";
-            this.领料.Width = 40;
+            this.选配.DataPropertyName = "选配";
+            this.选配.HeaderText = "选配";
+            this.选配.Name = "选配";
+            this.选配.Width = 40;
+            // 
+            // 台套领料
+            // 
+            this.台套领料.DataPropertyName = "台套领料";
+            this.台套领料.HeaderText = "台套领料";
+            this.台套领料.Name = "台套领料";
+            this.台套领料.Width = 80;
             // 
             // 采购
             // 
@@ -492,6 +529,7 @@
             this.生效版次号.DataPropertyName = "生效版次号";
             this.生效版次号.HeaderText = "生效版次号";
             this.生效版次号.Name = "生效版次号";
+            this.生效版次号.ReadOnly = true;
             this.生效版次号.Width = 90;
             // 
             // 生效日期
@@ -499,6 +537,7 @@
             this.生效日期.DataPropertyName = "生效日期";
             this.生效日期.HeaderText = "生效日期";
             this.生效日期.Name = "生效日期";
+            this.生效日期.Width = 150;
             // 
             // 失效版次号
             // 
@@ -602,12 +641,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 设计BOM版本_ZC;
         private System.Windows.Forms.ComboBox cmbEdition;
         private System.Windows.Forms.ComboBox cmbDBOMVersion;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn 选;
         private System.Windows.Forms.DataGridViewTextBoxColumn 父级图号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件图号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件名称;
         private System.Windows.Forms.DataGridViewTextBoxColumn 零件规格;
+        private System.Windows.Forms.DataGridViewComboBoxColumn 零件类别;
         private System.Windows.Forms.DataGridViewTextBoxColumn 基数;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn 领料;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn 选配;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn 台套领料;
         private System.Windows.Forms.DataGridViewCheckBoxColumn 采购;
         private System.Windows.Forms.DataGridViewTextBoxColumn 生效版次号;
         private UniversalControlLibrary.DataGridViewDateTimePickColumn 生效日期;
