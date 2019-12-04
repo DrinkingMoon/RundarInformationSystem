@@ -226,17 +226,17 @@ namespace Service_Peripheral_HR
 
                             if (timeException.RealExceptionType == 8)
                             {
-                                DateTime starDate = new DateTime(timeException.Date.Year, timeException.Date.Month, 1);
-                                int Days = DateTime.DaysInMonth(timeException.Date.Year, timeException.Date.Month);
-                                DateTime endDate = new DateTime(timeException.Date.Year, timeException.Date.Month, Days);
+                                //DateTime starDate = new DateTime(timeException.Date.Year, timeException.Date.Month, 1);
+                                //int Days = DateTime.DaysInMonth(timeException.Date.Year, timeException.Date.Month);
+                                //DateTime endDate = new DateTime(timeException.Date.Year, timeException.Date.Month, Days);
 
-                                if (!IsTimeExceptionCount(timeException.WorkID, starDate, endDate,
-                                    timeException.RealExceptionType.ToString(), out error))//漏打卡次数大于3
-                                {
-                                    error = "每人每个月漏打卡次数不能超过3次！" +
-                                        UniversalFunction.GetPersonnelName(timeException.WorkID) + "已有三次";
-                                    return false;
-                                }
+                                //if (!IsTimeExceptionCount(timeException.WorkID, starDate, endDate,
+                                //    timeException.RealExceptionType.ToString(), out error))//漏打卡次数大于3
+                                //{
+                                //    error = "每人每个月漏打卡次数不能超过3次！" +
+                                //        UniversalFunction.GetPersonnelName(timeException.WorkID) + "已有三次";
+                                //    return false;
+                                //}
 
                                 exceptionList.RealExceptionType = timeException.RealExceptionType;
                             }

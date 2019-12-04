@@ -468,7 +468,6 @@ namespace Form_Project_Design
             {
                 dataGridViewStruct.Rows.Clear();
             }
-
         }
 
         private void txtParentGoodsCode_OnCompleteSearch()

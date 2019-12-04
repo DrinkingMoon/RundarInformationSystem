@@ -12,6 +12,7 @@ using PlatformManagement;
 using Service_Peripheral_HR;
 using GlobalObject;
 using UniversalControlLibrary;
+using System.Collections;
 
 namespace Form_Peripheral_HR
 {
@@ -449,6 +450,7 @@ namespace Form_Peripheral_HR
                             {
                                 MessageDialog.ShowPromptMessage(UniversalFunction.GetPersonnelName(cells["员工编号"].Value.ToString()) 
                                     + "有欠班，只能选择调休！");
+                                return false;
                             }
                         }
                     }
@@ -518,9 +520,16 @@ namespace Form_Peripheral_HR
             string[] schemeCode = attendanceSet.SchemeCode.Split(' ');
             string mode = m_attendanceSchemeServer.GetAttendanceSchemeByCode(schemeCode[0]).AttendanceMode;
 
+            Hashtable hsTable = new Hashtable();
+
+            hsTable.Add("@ParentCode", "ZZGC");
+            hsTable.Add("@WorkID", BasicInfo.LoginID);
+
+            DataTable tempTable = GlobalObject.DatabaseServer.QueryInfoPro("HR_Personnel_GetParentDept", hsTable, out error);
+
             #region 2017.10.27 夏石友， 向菲菲将工务人员、车间人员修改为非自然月排班考勤后出现必须加班2小时才可以填写加班单的现象
             //if (mode.Contains("非自然月考勤"))
-            if (mode.Contains("非自然月考勤") || mode.Contains("非自然月排班考勤"))
+            if (mode.Contains("非自然月考勤") || mode.Contains("非自然月排班考勤") || tempTable.Rows.Count > 0)
             #endregion
             {
                 if (numHours.Value < 1)
