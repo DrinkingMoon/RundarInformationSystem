@@ -98,5 +98,14 @@ namespace Service_Project_Design
 
             return GlobalObject.DatabaseServer.QueryInfoPro("BASE_PBOM_Select", hsTable, out error);
         }
+
+        public DataTable GetPBOMItems(string edition)
+        {
+            string error = "";
+
+            Hashtable hsTable = new Hashtable();
+            hsTable.Add("@GoodsInfo", edition);
+            return GlobalObject.DatabaseServer.QueryInfoPro("BASE_PBOM_Inbound", hsTable, out error);
+        }
     }
 }

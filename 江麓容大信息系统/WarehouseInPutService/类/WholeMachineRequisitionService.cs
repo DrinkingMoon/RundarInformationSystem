@@ -559,7 +559,8 @@ namespace Service_Manufacture_Storage
                                 goodsInfo.RequestCount = listGoodsInfoTemp[i].GoodsCount;
 
                                 IProductOrder serviceProductOrder = ServerModuleFactory.GetServerModule<IProductOrder>();
-                                goodsInfo.ShowPosition = serviceProductOrder.GetPosition(ctx, billInfo.ProductType, goodsInfo.GoodsID);
+                                goodsInfo.ShowPosition = 0;
+                                    //serviceProductOrder.GetPosition(ctx, billInfo.ProductType, goodsInfo.GoodsID);
 
                                 if (!serviceGoods.AutoCreateGoods(ctx, goodsInfo, out error))
                                 {

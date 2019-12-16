@@ -354,41 +354,75 @@ namespace Form_Manufacture_Storage
             {
                 MessageDialog.ShowPromptMessage(string.Format("整台份数量不能等于0"));
                 return;
+
             }
 
-            Service_Manufacture_Storage.IProductOrder server = Service_Manufacture_Storage.ServerModuleFactory.GetServerModule<Service_Manufacture_Storage.IProductOrder>();
-            List<BASE_ProductOrder> mrGoodsOrder =
-                server.GetAllDataList(chbIncludeAfterSupplement.Checked ? FetchGoodsType.整台领料 : FetchGoodsType.整台领料不含后补充,
-                txtProductType.Text, CE_DebitScheduleApplicable.正常装配, true);
+            List<View_Business_WarehouseOutPut_WholeMachineRequisitionDetail> source =
+                new List<View_Business_WarehouseOutPut_WholeMachineRequisitionDetail>();
 
-            if (mrGoodsOrder.Count == 0)
+            Service_Project_Design.IBOMInfoService service = 
+                Service_Project_Design.ServerModuleFactory.GetServerModule<Service_Project_Design.IBOMInfoService>();
+
+            bool isCVT = Convert.ToBoolean(UniversalFunction.GetGoodsAttributeInfo(Convert.ToInt32(txtProductType.Tag), CE_GoodsAttributeName.CVT));
+            bool isTCU = Convert.ToBoolean(UniversalFunction.GetGoodsAttributeInfo(Convert.ToInt32(txtProductType.Tag), CE_GoodsAttributeName.TCU));
+
+            DataTable tablePBOM = service.GetPBOMItems(isCVT || isTCU ? txtProductType.Text : txtProductType.Tag.ToString());
+
+            if (tablePBOM.Rows.Count == 0)
             {
-                MessageDialog.ShowPromptMessage(string.Format("没有找到{0}整台份的领料排序规则，无法进行此操作！", txtProductType.Text));
+                MessageDialog.ShowPromptMessage(string.Format("没有找到{0}型号的生产BOM，无法进行此操作！", txtProductType.Text));
                 return;
             }
 
-            List<View_Business_WarehouseOutPut_WholeMachineRequisitionDetail> source = 
-                new List<View_Business_WarehouseOutPut_WholeMachineRequisitionDetail>();
-
-            foreach (BASE_ProductOrder item1 in mrGoodsOrder)
+            foreach (DataRow dr in tablePBOM.Rows)
             {
-                View_Business_WarehouseOutPut_WholeMachineRequisitionDetail tempView = 
+                View_Business_WarehouseOutPut_WholeMachineRequisitionDetail tempView =
                     new View_Business_WarehouseOutPut_WholeMachineRequisitionDetail();
 
-                View_F_GoodsPlanCost goodsInfo = UniversalFunction.GetGoodsInfo(item1.GoodsID);
+                View_F_GoodsPlanCost goodsInfo = UniversalFunction.GetGoodsInfo(Convert.ToInt32(dr["GoodsID"]));
 
                 tempView.单据号 = txtBillNo.Text;
                 tempView.单位 = goodsInfo.单位;
                 tempView.规格 = goodsInfo.规格;
-                tempView.基数 = item1.Redices;
-                tempView.数量 = item1.Redices * numRequestCount.Value;
+                tempView.基数 = Convert.ToDecimal(dr["Usage"]);
+                tempView.数量 = Convert.ToDecimal(dr["Usage"]) * numRequestCount.Value;
                 tempView.图号型号 = goodsInfo.图号型号;
-                tempView.物品ID = item1.GoodsID;
+                tempView.物品ID = Convert.ToInt32(dr["GoodsID"]);
                 tempView.物品名称 = goodsInfo.物品名称;
-
 
                 source.Add(tempView);
             }
+
+            //Service_Manufacture_Storage.IProductOrder server = Service_Manufacture_Storage.ServerModuleFactory.GetServerModule<Service_Manufacture_Storage.IProductOrder>();
+            //List<BASE_ProductOrder> mrGoodsOrder =
+            //    server.GetAllDataList(chbIncludeAfterSupplement.Checked ? FetchGoodsType.整台领料 : FetchGoodsType.整台领料不含后补充,
+            //    txtProductType.Text, CE_DebitScheduleApplicable.正常装配, true);
+
+            //if (mrGoodsOrder.Count == 0)
+            //{
+            //    MessageDialog.ShowPromptMessage(string.Format("没有找到{0}整台份的领料排序规则，无法进行此操作！", txtProductType.Text));
+            //    return;
+            //}
+
+            //foreach (BASE_ProductOrder item1 in mrGoodsOrder)
+            //{
+            //    View_Business_WarehouseOutPut_WholeMachineRequisitionDetail tempView = 
+            //        new View_Business_WarehouseOutPut_WholeMachineRequisitionDetail();
+
+            //    View_F_GoodsPlanCost goodsInfo = UniversalFunction.GetGoodsInfo(item1.GoodsID);
+
+            //    tempView.单据号 = txtBillNo.Text;
+            //    tempView.单位 = goodsInfo.单位;
+            //    tempView.规格 = goodsInfo.规格;
+            //    tempView.基数 = item1.Redices;
+            //    tempView.数量 = item1.Redices * numRequestCount.Value;
+            //    tempView.图号型号 = goodsInfo.图号型号;
+            //    tempView.物品ID = item1.GoodsID;
+            //    tempView.物品名称 = goodsInfo.物品名称;
+
+
+            //    source.Add(tempView);
+            //}
             
             RefreshDataGridView(source, null);
 
@@ -401,7 +435,13 @@ namespace Form_Manufacture_Storage
 
         private void txtProductType_OnCompleteSearch()
         {
+            if (txtProductType.DataResult == null)
+            {
+                return;
+            }
+
             txtProductType.Text = txtProductType.DataResult["图号型号"].ToString();
+            txtProductType.Tag = txtProductType.DataResult["序号"];
         }
 
         private void txtProductType_Enter(object sender, EventArgs e)

@@ -4,6 +4,6 @@
     <paramitem value="113.240.226.82,1467">数据库服务器地址</paramitem>
     <paramitem value="Data Source=INFOSYSDBSERVER;Initial Catalog=DepotManagement;UID=InfoSysUser">仓库业务数据库连接字符串</paramitem>
     <paramitem value="Data Source=INFOSYSDBSERVER;Initial Catalog=PlatformService;Persist Security Info=True;User ID=InfoSysUser">平台服务数据库连接字符串</paramitem>
-    <paramitem value="E:\RundarInformationSystem\江麓容大信息系统\Expression\bin\Debug">在线升级文件目录</paramitem>
+    <paramitem value="E:\WorkSpace\RundarInformationSystem\江麓容大信息系统\Expression\bin\Debug">在线升级文件目录</paramitem>
   </param>
 </params>

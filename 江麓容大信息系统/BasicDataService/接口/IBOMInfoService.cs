@@ -21,5 +21,7 @@ namespace Service_Project_Design
         List<decimal> GetPBOMVersionItems(string edtion);
 
         DataTable GetPBOMLogInfoItems(string edition, string sysVersion);
+
+        DataTable GetPBOMItems(string edition);
     }
 }

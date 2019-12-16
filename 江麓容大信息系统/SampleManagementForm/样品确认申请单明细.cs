@@ -162,9 +162,10 @@ namespace Form_Project_Project
 
                 string error = "";
 
-                DataTable storageTable =
-                    DataSetHelper.SiftDataTable(UniversalFunction.GetStorageTb(), 
-                    " StorageID in ('01','03','08','12','13','15','17')", out error);
+                DataTable storageTable = //UniversalFunction.GetStorageTb();
+                //泸容随意添加库房 无法控制
+                DataSetHelper.SiftDataTable(UniversalFunction.GetStorageTb(),
+                " StorageID in ('01','03','08','12','13','15','17')", out error);
 
                 cmb_Purchase_StorageID.DataSource = storageTable;
                 cmb_Purchase_StorageID.DisplayMember = "StorageName";

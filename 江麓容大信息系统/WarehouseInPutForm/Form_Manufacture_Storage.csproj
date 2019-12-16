@@ -250,6 +250,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BasicDataService\Service_Project_Design.csproj">
+      <Project>{42152C2B-C954-4CED-9135-1674F4B72831}</Project>
+      <Name>Service_Project_Design</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BasicServer\BasicServer.csproj">
       <Project>{8E6426C5-FB8E-4A02-91EB-E19EFC48E422}</Project>
       <Name>BasicServer</Name>
