@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D89527E1-0789-4C51-9CA3-1A53DE4F7570}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -110,45 +110,59 @@
     </EmbeddedResource>
     <EmbeddedResource Include="入库单.resx">
       <DependentUpon>入库单.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="入库单明细.resx">
       <DependentUpon>入库单明细.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="入库申请单.resx">
       <DependentUpon>入库申请单.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="入库申请单明细.resx">
       <DependentUpon>入库申请单明细.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="出库单.resx">
       <DependentUpon>出库单.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="出库单明细.resx">
       <DependentUpon>出库单明细.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="出库申请单.resx">
       <DependentUpon>出库申请单.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="出库申请单明细.resx">
       <DependentUpon>出库申请单明细.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="到货单.resx">
       <DependentUpon>到货单.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="到货单明细.resx">
       <DependentUpon>到货单明细.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="发料清单编制主界面.resx">
       <DependentUpon>发料清单编制主界面.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="发料清单编制明细界面.resx">
       <DependentUpon>发料清单编制明细界面.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="整台份请领单.resx">
       <DependentUpon>整台份请领单.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="整台份请领单明细.resx">
       <DependentUpon>整台份请领单明细.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

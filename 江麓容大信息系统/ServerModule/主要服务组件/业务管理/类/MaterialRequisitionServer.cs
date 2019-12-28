@@ -809,6 +809,8 @@ namespace ServerModule
                 fetchBill.BillStatus = MaterialRequisitionBillStatus.已出库.ToString();
                 fetchBill.OutDepotDate = ServerTime.Time;
 
+                ctx.SubmitChanges();
+
                 // 添加出库明细表记录
                 IMaterialRequisitionGoodsServer goodsServer = ServerModuleFactory.GetServerModule<IMaterialRequisitionGoodsServer>();
 
